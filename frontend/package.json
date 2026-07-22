@@ -1,14 +1,19 @@
 {
   "name": "ipgs-frontend",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+   "engines": {
+  "node": "22.x",
+  "npm": "10.x"
+},
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+  "preview": "vite preview",
+  "start": "serve -s dist -l tcp://0.0.0.0:$PORT"
+},
   "dependencies": {
     "aos": "2.3.4",
     "bootstrap": "5.3.3",
