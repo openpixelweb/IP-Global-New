@@ -7,7 +7,7 @@ export const menuList = [
     },
     {
         id: 2,
-        path: "/about",
+        path: "#",
         label: "About",
         dropDown: false
     },
@@ -63,7 +63,7 @@ export const menuList = [
     },
     {
         id: 6,
-        path: "/contact",
+        path: "#",
         label: "Contact",
         dropDown: false
     },

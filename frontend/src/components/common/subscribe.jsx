@@ -37,14 +37,14 @@ const Subscribe = () => {
                         <div className="col-lg-4">
                             <div className="final-contact-actions">
                                 <Link
-                                    to="/contact"
+                                    to="#"
                                     className="final-contact-primary-button text-decoration-none"
                                 >
                                     Talk to an Expert
                                 </Link>
 
                                 <Link
-                                    to="/contact"
+                                    to="#"
                                     className="final-contact-secondary-link text-decoration-none"
                                 >
                                     Contact IPGS

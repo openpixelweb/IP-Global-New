@@ -88,7 +88,7 @@ const HeaderOne = ({ }) => {
                                     <li>
                                         <Link
                                             className="default-btn text-decoration-none"
-                                            to="/contact"
+                                            to="#"
                                         >
                                             <i className="ri-arrow-right-line"></i>
                                             Talk to an Expert
@@ -96,7 +96,7 @@ const HeaderOne = ({ }) => {
 
                                         <Link
                                             className="quote d-none text-decoration-none"
-                                            to="/contact"
+                                            to="#"
                                         >
                                             <i className="ri-chat-quote-line"></i>
                                         </Link>
@@ -158,7 +158,7 @@ const HeaderOne = ({ }) => {
                             <li>
                                 <Link
                                     className="quote text-decoration-none"
-                                    to="/contact"
+                                    to="#"
                                 >
                                     <i className="ri-chat-quote-line"></i>
                                 </Link>

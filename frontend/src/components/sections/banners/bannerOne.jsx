@@ -33,7 +33,7 @@ const BannerOne = () => {
                             <div className="banner-button d-flex align-items-center">
                                 <Link
                                     className="demo text-decoration-none"
-                                    to="/contact"
+                                    to="#"
                                 >
                                     Explore Our Solutions
                                 </Link>
