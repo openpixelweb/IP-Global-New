@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "image": "image-7.png",
+        "author": "Elite Willer",
+        "comments": 10,
+        "title": "How many solar panels do you need for your home?",
+        "link": "/BlogDetail"
+    },
+    {
+        "id": 2,
+        "image": "image-1.png",
+        "author": "Speck Willer",
+        "comments": 24,
+        "title": "Exploring the latest innovations in solar technology",
+        "link": "/BlogDetail2"
+    },
+    {
+        "id": 3,
+        "image": "image-2.png",
+        "author": "Speck Willer",
+        "comments": 12,
+        "title": "Understanding solar tax deductions for small businesses",
+        "link": "/BlogDetail"
+    },
+    {
+        "id": 4,
+        "image": "image-5.png",
+        "author": "Speck Willer",
+        "comments": 24,
+        "title": "Understanding solar tax deductions for small businesses",
+        "link": "/BlogDetail"
+    },
+    {
+        "id": 5,
+        "image": "image-4.png",
+        "author": "Speck Willer",
+        "comments": 30,
+        "title": "Exploring the latest innovations in solar technology",
+        "link": "/BlogDetail"
+    },
+    {
+        "id": 6,
+        "image": "image-3.png",
+        "author": "Elite Willer",
+        "comments": 22,
+        "title": "How many solar panels do you need for your home?",
+        "link": "/BlogDetail"
+    },
+     {
+        "id": 7,
+        "image": "image-6.png",
+        "author": "Speck Willer",
+        "comments": 24,
+        "title": "How many solar panels do you need for your home?",
+        "link": "/BlogDetail"
+    },
+    {
+        "id": 8,
+        "image": "image-8.png",
+        "author": "Speck Willer",
+        "comments": 30,
+        "title": "Exploring the latest innovations in solar technology",
+        "link": "/BlogDetail"
+    },
+    {
+        "id": 9,
+        "image": "image-9.png",
+        "author": "Elite Willer",
+        "comments": 22,
+        "title": "How many solar panels do you need for your home?",
+        "link": "/BlogDetail"
+    }
+]

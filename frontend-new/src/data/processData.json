@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "number": "01",
+        "title": "IT Consulting",
+        "desc": "Technology strategy aligned with business goals.",
+        "image": "our-capabilities-01.jpg"
+    },
+    {
+        "id": 2,
+        "number": "02",
+        "title": "Network & Cybersecurity",
+        "desc": "Secure networks that protect business operations.",
+        "image": "our-capabilities-02.jpg"
+    },
+    {
+        "id": 3,
+        "number": "03",
+        "title": "Cloud Infrastructure",
+        "desc": "Flexible cloud solutions built for growth.",
+        "image": "our-capabilities-03.jpg"
+    },
+    {
+        "id": 4,
+        "number": "04",
+        "title": "Telecom Solutions",
+        "desc": "High-performance enterprise communication solutions.",
+        "image": "our-capabilities-04.jpg"
+    }
+]
