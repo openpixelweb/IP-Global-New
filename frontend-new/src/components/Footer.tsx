@@ -113,42 +113,42 @@ const Footer = () => {
                         <ul>
 
                             <li>
-                                <Link to="/about">
+                                <Link to="#">
                                     About IPGS
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/about/how-we-work">
+                                <Link to="#">
                                     How We Work
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/about/our-team">
+                                <Link to="#">
                                     Our Team
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/about/culture">
+                                <Link to="#">
                                     Culture
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/about/careers">
+                                <Link to="#">
                                     Careers
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/about/ipgs-academy">
+                                <Link to="#">
                                     IPGS Academy
                                 </Link>
                             </li>
@@ -173,42 +173,42 @@ const Footer = () => {
                         <ul>
 
                             <li>
-                                <Link to="/operational-technology">
+                                <Link to="#">
                                     Operational Technology
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/telecom-network-services">
+                                <Link to="#">
                                     Telecom Network Services
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/enterprise-it-services">
+                                <Link to="#">
                                     Enterprise IT Services
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/enterprise-it-services/cybersecurity">
+                                <Link to="#">
                                     Cybersecurity
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/enterprise-it-services/infrastructure-cloud">
+                                <Link to="#">
                                     Infrastructure & Cloud
                                 </Link>
                             </li>
 
 
                             <li>
-                                <Link to="/enterprise-it-services/data-centre-services">
+                                <Link to="#">
                                     Data Centre Services
                                 </Link>
                             </li>
