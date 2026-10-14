@@ -318,7 +318,7 @@ const Footer = () => {
                         {/* CONTACT BUTTON */}
 
                         <Link
-                            to="/contact"
+                            to="#"
                             className="ipgs-new-footer-contact-btn"
                         >
 
