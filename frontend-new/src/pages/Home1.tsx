@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import whyHmImage from "../assets/images/why-hm.jpg";
-import bannerBg from "../assets/images/banner-bg.jpg";
+// import bannerBg from "../assets/images/banner-bg.jpg";
 import teamWorkImage from "../assets/images/team-work.png";
 import indusHmImage1 from "../assets/images/indus-hm-01.jpg";
 import indusHmImage2 from "../assets/images/indus-hm-02.jpg";
@@ -23,213 +23,162 @@ const Home1: React.FC = () => {
     IPGS HOME HERO
 ===================================================== */}
 
-<section className="ipgs-home-hero-v2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bannerBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", width: "100%", minHeight: "500px" }} >
+{/* <section className="ipgs-home-hero-v2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bannerBg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", width: "100%", minHeight: "500px" }} > */}
+{/* =====================================================
+    IPGS HOME HERO - SIMPLE CLIENT VERSION
+===================================================== */}
 
-    <div
-        className="ipgs-hero-shape ipgs-hero-shape-one"
-        aria-hidden="true"
-    ></div>
-
-    <div
-        className="ipgs-hero-shape ipgs-hero-shape-two"
-        aria-hidden="true"
-    ></div>
-
-    <div
-        className="ipgs-hero-shape ipgs-hero-shape-three"
-        aria-hidden="true"
-    ></div>
-
+<section className="ipgs-simple-hero">
 
     <div className="container">
 
-        <div className="ipgs-home-hero-v2-main">
+        <div className="ipgs-simple-hero-content">
 
 
             {/* =========================================
-                LEFT CONTENT
+                EYEBROW
             ========================================= */}
 
-            <div className="ipgs-home-hero-v2-content">
+            <div className="ipgs-simple-hero-eyebrow">
 
-                <div className="ipgs-hero-v2-eyebrow">
+                <span className="ipgs-simple-hero-eyebrow-line"></span>
 
-                    <span className="ipgs-hero-v2-eyebrow-line"></span>
-
-                    <span>
-                        NETWORK & IT SERVICES
-                    </span>
-
-                </div>
-
-
-                <h1 className="ipgs-home-hero-v2-title">
-
-                    Technical excellence,
-
-                    <span>
-                        delivered
-                    </span>
-
-                </h1>
-
-
-                <h2 className="ipgs-home-hero-v2-subtitle">
-
-                    The network and IT services partner
-                    that never says
-                    “that’s not my department”
-
-                </h2>
-
-
-                <p className="ipgs-home-hero-v2-description">
-
-                    IPGS is a network and IT services provider that
-                    builds, designs, secures, and runs systems on an
-                    end-to-end basis. With us driving your project
-                    forward, you’ll always get a single point of
-                    contact and a can-do attitude.
-
-                </p>
-
-
-                <div className="ipgs-home-hero-v2-actions">
-
-                    <Link
-                        to="#"
-                        className="ipgs-home-hero-v2-button"
-                    >
-                        Let’s Talk
-
-                        <i className="ri-arrow-right-up-line"></i>
-                    </Link>
-
-
-                    <div className="ipgs-home-hero-v2-mini">
-
-                        <span className="ipgs-home-hero-v2-mini-dot"></span>
-
-                        <span>
-                            End-to-end technology delivery
-                        </span>
-
-                    </div>
-
-                </div>
+                <span>
+                    NETWORK & IT SERVICES
+                </span>
 
             </div>
 
 
-            
+            {/* =========================================
+                MAIN HEADING
+            ========================================= */}
+
+            <h1 className="ipgs-simple-hero-title">
+
+                Technical excellence,
+
+                <span>
+                    delivered
+                </span>
+
+            </h1>
+
+
+            {/* =========================================
+                SUB HEADING
+            ========================================= */}
+
+            <h2 className="ipgs-simple-hero-subtitle">
+
+                The network and IT services partner that never says
+                “that’s not my department”
+
+            </h2>
+
+
+            {/* =========================================
+                DESCRIPTION
+            ========================================= */}
+
+            <p className="ipgs-simple-hero-description">
+
+                IPGS is a network and IT services provider that builds,
+                designs, secures, and runs systems on an end-to-end basis.
+                With us driving your project forward, you’ll always get a
+                single point of contact and a can-do attitude.
+
+            </p>
+
+
+            {/* =========================================
+                ACTION
+            ========================================= */}
+
+            <div className="ipgs-simple-hero-actions">
+
+                <Link
+                    to="/contact"
+                    className="ipgs-simple-hero-button"
+                >
+
+                    <span>
+                        Let’s Talk
+                    </span>
+
+                    <i className="ri-arrow-right-line"></i>
+
+                </Link>
+
+            </div>
 
         </div>
 
-    </div>
+
+        {/* =================================================
+            STATISTICS
+        ================================================= */}
+
+        <div className="ipgs-simple-hero-stats">
 
 
-    {/* =================================================
-        STATISTICS
-    ================================================= */}
+            {/* STAT 1 */}
 
-    <div className="ipgs-home-hero-v2-stats-area">
+            <div className="ipgs-simple-hero-stat">
 
-        <div className="container">
+                <strong>
+                    Zero
+                </strong>
 
-            <div className="ipgs-home-hero-v2-stats">
+                <span>
+                    client accounts lost since 2016
+                </span>
 
-
-                {/* STAT 1 */}
-
-                <div className="ipgs-home-hero-v2-stat">
-
-                    <div className="ipgs-home-hero-v2-stat-top">
-
-                        <span className="ipgs-home-hero-v2-stat-number">
-                            Zero
-                        </span>
-
-                        <span className="ipgs-home-hero-v2-stat-icon">
-                            01
-                        </span>
-
-                    </div>
-
-                    <p>
-                        client accounts lost since 2016
-                    </p>
-
-                </div>
+            </div>
 
 
-                {/* STAT 2 */}
+            {/* STAT 2 */}
 
-                <div className="ipgs-home-hero-v2-stat">
+            <div className="ipgs-simple-hero-stat">
 
-                    <div className="ipgs-home-hero-v2-stat-top">
+                <strong>
+                    126
+                </strong>
 
-                        <span className="ipgs-home-hero-v2-stat-number">
-                            126
-                        </span>
+                <span>
+                    specialists across five countries — UK,
+                    Poland, UAE, Australia, India
+                </span>
 
-                        <span className="ipgs-home-hero-v2-stat-icon">
-                            02
-                        </span>
-
-                    </div>
-
-                    <p>
-                        specialists across five countries — UK,
-                        Poland, UAE, Australia, India
-                    </p>
-
-                </div>
+            </div>
 
 
-                {/* STAT 3 */}
+            {/* STAT 3 */}
 
-                <div className="ipgs-home-hero-v2-stat">
+            <div className="ipgs-simple-hero-stat">
 
-                    <div className="ipgs-home-hero-v2-stat-top">
+                <strong>
+                    80%
+                </strong>
 
-                        <span className="ipgs-home-hero-v2-stat-number">
-                            80%
-                        </span>
+                <span>
+                    year-on-year growth every year since 2018
+                </span>
 
-                        <span className="ipgs-home-hero-v2-stat-icon">
-                            03
-                        </span>
-
-                    </div>
-
-                    <p>
-                        year-on-year growth every year since 2018
-                    </p>
-
-                </div>
+            </div>
 
 
-                {/* STAT 4 */}
+            {/* STAT 4 */}
 
-                <div className="ipgs-home-hero-v2-stat">
+            <div className="ipgs-simple-hero-stat">
 
-                    <div className="ipgs-home-hero-v2-stat-top">
+                <strong>
+                    68 / 72
+                </strong>
 
-                        <span className="ipgs-home-hero-v2-stat-number">
-                            68 / 72
-                        </span>
-
-                        <span className="ipgs-home-hero-v2-stat-icon">
-                            04
-                        </span>
-
-                    </div>
-
-                    <p>
-                        IPGS Academy trainees placed into jobs
-                    </p>
-
-                </div>
+                <span>
+                    IPGS Academy trainees placed into jobs
+                </span>
 
             </div>
 
