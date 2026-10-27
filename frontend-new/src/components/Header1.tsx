@@ -14,36 +14,36 @@ const menuItems: MenuItem[] = [
         link: "/",
     },
 
-    {
-        title: "About IPGS",
-        link: "#",
-        children: [
-            {
-                title: "How We Work",
-                link: "#",
-            },
-            {
-                title: "Our Team",
-                link: "#",
-            },
-            {
-                title: "Culture",
-                link: "#",
-            },
-            {
-                title: "Careers",
-                link: "#",
-            },
-            {
-                title: "IPGS Academy",
-                link: "#",
-            },
-            {
-                title: "CSR",
-                link: "#",
-            },
-        ],
-    },
+{
+    title: "About IPGS",
+    link: "/AboutUs",
+    children: [
+        {
+            title: "How We Work",
+            link: "#",
+        },
+        {
+            title: "Our Team",
+            link: "#",
+        },
+        {
+            title: "Culture",
+            link: "#",
+        },
+        {
+            title: "Careers",
+            link: "#",
+        },
+        {
+            title: "IPGS Academy",
+            link: "#",
+        },
+        {
+            title: "CSR",
+            link: "#",
+        },
+    ],
+},
 
     {
         title: "Operational Technology",
@@ -72,6 +72,14 @@ const menuItems: MenuItem[] = [
                 title: "RAN",
                 link: "#",
             },
+            {
+                title: "Cybersecurity",
+                link: "#",
+            },
+            {
+                title: "IP Networks / Transmission",
+                link: "#",
+            },
         ],
     },
 
@@ -79,10 +87,7 @@ const menuItems: MenuItem[] = [
         title: "Enterprise IT Services",
         link: "#",
         children: [
-            {
-                title: "Cybersecurity",
-                link: "#",
-            },
+            
             {
                 title: "Infrastructure & Cloud",
                 link: "#",
@@ -326,7 +331,7 @@ const Header1: React.FC = () => {
                     {/* CONTACT BUTTON */}
 
                     <Link
-                        to="#"
+                        to="/contact"
                         className="ipgs-contact-btn"
                     >
                         Contact Us

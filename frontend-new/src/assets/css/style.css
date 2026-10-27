@@ -2880,13 +2880,28 @@ li.slick-active {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 20px;
-    padding: 140px 100px;
+    padding: 76px 100px;
     position: relative;
 }
 
 .desck-about {
-    background-image: url(../images/hero/image-data-about.png);
+    position: relative;
+    overflow: hidden;
+
+
+    background:
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(95, 182, 213, 0.16) 0%,
+            rgba(95, 182, 213, 0.08) 22%,
+            transparent 48%
+        ),
+        linear-gradient(
+            120deg,
+            #0F1E2A 0%,
+            #173448 48%,
+            #256F90 100%
+        );
 }
 
 .services-home-hero::after {
@@ -2913,10 +2928,11 @@ li.slick-active {
 }
 
 .title-of-hero p {
-    font-size: 64px;
+    font-size: 41px;
     font-weight: 800;
     line-height: 80px;
     color: #FFF;
+    line-height: 46px;
 }
 
 .title-of-hero span {
@@ -14728,6 +14744,3175 @@ a.ipgs-new-footer-contact-item:hover
 
         right: -130px;
         bottom: -110px;
+    }
+
+}
+
+
+
+
+
+
+/* =========================================================
+   ABOUT STORY SECTION
+========================================================= */
+
+.ipgs-about-story-section {
+    padding: 90px 0;
+
+    background: #F5F8FA;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.ipgs-about-story-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.ipgs-about-story-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+
+.ipgs-about-story-image img {
+    display: block;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.ipgs-about-story-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ipgs-about-story-content {
+    max-width: 620px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.ipgs-about-story-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    color: #2F89B0;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.ipgs-about-story-label span {
+    width: 34px;
+    height: 2px;
+
+    background: #2F89B0;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.ipgs-about-story-content h2 {
+    margin:
+        0
+        0
+        24px;
+
+    color: #0F1E2A;
+
+    font-size: clamp(36px, 4vw, 54px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+.ipgs-about-story-content p {
+    margin:
+        0
+        0
+        18px;
+
+    color: #5F6E78;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.ipgs-about-story-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-about-story-section {
+        padding: 70px 0;
+    }
+
+
+    .ipgs-about-story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .ipgs-about-story-content {
+        max-width: 100%;
+    }
+
+
+    .ipgs-about-story-image img {
+        height: 430px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-about-story-section {
+        padding: 55px 0;
+    }
+
+
+    .ipgs-about-story-grid {
+        gap: 32px;
+    }
+
+
+    .ipgs-about-story-image {
+        border-radius: 12px;
+    }
+
+
+    .ipgs-about-story-image img {
+        height: 300px;
+    }
+
+
+    .ipgs-about-story-content h2 {
+        font-size: 34px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-about-story-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ABOUT MISSION SECTION
+========================================================= */
+
+.ipgs-about-mission-section {
+    position: relative;
+
+    padding: 95px 0;
+
+    background: #0F1E2A;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ipgs-about-mission-head {
+    max-width: 920px;
+
+    margin-bottom: 50px;
+}
+
+
+.ipgs-about-mission-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+    color: #5FB6D5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.ipgs-about-mission-label span {
+    width: 34px;
+    height: 2px;
+
+    background: #5FB6D5;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.ipgs-about-mission-head h2 {
+    max-width: 900px;
+
+    margin:
+        0
+        0
+        24px;
+
+    color: #FFFFFF;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.8px;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+========================================================= */
+
+.ipgs-about-mission-head p {
+    max-width: 860px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.ipgs-about-mission-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.ipgs-about-mission-card {
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 38px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.ipgs-about-mission-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(95, 182, 213, 0.55);
+
+    background: rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.ipgs-about-mission-card-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+    background: #2F89B0;
+
+    color: #FFFFFF;
+
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.ipgs-about-mission-card h3 {
+    max-width: 500px;
+
+    margin:
+        0
+        0
+        18px;
+
+    color: #FFFFFF;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.ipgs-about-mission-card p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-about-mission-section {
+        padding: 75px 0;
+    }
+
+
+    .ipgs-about-mission-head {
+        margin-bottom: 40px;
+    }
+
+
+    .ipgs-about-mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ipgs-about-mission-card {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-about-mission-section {
+        padding: 60px 0;
+    }
+
+
+    .ipgs-about-mission-head h2 {
+        font-size: 34px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-about-mission-head p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .ipgs-about-mission-card {
+        padding: 28px 24px;
+    }
+
+
+    .ipgs-about-mission-card h3 {
+        font-size: 22px;
+    }
+
+
+    .ipgs-about-mission-card p {
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   ABOUT GROWTH SECTION
+========================================================= */
+
+.ipgs-about-growth-section {
+    padding: 95px 0;
+
+    background: #FFFFFF;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ipgs-about-growth-head {
+    max-width: 850px;
+
+    margin-bottom: 65px;
+}
+
+
+.ipgs-about-growth-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #2F89B0;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.ipgs-about-growth-label span {
+    width: 34px;
+    height: 2px;
+
+    background: #2F89B0;
+}
+
+
+.ipgs-about-growth-head h2 {
+    max-width: 800px;
+
+    margin:
+        0
+        0
+        22px;
+
+    color: #0F1E2A;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.6px;
+}
+
+
+.ipgs-about-growth-head p {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: #5F6E78;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.ipgs-about-growth-timeline {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+    padding-top: 35px;
+}
+
+
+/* CONNECTING LINE */
+
+.ipgs-about-growth-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 11px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: #D9E7EE;
+}
+
+
+/* =========================================================
+   TIMELINE ITEM
+========================================================= */
+
+.ipgs-about-growth-item {
+    position: relative;
+
+    padding-top: 18px;
+}
+
+
+/* =========================================================
+   DOT
+========================================================= */
+
+.ipgs-about-growth-dot {
+    position: absolute;
+
+    top: -30px;
+    left: 0;
+
+    width: 14px;
+    height: 14px;
+
+    border: 3px solid #FFFFFF;
+
+    border-radius: 50%;
+
+    background: #2F89B0;
+
+    box-shadow: 0 0 0 4px #EAF5FA;
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.ipgs-about-growth-year {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #2F89B0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.ipgs-about-growth-item strong {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #0F1E2A;
+
+    font-size: clamp(30px, 3vw, 42px);
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ipgs-about-growth-item p {
+    max-width: 330px;
+
+    margin: 0;
+
+    color: #5F6E78;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BOTTOM CONTENT
+========================================================= */
+
+.ipgs-about-growth-bottom {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    align-items: start;
+
+    gap: 25px;
+
+    max-width: 930px;
+
+    margin-top: 60px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #D9E7EE;
+}
+
+
+.ipgs-about-growth-bottom-line {
+    width: 50px;
+    height: 3px;
+
+    margin-top: 10px;
+
+    background: #2F89B0;
+}
+
+
+.ipgs-about-growth-bottom p {
+    margin: 0;
+
+    color: #1C2B36;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-about-growth-section {
+        padding: 75px 0;
+    }
+
+
+    .ipgs-about-growth-head {
+        margin-bottom: 50px;
+    }
+
+
+    .ipgs-about-growth-timeline {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-top: 0;
+
+        padding-left: 30px;
+    }
+
+
+    .ipgs-about-growth-timeline::before {
+        top: 0;
+        left: 6px;
+
+        width: 1px;
+        height: 100%;
+    }
+
+
+    .ipgs-about-growth-item {
+        padding-top: 0;
+    }
+
+
+    .ipgs-about-growth-dot {
+        top: 2px;
+        left: -30px;
+    }
+
+
+    .ipgs-about-growth-item p {
+        max-width: 650px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-about-growth-section {
+        padding: 60px 0;
+    }
+
+
+    .ipgs-about-growth-head h2 {
+        font-size: 34px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-about-growth-head p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .ipgs-about-growth-timeline {
+        gap: 35px;
+    }
+
+
+    .ipgs-about-growth-item strong {
+        font-size: 30px;
+    }
+
+
+    .ipgs-about-growth-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 45px;
+    }
+
+
+    .ipgs-about-growth-bottom p {
+        font-size: 16px;
+    }
+
+}
+
+
+
+/* =========================================================
+   ABOUT FAMILY SECTION
+========================================================= */
+
+.ipgs-about-family-section {
+    padding: 95px 0;
+
+    background: #F5F8FA;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ipgs-about-family-head {
+    max-width: 780px;
+
+    margin-bottom: 50px;
+}
+
+
+.ipgs-about-family-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #2F89B0;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.ipgs-about-family-label span {
+    width: 34px;
+    height: 2px;
+
+    background: #2F89B0;
+}
+
+
+.ipgs-about-family-head h2 {
+    margin:
+        0
+        0
+        20px;
+
+    color: #0F1E2A;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.ipgs-about-family-head p {
+    max-width: 730px;
+
+    margin: 0;
+
+    color: #5F6E78;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.ipgs-about-family-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.ipgs-about-family-card {
+    position: relative;
+
+    min-height: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 32px;
+
+    overflow: hidden;
+
+    border: 1px solid #D9E7EE;
+
+    border-radius: 14px;
+
+    background: #FFFFFF;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.ipgs-about-family-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #A9D7E8;
+
+    box-shadow: 0 16px 35px rgba(15, 30, 42, 0.08);
+}
+
+
+/* TOP ACCENT */
+
+.ipgs-about-family-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #2F89B0;
+
+    transition: width 0.3s ease;
+}
+
+
+.ipgs-about-family-card:hover::before {
+    width: 100%;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.ipgs-about-family-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 26px;
+
+    border-radius: 10px;
+
+    background: #EAF5FA;
+
+    color: #2F89B0;
+
+    font-size: 24px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.ipgs-about-family-card:hover .ipgs-about-family-icon {
+    background: #2F89B0;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.ipgs-about-family-card h3 {
+    margin:
+        0
+        0
+        14px;
+
+    color: #0F1E2A;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.ipgs-about-family-card p {
+    margin:
+        0
+        0
+        25px;
+
+    color: #5F6E78;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LEARN MORE
+========================================================= */
+
+.ipgs-about-family-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: #2F89B0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.ipgs-about-family-link i {
+    font-size: 17px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.ipgs-about-family-card:hover .ipgs-about-family-link i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-about-family-section {
+        padding: 75px 0;
+    }
+
+
+    .ipgs-about-family-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-about-family-section {
+        padding: 60px 0;
+    }
+
+
+    .ipgs-about-family-head {
+        margin-bottom: 35px;
+    }
+
+
+    .ipgs-about-family-head h2 {
+        font-size: 34px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-about-family-head p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .ipgs-about-family-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .ipgs-about-family-card {
+        min-height: auto;
+
+        padding: 28px 24px;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   ABOUT FINAL CTA
+========================================================= */
+
+.ipgs-about-final-cta {
+    position: relative;
+
+    padding: 80px 0;
+
+    overflow: hidden;
+
+    background: #0F1E2A;
+}
+
+
+/* SUBTLE DECORATION */
+
+.ipgs-about-final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 8%;
+
+    width: 170px;
+    height: 3px;
+
+    background: #2F89B0;
+}
+
+
+.ipgs-about-final-cta::after {
+    content: "";
+
+    position: absolute;
+
+    right: -130px;
+    bottom: -180px;
+
+    width: 360px;
+    height: 360px;
+
+    border: 1px solid rgba(95, 182, 213, 0.14);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.ipgs-about-final-cta-inner {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ipgs-about-final-cta-content {
+    max-width: 820px;
+}
+
+
+.ipgs-about-final-cta-label {
+    margin-bottom: 17px;
+
+    color: #5FB6D5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.ipgs-about-final-cta-content h2 {
+    margin:
+        0
+        0
+        20px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(36px, 4vw, 54px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.ipgs-about-final-cta-content p {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.ipgs-about-final-cta-button {
+    min-width: 165px;
+    min-height: 55px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        0
+        24px;
+
+    background: #2F89B0;
+
+    border: 1px solid #2F89B0;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ipgs-about-final-cta-button:hover {
+    background: #256F90;
+
+    border-color: #256F90;
+
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+}
+
+
+.ipgs-about-final-cta-button i {
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.ipgs-about-final-cta-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-about-final-cta {
+        padding: 70px 0;
+    }
+
+
+    .ipgs-about-final-cta-inner {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .ipgs-about-final-cta-action {
+        justify-self: start;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-about-final-cta {
+        padding: 55px 0;
+    }
+
+
+    .ipgs-about-final-cta-content h2 {
+        font-size: 34px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-about-final-cta-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .ipgs-about-final-cta-button {
+        width: 100%;
+    }
+
+}
+
+
+.desck-about::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    right: -140px;
+    top: -150px;
+
+    border: 1px solid rgba(169, 215, 232, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+.desck-about::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 2px;
+
+    right: 8%;
+    bottom: 28px;
+
+    background: rgba(95, 182, 213, 0.45);
+
+    pointer-events: none;
+}
+.desck-about .title-of-hero span {
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 14px;
+}
+
+.desck-about .title-of-hero span a {
+    color: #A9D7E8;
+
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+.desck-about .title-of-hero span a:hover {
+    color: #FFFFFF;
+}
+@media (max-width: 767px) {
+
+    .desck-about {
+        padding: 95px 0 65px;
+    }
+
+    .desck-about .title-of-hero p {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+    .desck-about::before {
+        width: 260px;
+        height: 260px;
+
+        right: -130px;
+        top: -100px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   IPGS CONTACT DOCUMENT DESIGN
+========================================================= */
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.ipgs-contact-doc-intro {
+    padding: 90px 0;
+
+    background: #FFFFFF;
+}
+
+
+.ipgs-contact-doc-intro-inner {
+    max-width: 1200px;
+}
+
+
+.ipgs-contact-doc-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    color: #2F89B0;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+.ipgs-contact-doc-label > span {
+    width: 34px;
+    height: 2px;
+
+    background: #2F89B0;
+}
+
+
+.ipgs-contact-doc-label-light {
+    color: #5FB6D5;
+}
+
+
+.ipgs-contact-doc-label-light > span {
+    background: #5FB6D5;
+}
+
+
+.ipgs-contact-doc-intro-grid {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: end;
+
+    gap: 80px;
+}
+
+
+.ipgs-contact-doc-intro-grid h1 {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #0F1E2A;
+
+    font-size: clamp(42px, 4.8vw, 64px);
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+
+.ipgs-contact-doc-intro-grid h1 span {
+    color: #2F89B0;
+}
+
+
+.ipgs-contact-doc-intro-right {
+    max-width: 510px;
+}
+
+
+.ipgs-contact-doc-intro-right p {
+    margin: 0 0 28px;
+
+    color: #5F6E78;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.ipgs-contact-doc-primary-button {
+    min-height: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0 23px;
+
+    border: 1px solid #2F89B0;
+
+    background: #2F89B0;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.ipgs-contact-doc-primary-button:hover {
+    background: #256F90;
+
+    color: #FFFFFF;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px
+        rgba(47, 137, 176, 0.18);
+}
+
+
+.ipgs-contact-doc-primary-button i {
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.ipgs-contact-doc-primary-button:hover i {
+    transform: translateY(4px);
+}
+
+
+/* =========================================================
+   OFFICES
+========================================================= */
+
+.ipgs-contact-offices-section {
+    padding: 95px 0;
+
+    background: #F5F8FA;
+}
+
+
+.ipgs-contact-offices-head {
+    max-width: 760px;
+
+    margin-bottom: 50px;
+}
+
+
+.ipgs-contact-offices-head h2 {
+    margin: 0 0 18px;
+
+    color: #0F1E2A;
+
+    font-size: clamp(38px, 4vw, 54px);
+
+    font-weight: 700;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.6px;
+}
+
+
+.ipgs-contact-offices-head > p {
+    margin: 0;
+
+    color: #5F6E78;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FEATURED OFFICE
+========================================================= */
+
+.ipgs-contact-featured-office {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 70px 1.25fr 0.75fr;
+
+    gap: 32px;
+
+    margin-bottom: 22px;
+
+    padding: 40px;
+
+    overflow: hidden;
+
+    background: #0F1E2A;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.ipgs-contact-featured-office::after {
+    content: "";
+
+    position: absolute;
+
+    right: -130px;
+
+    bottom: -200px;
+
+    width: 360px;
+    height: 360px;
+
+    border: 1px solid rgba(95, 182, 213, 0.12);
+
+    border-radius: 50%;
+}
+
+
+.ipgs-contact-featured-office:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 24px 55px
+        rgba(15, 30, 42, 0.15);
+}
+
+
+.ipgs-contact-office-number {
+    position: relative;
+
+    z-index: 2;
+
+    color: #5FB6D5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+
+.ipgs-contact-featured-main,
+.ipgs-contact-featured-details {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.ipgs-contact-office-country {
+    margin-bottom: 12px;
+
+    color: #2F89B0;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+}
+
+
+.ipgs-contact-featured-office .ipgs-contact-office-country {
+    color: #5FB6D5;
+}
+
+
+.ipgs-contact-featured-office h3 {
+    margin: 0 0 12px;
+
+    color: #FFFFFF;
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    line-height: 1.25;
+}
+
+
+.ipgs-contact-office-description {
+    margin: 0;
+
+    color: #5F6E78;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.ipgs-contact-featured-office .ipgs-contact-office-description {
+    max-width: 560px;
+
+    color: rgba(255, 255, 255, 0.64);
+}
+
+
+/* ADDRESS */
+
+.ipgs-contact-office-address {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    margin-top: 22px;
+}
+
+
+.ipgs-contact-office-address i {
+    flex: 0 0 auto;
+
+    margin-top: 3px;
+
+    color: #2F89B0;
+
+    font-size: 18px;
+}
+
+
+.ipgs-contact-featured-office
+.ipgs-contact-office-address i {
+    color: #5FB6D5;
+}
+
+
+.ipgs-contact-office-address p {
+    margin: 0;
+
+    color: #5F6E78;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.ipgs-contact-featured-office
+.ipgs-contact-office-address p {
+    max-width: 560px;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   FEATURED DETAILS
+========================================================= */
+
+.ipgs-contact-featured-details {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding-left: 28px;
+
+    border-left:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+}
+
+
+.ipgs-contact-featured-details > a:not(.ipgs-contact-map-button) {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 0;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+}
+
+
+.ipgs-contact-featured-details > a > i {
+    color: #5FB6D5;
+
+    font-size: 19px;
+}
+
+
+.ipgs-contact-featured-details span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: rgba(255, 255, 255, 0.46);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+
+    text-transform: uppercase;
+}
+
+
+.ipgs-contact-featured-details strong {
+    color: #FFFFFF;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.ipgs-contact-map-button {
+    min-height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 7px;
+
+    padding: 0 18px;
+
+    background: #2F89B0;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ipgs-contact-map-button:hover {
+    background: #256F90;
+
+    color: #FFFFFF;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   OFFICE GRID
+========================================================= */
+
+.ipgs-contact-office-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.ipgs-contact-office-card {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 32px;
+
+    overflow: hidden;
+
+    border: 1px solid #D9E7EE;
+
+    background: #FFFFFF;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.ipgs-contact-office-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #2F89B0;
+
+    transition: width 0.35s ease;
+}
+
+
+.ipgs-contact-office-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #A9D7E8;
+
+    box-shadow:
+        0 20px 45px
+        rgba(15, 30, 42, 0.08);
+}
+
+
+.ipgs-contact-office-card:hover::before {
+    width: 100%;
+}
+
+
+.ipgs-contact-office-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 27px;
+}
+
+
+.ipgs-contact-office-card-top > span {
+    color: #8B979E;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.ipgs-contact-office-marker {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #EAF5FA;
+
+    color: #2F89B0;
+
+    font-size: 19px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.ipgs-contact-office-card:hover
+.ipgs-contact-office-marker {
+    background: #2F89B0;
+
+    color: #FFFFFF;
+}
+
+
+.ipgs-contact-office-card h3 {
+    margin: 0 0 12px;
+
+    color: #0F1E2A;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+.ipgs-contact-office-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 24px 0 0;
+
+    background: #E4EDF1;
+}
+
+
+/* CONTACT */
+
+.ipgs-contact-office-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+.ipgs-contact-office-contact a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1C2B36;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: color 0.25s ease;
+}
+
+
+.ipgs-contact-office-contact a i {
+    color: #2F89B0;
+
+    font-size: 16px;
+}
+
+
+.ipgs-contact-office-contact a:hover {
+    color: #2F89B0;
+}
+
+
+/* MAP LINK */
+
+.ipgs-contact-office-map-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    padding-top: 24px;
+
+    color: #2F89B0;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.ipgs-contact-office-map-link i {
+    font-size: 16px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.ipgs-contact-office-map-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   MAP SECTION
+========================================================= */
+
+.ipgs-contact-map-section {
+    padding-top: 85px;
+
+    background: #0F1E2A;
+}
+
+
+.ipgs-contact-map-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 35px;
+}
+
+
+.ipgs-contact-map-heading h2 {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: clamp(35px, 4vw, 50px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.4px;
+}
+
+
+.ipgs-contact-map-heading > a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #A9D7E8;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.ipgs-contact-map-heading > a i {
+    transition: transform 0.3s ease;
+}
+
+
+.ipgs-contact-map-heading > a:hover i {
+    transform: translate(3px, -3px);
+}
+
+
+.ipgs-contact-map-frame {
+    width: 100%;
+
+    height: 520px;
+
+    overflow: hidden;
+}
+
+
+.ipgs-contact-map-frame iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    filter:
+        saturate(0.82)
+        contrast(1.02);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.ipgs-contact-process-section {
+    padding: 95px 0;
+
+    background: #FFFFFF;
+}
+
+
+.ipgs-contact-process-head {
+    max-width: 780px;
+
+    margin-bottom: 50px;
+}
+
+
+.ipgs-contact-process-head h2 {
+    margin: 0;
+
+    color: #0F1E2A;
+
+    font-size: clamp(38px, 4vw, 54px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.ipgs-contact-process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    border-top: 1px solid #D9E7EE;
+
+    border-bottom: 1px solid #D9E7EE;
+}
+
+
+.ipgs-contact-process-card {
+    min-height: 310px;
+
+    padding: 35px 32px;
+
+    border-right: 1px solid #D9E7EE;
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.ipgs-contact-process-card:last-child {
+    border-right: 0;
+}
+
+
+.ipgs-contact-process-card:hover {
+    background: #F5F8FA;
+
+    transform: translateY(-5px);
+}
+
+
+.ipgs-contact-process-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+}
+
+
+.ipgs-contact-process-top span {
+    color: #2F89B0;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.ipgs-contact-process-top i {
+    color: #A9D7E8;
+
+    font-size: 32px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ipgs-contact-process-card:hover
+.ipgs-contact-process-top i {
+    color: #2F89B0;
+
+    transform: translateY(-3px);
+}
+
+
+.ipgs-contact-process-card h3 {
+    margin: 0 0 15px;
+
+    color: #0F1E2A;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+.ipgs-contact-process-card p {
+    margin: 0;
+
+    color: #5F6E78;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MESSAGE SECTION
+========================================================= */
+
+.ipgs-contact-message-section {
+    padding: 100px 0;
+
+    background: #0B1117;
+}
+
+
+.ipgs-contact-message-layout {
+    display: grid;
+
+    grid-template-columns: 0.78fr 1.22fr;
+
+    align-items: start;
+
+    gap: 75px;
+}
+
+
+.ipgs-contact-message-content {
+    position: sticky;
+
+    top: 120px;
+}
+
+
+.ipgs-contact-message-content h2 {
+    margin: 0 0 20px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(40px, 4.5vw, 58px);
+
+    font-weight: 700;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.7px;
+}
+
+
+.ipgs-contact-message-content > p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.63);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* EMAIL */
+
+.ipgs-contact-message-mini {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+
+.ipgs-contact-message-mini > i {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #2F89B0;
+
+    color: #FFFFFF;
+
+    font-size: 20px;
+}
+
+
+.ipgs-contact-message-mini span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.ipgs-contact-message-mini a {
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.ipgs-contact-message-form {
+    padding: 42px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.ipgs-contact-message-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px 18px;
+}
+
+
+.ipgs-contact-form-field-full {
+    grid-column: 1 / -1;
+}
+
+
+.ipgs-contact-form-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #1C2B36;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.ipgs-contact-form-control {
+    position: relative;
+}
+
+
+.ipgs-contact-form-control > i:first-child {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+
+    left: 15px;
+
+    transform: translateY(-50%);
+
+    color: #2F89B0;
+
+    font-size: 18px;
+
+    pointer-events: none;
+}
+
+
+.ipgs-contact-form-control input,
+.ipgs-contact-form-control select,
+.ipgs-contact-form-control textarea {
+    width: 100%;
+
+    outline: none;
+
+    border: 1px solid #D9E7EE;
+
+    border-radius: 0;
+
+    background: #F8FBFC;
+
+    color: #1C2B36;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ipgs-contact-form-control input,
+.ipgs-contact-form-control select {
+    height: 54px;
+
+    padding: 0 45px;
+}
+
+
+.ipgs-contact-form-control textarea {
+    min-height: 145px;
+
+    padding: 16px 45px;
+
+    resize: vertical;
+}
+
+
+.ipgs-contact-form-control input:focus,
+.ipgs-contact-form-control select:focus,
+.ipgs-contact-form-control textarea:focus {
+    border-color: #2F89B0;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(47, 137, 176, 0.08);
+}
+
+
+.ipgs-contact-form-textarea > i:first-child {
+    top: 17px;
+
+    transform: none;
+}
+
+
+.ipgs-contact-form-control select {
+    appearance: none;
+
+    cursor: pointer;
+}
+
+
+.ipgs-contact-select-icon {
+    left: auto !important;
+
+    right: 14px !important;
+
+    color: #5F6E78 !important;
+}
+
+
+/* ERROR */
+
+.ipgs-contact-form-error {
+    margin: 6px 0 0;
+
+    color: #C84646;
+
+    font-size: 11px;
+}
+
+
+/* SUCCESS */
+
+.ipgs-contact-form-success {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 22px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #B9DBCE;
+
+    background: #F1FAF6;
+
+    color: #207069;
+
+    font-size: 13px;
+}
+
+
+/* BUTTON */
+
+.ipgs-contact-message-button {
+    min-height: 54px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 27px;
+
+    padding: 0 25px;
+
+    border: 1px solid #2F89B0;
+
+    background: #2F89B0;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.ipgs-contact-message-button:hover {
+    background: #256F90;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 24px
+        rgba(47, 137, 176, 0.2);
+}
+
+
+.ipgs-contact-message-button i {
+    transition: transform 0.3s ease;
+}
+
+
+.ipgs-contact-message-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SMOOTH ANIMATIONS
+========================================================= */
+
+@keyframes ipgsContactFadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes ipgsContactFadeLeft {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes ipgsContactFadeRight {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+.ipgs-contact-doc-intro-grid {
+    animation:
+        ipgsContactFadeUp
+        0.8s
+        ease
+        both;
+}
+
+
+.ipgs-contact-featured-office {
+    animation:
+        ipgsContactFadeUp
+        0.75s
+        ease
+        both;
+}
+
+
+.ipgs-contact-office-card {
+    animation:
+        ipgsContactFadeUp
+        0.7s
+        ease
+        both;
+}
+
+
+.ipgs-contact-office-card:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+
+.ipgs-contact-office-card:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+
+.ipgs-contact-office-card:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+
+.ipgs-contact-process-card {
+    animation:
+        ipgsContactFadeUp
+        0.7s
+        ease
+        both;
+}
+
+
+.ipgs-contact-message-content {
+    animation:
+        ipgsContactFadeLeft
+        0.75s
+        ease
+        both;
+}
+
+
+.ipgs-contact-message-form {
+    animation:
+        ipgsContactFadeRight
+        0.75s
+        ease
+        both;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-contact-doc-intro,
+    .ipgs-contact-offices-section,
+    .ipgs-contact-process-section {
+        padding: 75px 0;
+    }
+
+
+    .ipgs-contact-doc-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .ipgs-contact-featured-office {
+        grid-template-columns: 50px 1fr;
+
+        gap: 20px;
+    }
+
+
+    .ipgs-contact-featured-details {
+        grid-column: 2;
+
+        padding:
+            25px
+            0
+            0;
+
+        border-top:
+            1px solid
+            rgba(255, 255, 255, 0.1);
+
+        border-left: 0;
+    }
+
+
+    .ipgs-contact-office-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ipgs-contact-map-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .ipgs-contact-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ipgs-contact-process-card {
+        min-height: auto;
+
+        border-right: 0;
+
+        border-bottom: 1px solid #D9E7EE;
+    }
+
+
+    .ipgs-contact-process-card:last-child {
+        border-bottom: 0;
+    }
+
+
+    .ipgs-contact-message-section {
+        padding: 75px 0;
+    }
+
+
+    .ipgs-contact-message-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .ipgs-contact-message-content {
+        position: static;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-contact-doc-intro,
+    .ipgs-contact-offices-section,
+    .ipgs-contact-process-section {
+        padding: 58px 0;
+    }
+
+
+    .ipgs-contact-doc-intro-grid h1 {
+        font-size: 36px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-contact-doc-intro-right p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .ipgs-contact-featured-office {
+        grid-template-columns: 1fr;
+
+        padding: 28px 22px;
+    }
+
+
+    .ipgs-contact-office-number {
+        margin-bottom: 3px;
+    }
+
+
+    .ipgs-contact-featured-details {
+        grid-column: auto;
+    }
+
+
+    .ipgs-contact-featured-office h3 {
+        font-size: 24px;
+    }
+
+
+    .ipgs-contact-office-card {
+        min-height: auto;
+
+        padding: 27px 22px;
+    }
+
+
+    .ipgs-contact-map-section {
+        padding-top: 58px;
+    }
+
+
+    .ipgs-contact-map-heading h2 {
+        font-size: 34px;
+    }
+
+
+    .ipgs-contact-map-frame {
+        height: 370px;
+    }
+
+
+    .ipgs-contact-process-head h2 {
+        font-size: 34px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-contact-process-card {
+        padding: 28px 20px;
+    }
+
+
+    .ipgs-contact-process-top {
+        margin-bottom: 28px;
+    }
+
+
+    .ipgs-contact-message-section {
+        padding: 58px 0;
+    }
+
+
+    .ipgs-contact-message-content h2 {
+        font-size: 36px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ipgs-contact-message-content > p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .ipgs-contact-message-form {
+        padding: 28px 20px;
+    }
+
+
+    .ipgs-contact-message-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ipgs-contact-form-field-full {
+        grid-column: auto;
+    }
+
+
+    .ipgs-contact-message-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ipgs-contact-doc-intro-grid,
+    .ipgs-contact-featured-office,
+    .ipgs-contact-office-card,
+    .ipgs-contact-process-card,
+    .ipgs-contact-message-content,
+    .ipgs-contact-message-form {
+        animation: none;
+    }
+
+
+    .ipgs-contact-featured-office,
+    .ipgs-contact-office-card,
+    .ipgs-contact-process-card,
+    .ipgs-contact-message-button,
+    .ipgs-contact-map-button {
+        transition: none;
     }
 
 }

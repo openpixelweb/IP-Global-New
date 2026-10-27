@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import whyHmImage from "../assets/images/why-hm.jpg";
 // import bannerBg from "../assets/images/banner-bg.jpg";
-import teamWorkImage from "../assets/images/team-work.png";
+import teamWorkImage from "../assets/images/team-work.jpg";
 import indusHmImage1 from "../assets/images/indus-hm-01.jpg";
 import indusHmImage2 from "../assets/images/indus-hm-02.jpg";
 import indusHmImage3 from "../assets/images/indus-hm-03.jpg";
@@ -59,22 +59,10 @@ const Home1: React.FC = () => {
                 Technical excellence,
 
                 <span>
-                    delivered
+                    built today for tomorrow’s big ideas
                 </span>
 
             </h1>
-
-
-            {/* =========================================
-                SUB HEADING
-            ========================================= */}
-
-            <h2 className="ipgs-simple-hero-subtitle">
-
-                The network and IT services partner that never says
-                “that’s not my department”
-
-            </h2>
 
 
             {/* =========================================
@@ -83,10 +71,8 @@ const Home1: React.FC = () => {
 
             <p className="ipgs-simple-hero-description">
 
-                IPGS is a network and IT services provider that builds,
-                designs, secures, and runs systems on an end-to-end basis.
-                With us driving your project forward, you’ll always get a
-                single point of contact and a can-do attitude.
+                IPGS is a network and IT services provider that does it all. We’re an end-to-end partner that designs, builds, and runs
+                the infrastructure needed to turn ambition into results.
 
             </p>
 
@@ -127,11 +113,11 @@ const Home1: React.FC = () => {
             <div className="ipgs-simple-hero-stat">
 
                 <strong>
-                    Zero
+                    4-hour
                 </strong>
 
                 <span>
-                    client accounts lost since 2016
+                    response, 12-hour
                 </span>
 
             </div>
@@ -142,12 +128,11 @@ const Home1: React.FC = () => {
             <div className="ipgs-simple-hero-stat">
 
                 <strong>
-                    126
+                    80-90%
                 </strong>
 
                 <span>
-                    specialists across five countries — UK,
-                    Poland, UAE, Australia, India
+                    of RAN tickets resolved without vendor escalation
                 </span>
 
             </div>
@@ -158,11 +143,11 @@ const Home1: React.FC = () => {
             <div className="ipgs-simple-hero-stat">
 
                 <strong>
-                    80%
+                    5
                 </strong>
 
                 <span>
-                    year-on-year growth every year since 2018
+                    global offices
                 </span>
 
             </div>
@@ -177,7 +162,7 @@ const Home1: React.FC = () => {
                 </strong>
 
                 <span>
-                    IPGS Academy trainees placed into jobs
+                    academy trainees placed into jobs
                 </span>
 
             </div>
@@ -187,7 +172,6 @@ const Home1: React.FC = () => {
     </div>
 
 </section>
-
 
 
 {/* =====================================================

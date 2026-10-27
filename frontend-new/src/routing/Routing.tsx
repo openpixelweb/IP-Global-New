@@ -30,13 +30,13 @@ interface RouteType {
     element: ReactNode;
 }
 
-export const routesWithMainLayout1: RouteType[] = [
-    { path: "/", element: <Home1 /> },
+export const routesWithMainLayout2: RouteType[] = [
     { path: "/Home3", element: <Home3 /> },
     { path: "/Home4", element: <Home4 /> },
 ];
 
-export const routesWithMainLayout2: RouteType[] = [
+export const routesWithMainLayout1: RouteType[] = [
+    { path: "/", element: <Home1 /> },
     { path: "/Home2", element: <Home2 /> },
     { path: "/AboutUs", element: <AboutUs /> },
     { path: "/Team1", element: <Team1 /> },

@@ -1,390 +1,563 @@
-import React, { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 
-import AboutImg3 from "../assets/images/about/image-3.png";
-import AboutOnly from "../assets/images/about/only.png";
-import CheckArrowSvg from "../assets/images/services/arrow.svg";
-import CreackSvg from "../assets/images/hero/crack.svg";
-import MedelSvg from "../assets/images/about/medel.svg";
-import ProcessSec from "../components/ProcessSec.tsx";
-import thirdImage1 from "../assets/images/services/third-image-1.svg";
-import thirdImage2 from "../assets/images/services/third-image-2.svg";
-import videoData from '../data/videoData.json';
-import VideoModal from "../components/VideoModal.tsx";
-import Video1 from "../assets/images/why-choose/why-choose.mp4";
-import ArrowChoose from "../assets/images/why-choose/arrow.png";
-import BtnImage from "../assets/images/hero/btn-image.svg";
-import CallIconSvg from "../assets/images/prosess/call-icon.svg";
-import PlayImg from "../assets/images/appointment/play.png";
-import Team from "../components/Team.tsx";
-import SuccessSlider from "../components/SuccessSlider.tsx";
-import TestimonialSec from "../components/TestimonialSec.tsx";
-import AppointmentForm from "../components/AppointmentForm.tsx";
+// import AboutImg3 from "../assets/images/about/image-3.png";
 
+import AboutImage from "../assets/images/abt-01.jpg";
 
 const AboutUs: React.FC = () => {
-    // small appointment slider index
-    const [currentIndex, setCurrentIndex] = useState<number>(0);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % 4);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
-    // Yt video PopUp
-    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <>
             <div className="js-scroll">
                 {/* <!-- ========================= [ hero section all separate start ] ========================= --> */}
-                <div className="bg-container hero-data-bottom">
-                    <div className="services-home-hero desck-about">
-                        <div className="title-of-hero">
-                            <p>About Us</p>
-                            <span><Link to="/">Home</Link> - About Us</span>
-                        </div>
-                    </div>
+<div className="hero-data-bottom">
+
+    <div className="services-home-hero desck-about">
+
+        <div className="title-of-hero">
+
+            <p>
+                Technical excellence, built for
+                <br />
+                mission-critical infrastructure
+            </p>
+
+            <span>
+                <Link to="/">Home</Link> - About Us
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<section className="ipgs-about-story-section">
+
+    <div className="container">
+
+        <div className="ipgs-about-story-grid">
+
+            {/* LEFT IMAGE */}
+
+            <div className="ipgs-about-story-image">
+
+                <img
+    src={AboutImage}
+    alt="IPGS team and company journey"
+/>
+
+            </div>
+
+
+            {/* RIGHT CONTENT */}
+
+            <div className="ipgs-about-story-content">
+
+                <div className="ipgs-about-story-label">
+
+                    <span></span>
+
+                    OUR STORY
+
                 </div>
-                {/* <!-- ========================= [ hero section all separate Exit ] ========================= --> */}
-                {/* <!-- ========================= [ About section all separate Start ] ========================= --> */}
-                <div className="about-data">
-                    <div className="container">
-                        <div className="row about-detail-data">
-                            <div className="col-xl-6 col-lg-6 col-md-12">
-                                <div className="all-left-about">
-                                    <div className="image-data-about mt-0">
-                                        <img src={AboutImg3} alt="image" className="position-relative" />
-                                        <div className="data-experience">
-                                            <div className="font-about-exper">
-                                                <p className="font-exper count" data-number="14">14</p>
-                                                <div className="rounded-about"></div>
-                                                <p className="year-exper">Years of Experience</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="only-image-about">
-                                        <img src={AboutOnly} alt=" anu" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-6 col-lg-6 col-md-12">
-                                <div className="all-right-about">
-                                    <div className="box-data-design fade_down">
-                                        <div className="dot-data"></div>
-                                        <p className="title-font">About Us</p>
-                                    </div>
-                                    <h2 className="title-about fade_down">
-                                        We Strive to Lead The Way in <span>Solar Energy Industry</span>
-                                    </h2>
-                                    <p className="about-detail-desc fade_down">
-                                        We're committed to revolutionizing the way you think about energy. Say goodbye to
-                                        skyrocketing utility bills and hello
-                                        to a brighter, greener future with our state-of-the-art solar energy solutions.
-                                    </p>
-                                    <p className="about-detail-desc mt-2 fade_down">
-                                        Your premier source for sustainable energy solutions. Explore our range of solar
-                                        products and services designed to meet
-                                        your energy needs. eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                                        beatae vitae dicta sunt explicabo.
-                                    </p>
-                                    <div className="row data-about-ul">
-                                        <div className="col-xl-6 col-lg-7 col-md-7 col-sm-6">
-                                            <ul className="service-ul zoom_in">
-                                                <li className="services-li zoom_in">
-                                                    <img src={CheckArrowSvg} alt="about" />
-                                                    <p>Solar Inverter Setup</p>
-                                                </li>
-                                                <li className="services-li zoom_in">
-                                                    <img src={CheckArrowSvg} alt="about" />
-                                                    <p>Solar Material Financing</p>
-                                                </li>
-                                                <li className="services-li zoom_in">
-                                                    <img src={CheckArrowSvg} alt="about" />
-                                                    <p>Proven Track Record</p>
-                                                </li>
-                                                <li className="services-li zoom_in">
-                                                    <img src={CheckArrowSvg} alt="about" />
-                                                    <p>Battery Storage Solutions</p>
-                                                </li>
-                                                <li className="services-li zoom_in">
-                                                    <img src={CheckArrowSvg} alt="about" />
-                                                    <p>24x7 Call & Chat Support</p>
-                                                </li>
-                                                <li className="services-li zoom_in">
-                                                    <img src={CheckArrowSvg} alt="about" />
-                                                    <p>Customer-Centric Approach</p>
-                                                </li>
-                                            </ul>
-                                            <div className="data-about-btn zoom_in">
-                                                <Link to="/Services1" className="button stoped-btn-about d-inline-flex">
-                                                    <span className="btn-text">Our Services</span>
-                                                    <img src={CreackSvg} alt="image" />
-                                                </Link>
-                                            </div>
-                                        </div>
-                                        <div className="col-xl-6 col-lg-5 col-md-5 col-sm-6">
-                                            <div className="medal-about zoom_in">
-                                                <div className="box-medal">
-                                                    <img src={MedelSvg} alt="mailup" />
-                                                    <p>We’re Certified Solar Experts</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+                <h2>
+                    The catch-22 that started our journey
+                </h2>
+
+
+                <p>
+                    Every company like ours wrestles with the same catch-22.
+                    You need clients before you can prove your talent, and
+                    you need talent before you can win clients.
+                </p>
+
+
+                <p>
+                    Before IPGS had a single account, our founder was
+                    personally knocking on doors to find people willing to
+                    learn a trade from nothing. That instinct still shapes
+                    how the company hires and grows today.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section className="ipgs-about-mission-section">
+
+    <div className="container">
+
+        <div className="ipgs-about-mission-head">
+
+            <div className="ipgs-about-mission-label">
+                <span></span>
+                WHAT DRIVES US
+            </div>
+
+            <h2>
+                Mission-critical infrastructure delivered by people who take it personally
+            </h2>
+
+            <p>
+                Technical excellence is more than a claim on a website. IPGS treats every rail
+                signalling network, mobile core, and corporate firewall as mission-critical,
+                because for the client on the other end of it, it is. That standard gets built
+                into hiring from day one, and every specialist offers genuine depth in their
+                respective discipline. That’s the secret to our global success.
+            </p>
+
+        </div>
+
+
+        <div className="ipgs-about-mission-grid">
+
+            {/* BLOCK 1 */}
+
+            <div className="ipgs-about-mission-card">
+
+                <div className="ipgs-about-mission-card-icon">
+                    <i className="ri-stack-line"></i>
                 </div>
-                {/* <!-- ========================= [ About section all separate Exit ] ========================= --> */}
-                {/* <!-- ========================= [ Working Prosess Section Start ] ========================= --> */}
-                <div className="work-data about-data">
-                    <div className="container">
-                        <div className="success-detail fade_down">
-                            <div className="box-data-design">
-                                <div className="dot-data"></div>
-                                <p className="title-font">Our Working Process</p>
-                            </div>
-                            <h2 className="title-about">
-                                Solar Work Process In <span>Sun Star Energy</span>
-                            </h2>
-                        </div>
-                        <div className="testimonial-main prosess-main-data row">
-                            <ProcessSec />
-                        </div>
-                        <div className="prosess-call testimonial-main zoom_in">
-                            <Link to="/Services1" className="button mt-0 ">
-                                <span className="btn-text">Explore All Services</span>
-                                <img src={BtnImage} alt="image" />
-                            </Link>
-                            <a href="tel:+911(234)5678899" className="data-call-proses ">
-                                <div className="prosess-image">
-                                    <img src={CallIconSvg} alt="call" />
-                                </div>
-                                <div className="prosess-call-detail">
-                                    <p className="prog-main">Talk To Us</p>
-                                    <p className="mailup">+1 (234) 567 8899</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+
+                <h3>
+                    Mission-critical infrastructure, delivered on an end-to-end basis
+                </h3>
+
+                <p>
+                    One team carries a project from concept to completion. Our multidisciplinary
+                    team offers a complete solution, so you’ll never have to look elsewhere
+                    for assistance.
+                </p>
+
+            </div>
+
+
+            {/* BLOCK 2 */}
+
+            <div className="ipgs-about-mission-card">
+
+                <div className="ipgs-about-mission-card-icon">
+                    <i className="ri-node-tree"></i>
                 </div>
-                {/* <!-- ========================= [ Working Prosess Section Exit ] ========================= --> */}
-                {/* <!-- ========================= [ our Services separate-sectond Start ] ========================= --> */}
-                <div className="bg-container pb-0">
-                    <div className="services-padding-data bihind-the-squre">
-                        <div className="row services-main-separate">
-                            <div className="col-xl-8 col-lg-12">
-                                <div className="over-services-seprate fade_down">
-                                    <div className="dovt"></div>
-                                    <p>Our Services</p>
-                                </div>
-                                <h2 className="title-about second-services-data-title fade_down">
-                                    Switch to Solar <span>Sustainable, Affordable, & Reliable</span> Energy
-                                </h2>
-                                <p className="separte-desc second-services-data-title fade_down">Our advanced energy storage
-                                    solutions
-                                    allow you to store excess energy generated from renewable sources like solar and
-                                    wind. This enables a constant, uninterrupted power supply, providing energy
-                                    independence.</p>
-                                <div className="services-about fade_down">
-                                    <div className="services-about-image">
-                                        <img src={thirdImage1} alt="thirdImage1" />
-                                    </div>
-                                    <div className="data-detail-service">
-                                        <p>Professional Solar Expert</p>
-                                        <span>Solar panels, also referred to as solar modules, are made up of multiple solar
-                                            cells arranged in a grid. They are installed on rooftops, solar farms, and other suitable.</span>
-                                    </div>
-                                </div>
-                                <div className="services-about fade_down">
-                                    <div className="services-about-image">
-                                        <img src={thirdImage2} alt="thirdImage2" />
-                                    </div>
-                                    <div className="data-detail-service">
-                                        <p>24/7 Customer Support</p>
-                                        <span>Lorem ipsum dolor sit amet consectetur. Molestie posuere a vel non. Sed quis
-                                            molestie vitae viverra et morbi. Pretium lobortis eu pulvinar molestie facilisi morbi lectus dignissim.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <h3>
+                    Edge-to-core delivery offers peace of mind
+                </h3>
+
+                <p>
+                    Edge-to-core delivery means nobody hands a project off to a different team
+                    once the hard part starts. The engineer who scoped it is still there when
+                    it goes live. That’s why our clients trust us with their most critical
+                    infrastructure projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section className="ipgs-about-growth-section">
+
+    <div className="container">
+
+        {/* =========================================
+            SECTION HEADER
+        ========================================= */}
+
+        <div className="ipgs-about-growth-head">
+
+            <div className="ipgs-about-growth-label">
+                <span></span>
+                OUR GROWTH
+            </div>
+
+            <h2>
+                From a modest beginning in 2016 to a global footprint
+            </h2>
+
+            <p>
+                Our revenue sat at a modest €8,000 in 2016, and most of the work
+                came from word of mouth. What mattered more was that IPGS had
+                already become a name people trusted enough to call when
+                something went wrong.
+            </p>
+
+        </div>
+
+
+        {/* =========================================
+            TIMELINE
+        ========================================= */}
+
+        <div className="ipgs-about-growth-timeline">
+
+            {/* ITEM 1 */}
+
+            <div className="ipgs-about-growth-item">
+
+                <div className="ipgs-about-growth-dot"></div>
+
+                <span className="ipgs-about-growth-year">
+                    2016
+                </span>
+
+                <strong>
+                    €8,000
+                </strong>
+
+                <p>
+                    A modest beginning built primarily through word of mouth
+                    and trusted relationships.
+                </p>
+
+            </div>
+
+
+            {/* ITEM 2 */}
+
+            <div className="ipgs-about-growth-item">
+
+                <div className="ipgs-about-growth-dot"></div>
+
+                <span className="ipgs-about-growth-year">
+                    2018
+                </span>
+
+                <strong>
+                    ~£300,000
+                </strong>
+
+                <p>
+                    Growth accelerated as more organisations trusted IPGS
+                    with increasingly complex technical requirements.
+                </p>
+
+            </div>
+
+
+            {/* ITEM 3 */}
+
+            <div className="ipgs-about-growth-item">
+
+                <div className="ipgs-about-growth-dot"></div>
+
+                <span className="ipgs-about-growth-year">
+                    2026 / 27
+                </span>
+
+                <strong>
+                    ~£20 Million
+                </strong>
+
+                <p>
+                    Heading toward a global-scale operation built on technical
+                    expertise, long-term relationships and dependable delivery.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        {/* =========================================
+            SUPPORTING CONTENT
+        ========================================= */}
+
+        <div className="ipgs-about-growth-bottom">
+
+            <div className="ipgs-about-growth-bottom-line"></div>
+
+            <p>
+                While we don’t like to boast about our annual revenues, we point
+                to them — and the exceptional growth we’ve delivered in such a
+                short time — as evidence of our ability to get the job done.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section className="ipgs-about-family-section">
+
+    <div className="container">
+
+        {/* =========================================
+            SECTION HEADER
+        ========================================= */}
+
+        <div className="ipgs-about-family-head">
+
+            <div className="ipgs-about-family-label">
+                <span></span>
+                DISCOVER MORE
+            </div>
+
+            <h2>
+                Learn more about the IPGS family
+            </h2>
+
+            <p>
+                Take a deep dive into the culture and approach that makes IPGS
+                stand out in an increasingly crowded marketplace. And meet some
+                of the people making the magic happen on a daily basis.
+            </p>
+
+        </div>
+
+
+        {/* =========================================
+            FAMILY GRID
+        ========================================= */}
+
+        <div className="ipgs-about-family-grid">
+
+
+            {/* HOW WE WORK */}
+
+            <Link
+                to="/about/how-we-work"
+                className="ipgs-about-family-card"
+            >
+
+                <div className="ipgs-about-family-icon">
+                    <i className="ri-settings-3-line"></i>
                 </div>
-                {/* <!-- ========================= [ Experience sectond Start ] ========================= --> */}
-                <div className="exper-sec-data">
-                    <div className="container">
-                        <div className="design-sec-exper">
-                            <div className="over-exper-sec zoom_in">
-                                <div className="subscribe-index">
-                                    <p className="mega-counter"><span className="counter-js" data-count="46">46</span>K+
-                                    </p>
-                                    <span className="descr-index">Solar Plate Installed</span>
-                                </div>
-                            </div>
-                            <div className="over-exper-sec zoom_in">
-                                <div className="subscribe-index">
-                                    <p className="mega-counter"><span className="counter-js" data-count="15">15</span>K+
-                                    </p>
-                                    <span className="descr-index">Projects Completed</span>
-                                </div>
-                            </div>
-                            <div className="over-exper-sec zoom_in">
-                                <div className="subscribe-index">
-                                    <p className="mega-counter"><span className="counter-js" data-count="99">99</span>%
-                                    </p>
-                                    <span className="descr-index">Customers Satisfaction</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <h3>
+                    How We Work
+                </h3>
+
+                <p>
+                    Discover the collaborative, accountable approach that keeps
+                    IPGS projects moving from first conversation to successful
+                    delivery.
+                </p>
+
+                <div className="ipgs-about-family-link">
+                    Learn More
+                    <i className="ri-arrow-right-line"></i>
                 </div>
-                {/* <!-- ========================= [ Experience sectond Exit ] ========================= --> */}
-                {/* <!-- ========================= [ Why Choose Section Start ] ========================= --> */}
-                <div className="about-data" id="why-choose">
-                    <div className="container">
-                        <div className="choose-data fade_down">
-                            <div className="box-data-design">
-                                <div className="dot-data"></div>
-                                <p className="title-font">Why Choose Us</p>
-                            </div>
-                        </div>
-                        <div className="row data-why">
-                            <div className="col-xl-6 col-lg-6">
-                                <h2 className="title-about fade_down">
-                                    Sustainable Care For Your <span>Home and Earth</span>
-                                </h2>
-                                <p className="tile-data-about fade_down why-choose-desc">At Sun Star, we believe in the power of
-                                    renewable energy to create a more sustainable future. With a passion for clean energy and a commitment to our customers, we are dedicated to delivering the of best possible solutions.</p>
-                            </div>
-                            <div className="col-xl-6 col-lg-6">
-                                <div className="video-data fade_down">
-                                    <video autoPlay muted loop playsInline preload="metadata">
-                                        <source src={Video1} type="video/mp4" />
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row why-choose-data">
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-12">
-                                <div className="why-detail-area fade_down">
-                                    <div className="top-tilte">
-                                        <img src={ArrowChoose} alt="about" />
-                                        <p className="title-top">Custom Strategies</p>
-                                    </div>
-                                    <p className="title-desc-why">Lorem ipsum dolor sit amet consectetur. Tellus consectetur
-                                        viverra in vitae nullam id a tortor dignissim.</p>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-12">
-                                <div className="why-detail-area fade_down">
-                                    <div className="top-tilte">
-                                        <img src={ArrowChoose} alt="about" />
-                                        <p className="title-top">Professional Setup</p>
-                                    </div>
-                                    <p className="title-desc-why">Lorem ipsum dolor sit amet consectetur. Adipiscing habitant et
-                                        leo malesuada sit a.</p>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-12">
-                                <div className="why-detail-area fade_down">
-                                    <div className="top-tilte">
-                                        <img src={ArrowChoose} alt="about" />
-                                        <p className="title-top">Luxury Panels</p>
-                                    </div>
-                                    <p className="title-desc-why">Lorem ipsum dolor sit amet consectetur. Sit arcu egestas netus
-                                        eu etiam mauris nulla id pretium.</p>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-6 col-12">
-                                <div className="why-detail-area fade_down">
-                                    <div className="top-tilte">
-                                        <img src={ArrowChoose} alt="about" />
-                                        <p className="title-top">27/7 Support</p>
-                                    </div>
-                                    <p className="title-desc-why">Lorem ipsum dolor sit amet consectetur. Porttitor sit iaculis
-                                        adipiscing mattis nec elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+            </Link>
+
+
+            {/* OUR TEAM */}
+
+            <Link
+                to="/about/our-team"
+                className="ipgs-about-family-card"
+            >
+
+                <div className="ipgs-about-family-icon">
+                    <i className="ri-team-line"></i>
                 </div>
-                {/* <!-- ========================= [ Why Choose Section Exit ] ========================= --> */}
-                {/* <!-- ========================= [ Team Members Section Start ] ========================= --> */}
-                <div className="about-data pt-0">
-                    <div className="data-team-biggest">
-                        <div className="container">
-                            <div className="success-detail fade_down">
-                                <div className="box-data-design">
-                                    <div className="dot-data"></div>
-                                    <p className="title-font">Team Members</p>
-                                </div>
-                                <h2 className="title-about">
-                                    Meet Our <span>Amazing Solar Experts</span>
-                                </h2>
-                            </div>
-                            <div className="testimonial-main team-all row">
-                                <Team limit={4} />
-                            </div>
-                        </div>
-                    </div>
+
+                <h3>
+                    Our Team
+                </h3>
+
+                <p>
+                    Meet the specialists whose technical depth, experience and
+                    commitment drive IPGS projects around the world.
+                </p>
+
+                <div className="ipgs-about-family-link">
+                    Learn More
+                    <i className="ri-arrow-right-line"></i>
                 </div>
-                {/* <!-- ========================= [ Team Members Section Exit ] ========================= --> */}
-                {/* <!-- ========================= [ Appointment Section Start ] ========================= --> */}
-                <div className="padding-sucess">
-                    <div className="make-appoint bg-container pt-0 " id="make-appoint">
-                        <div className="w-apoint">
-                            <div className={`main-div-appoint appointbg-${currentIndex}`}>
-                                <button className="appoint-video popup-youtube" onClick={() => setIsOpen(true)}>
-                                    <img src={PlayImg} alt="play" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    {/* ---YT Video Modal --- */}
-                    <VideoModal
-                        isOpen={isOpen}
-                        onClose={() => setIsOpen(false)}
-                        videoUrl={videoData.youtubeUrl}
-                    />
-                    {/* ========== APPOINTMENT FORM ========== */}
-                    <AppointmentForm />
+
+            </Link>
+
+
+            {/* CULTURE */}
+
+            <Link
+                to="/about/culture"
+                className="ipgs-about-family-card"
+            >
+
+                <div className="ipgs-about-family-icon">
+                    <i className="ri-heart-3-line"></i>
                 </div>
-                {/* <!-- ========================= [ Our Success Section Start ] ========================= --> */}
-                <div className="success-data">
-                    <div className="container">
-                        <div className="success-detail zoom_in">
-                            <div className="box-data-design">
-                                <div className="dot-data"></div>
-                                <p className="title-font">Our Success</p>
-                            </div>
-                            <h2 className="title-about">
-                                Portfolio of <span>Solar Success</span>
-                            </h2>
-                        </div>
-                    </div>
-                    <SuccessSlider />
+
+                <h3>
+                    Culture
+                </h3>
+
+                <p>
+                    Explore the values, mindset and working environment that
+                    encourage people at IPGS to grow and do their best work.
+                </p>
+
+                <div className="ipgs-about-family-link">
+                    Learn More
+                    <i className="ri-arrow-right-line"></i>
                 </div>
-                {/* <!-- ========================= [ Our Success Section Exit ] ========================= --> */}
-                {/* <!-- ========================= [ Testimonial Section Start ] ========================= --> */}
-                <div className="blog-sec">
-                    <div className="about-data testimonial" id="testimonial">
-                        <div className="container">
-                            <div className="success-detail zoom_in">
-                                <div className="box-data-design">
-                                    <div className="dot-data"></div>
-                                    <p className="title-font">Our Testimonials</p>
-                                </div>
-                                <h2 className="title-about">
-                                    Our Customers Give <span>Love Feedback</span>
-                                </h2>
-                            </div>
-                            <div className="testimonial-main">
-                                <TestimonialSec />
-                            </div>
-                        </div>
-                    </div>
+
+            </Link>
+
+
+            {/* CAREERS */}
+
+            <Link
+                to="/about/careers"
+                className="ipgs-about-family-card"
+            >
+
+                <div className="ipgs-about-family-icon">
+                    <i className="ri-briefcase-4-line"></i>
                 </div>
+
+                <h3>
+                    Careers
+                </h3>
+
+                <p>
+                    Find opportunities to build your career with a growing
+                    international technology team focused on meaningful work.
+                </p>
+
+                <div className="ipgs-about-family-link">
+                    Learn More
+                    <i className="ri-arrow-right-line"></i>
+                </div>
+
+            </Link>
+
+
+            {/* IPGS ACADEMY */}
+
+            <Link
+                to="/about/ipgs-academy"
+                className="ipgs-about-family-card"
+            >
+
+                <div className="ipgs-about-family-icon">
+                    <i className="ri-graduation-cap-line"></i>
+                </div>
+
+                <h3>
+                    IPGS Academy
+                </h3>
+
+                <p>
+                    Learn how IPGS develops new technical talent and gives
+                    people the skills and support needed to build lasting careers.
+                </p>
+
+                <div className="ipgs-about-family-link">
+                    Learn More
+                    <i className="ri-arrow-right-line"></i>
+                </div>
+
+            </Link>
+
+
+            {/* CSR */}
+
+            <Link
+                to="/about/csr"
+                className="ipgs-about-family-card"
+            >
+
+                <div className="ipgs-about-family-icon">
+                    <i className="ri-hand-heart-line"></i>
+                </div>
+
+                <h3>
+                    CSR
+                </h3>
+
+                <p>
+                    See how IPGS supports people, communities and initiatives
+                    beyond day-to-day technology delivery.
+                </p>
+
+                <div className="ipgs-about-family-link">
+                    Learn More
+                    <i className="ri-arrow-right-line"></i>
+                </div>
+
+            </Link>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section className="ipgs-about-final-cta">
+
+    <div className="container">
+
+        <div className="ipgs-about-final-cta-inner">
+
+            <div className="ipgs-about-final-cta-content">
+
+                <div className="ipgs-about-final-cta-label">
+                    LET'S TALK
+                </div>
+
+                <h2>
+                    Let’s talk about your mission-critical
+                    infrastructure project
+                </h2>
+
+                <p>
+                    Get in touch and find out what mission-critical
+                    infrastructure looks like on your project.
+                    Your journey with IPGS starts with a friendly conversation.
+                </p>
+
+            </div>
+
+
+            <div className="ipgs-about-final-cta-action">
+
+                <Link
+                    to="/contact"
+                    className="ipgs-about-final-cta-button"
+                >
+                    Get In Touch
+
+                    <i className="ri-arrow-right-up-line"></i>
+                </Link>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+ 
                 {/* <!-- ========================= [ Testimonial Section Exit ] ========================= --> */}
             </div>
         </>
