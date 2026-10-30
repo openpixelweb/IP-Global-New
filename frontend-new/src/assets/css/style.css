@@ -17916,3 +17916,399 @@ a.ipgs-new-footer-contact-item:hover
     }
 
 }
+
+
+
+
+
+
+
+
+/* =========================================================
+   HOME COUNTER SECTION
+========================================================= */
+
+.ipgs-home-counter-section {
+    position: relative;
+
+    padding: 10px 0 10px;
+
+    overflow: hidden;
+
+    background: #050708;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   TOP FLOWING BLUE SHAPE
+========================================================= */
+
+.ipgs-home-counter-wave {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 118px;
+
+    pointer-events: none;
+
+    opacity: 0.95;
+}
+
+
+.ipgs-home-counter-wave svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.ipgs-home-counter-wave path {
+    fill: #8CC7DD;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.ipgs-home-counter-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        54px
+        minmax(0, 1fr)
+        54px
+        minmax(0, 1fr)
+        54px
+        minmax(0, 1fr);
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.ipgs-home-counter-item {
+    text-align: center;
+
+    padding: 15px 10px;
+
+    animation:
+        ipgsCounterFadeUp
+        0.75s
+        ease
+        both;
+}
+
+
+.ipgs-home-counter-item:nth-of-type(3) {
+    animation-delay: 0.08s;
+}
+
+
+.ipgs-home-counter-item:nth-of-type(5) {
+    animation-delay: 0.16s;
+}
+
+
+.ipgs-home-counter-item:nth-of-type(7) {
+    animation-delay: 0.24s;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.ipgs-home-counter-number {
+    margin-bottom: 12px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(42px, 4vw, 64px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.ipgs-home-counter-item p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+.ipgs-home-counter-item small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   CONNECTOR
+========================================================= */
+
+.ipgs-home-counter-connector {
+    position: relative;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ipgs-home-counter-connector span {
+    position: relative;
+
+    width: 1px;
+    height: 58px;
+
+    background: rgba(255, 255, 255, 0.58);
+}
+
+
+.ipgs-home-counter-connector span::before,
+.ipgs-home-counter-connector span::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #FFFFFF;
+
+    transform: translateX(-50%);
+}
+
+
+.ipgs-home-counter-connector span::before {
+    top: -3px;
+}
+
+
+.ipgs-home-counter-connector span::after {
+    bottom: -3px;
+}
+
+
+/* =========================================================
+   SUBTLE HOVER
+========================================================= */
+
+.ipgs-home-counter-item {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.ipgs-home-counter-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   ENTRANCE ANIMATION
+========================================================= */
+
+@keyframes ipgsCounterFadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-home-counter-section {
+        padding:
+            82px
+            0
+            45px;
+    }
+
+
+    .ipgs-home-counter-wave {
+        height: 90px;
+    }
+
+
+    .ipgs-home-counter-grid {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 0;
+    }
+
+
+    .ipgs-home-counter-item {
+        min-height: 170px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.12);
+    }
+
+
+    .ipgs-home-counter-item:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+
+    .ipgs-home-counter-connector {
+        display: none;
+    }
+
+
+    .ipgs-home-counter-item:nth-of-type(1),
+    .ipgs-home-counter-item:nth-of-type(5) {
+        border-right:
+            1px solid
+            rgba(255, 255, 255, 0.12);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-home-counter-section {
+        padding:
+            70px
+            0
+            30px;
+    }
+
+
+    .ipgs-home-counter-wave {
+        height: 70px;
+    }
+
+
+    .ipgs-home-counter-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ipgs-home-counter-item {
+        min-height: auto;
+
+        padding:
+            26px
+            10px;
+
+        border-right: 0 !important;
+
+        border-bottom:
+            1px solid
+            rgba(255, 255, 255, 0.12);
+    }
+
+
+    .ipgs-home-counter-item:last-child {
+        border-bottom: 0;
+    }
+
+
+    .ipgs-home-counter-number {
+        margin-bottom: 9px;
+
+        font-size: 44px;
+    }
+
+
+    .ipgs-home-counter-item p {
+        font-size: 13px;
+    }
+
+
+    .ipgs-home-counter-item small {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ipgs-home-counter-item {
+        animation: none;
+
+        transition: none;
+    }
+
+}

@@ -1,4 +1,4 @@
-
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import whyHmImage from "../assets/images/why-hm.jpg";
 // import bannerBg from "../assets/images/banner-bg.jpg";
@@ -13,7 +13,94 @@ import indusHmImage6 from "../assets/images/indus-hm-06.jpg";
 
 
 
+interface CounterProps {
+    end: number;
+    suffix?: string;
+    duration?: number;
+    format?: boolean;
+}
 
+const AnimatedCounter: React.FC<CounterProps> = ({
+    end,
+    suffix = "",
+    duration = 1800,
+    format = false,
+}) => {
+
+    const [count, setCount] = useState(0);
+    const counterRef = useRef<HTMLSpanElement | null>(null);
+    const started = useRef(false);
+
+    useEffect(() => {
+
+        const element = counterRef.current;
+
+        if (!element) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+
+                if (entry.isIntersecting && !started.current) {
+
+                    started.current = true;
+
+                    const startTime = performance.now();
+
+                    const animate = (currentTime: number) => {
+
+                        const elapsed = currentTime - startTime;
+
+                        const progress = Math.min(
+                            elapsed / duration,
+                            1
+                        );
+
+                        const easedProgress =
+                            1 - Math.pow(1 - progress, 3);
+
+                        const currentValue =
+                            Math.floor(end * easedProgress);
+
+                        setCount(currentValue);
+
+                        if (progress < 1) {
+                            requestAnimationFrame(animate);
+                        } else {
+                            setCount(end);
+                        }
+
+                    };
+
+                    requestAnimationFrame(animate);
+
+                    observer.disconnect();
+                }
+
+            },
+            {
+                threshold: 0.35,
+            }
+        );
+
+        observer.observe(element);
+
+        return () => observer.disconnect();
+
+    }, [end, duration]);
+
+
+    const displayValue = format
+        ? count.toLocaleString()
+        : count;
+
+
+    return (
+        <span ref={counterRef}>
+            {displayValue}
+            {suffix}
+        </span>
+    );
+};
 // ---- Component ----
 const Home1: React.FC = () => {
     return (
@@ -1272,7 +1359,131 @@ const Home1: React.FC = () => {
 
 </section>
 
+<section className="ipgs-home-counter-section">
 
+    {/* BLUE FLOWING SHAPE */}
+
+
+
+
+    <div className="container">
+
+        <div className="ipgs-home-counter-grid">
+
+
+            {/* 01 */}
+
+            <div className="ipgs-home-counter-item">
+
+                <div className="ipgs-home-counter-number">
+                    <AnimatedCounter
+                        end={12}
+                        suffix="+"
+                    />
+                </div>
+
+                <p>
+                    Years of Industry Experience
+                </p>
+
+            </div>
+
+
+            {/* CONNECTOR */}
+
+            <div
+                className="ipgs-home-counter-connector"
+                aria-hidden="true"
+            >
+                <span></span>
+            </div>
+
+
+            {/* 02 */}
+
+            <div className="ipgs-home-counter-item">
+
+                <div className="ipgs-home-counter-number">
+                    <AnimatedCounter
+                        end={100}
+                        suffix="+"
+                    />
+                </div>
+
+                <p>
+                    Combined Technology Expertise
+                </p>
+
+            </div>
+
+
+            {/* CONNECTOR */}
+
+            <div
+                className="ipgs-home-counter-connector"
+                aria-hidden="true"
+            >
+                <span></span>
+            </div>
+
+
+            {/* 03 */}
+
+            <div className="ipgs-home-counter-item">
+
+                <div className="ipgs-home-counter-number">
+                    <AnimatedCounter
+                        end={5}
+                        suffix="+"
+                    />
+                </div>
+
+                <p>
+                    Global Locations
+                </p>
+
+                <small>
+                    United Kingdom, India,
+                    <br />
+                    UAE, Poland & Australia
+                </small>
+
+            </div>
+
+
+            {/* CONNECTOR */}
+
+            <div
+                className="ipgs-home-counter-connector"
+                aria-hidden="true"
+            >
+                <span></span>
+            </div>
+
+
+            {/* 04 */}
+
+            <div className="ipgs-home-counter-item">
+
+                <div className="ipgs-home-counter-number">
+                    <AnimatedCounter
+                        end={2000}
+                        suffix="+"
+                        format
+                    />
+                </div>
+
+                <p>
+                    Project Execution
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
