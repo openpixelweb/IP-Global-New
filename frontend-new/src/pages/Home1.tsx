@@ -10,6 +10,7 @@ import indusHmImage4 from "../assets/images/indus-hm-04.jpg";
 import indusHmImage5 from "../assets/images/indus-hm-05.jpg";
 import indusHmImage6 from "../assets/images/indus-hm-06.jpg";
 // import BannerLogoSvg from "../assets/images/banner-icon.png";
+import CounterStrip from "../assets/images/counter-strip.png";
 
 
 
@@ -1361,9 +1362,18 @@ const Home1: React.FC = () => {
 
 <section className="ipgs-home-counter-section">
 
-    {/* BLUE FLOWING SHAPE */}
 
+    {/* RIGHT SIDE PNG STRIP */}
 
+    <div
+        className="ipgs-home-counter-strip"
+        aria-hidden="true"
+    >
+<img
+    src={CounterStrip}
+    alt=""
+/>
+    </div>
 
 
     <div className="container">
@@ -1388,8 +1398,6 @@ const Home1: React.FC = () => {
 
             </div>
 
-
-            {/* CONNECTOR */}
 
             <div
                 className="ipgs-home-counter-connector"
@@ -1416,8 +1424,6 @@ const Home1: React.FC = () => {
 
             </div>
 
-
-            {/* CONNECTOR */}
 
             <div
                 className="ipgs-home-counter-connector"
@@ -1450,8 +1456,6 @@ const Home1: React.FC = () => {
 
             </div>
 
-
-            {/* CONNECTOR */}
 
             <div
                 className="ipgs-home-counter-connector"

@@ -18312,3 +18312,82 @@ a.ipgs-new-footer-contact-item:hover
     }
 
 }
+
+/* =========================================================
+   RIGHT SIDE PNG STRIP
+========================================================= */
+
+.ipgs-home-counter-strip {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1;
+
+    width: clamp(120px, 12vw, 230px);
+
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    pointer-events: none;
+
+    /* overflow: hidden; */
+}
+
+
+.ipgs-home-counter-strip img {
+    display: block;
+
+    width: auto;
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+
+    object-position: right center;
+
+    opacity: 0.95;
+}
+
+
+/* Keep counter content above strip */
+
+.ipgs-home-counter-grid {
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .ipgs-home-counter-strip {
+        width: 140px;
+
+        opacity: 0.65;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .ipgs-home-counter-strip {
+        width: 90px;
+
+        opacity: 0.35;
+    }
+
+}
