@@ -42,12 +42,7 @@ const otStrengths: OTStrength[] = [
     },
 ];
 
-const keyFacts = [
-    { value: "IEC 62443", label: "Aligned segmentation from the outset" },
-    { value: "IRSE", label: "Certified rail engineers" },
-    { value: "Since 2016", label: "Without losing a client" },
-    { value: "Rail & Energy", label: "One accountable team" },
-];
+
 
 type SectorId = "rail" | "energy";
 

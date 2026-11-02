@@ -31,11 +31,7 @@ const strengths: TelecomStrength[] = [
     },
 ];
 
-const layers = [
-    { label: "Core.", icon: "ri-node-tree" },
-    { label: "RAN.", icon: "ri-base-station-line" },
-    { label: "Transport.", icon: "ri-route-line" },
-];
+
 
 const coreScope = [
     "Resourcing",

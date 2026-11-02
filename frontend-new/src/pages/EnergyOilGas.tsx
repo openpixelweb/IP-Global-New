@@ -94,13 +94,6 @@ const energyAdvantages: EnergyAdvantage[] = [
     },
 ];
 
-/* Taken from the intro copy */
-const plantChain = [
-    { label: "Wellheads", icon: "ri-drop-line" },
-    { label: "Pipelines", icon: "ri-route-line" },
-    { label: "Substations", icon: "ri-flashlight-line" },
-    { label: "Control rooms", icon: "ri-computer-line" },
-];
 
 const lifecycle = [
     { label: "Design", icon: "ri-pencil-ruler-2-line" },

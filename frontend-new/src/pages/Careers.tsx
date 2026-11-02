@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import type { CSSProperties, FC, MouseEvent } from "react";
 import { Link } from "react-router-dom";
 
-import CareerImage from "../assets/images/team-work.jpg";
+
 import CareerStoryImage from "../assets/images/we-work.png";
 
 import "../assets/css/careers.css";

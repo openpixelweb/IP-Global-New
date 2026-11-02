@@ -18,12 +18,7 @@ const promises: { title: string; icon: string }[] = [
     { title: "Competitive Pricing", icon: "ri-price-tag-3-line" },
 ];
 
-/* Facts taken from the page copy */
-const facts = [
-    { value: "Since 2016", label: "Not a single client account lost" },
-    { value: "One contact", label: "A named person for the whole project" },
-    { value: "In-house", label: "Concept to completion, one team" },
-];
+
 
 const commitments: WorkDetail[] = [
     {

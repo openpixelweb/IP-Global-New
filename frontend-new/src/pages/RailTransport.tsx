@@ -87,15 +87,7 @@ const railStrengths: RailItem[] = [
     },
 ];
 
-/* Taken from the page copy */
-const ticker = [
-    "FTN/FTNx migration",
-    "ETCS readiness",
-    "Legacy-to-IP transition",
-    "IP/MPLS and fibre",
-    "IEC 62443-aligned",
-    "Separate A and B networks",
-];
+
 
 const journey = [
     { label: "Discovery", icon: "ri-search-eye-line" },
@@ -104,13 +96,7 @@ const journey = [
     { label: "Post-migration assurance", icon: "ri-verified-badge-line" },
 ];
 
-/* Taken from the intro copy */
-const networkNodes = [
-    { label: "Trackside assets", icon: "ri-signal-tower-line" },
-    { label: "Stations", icon: "ri-building-line" },
-    { label: "Depots", icon: "ri-tools-line" },
-    { label: "Rail Operating Centres", icon: "ri-computer-line" },
-];
+
 
 const delay = (ms: number): CSSProperties =>
     ({ "--d": `${ms}ms` }) as CSSProperties;

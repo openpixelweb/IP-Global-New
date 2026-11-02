@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import type { CSSProperties, FC } from "react";
 import { Link } from "react-router-dom";
 
-import AcademyImage from "../assets/images/team-work.jpg";
 import StoryImage from "../assets/images/it-training.png";
 import LearningImage from "../assets/images/about/image-2.png";
 

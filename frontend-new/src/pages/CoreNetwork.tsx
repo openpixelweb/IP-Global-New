@@ -82,11 +82,7 @@ const coreAdvantages: CoreItem[] = [
     },
 ];
 
-const stages = [
-    { label: "Design.", icon: "ri-pencil-ruler-2-line" },
-    { label: "Migrate.", icon: "ri-git-merge-line" },
-    { label: "Optimise.", icon: "ri-speed-up-line" },
-];
+
 
 const delivery = [
     { label: "Embedded expertise.", icon: "ri-node-tree" },

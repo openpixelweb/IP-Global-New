@@ -1,8 +1,8 @@
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties, FC } from "react";
 import { Link } from "react-router-dom";
 
-import TeamImage from "../assets/images/team-work.jpg";
 import "../assets/css/our-team.css";
 
 /* =========================================
@@ -161,59 +161,9 @@ const FILTERS: ("All" | Category)[] = [
 
 const BIO_LIMIT = 190;
 
-const prefersReducedMotion = () =>
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 /** Sets a stagger delay used by the CSS transitions. */
 const delay = (ms: number): CSSProperties =>
     ({ "--d": `${ms}ms` }) as CSSProperties;
-
-/* =========================================
-   COUNT-UP NUMBER (runs once when in view)
-========================================= */
-
-const CountUp: FC<{ to: number }> = ({ to }) => {
-    const ref = useRef<HTMLSpanElement>(null);
-    const [value, setValue] = useState(0);
-
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-
-        if (prefersReducedMotion() || !("IntersectionObserver" in window)) {
-            setValue(to);
-            return;
-        }
-
-        let raf = 0;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) return;
-                observer.disconnect();
-
-                const start = performance.now();
-                const duration = 1500;
-
-                const tick = (now: number) => {
-                    const t = Math.min((now - start) / duration, 1);
-                    setValue(Math.round(to * (1 - Math.pow(1 - t, 3))));
-                    if (t < 1) raf = requestAnimationFrame(tick);
-                };
-                raf = requestAnimationFrame(tick);
-            },
-            { threshold: 0.6 }
-        );
-
-        observer.observe(el);
-        return () => {
-            observer.disconnect();
-            cancelAnimationFrame(raf);
-        };
-    }, [to]);
-
-    return <span ref={ref}>{value}</span>;
-};
 
 /* =========================================
    INDIVIDUAL TEAM PROFILE
@@ -296,11 +246,6 @@ const OurTeam: FC = () => {
 
     const [filter, setFilter] = useState<"All" | Category>("All");
     const [gridVisible, setGridVisible] = useState(false);
-
-    const disciplineCount = useMemo(
-        () => new Set(teamMembers.map((m) => m.department)).size,
-        []
-    );
 
     const filtered = useMemo(
         () =>
@@ -390,20 +335,16 @@ const OurTeam: FC = () => {
         return () => observer.disconnect();
     }, []);
 
-    const scrollToTeam = () => {
-        document.getElementById("ipgs-team-directory")?.scrollIntoView({
-            behavior: prefersReducedMotion() ? "auto" : "smooth",
-            block: "start",
-        });
-    };
-
     return (
         <div className="js-scroll ipgs-team-page is-anim" ref={rootRef}>
             {/* ================= HERO BANNER ================= */}
             <div className="hero-data-bottom">
                 <div className="services-home-hero desck-about ipgs-team-hero">
                     <div className="title-of-hero">
-                        <p>The IT services leadership team <br />behind every IPGS project</p>
+                        <p>
+                            The IT services leadership team <br />
+                            behind every IPGS project
+                        </p>
                         <span>
                             <Link to="/">Home</Link>
                             {" - "}
@@ -415,7 +356,6 @@ const OurTeam: FC = () => {
                 </div>
             </div>
 
-            
             {/* ================= TEAM DIRECTORY ================= */}
             <section
                 id="ipgs-team-directory"
@@ -535,7 +475,10 @@ const OurTeam: FC = () => {
             <section className="ipgs-team-final-cta">
                 <div className="container">
                     <div className="ipgs-team-final-inner">
-                        <div className="ipgs-team-label ipgs-team-label--center" data-reveal="up">
+                        <div
+                            className="ipgs-team-label ipgs-team-label--center"
+                            data-reveal="up"
+                        >
                             <span></span>
                             Let's talk
                             <span></span>
@@ -552,7 +495,10 @@ const OurTeam: FC = () => {
                         </p>
 
                         <div data-reveal="up" style={delay(300)}>
-                            <Link to="/Contact" className="ipgs-team-final-button">
+                            <Link
+                                to="/Contact"
+                                className="ipgs-team-final-button"
+                            >
                                 Get in touch
                                 <i
                                     className="ri-arrow-right-up-line"

@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+
+import { useEffect, useRef } from "react";
 import type { CSSProperties, FC } from "react";
 import { Link } from "react-router-dom";
 
@@ -8,57 +9,9 @@ import "../assets/css/culture.css";
    IPGS CULTURE PAGE
 ============================================= */
 
-const prefersReducedMotion = () =>
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 /** Sets a stagger delay used by the CSS transitions. */
 const delay = (ms: number): CSSProperties =>
     ({ "--d": `${ms}ms` }) as CSSProperties;
-
-/* ---------- Count-up number (runs once when in view) ---------- */
-
-const CountUp: FC<{ to: number }> = ({ to }) => {
-    const ref = useRef<HTMLSpanElement>(null);
-    const [value, setValue] = useState(0);
-
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-
-        if (prefersReducedMotion() || !("IntersectionObserver" in window)) {
-            setValue(to);
-            return;
-        }
-
-        let raf = 0;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) return;
-                observer.disconnect();
-
-                const start = performance.now();
-                const duration = 1600;
-
-                const tick = (now: number) => {
-                    const t = Math.min((now - start) / duration, 1);
-                    setValue(Math.round(to * (1 - Math.pow(1 - t, 3))));
-                    if (t < 1) raf = requestAnimationFrame(tick);
-                };
-                raf = requestAnimationFrame(tick);
-            },
-            { threshold: 0.6 }
-        );
-
-        observer.observe(el);
-        return () => {
-            observer.disconnect();
-            cancelAnimationFrame(raf);
-        };
-    }, [to]);
-
-    return <span ref={ref}>{value}</span>;
-};
 
 const specialisms = [
     { label: "Core network migration", icon: "ri-router-line" },
@@ -127,7 +80,10 @@ const Culture: FC = () => {
             <div className="hero-data-bottom">
                 <div className="services-home-hero desck-about ipgs-team-hero">
                     <div className="title-of-hero">
-                        <p>A company that calls you by <br />your name and values your input</p>
+                        <p>
+                            A company that calls you by <br />
+                            your name and values your input
+                        </p>
                         <span>
                             <Link to="/">Home</Link>
                             {" - "}
@@ -139,26 +95,34 @@ const Culture: FC = () => {
                 </div>
             </div>
 
-    
             {/* ================= CLOSE-KNIT TEAM ================= */}
             <section className="ipgs-culture-story-section">
                 <div className="container">
                     <div className="ipgs-culture-story-grid">
-                        <ul className="ipgs-culture-specialisms" aria-label="Specialisms across IPGS">
+                        <ul
+                            className="ipgs-culture-specialisms"
+                            aria-label="Specialisms across IPGS"
+                        >
                             {specialisms.map((item, i) => (
                                 <li
                                     key={item.label}
                                     data-reveal="spec"
                                     style={delay(i * 120)}
                                 >
-                                    <i className={item.icon} aria-hidden="true"></i>
+                                    <i
+                                        className={item.icon}
+                                        aria-hidden="true"
+                                    ></i>
                                     <strong>{item.label}</strong>
                                 </li>
                             ))}
                         </ul>
 
                         <div className="ipgs-culture-story-content">
-                            <div className="ipgs-culture-label" data-reveal="up">
+                            <div
+                                className="ipgs-culture-label"
+                                data-reveal="up"
+                            >
                                 <span></span>
                                 Connected by purpose
                             </div>
@@ -192,7 +156,10 @@ const Culture: FC = () => {
                 <div className="container">
                     <div className="ipgs-culture-growth-grid">
                         <div className="ipgs-culture-growth-content">
-                            <div className="ipgs-culture-label" data-reveal="up">
+                            <div
+                                className="ipgs-culture-label"
+                                data-reveal="up"
+                            >
                                 <span></span>
                                 Developing our people
                             </div>
@@ -221,7 +188,10 @@ const Culture: FC = () => {
                                 data-reveal="up"
                                 style={delay(400)}
                             >
-                                <i className="ri-seedling-line" aria-hidden="true"></i>
+                                <i
+                                    className="ri-seedling-line"
+                                    aria-hidden="true"
+                                ></i>
                                 <span>
                                     Learning and development are part of how we
                                     work.
@@ -229,16 +199,34 @@ const Culture: FC = () => {
                             </div>
                         </div>
 
-                        <div className="ipgs-culture-roles" data-reveal="roles">
-                            <div className="ipgs-culture-role" style={delay(0)}>
-                                <i className="ri-compass-3-line" aria-hidden="true"></i>
+                        <div
+                            className="ipgs-culture-roles"
+                            data-reveal="roles"
+                        >
+                            <div
+                                className="ipgs-culture-role"
+                                style={delay(0)}
+                            >
+                                <i
+                                    className="ri-compass-3-line"
+                                    aria-hidden="true"
+                                ></i>
                                 <strong>Architects</strong>
                             </div>
 
-                            <span className="ipgs-culture-role-link" aria-hidden="true"></span>
+                            <span
+                                className="ipgs-culture-role-link"
+                                aria-hidden="true"
+                            ></span>
 
-                            <div className="ipgs-culture-role" style={delay(250)}>
-                                <i className="ri-tools-line" aria-hidden="true"></i>
+                            <div
+                                className="ipgs-culture-role"
+                                style={delay(250)}
+                            >
+                                <i
+                                    className="ri-tools-line"
+                                    aria-hidden="true"
+                                ></i>
                                 <strong>Implementation engineers</strong>
                             </div>
                         </div>
@@ -259,12 +247,17 @@ const Culture: FC = () => {
                                 Continuous learning
                             </div>
 
-                            <h2>A learning culture with a genuine head start</h2>
+                            <h2>
+                                A learning culture with a genuine head start
+                            </h2>
                         </div>
 
                         <div className="ipgs-culture-academy-content">
                             <div className="ipgs-culture-academy-icon">
-                                <i className="ri-graduation-cap-line" aria-hidden="true"></i>
+                                <i
+                                    className="ri-graduation-cap-line"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
 
                             <p>
@@ -286,7 +279,10 @@ const Culture: FC = () => {
                                 className="ipgs-culture-text-link"
                             >
                                 Discover IPGS Academy
-                                <i className="ri-arrow-right-line" aria-hidden="true"></i>
+                                <i
+                                    className="ri-arrow-right-line"
+                                    aria-hidden="true"
+                                ></i>
                             </Link>
                         </div>
                     </div>
@@ -298,7 +294,10 @@ const Culture: FC = () => {
                 <div className="container">
                     <div className="ipgs-culture-together-grid">
                         <div className="ipgs-culture-together-left">
-                            <div className="ipgs-culture-label" data-reveal="up">
+                            <div
+                                className="ipgs-culture-label"
+                                data-reveal="up"
+                            >
                                 <span></span>
                                 Collaboration at IPGS
                             </div>
@@ -326,7 +325,10 @@ const Culture: FC = () => {
                         style={delay(200)}
                     >
                         <span>
-                            <i className="ri-team-line" aria-hidden="true"></i>
+                            <i
+                                className="ri-team-line"
+                                aria-hidden="true"
+                            ></i>
                         </span>
                         <strong>
                             Different specialisms. One connected team.
@@ -340,7 +342,10 @@ const Culture: FC = () => {
                 <div className="container">
                     <div className="ipgs-culture-final-inner">
                         <div className="ipgs-culture-final-content">
-                            <div className="ipgs-culture-label" data-reveal="up">
+                            <div
+                                className="ipgs-culture-label"
+                                data-reveal="up"
+                            >
                                 <span></span>
                                 Let's connect
                             </div>
@@ -366,14 +371,26 @@ const Culture: FC = () => {
                             data-reveal="up"
                             style={delay(300)}
                         >
-                            <Link to="/about/careers" className="ipgs-culture-btn-primary">
+                            <Link
+                                to="/about/careers"
+                                className="ipgs-culture-btn-primary"
+                            >
                                 Explore careers at IPGS
-                                <i className="ri-arrow-right-up-line" aria-hidden="true"></i>
+                                <i
+                                    className="ri-arrow-right-up-line"
+                                    aria-hidden="true"
+                                ></i>
                             </Link>
 
-                            <Link to="/contact" className="ipgs-culture-btn-secondary">
+                            <Link
+                                to="/contact"
+                                className="ipgs-culture-btn-secondary"
+                            >
                                 Contact us
-                                <i className="ri-arrow-right-up-line" aria-hidden="true"></i>
+                                <i
+                                    className="ri-arrow-right-up-line"
+                                    aria-hidden="true"
+                                ></i>
                             </Link>
                         </div>
                     </div>
