@@ -248,9 +248,7 @@ const Contact: React.FC = () => {
                                     <i className="ri-map-pin-2-line"></i>
 
                                     <p>
-                                        1F02 West Wing, Arena Business Centre,
-                                        100 Berkshire Place, Wharfdale Road,
-                                        Winnersh – RG41 5RD, United Kingdom
+                                        Gf35 & 36 Arena Business Centre 100 Berkshire Plac Wharfedale Road, Winnersh, Wokingham, England, RG41 5RD United Kingdom
                                     </p>
 
                                 </div>
