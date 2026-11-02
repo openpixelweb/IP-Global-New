@@ -1,0 +1,906 @@
+/* ==========================================
+   IPGS - OUR TEAM
+   Dark navy + steel-blue palette. Centred
+   intro, overlapping stat panel, filterable
+   profile cards with a left accent bar.
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-team-page {
+    --bg: #101c29;
+    --bg-alt: #132130;
+    --card: #19262f;
+    --card-hover: #1e2d38;
+    --line: #2a3742;
+    --blue: #2f8ab3;
+    --blue-light: #5db5d6;
+    --blue-hover: #3d9ec9;
+    --white: #ffffff;
+    --text: #a9b5bf;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-team-page *,
+.ipgs-team-page *::before,
+.ipgs-team-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-team-page .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ipgs-team-page h1,
+.ipgs-team-page h2,
+.ipgs-team-page h3 {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+}
+
+.ipgs-team-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-team-page img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- Eyebrow label ---------- */
+
+.ipgs-team-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ipgs-team-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+.ipgs-team-label--center {
+    justify-content: center;
+}
+
+/* ---------- Hero banner (existing site hero) ---------- */
+
+.ipgs-team-hero .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-team-hero .title-of-hero p,
+.ipgs-team-hero .title-of-hero span {
+    animation: team-hero-in 0.9s var(--ease) both;
+}
+
+.ipgs-team-hero .title-of-hero span {
+    animation-delay: 0.18s;
+}
+
+.ipgs-team-hero .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ipgs-team-hero .title-of-hero span a:hover {
+    color: var(--blue-light);
+}
+
+@keyframes team-hero-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- Scroll reveal ----------
+   up    : fade + rise
+   lines : headline lines slide up out of a mask
+   image : the OBSERVED wrapper stays visible; only the <img>
+           inside is clipped, so the image always triggers. */
+
+.ipgs-team-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-team-page.is-anim [data-reveal="up"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-team-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.ipgs-team-line > span {
+    display: block;
+}
+
+.ipgs-team-page.is-anim [data-reveal="lines"] .ipgs-team-line > span {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-team-page.is-anim [data-reveal="lines"].is-visible .ipgs-team-line > span {
+    transform: none;
+}
+
+.ipgs-team-page.is-anim [data-reveal="image"] img {
+    clip-path: inset(0 0 100% 0);
+    transform: scale(1.1);
+    transition:
+        clip-path 1.2s var(--ease),
+        transform 1.8s var(--ease);
+}
+
+.ipgs-team-page.is-anim [data-reveal="image"].is-visible img {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+}
+
+/* ---------- Buttons ---------- */
+
+.ipgs-team-primary-btn,
+.ipgs-team-final-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 54px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 0;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-team-primary-btn:hover,
+.ipgs-team-final-button:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-team-primary-btn i,
+.ipgs-team-final-button i {
+    font-size: 19px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-team-primary-btn:hover i {
+    transform: translateY(3px);
+}
+
+.ipgs-team-final-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+.ipgs-team-primary-btn:focus-visible,
+.ipgs-team-final-button:focus-visible,
+.ipgs-team-chip:focus-visible,
+.ipgs-team-more:focus-visible,
+.ipgs-team-text-link:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 3px;
+}
+
+/* ---------- Introduction (centred) ---------- */
+
+.ipgs-team-intro-section {
+    padding: 110px 0 0;
+    background: var(--bg);
+}
+
+.ipgs-team-intro-content {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ipgs-team-intro-content h1 {
+    font-size: clamp(36px, 4.6vw, 66px);
+    margin-bottom: 28px;
+}
+
+.ipgs-team-intro-content p {
+    max-width: 60ch;
+    margin: 0 auto 34px;
+    font-size: 18px;
+}
+
+/* ---------- Banner + overlapping stats ---------- */
+
+.ipgs-team-banner {
+    position: relative;
+    margin-top: 72px;
+    padding-bottom: 70px;
+}
+
+.ipgs-team-photo {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--card);
+}
+
+.ipgs-team-photo img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+
+.ipgs-team-stats {
+    position: absolute;
+    left: 48px;
+    right: 48px;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-team-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 28px 34px;
+}
+
+.ipgs-team-stat + .ipgs-team-stat {
+    border-left: 1px solid var(--line);
+}
+
+.ipgs-team-stat strong {
+    color: var(--white);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+}
+
+.ipgs-team-stat span {
+    color: var(--text);
+    font-size: 15px;
+}
+
+.ipgs-team-stat--text strong {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- Directory ---------- */
+
+.ipgs-team-directory-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 90px;
+}
+
+.ipgs-team-directory-heading {
+    margin-bottom: 48px;
+}
+
+.ipgs-team-directory-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: end;
+    gap: 8%;
+}
+
+.ipgs-team-directory-heading h2 {
+    margin-bottom: 0;
+    font-size: clamp(32px, 3.6vw, 52px);
+}
+
+.ipgs-team-directory-heading p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* Filter chips */
+
+.ipgs-team-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.ipgs-team-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 18px;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.ipgs-team-chip span {
+    min-width: 22px;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 12px;
+    text-align: center;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-team-chip:hover {
+    border-color: var(--blue);
+    color: var(--white);
+}
+
+.ipgs-team-chip.is-active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+}
+
+.ipgs-team-chip.is-active span {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.ipgs-team-result {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #8593a0;
+}
+
+/* Grid */
+
+.ipgs-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: start;
+}
+
+/* Card */
+
+.ipgs-team-card {
+    position: relative;
+    min-width: 0;
+    padding: 32px 30px 34px 34px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Blue accent bar on the left edge grows on hover */
+.ipgs-team-card::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: 4px;
+    background: var(--blue);
+    transform-origin: top;
+    transform: scaleY(0.28);
+    transition: transform 0.45s var(--ease);
+}
+
+.ipgs-team-card:hover {
+    background: var(--card-hover);
+    border-color: #3a4b58;
+}
+
+.ipgs-team-card:hover::before {
+    transform: scaleY(1);
+}
+
+/* Entrance: hidden until the grid scrolls into view, then staggered */
+.ipgs-team-page.is-anim .ipgs-team-card {
+    opacity: 0;
+}
+
+.ipgs-team-page.is-anim .ipgs-team-card.is-in {
+    animation: team-card-in 0.75s var(--ease) var(--d, 0ms) both;
+}
+
+@keyframes team-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(26px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.ipgs-team-card-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.ipgs-team-avatar {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 5px rgba(47, 138, 179, 0.18);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: box-shadow 0.35s ease, transform 0.35s var(--ease);
+}
+
+.ipgs-team-card:hover .ipgs-team-avatar {
+    box-shadow: 0 0 0 8px rgba(47, 138, 179, 0.22);
+    transform: scale(1.04);
+}
+
+.ipgs-team-card-id {
+    min-width: 0;
+}
+
+.ipgs-team-card-id h3 {
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+
+.ipgs-team-card-department {
+    display: block;
+    color: var(--blue-light);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.ipgs-team-card-body {
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-team-bio {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.ipgs-team-bio.is-clamped {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.ipgs-team-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 14px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--blue-light);
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.ipgs-team-more:hover {
+    color: var(--white);
+}
+
+.ipgs-team-more i {
+    font-size: 19px;
+}
+
+.ipgs-team-card-pending {
+    margin-bottom: 0;
+    color: #7a8896;
+    font-size: 14px;
+}
+
+/* ---------- Approach ---------- */
+
+.ipgs-team-approach-section {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-team-approach-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: 10%;
+}
+
+.ipgs-team-approach-left h2 {
+    max-width: 16ch;
+    margin-bottom: 0;
+    font-size: clamp(34px, 3.8vw, 54px);
+}
+
+.ipgs-team-approach-right p {
+    margin-bottom: 26px;
+    font-size: 18px;
+}
+
+.ipgs-team-text-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 10px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Underline draws left-to-right on hover */
+.ipgs-team-text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--blue-light);
+    transform-origin: left;
+    transform: scaleX(0.35);
+    transition: transform 0.4s var(--ease);
+}
+
+.ipgs-team-text-link:hover {
+    color: var(--white);
+}
+
+.ipgs-team-text-link:hover::after {
+    transform: scaleX(1);
+}
+
+.ipgs-team-text-link i {
+    font-size: 19px;
+    transition: transform 0.3s var(--ease);
+}
+
+.ipgs-team-text-link:hover i {
+    transform: translateX(4px);
+}
+
+/* ---------- Final CTA (centred) ---------- */
+
+.ipgs-team-final-cta {
+    padding: 50px 0;
+    background: #0b1520;
+    border-top: 3px solid var(--blue);
+    text-align: center;
+}
+
+.ipgs-team-final-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.ipgs-team-final-inner h2 {
+    margin-bottom: 22px;
+    font-size: clamp(36px, 4vw, 58px);
+}
+
+.ipgs-team-final-inner p {
+    max-width: 52ch;
+    margin: 0 auto 34px;
+    font-size: 17px;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1199px) {
+    .ipgs-team-intro-section {
+        padding-top: 86px;
+    }
+
+    .ipgs-team-directory-section,
+    .ipgs-team-approach-section {
+        padding: 86px 0;
+    }
+
+    .ipgs-team-grid {
+        gap: 20px;
+    }
+
+    .ipgs-team-card {
+        padding: 28px 24px 30px 28px;
+    }
+
+    .ipgs-team-stats {
+        left: 24px;
+        right: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ipgs-team-photo img {
+        height: 380px;
+    }
+
+    .ipgs-team-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ipgs-team-stat--text {
+        grid-column: 1 / -1;
+        border-left: none !important;
+        border-top: 1px solid var(--line);
+    }
+
+    .ipgs-team-banner {
+        padding-bottom: 150px;
+    }
+
+    .ipgs-team-directory-heading-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .ipgs-team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ipgs-team-approach-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 767px) {
+    .ipgs-team-page .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ipgs-team-label {
+        font-size: 12px;
+        gap: 12px;
+    }
+
+    .ipgs-team-label > span {
+        width: 32px;
+    }
+
+    .ipgs-team-intro-section {
+        padding-top: 64px;
+    }
+
+    .ipgs-team-directory-section,
+    .ipgs-team-approach-section {
+        padding: 64px 0;
+    }
+
+    .ipgs-team-intro-content p,
+    .ipgs-team-approach-right p {
+        font-size: 16px;
+    }
+
+    .ipgs-team-banner {
+        margin-top: 48px;
+        padding-bottom: 0;
+    }
+
+    .ipgs-team-photo img {
+        height: 280px;
+    }
+
+    .ipgs-team-stats {
+        position: static;
+        grid-template-columns: 1fr 1fr;
+        margin-top: -1px;
+    }
+
+    .ipgs-team-stat {
+        padding: 22px 20px;
+    }
+
+    .ipgs-team-stat strong {
+        font-size: 38px;
+    }
+
+    .ipgs-team-stat--text strong {
+        font-size: 19px;
+    }
+
+    .ipgs-team-directory-heading {
+        margin-bottom: 34px;
+    }
+
+    /* chips scroll sideways instead of wrapping into many rows */
+    .ipgs-team-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0 20px 6px;
+        scrollbar-width: thin;
+    }
+
+    .ipgs-team-chip {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .ipgs-team-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .ipgs-team-final-cta {
+        padding: 70px 0;
+    }
+}
+
+/* ---------- Reduced motion: show everything, no movement ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-team-hero .title-of-hero p,
+    .ipgs-team-hero .title-of-hero span {
+        animation: none;
+    }
+
+    .ipgs-team-page.is-anim [data-reveal="up"],
+    .ipgs-team-page.is-anim [data-reveal="lines"] .ipgs-team-line > span,
+    .ipgs-team-page.is-anim [data-reveal="image"] img {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        transition: none;
+    }
+
+    .ipgs-team-page.is-anim .ipgs-team-card,
+    .ipgs-team-page.is-anim .ipgs-team-card.is-in {
+        opacity: 1;
+        animation: none;
+    }
+
+    .ipgs-team-card::before,
+    .ipgs-team-avatar,
+    .ipgs-team-text-link::after,
+    .ipgs-team-primary-btn i,
+    .ipgs-team-final-button i,
+    .ipgs-team-text-link i {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   IPGS OUR TEAM - WHITE BACKGROUND COLOUR OVERRIDE
+   Colour-only update. Original layout, spacing, interactions,
+   animations, and shared banner styling remain unchanged.
+   ========================================================= */
+.ipgs-team-page {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --card: #ffffff;
+    --card-hover: #f4f9fc;
+    --line: #d9e6ed;
+    --blue: #258db5;
+    --blue-light: #258db5;
+    --blue-hover: #207eaa;
+    --text: #4b6070;
+    background: #ffffff;
+    color: var(--text);
+}
+
+/* Headings and supporting text on the white sections */
+.ipgs-team-page h1,
+.ipgs-team-page h2,
+.ipgs-team-page h3,
+.ipgs-team-stat strong,
+.ipgs-team-card-id h3,
+.ipgs-team-approach-left h2,
+.ipgs-team-final-inner h2 {
+    color: #0f1e2a;
+}
+.ipgs-team-page .ipgs-team-label,
+.ipgs-team-page .ipgs-team-card-department,
+.ipgs-team-page .ipgs-team-more,
+.ipgs-team-page .ipgs-team-text-link {
+    color: #258db5;
+}
+.ipgs-team-page .ipgs-team-text-link:hover,
+.ipgs-team-page .ipgs-team-more:hover,
+.ipgs-team-page .ipgs-team-chip:hover {
+    color: #0f1e2a;
+}
+.ipgs-team-page .ipgs-team-chip,
+.ipgs-team-page .ipgs-team-stat span,
+.ipgs-team-page .ipgs-team-bio,
+.ipgs-team-page .ipgs-team-approach-right p,
+.ipgs-team-page .ipgs-team-final-inner p {
+    color: #4b6070;
+}
+.ipgs-team-page .ipgs-team-chip.is-active,
+.ipgs-team-page .ipgs-team-primary-btn,
+.ipgs-team-page .ipgs-team-final-button,
+.ipgs-team-page .ipgs-team-avatar {
+    color: #ffffff;
+}
+.ipgs-team-page .ipgs-team-chip span {
+    background: #edf5f9;
+}
+.ipgs-team-page .ipgs-team-chip.is-active span {
+    background: rgba(255,255,255,.22);
+}
+.ipgs-team-page .ipgs-team-result,
+.ipgs-team-page .ipgs-team-card-pending {
+    color: #687c8a;
+}
+.ipgs-team-page .ipgs-team-card:hover {
+    border-color: #b7d8e7;
+}
+/* The closing CTA is also white; its original 3px accent line stays. */
+.ipgs-team-page .ipgs-team-final-cta {
+    background: #ffffff;
+}
+/* Preserve white text on the separate dark global hero, if any title is a heading. */
+.ipgs-team-page .hero-data-bottom h1,
+.ipgs-team-page .hero-data-bottom h2,
+.ipgs-team-page .hero-data-bottom h3 {
+    color: #ffffff;
+}

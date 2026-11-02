@@ -24,6 +24,19 @@ import Projects1 from "../pages/Projects1.tsx";
 import SingleProjects from "../pages/SingleProjects.tsx";
 import SingleProjects2 from "../pages/SingleProjects2.tsx";
 import Contact from '../pages/Contact.tsx';
+import HowWeWork from "../pages/HowWeWork.tsx";
+import OurTeam from "../pages/OurTeam.tsx";
+import Culture from "../pages/Culture.tsx";
+import Careers from "../pages/Careers.tsx";
+import IPGSAcademy from "../pages/IPGSAcademy.tsx";
+import CSR from "../pages/CSR.tsx";
+import OperationalTechnology from "../pages/OperationalTechnology.tsx";
+import RailTransport from "../pages/RailTransport.tsx";
+import EnergyOilGas from "../pages/EnergyOilGas.tsx";
+import TelecomNetworkServices from "../pages/TelecomNetworkServices.tsx";
+import CoreNetwork from "../pages/CoreNetwork.tsx";
+import RAN from "../pages/RAN.tsx";
+import Cybersecurity from "../pages/Cybersecurity.tsx";
 
 interface RouteType {
     path: string;
@@ -39,6 +52,19 @@ export const routesWithMainLayout1: RouteType[] = [
     { path: "/", element: <Home1 /> },
     { path: "/Home2", element: <Home2 /> },
     { path: "/AboutUs", element: <AboutUs /> },
+    { path: "/how-we-work", element: <HowWeWork /> },
+    { path: "/our-team", element: <OurTeam /> },
+    {path: "/culture", element: <Culture /> },
+    {path: "/careers", element: <Careers /> },
+    {path: "/ipgs-academy", element: <IPGSAcademy /> },
+    {path: "/csr", element: <CSR />, },
+    {path: "/operational-technology", element: <OperationalTechnology /> },
+    {path: "/rail-transport", element: <RailTransport />, },
+    {path: "/energy-oil-gas", element: <EnergyOilGas />, },
+    {path: "/telecom-network-services", element: <TelecomNetworkServices />, },
+    {path: "/core-network", element: <CoreNetwork />, },
+    {path: "/ran", element: <RAN />, },
+    {path: "/cybersecurity", element: <Cybersecurity />, },
     { path: "/Team1", element: <Team1 /> },
     { path: "/Team2", element: <Team2 /> },
     { path: "/SingleTeam", element: <SingleTeam /> },

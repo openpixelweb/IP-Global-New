@@ -1,0 +1,981 @@
+/* ==========================================
+   IPGS ACADEMY
+   Dark navy + steel-blue palette. Rotating
+   seal, drawing learning pathway, belief
+   cards, outlined watermark CTA.
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-academy-page {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --card: #ffffff;
+    --card-hover: #f2f8fb;
+    --line: #d9e7ed;
+    --blue: #2f8ab3;
+    --blue-light: #207ea5;
+    --blue-hover: #3d9ec9;
+    --white: #ffffff;
+    --text: #465d6d;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-academy-page *,
+.ipgs-academy-page *::before,
+.ipgs-academy-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-academy-page .container {
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ipgs-academy-page h1,
+.ipgs-academy-page h2,
+.ipgs-academy-page h3 {
+    font-family: var(--font);
+    color: #0f1e2a;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+}
+
+.ipgs-academy-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-academy-page img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- Eyebrow label ---------- */
+
+.academy-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.academy-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+/* ---------- Banner (existing site hero) ---------- */
+
+.ipgs-academy-banner .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-academy-banner .title-of-hero p,
+.ipgs-academy-banner .title-of-hero span {
+    animation: academy-hero-in 0.9s var(--ease) both;
+}
+
+.ipgs-academy-banner .title-of-hero span {
+    animation-delay: 0.18s;
+}
+
+.ipgs-academy-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ipgs-academy-banner .title-of-hero span a:hover {
+    color: var(--blue-light);
+}
+
+@keyframes academy-hero-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes academy-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- Scroll reveal ----------
+   up    : fade + rise
+   lines : headline lines slide up out of a mask
+   image : the OBSERVED wrapper stays visible; only the <img>
+           inside is clipped, so the image always triggers
+   track : pathway line draws, then stages appear */
+
+.ipgs-academy-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-academy-page.is-anim [data-reveal="up"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.academy-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.academy-line > span {
+    display: block;
+}
+
+.ipgs-academy-page.is-anim [data-reveal="lines"] .academy-line > span {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-academy-page.is-anim [data-reveal="lines"].is-visible .academy-line > span {
+    transform: none;
+}
+
+.ipgs-academy-page.is-anim [data-reveal="image"] img {
+    clip-path: inset(0 0 100% 0);
+    transform: scale(1.1);
+    transition:
+        clip-path 1.2s var(--ease),
+        transform 1.8s var(--ease);
+}
+
+.ipgs-academy-page.is-anim [data-reveal="image"].is-visible img {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+}
+
+/* ---------- Shared ---------- */
+
+.academy-photo {
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+}
+
+.academy-photo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.academy-primary-btn,
+.academy-final-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 56px;
+    padding: 15px 28px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.academy-primary-btn:hover,
+.academy-final-button:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.academy-primary-btn i,
+.academy-final-button i {
+    font-size: 19px;
+    transition: transform 0.25s var(--ease);
+}
+
+.academy-primary-btn:hover i,
+.academy-final-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+.academy-text-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 10px;
+    color: #0f1e2a;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.academy-text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--blue-light);
+    transform-origin: left;
+    transform: scaleX(0.35);
+    transition: transform 0.4s var(--ease);
+}
+
+.academy-text-link:hover {
+    color: var(--white);
+}
+
+.academy-text-link:hover::after {
+    transform: scaleX(1);
+}
+
+.academy-text-link i {
+    font-size: 19px;
+    transition: transform 0.3s var(--ease);
+}
+
+.academy-text-link:hover i {
+    transform: translateX(4px);
+}
+
+.ipgs-academy-page a:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 4px;
+}
+
+/* ---------- Introduction ---------- */
+
+.academy-intro-section {
+    padding: 110px 0;
+    background: var(--bg);
+}
+
+.academy-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 7%;
+}
+
+.academy-intro-content h1 {
+    margin-bottom: 26px;
+    font-size: clamp(38px, 4.4vw, 64px);
+}
+
+.academy-intro-content > p {
+    max-width: 56ch;
+    margin-bottom: 34px;
+    font-size: 18px;
+}
+
+.academy-intro-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 26px;
+    color: #0f1e2a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.academy-intro-note i {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    font-size: 17px;
+}
+
+.academy-intro-visual {
+    position: relative;
+    min-width: 0;
+}
+
+.academy-intro-visual .academy-photo img {
+    height: 560px;
+}
+
+/* Seal */
+
+.academy-seal {
+    position: absolute;
+    top: -28px;
+    right: -20px;
+    display: grid;
+    place-items: center;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: #0b1520;
+    border: 1px solid var(--line);
+}
+
+.academy-seal::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 2px dashed var(--blue-light);
+    animation: academy-spin 28s linear infinite;
+}
+
+.academy-seal-text {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.academy-seal-text span {
+    display: block;
+    color: var(--blue-light);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.academy-seal-text strong {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.academy-intro-image-caption {
+    position: absolute;
+    left: -30px;
+    bottom: 36px;
+    padding: 24px 30px;
+    background: #0b1520;
+    border-left: 4px solid var(--blue);
+}
+
+.academy-intro-image-caption span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.academy-intro-image-caption strong {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- Story ---------- */
+
+.academy-story-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.academy-story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.academy-story-image {
+    position: relative;
+}
+
+.academy-story-image .academy-photo img {
+    height: 640px;
+}
+
+.academy-story-image-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: min(300px, 85%);
+    padding: 24px 26px;
+    background: var(--blue);
+}
+
+.academy-story-image-caption span {
+    display: block;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.academy-story-image-caption strong {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.academy-story-content h2 {
+    margin-bottom: 26px;
+    font-size: clamp(32px, 3.6vw, 50px);
+}
+
+.academy-story-content > p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.academy-story-message {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    margin: 32px 0 26px;
+    padding: 26px 28px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+}
+
+.academy-story-message i {
+    flex-shrink: 0;
+    color: var(--blue-light);
+    font-size: 34px;
+    line-height: 1;
+}
+
+.academy-story-message p {
+    margin-bottom: 0;
+    color: #0f1e2a;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* ---------- Learning pathway ---------- */
+
+.academy-benefits-section {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.academy-benefits-heading {
+    margin-bottom: 64px;
+}
+
+.academy-benefits-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: end;
+    gap: 8%;
+}
+
+.academy-benefits-heading h2 {
+    margin-bottom: 0;
+    font-size: clamp(34px, 4vw, 56px);
+}
+
+.academy-benefits-heading-grid p {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.academy-path {
+    position: relative;
+    display: grid;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* base line + blue progress line through the node centres */
+.academy-path::before,
+.academy-path::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 35px;
+    width: 2px;
+}
+
+.academy-path::before {
+    background: var(--line);
+}
+
+.academy-path::after {
+    background: var(--blue);
+    transform-origin: top;
+    transition: transform 2.4s var(--ease) 0.2s;
+}
+
+.ipgs-academy-page.is-anim .academy-path::after {
+    transform: scaleY(0);
+}
+
+.ipgs-academy-page.is-anim .academy-path.is-visible::after {
+    transform: scaleY(1);
+}
+
+.academy-path-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    align-items: center;
+    gap: 36px;
+}
+
+.academy-path-node {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    background: var(--blue);
+    border: 5px solid var(--bg);
+    color: #fff;
+    font-size: 29px;
+}
+
+.academy-path-card {
+    padding: 30px 36px 32px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.academy-path-item:hover .academy-path-card {
+    background: var(--card-hover);
+    border-color: #3a4b58;
+}
+
+.academy-path-card h3 {
+    margin-bottom: 12px;
+    font-size: clamp(21px, 2.2vw, 27px);
+}
+
+.academy-path-card p {
+    max-width: 70ch;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* stages appear one after another once the line starts drawing */
+.ipgs-academy-page.is-anim .academy-path-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-academy-page.is-anim .academy-path.is-visible .academy-path-item {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Beliefs ---------- */
+
+.academy-belief-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.academy-belief-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: 8%;
+}
+
+.academy-belief-heading {
+    position: sticky;
+    top: 110px;
+}
+
+.academy-belief-heading h2 {
+    margin-bottom: 26px;
+    font-size: clamp(32px, 3.6vw, 50px);
+}
+
+.academy-belief-heading > p {
+    margin-bottom: 32px;
+    font-size: 17px;
+}
+
+.academy-belief-image img {
+    height: 300px;
+}
+
+.academy-belief-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.academy-belief-item {
+    position: relative;
+    min-width: 0;
+    padding: 34px 30px 36px;
+    background: var(--card);
+    border: 1px solid var(--line);
+}
+
+/* blue line draws along the bottom edge on hover */
+.academy-belief-item::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    height: 3px;
+    background: var(--blue);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s var(--ease);
+}
+
+.academy-belief-item:hover::after {
+    transform: scaleX(1);
+}
+
+.academy-belief-icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 26px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 26px;
+}
+
+.academy-belief-item h3 {
+    margin-bottom: 14px;
+    font-size: 22px;
+}
+
+.academy-belief-item p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+/* ---------- Final CTA ---------- */
+
+.academy-final-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    background: #0b1520;
+    border-top: 3px solid var(--blue);
+}
+
+/* Large outlined word behind the content */
+.academy-final-watermark {
+    position: absolute;
+    right: -2%;
+    bottom: -0.2em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(93, 181, 214, 0.14);
+    font-size: clamp(120px, 20vw, 300px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    pointer-events: none;
+    user-select: none;
+}
+
+.academy-final-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.55fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.academy-final-content h2 {
+    margin-bottom: 24px;
+    font-size: clamp(34px, 4vw, 56px);
+}
+
+.academy-final-content p {
+    max-width: 62ch;
+    margin-bottom: 14px;
+    font-size: 17px;
+}
+
+.academy-final-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.academy-final-button {
+    width: min(100%, 340px);
+}
+
+.academy-final-small-text {
+    color: #8593a0;
+    font-size: 14px;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1199px) {
+    .academy-intro-section,
+    .academy-story-section,
+    .academy-benefits-section,
+    .academy-belief-section {
+        padding: 86px 0;
+    }
+
+    .academy-intro-visual .academy-photo img {
+        height: 480px;
+    }
+
+    .academy-story-image .academy-photo img {
+        height: 560px;
+    }
+
+    .academy-seal {
+        top: 12px;
+        right: 12px;
+    }
+
+    .academy-intro-image-caption {
+        left: 16px;
+    }
+
+    .academy-belief-list {
+        gap: 18px;
+    }
+
+    .academy-belief-item {
+        padding: 28px 22px 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .academy-intro-grid,
+    .academy-story-grid,
+    .academy-benefits-heading-grid,
+    .academy-belief-layout,
+    .academy-final-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .academy-story-image .academy-photo img {
+        height: 460px;
+    }
+
+    .academy-belief-heading {
+        position: static;
+    }
+
+    .academy-belief-image img {
+        height: 260px;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 767px) {
+    .ipgs-academy-page .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .academy-label {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .academy-label > span {
+        width: 32px;
+    }
+
+    .academy-intro-section,
+    .academy-story-section,
+    .academy-benefits-section,
+    .academy-belief-section {
+        padding: 64px 0;
+    }
+
+    .academy-intro-content > p,
+    .academy-story-content > p,
+    .academy-benefits-heading-grid p,
+    .academy-belief-heading > p {
+        font-size: 16px;
+    }
+
+    .academy-intro-visual .academy-photo img {
+        height: 340px;
+    }
+
+    .academy-seal {
+        width: 96px;
+        height: 96px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .academy-seal::before {
+        inset: 6px;
+    }
+
+    .academy-seal-text span {
+        font-size: 14px;
+    }
+
+    .academy-seal-text strong {
+        font-size: 10px;
+    }
+
+    .academy-intro-image-caption {
+        left: 10px;
+        bottom: 12px;
+        padding: 16px 20px;
+    }
+
+    .academy-intro-image-caption strong {
+        font-size: 19px;
+    }
+
+    .academy-story-image .academy-photo img {
+        height: 340px;
+    }
+
+    .academy-story-message {
+        padding: 20px;
+    }
+
+    .academy-benefits-heading {
+        margin-bottom: 40px;
+    }
+
+    /* shrink the pathway nodes */
+    .academy-path {
+        gap: 20px;
+    }
+
+    .academy-path::before,
+    .academy-path::after {
+        left: 23px;
+    }
+
+    .academy-path-item {
+        grid-template-columns: 48px minmax(0, 1fr);
+        align-items: start;
+        gap: 16px;
+    }
+
+    .academy-path-node {
+        width: 48px;
+        height: 48px;
+        border-width: 4px;
+        font-size: 21px;
+    }
+
+    .academy-path-card {
+        padding: 22px 20px 24px;
+    }
+
+    .academy-path-card p {
+        font-size: 15px;
+    }
+
+    .academy-belief-list {
+        grid-template-columns: 1fr;
+    }
+
+    .academy-final-section {
+        padding: 70px 0;
+    }
+}
+
+/* ---------- Reduced motion: show everything, no movement ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-academy-banner .title-of-hero p,
+    .ipgs-academy-banner .title-of-hero span {
+        animation: none;
+    }
+
+    .academy-seal::before {
+        animation: none;
+    }
+
+    .ipgs-academy-page.is-anim [data-reveal="up"],
+    .ipgs-academy-page.is-anim [data-reveal="lines"] .academy-line > span,
+    .ipgs-academy-page.is-anim [data-reveal="image"] img,
+    .ipgs-academy-page.is-anim .academy-path-item {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        transition: none;
+    }
+
+    .ipgs-academy-page.is-anim .academy-path::after {
+        transform: none;
+        transition: none;
+    }
+
+    .academy-text-link::after,
+    .academy-text-link i,
+    .academy-primary-btn i,
+    .academy-final-button i,
+    .academy-belief-item::after {
+        transition: none;
+    }
+}
+
+/* White content theme: contrast fixes only. Keep global shared hero untouched. */
+.ipgs-academy-page .academy-text-link,
+.ipgs-academy-page .academy-text-link:hover { color: #0f1e2a; }
+.ipgs-academy-page .academy-story-message p { color: #0f1e2a; }
+.ipgs-academy-page .academy-path-card h3,
+.ipgs-academy-page .academy-belief-item h3 { color: #0f1e2a; }
+.ipgs-academy-page .academy-final-section h2,
+.ipgs-academy-page .academy-final-section p { color: #ffffff; }
+.ipgs-academy-page .ipgs-academy-banner .title-of-hero p,
+.ipgs-academy-page .ipgs-academy-banner .title-of-hero span,
+.ipgs-academy-page .ipgs-academy-banner .title-of-hero a { color: #ffffff; }

@@ -1,0 +1,1044 @@
+/* =============================================
+   IPGS ENERGY, OIL & GAS
+   Dark navy + steel-blue palette. No photos:
+   plant-chain panel, uptime pulse line, delivery
+   lifecycle, accordion services, signal-line CTA.
+============================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-energy-page {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --bg-deep: #0b1520;
+    --card: #ffffff;
+    --card-hover: #f2f8fb;
+    --line: #d9e5ec;
+    --blue: #2f8ab3;
+    --blue-light: #247da3;
+    --blue-hover: #3d9ec9;
+    --white: #102b3b;
+    --text: #435566;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-energy-page *,
+.ipgs-energy-page *::before,
+.ipgs-energy-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-energy-page .container {
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.ipgs-energy-page h1,
+.ipgs-energy-page h2,
+.ipgs-energy-page h3 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: var(--font);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-energy-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-energy-page h1 em,
+.ipgs-energy-page h2 span {
+    color: var(--blue-light);
+    font-style: normal;
+}
+
+.ipgs-energy-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-energy-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+/* ---------- Banner ---------- */
+
+.ipgs-energy-banner .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-energy-banner .title-of-hero p,
+.ipgs-energy-banner .title-of-hero span {
+    animation: energy-hero-in 0.9s var(--ease) both;
+}
+
+.ipgs-energy-banner .title-of-hero span {
+    animation-delay: 0.18s;
+}
+
+.ipgs-energy-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ipgs-energy-banner .title-of-hero span a:hover {
+    color: var(--blue-light);
+}
+
+@keyframes energy-hero-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes energy-grid {
+    to { background-position: 64px 64px; }
+}
+
+@keyframes energy-flow {
+    0% { top: 36px; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: calc(100% - 36px); opacity: 0; }
+}
+
+@keyframes energy-draw {
+    0% { stroke-dashoffset: 1400; }
+    70%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes energy-step-icon {
+    0%, 3% { background-color: var(--bg-alt); color: var(--blue-light); border-color: var(--line); }
+    8%, 30% { background-color: var(--blue); color: #fff; border-color: var(--blue-light); }
+    36%, 100% { background-color: var(--bg-alt); color: var(--blue-light); border-color: var(--line); }
+}
+
+@keyframes energy-signal {
+    0% { left: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* ---------- Scroll reveal ---------- */
+
+.ipgs-energy-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-energy-page.is-anim [data-reveal="up"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-energy-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.ipgs-energy-line > * {
+    display: block;
+}
+
+.ipgs-energy-page.is-anim [data-reveal="lines"] .ipgs-energy-line > * {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-energy-page.is-anim [data-reveal="lines"].is-visible .ipgs-energy-line > * {
+    transform: none;
+}
+
+.ipgs-energy-page.is-anim [data-reveal="panel"] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.ipgs-energy-page.is-anim [data-reveal="panel"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.ipgs-energy-button,
+.ipgs-energy-final-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 56px;
+    padding: 15px 28px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-energy-button:hover,
+.ipgs-energy-final-button:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-energy-button i,
+.ipgs-energy-final-button i {
+    font-size: 19px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-energy-button:hover i,
+.ipgs-energy-final-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+.ipgs-energy-page a:focus-visible,
+.ipgs-energy-page button:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 4px;
+}
+
+/* ---------- Shared panel pieces ---------- */
+
+.ipgs-energy-chain-tag {
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* ---------- Intro ---------- */
+
+.ipgs-energy-intro {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.ipgs-energy-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.2;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    animation: energy-grid 24s linear infinite;
+}
+
+.ipgs-energy-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: stretch;
+    gap: 7%;
+}
+
+.ipgs-energy-intro-content h1 {
+    margin-bottom: 28px;
+    font-size: clamp(36px, 4.4vw, 62px);
+    line-height: 1.08;
+}
+
+.ipgs-energy-intro-content > p {
+    max-width: 58ch;
+    margin-bottom: 24px;
+    font-size: 17px;
+}
+
+.ipgs-energy-intro-quote {
+    max-width: 520px;
+    margin: 0 0 34px;
+    padding-left: 20px;
+    border-left: 3px solid var(--blue);
+    color: var(--white);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* Chain panel */
+
+.ipgs-energy-chain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    min-width: 0;
+    padding: 40px 44px 44px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-energy-chain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.16;
+    pointer-events: none;
+}
+
+.ipgs-energy-chain > * {
+    position: relative;
+}
+
+.ipgs-energy-chain-list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* vertical line joining the four nodes */
+.ipgs-energy-chain-list::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    bottom: 36px;
+    left: 35px;
+    width: 3px;
+    background: var(--line);
+}
+
+.ipgs-energy-chain-list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 0;
+}
+
+.ipgs-energy-chain-list li i {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    background: var(--bg-alt);
+    border: 2px solid var(--line);
+    color: var(--blue-light);
+    font-size: 30px;
+    transition: background-color 0.6s ease, border-color 0.6s ease, color 0.6s ease;
+}
+
+.ipgs-energy-chain-list li strong {
+    color: var(--white);
+    font-size: clamp(19px, 2vw, 25px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.ipgs-energy-page.is-anim [data-reveal="panel"].is-visible .ipgs-energy-chain-list li i {
+    background: var(--blue);
+    border-color: var(--blue-light);
+    color: #fff;
+    transition-delay: var(--d, 0ms);
+}
+
+.ipgs-energy-flow {
+    position: absolute;
+    left: 31px;
+    top: 36px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--blue-light);
+    box-shadow: 0 0 0 6px rgba(93, 181, 214, 0.2), 0 0 18px var(--blue-light);
+    animation: energy-flow 4.5s ease-in-out infinite;
+}
+
+.ipgs-energy-chain-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin: 0;
+    padding: 22px 0 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-energy-chain-values li {
+    color: var(--white);
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+/* ---------- Always-on operations ---------- */
+
+.ipgs-energy-operations {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-energy-operations-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    gap: 8%;
+}
+
+.ipgs-energy-uptime {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+    min-width: 0;
+    padding: 40px 40px 42px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+}
+
+.ipgs-energy-uptime > strong {
+    color: var(--white);
+    font-size: clamp(32px, 3.6vw, 50px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.ipgs-energy-pulse {
+    width: 100%;
+    height: 130px;
+}
+
+.ipgs-energy-pulse path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.pulse-base {
+    stroke: var(--line);
+    stroke-width: 3;
+}
+
+.pulse-live {
+    stroke: var(--blue-light);
+    stroke-width: 3;
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 1400;
+    animation: energy-draw 5s ease-in-out infinite;
+}
+
+.ipgs-energy-uptime > p {
+    margin: 0;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.ipgs-energy-operations-content h2 {
+    margin-bottom: 26px;
+    font-size: clamp(34px, 3.7vw, 52px);
+}
+
+.ipgs-energy-operations-content p {
+    margin-bottom: 18px;
+    font-size: 16.5px;
+}
+
+/* ---------- Capabilities ---------- */
+
+.ipgs-energy-capabilities {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-energy-capabilities-heading,
+.ipgs-energy-assurance-heading {
+    margin-bottom: 56px;
+}
+
+.ipgs-energy-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: end;
+    gap: 9%;
+}
+
+.ipgs-energy-heading-grid h2 {
+    margin-bottom: 0;
+    font-size: clamp(34px, 3.9vw, 54px);
+}
+
+.ipgs-energy-heading-grid > p {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-energy-capabilities-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    align-items: start;
+    gap: 6%;
+}
+
+/* Lifecycle panel (sticky) */
+
+.ipgs-energy-lifecycle {
+    position: sticky;
+    top: 100px;
+    padding: 36px 34px 38px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-energy-lifecycle ol {
+    position: relative;
+    margin: 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ipgs-energy-lifecycle ol::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 29px;
+    width: 3px;
+    background: var(--line);
+}
+
+.ipgs-energy-lifecycle li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.ipgs-energy-lifecycle li i {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--bg-alt);
+    border: 2px solid var(--line);
+    color: var(--blue-light);
+    font-size: 26px;
+    animation: energy-step-icon 9s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+.ipgs-energy-lifecycle li strong {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.ipgs-energy-lifecycle > p {
+    margin: 0;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Accordion */
+
+.ipgs-energy-services-list {
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-energy-service {
+    border-bottom: 1px solid var(--line);
+    transition: background-color 0.3s ease;
+}
+
+.ipgs-energy-service.is-active {
+    background: var(--card);
+}
+
+.ipgs-energy-service-heading {
+    margin: 0;
+    font-size: inherit;
+    letter-spacing: 0;
+}
+
+.ipgs-energy-service-button {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) 24px;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 24px 22px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font);
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.ipgs-energy-service-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--blue-light);
+    font-size: 23px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.ipgs-energy-service.is-active .ipgs-energy-service-icon {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+}
+
+.ipgs-energy-service-title {
+    font-size: clamp(17px, 1.7vw, 21px);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+}
+
+.ipgs-energy-service-button:hover .ipgs-energy-service-title {
+    color: var(--blue-light);
+}
+
+/* plus / minus */
+.ipgs-energy-toggle {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.ipgs-energy-toggle::before,
+.ipgs-energy-toggle::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: var(--blue-light);
+    transition: transform 0.35s var(--ease);
+}
+
+.ipgs-energy-toggle::after {
+    transform: rotate(90deg);
+}
+
+.ipgs-energy-service.is-active .ipgs-energy-toggle::after {
+    transform: rotate(0);
+}
+
+.ipgs-energy-service-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition:
+        grid-template-rows 0.5s var(--ease),
+        visibility 0s linear 0.5s;
+}
+
+.ipgs-energy-service.is-active .ipgs-energy-service-panel {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows 0.5s var(--ease), visibility 0s;
+}
+
+.ipgs-energy-service-panel > div {
+    min-height: 0;
+    overflow: hidden;
+    padding: 0 40px 0 94px;
+}
+
+.ipgs-energy-service-panel p {
+    margin: 0 0 26px;
+    font-size: 16px;
+}
+
+.ipgs-energy-service-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: -6px 0 28px;
+    padding-bottom: 8px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ipgs-energy-service-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--blue-light);
+    transform-origin: left;
+    transform: scaleX(0.35);
+    transition: transform 0.4s var(--ease);
+}
+
+.ipgs-energy-service-link:hover {
+    color: var(--white);
+}
+
+.ipgs-energy-service-link:hover::after {
+    transform: scaleX(1);
+}
+
+.ipgs-energy-service-link i {
+    font-size: 18px;
+    transition: transform 0.3s var(--ease);
+}
+
+.ipgs-energy-service-link:hover i {
+    transform: translateX(4px);
+}
+
+/* ---------- Assurance ---------- */
+
+.ipgs-energy-assurance {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-energy-assurance-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 70px;
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-energy-assurance-item {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 22px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-energy-tick {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 22px;
+    transition: background-color 0.25s ease, transform 0.4s var(--ease);
+}
+
+.ipgs-energy-assurance-item:hover .ipgs-energy-tick {
+    background: var(--blue-hover);
+    transform: translateY(-3px);
+}
+
+.ipgs-energy-assurance-item h3 {
+    margin-bottom: 12px;
+    font-size: clamp(20px, 2vw, 24px);
+}
+
+.ipgs-energy-assurance-item p {
+    margin-bottom: 0;
+    font-size: 15.5px;
+}
+
+/* ---------- Final CTA ---------- */
+
+.ipgs-energy-final {
+    position: relative;
+    padding: 50px 0 50px;
+    overflow: hidden;
+    background: var(--bg-deep);
+}
+
+.ipgs-energy-signal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(47, 138, 179, 0.35);
+}
+
+.ipgs-energy-signal span {
+    position: absolute;
+    top: -5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 4px rgba(47, 138, 179, 0.25);
+}
+
+.ipgs-energy-signal span:nth-child(1) { left: 8%; }
+.ipgs-energy-signal span:nth-child(2) { left: 50%; }
+.ipgs-energy-signal span:nth-child(3) { left: 92%; }
+
+.ipgs-energy-signal i {
+    position: absolute;
+    top: -2px;
+    width: 120px;
+    height: 7px;
+    margin-left: -120px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, transparent, var(--blue-light));
+    animation: energy-signal 6s linear infinite;
+}
+
+.ipgs-energy-final-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-energy-final h2 {
+    max-width: 22ch;
+    margin-bottom: 24px;
+    font-size: clamp(34px, 4vw, 56px);
+}
+
+.ipgs-energy-final p {
+    max-width: 62ch;
+    margin-bottom: 14px;
+    font-size: 17px;
+}
+
+.ipgs-energy-final-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.ipgs-energy-final-button {
+    white-space: nowrap;
+}
+
+.ipgs-energy-final-action > span {
+    max-width: 30ch;
+    font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1199px) {
+    .ipgs-energy-intro,
+    .ipgs-energy-operations,
+    .ipgs-energy-capabilities,
+    .ipgs-energy-assurance { padding: 86px 0; }
+
+    .ipgs-energy-chain { padding: 32px 28px 34px; }
+    .ipgs-energy-uptime { padding: 32px 28px 34px; }
+    .ipgs-energy-service-panel > div { padding-left: 90px; }
+    .ipgs-energy-assurance-list { column-gap: 40px; }
+}
+
+@media (max-width: 991px) {
+    .ipgs-energy-intro-grid,
+    .ipgs-energy-operations-grid,
+    .ipgs-energy-heading-grid,
+    .ipgs-energy-capabilities-grid,
+    .ipgs-energy-final-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .ipgs-energy-lifecycle { position: static; }
+    .ipgs-energy-assurance-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+    .ipgs-energy-page .container { padding: 0 20px; }
+
+    .ipgs-energy-label { gap: 12px; font-size: 12px; }
+    .ipgs-energy-label > span { width: 32px; }
+
+    .ipgs-energy-intro,
+    .ipgs-energy-operations,
+    .ipgs-energy-capabilities,
+    .ipgs-energy-assurance { padding: 64px 0; }
+
+    .ipgs-energy-intro-content > p,
+    .ipgs-energy-operations-content p,
+    .ipgs-energy-heading-grid > p { font-size: 16px; }
+
+    .ipgs-energy-chain { padding: 26px 20px 28px; gap: 30px; }
+    .ipgs-energy-chain-list::before { left: 27px; }
+    .ipgs-energy-flow { left: 23px; }
+    .ipgs-energy-chain-list li i { width: 56px; height: 56px; font-size: 24px; }
+
+    .ipgs-energy-uptime { padding: 26px 20px 28px; }
+    .ipgs-energy-pulse { height: 100px; }
+
+    .ipgs-energy-capabilities-heading,
+    .ipgs-energy-assurance-heading { margin-bottom: 36px; }
+
+    .ipgs-energy-lifecycle { padding: 26px 20px 28px; }
+
+    .ipgs-energy-service-button {
+        grid-template-columns: 44px minmax(0, 1fr) 20px;
+        gap: 14px;
+        padding: 20px 14px;
+    }
+
+    .ipgs-energy-service-icon { width: 44px; height: 44px; font-size: 20px; }
+    .ipgs-energy-service-panel > div { padding: 0 14px 0 72px; }
+    .ipgs-energy-service-panel p { font-size: 15px; }
+
+    .ipgs-energy-assurance-item { grid-template-columns: 38px minmax(0, 1fr); gap: 16px; padding: 24px 0; }
+    .ipgs-energy-tick { width: 38px; height: 38px; font-size: 19px; }
+
+    .ipgs-energy-final { padding: 76px 0 70px; }
+    .ipgs-energy-final-button { white-space: normal; }
+}
+
+@media (max-width: 420px) {
+    .ipgs-energy-page .container { padding: 0 17px; }
+    .ipgs-energy-button,
+    .ipgs-energy-final-button { width: 100%; }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-energy-banner .title-of-hero p,
+    .ipgs-energy-banner .title-of-hero span,
+    .ipgs-energy-grid-bg,
+    .ipgs-energy-flow,
+    .ipgs-energy-lifecycle li i,
+    .ipgs-energy-signal i {
+        animation: none;
+    }
+
+    .ipgs-energy-flow,
+    .ipgs-energy-signal i { display: none; }
+
+    .pulse-live { animation: none; stroke-dashoffset: 0; }
+
+    .ipgs-energy-page.is-anim [data-reveal="up"],
+    .ipgs-energy-page.is-anim [data-reveal="lines"] .ipgs-energy-line > *,
+    .ipgs-energy-page.is-anim [data-reveal="panel"] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .ipgs-energy-service-panel,
+    .ipgs-energy-toggle::before,
+    .ipgs-energy-toggle::after,
+    .ipgs-energy-service-link::after,
+    .ipgs-energy-service-link i,
+    .ipgs-energy-button i,
+    .ipgs-energy-final-button i {
+        transition: none;
+    }
+}
+
+/* ==============================================================
+   WHITE BACKGROUND / CONTRAST CORRECTION
+   Content backgrounds and colour contrast only.
+   Existing structure, sizing, animation and interactions retained.
+   ============================================================== */
+
+/* The site-wide breadcrumb banner remains navy, independent of the
+   page-level light theme. */
+.ipgs-energy-page .ipgs-energy-banner .title-of-hero p,
+.ipgs-energy-page .ipgs-energy-banner .title-of-hero span,
+.ipgs-energy-page .ipgs-energy-banner .title-of-hero span a {
+    color: #ffffff;
+}
+
+/* The closing call-to-action deliberately keeps its original navy
+   background while other sections are white. */
+.ipgs-energy-page .ipgs-energy-final h2 {
+    color: #ffffff;
+}
+.ipgs-energy-page .ipgs-energy-final p,
+.ipgs-energy-page .ipgs-energy-final-action > span {
+    color: #c7d6e1;
+}
+
+/* Maintain clear icon contrast on blue active backgrounds. */
+.ipgs-energy-page .ipgs-energy-chain-list li i,
+.ipgs-energy-page .ipgs-energy-lifecycle li i,
+.ipgs-energy-page .ipgs-energy-service-icon {
+    color: #247da3;
+}
+.ipgs-energy-page .ipgs-energy-service.is-active .ipgs-energy-service-icon,
+.ipgs-energy-page.is-anim [data-reveal="panel"].is-visible .ipgs-energy-chain-list li i {
+    color: #ffffff;
+}
+
+/* Avoid white-on-white in non-active accordion and card content. */
+.ipgs-energy-page .ipgs-energy-service-button,
+.ipgs-energy-page .ipgs-energy-service-link,
+.ipgs-energy-page .ipgs-energy-service-link:hover {
+    color: #102b3b;
+}
+.ipgs-energy-page .ipgs-energy-service-button:hover .ipgs-energy-service-title {
+    color: #247da3;
+}

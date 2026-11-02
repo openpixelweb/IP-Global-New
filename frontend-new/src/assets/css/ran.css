@@ -1,0 +1,1119 @@
+
+/* ===========================================
+   IPGS - RADIO ACCESS NETWORK (RAN)
+   Premium Telecom Design
+   Logo Palette: Navy / Blue / White
+=========================================== */
+
+.ipgs-ran-page {
+    --ran-navy: #0f1e2a;
+    --ran-navy-soft: #183247;
+    --ran-blue: #258db5;
+    --ran-sky: #75c5e4;
+    --ran-white: #ffffff;
+    --ran-pale: #edf7fb;
+    --ran-text: #465d6d;
+    --ran-border: #d8e7ee;
+
+    color: var(--ran-navy);
+    background: #ffffff;
+}
+
+.ipgs-ran-page *,
+.ipgs-ran-page *::before,
+.ipgs-ran-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-ran-page .container {
+    width: 100%;
+    max-width: 1240px;
+    padding-inline: 24px;
+    margin-inline: auto;
+}
+
+.ipgs-ran-page h1,
+.ipgs-ran-page h2,
+.ipgs-ran-page h3 {
+    margin-top: 0;
+    color: var(--ran-navy);
+    font-weight: 600;
+    letter-spacing: -.035em;
+    line-height: 1.2;
+}
+
+.ipgs-ran-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-ran-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.ipgs-ran-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ran-blue);
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.ipgs-ran-label > span {
+    width: 30px;
+    height: 3px;
+    flex-shrink: 0;
+    background: var(--ran-sky);
+}
+
+/* ===========================================
+   EXISTING IPGS BANNER
+=========================================== */
+
+.ipgs-ran-banner {
+    position: relative;
+    isolation: isolate;
+}
+
+.ipgs-ran-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(15, 30, 42, .85),
+        rgba(15, 30, 42, .35)
+    );
+    pointer-events: none;
+}
+
+.ipgs-ran-banner .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-ran-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ipgs-ran-banner .title-of-hero span a:hover {
+    color: var(--ran-sky);
+}
+
+/* ===========================================
+   BUTTONS AND LINKS
+=========================================== */
+
+.ipgs-ran-button,
+.ipgs-ran-final-button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    min-height: 55px;
+    padding: 16px 25px;
+    border: 0;
+    background: var(--ran-blue);
+    color: var(--ran-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+    transition:
+        background-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-ran-button:hover,
+.ipgs-ran-final-button:hover {
+    background: var(--ran-sky);
+    color: var(--ran-navy);
+    transform: translateY(-2px);
+}
+
+.ipgs-ran-button i,
+.ipgs-ran-final-button i {
+    font-size: 20px;
+}
+
+.ipgs-ran-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 9px;
+    border-bottom: 2px solid var(--ran-blue);
+    color: var(--ran-navy);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ipgs-ran-text-link:hover {
+    color: var(--ran-blue);
+}
+
+.ipgs-ran-text-link i {
+    font-size: 20px;
+}
+
+.ipgs-ran-page a:focus-visible,
+.ipgs-ran-page button:focus-visible {
+    outline: 3px solid var(--ran-sky);
+    outline-offset: 4px;
+}
+
+/* ===========================================
+   01 - NAVY INTRODUCTION
+=========================================== */
+
+.ipgs-ran-intro {
+    padding: 105px 0 120px;
+    overflow: hidden;
+    background: var(--ran-navy);
+}
+
+.ipgs-ran-intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.03fr) minmax(0, .97fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-ran-intro .ipgs-ran-label {
+    color: var(--ran-sky);
+}
+
+.ipgs-ran-intro-copy h1 {
+    margin-bottom: 28px;
+    color: #ffffff;
+    font-size: clamp(39px, 4.15vw, 60px);
+}
+
+.ipgs-ran-intro-copy h1 em {
+    color: var(--ran-sky);
+    font-style: normal;
+}
+
+.ipgs-ran-intro-copy > p {
+    max-width: 600px;
+    margin-bottom: 18px;
+    color: #c6dce8;
+    font-size: 17px;
+}
+
+.ipgs-ran-intro-copy .ipgs-ran-button {
+    margin-top: 22px;
+}
+
+/* MAIN RAN PHOTO */
+
+.ipgs-ran-intro-media {
+    position: relative;
+    min-width: 0;
+}
+
+.ipgs-ran-image-frame {
+    position: relative;
+    overflow: hidden;
+}
+
+.ipgs-ran-image-frame img {
+    width: 100%;
+    height: 525px;
+    object-fit: cover;
+}
+
+.ipgs-ran-image-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        0deg,
+        rgba(15, 30, 42, .28),
+        transparent 60%
+    );
+}
+
+.ipgs-ran-media-caption {
+    position: absolute;
+    left: -24px;
+    bottom: 25px;
+    z-index: 3;
+    width: min(215px, 75%);
+    padding: 23px;
+    background: #ffffff;
+    border-top: 3px solid var(--ran-blue);
+}
+
+.ipgs-ran-media-caption span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--ran-blue);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.ipgs-ran-media-caption strong {
+    color: var(--ran-navy);
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+/* ANIMATED RADIO NETWORK RINGS */
+
+.ipgs-ran-network-graphic {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    right: 25px;
+    display: grid;
+    place-items: center;
+    width: 115px;
+    height: 115px;
+    pointer-events: none;
+}
+
+.ipgs-ran-network-ring {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--ran-sky);
+    border-radius: 50%;
+    opacity: .65;
+}
+
+.ipgs-ran-network-ring.ring-one {
+    animation: ranSignal 4s ease-out infinite;
+}
+
+.ipgs-ran-network-ring.ring-two {
+    animation: ranSignal 4s ease-out 2s infinite;
+}
+
+.ipgs-ran-network-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--ran-sky);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 16px rgba(117, 197, 228, .6);
+}
+
+@keyframes ranSignal {
+    0% {
+        transform: scale(.4);
+        opacity: .8;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* ===========================================
+   02 - OUR APPROACH
+=========================================== */
+
+.ipgs-ran-approach {
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.ipgs-ran-approach-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .92fr);
+    align-items: start;
+    gap: 10%;
+}
+
+.ipgs-ran-chapter {
+    display: block;
+    margin-bottom: 27px;
+    color: #7895a6;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.ipgs-ran-approach h2 {
+    font-size: clamp(36px, 3.8vw, 54px);
+}
+
+.ipgs-ran-approach h2 span {
+    color: var(--ran-blue);
+}
+
+.ipgs-ran-approach-copy {
+    padding-top: 34px;
+}
+
+.ipgs-ran-approach-copy p {
+    margin-bottom: 20px;
+    color: var(--ran-text);
+    font-size: 17px;
+}
+
+.ipgs-ran-approach-note {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    padding-top: 23px;
+    border-top: 1px solid var(--ran-border);
+}
+
+.ipgs-ran-approach-note i {
+    color: var(--ran-blue);
+    font-size: 29px;
+}
+
+.ipgs-ran-approach-note strong {
+    color: var(--ran-navy);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ===========================================
+   03 - SIX CAPABILITIES
+=========================================== */
+
+.ipgs-ran-services {
+    padding: 50px 0 50px;
+    background: var(--ran-pale);
+}
+
+.ipgs-ran-services-heading {
+    margin-bottom: 55px;
+}
+
+.ipgs-ran-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
+    gap: 10%;
+    align-items: end;
+}
+
+.ipgs-ran-heading-grid h2 {
+    margin-bottom: 0;
+    font-size: clamp(37px, 4vw, 56px);
+}
+
+.ipgs-ran-heading-grid h2 span {
+    color: var(--ran-blue);
+}
+
+.ipgs-ran-heading-grid p {
+    color: var(--ran-text);
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.ipgs-ran-capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.ipgs-ran-capability {
+    background: #ffffff;
+    border: 1px solid var(--ran-border);
+    border-top: 2px solid var(--ran-blue);
+    min-width: 0;
+}
+
+.ipgs-ran-capability.is-active {
+    box-shadow: 0 15px 35px rgba(15, 30, 42, .07);
+}
+
+.ipgs-ran-capability h3 {
+    margin: 0;
+}
+
+.ipgs-ran-capability-trigger {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) 32px 22px;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    min-height: 115px;
+    padding: 22px 23px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    color: var(--ran-navy);
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.ipgs-ran-capability-index {
+    align-self: start;
+    padding-top: 5px;
+    color: var(--ran-blue);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ipgs-ran-capability-name {
+    font-size: clamp(18px, 1.7vw, 22px);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -.02em;
+}
+
+.ipgs-ran-capability-icon {
+    color: var(--ran-blue);
+    font-size: 26px;
+}
+
+.ipgs-ran-capability-trigger > i {
+    justify-self: end;
+    color: var(--ran-blue);
+    font-size: 20px;
+}
+
+.ipgs-ran-capability-panel {
+    padding: 0 27px 28px 68px;
+    animation: ranPanelEnter .25s ease-out both;
+}
+
+.ipgs-ran-capability-panel p {
+    margin-bottom: 0;
+    color: var(--ran-text);
+    font-size: 15px;
+}
+
+@keyframes ranPanelEnter {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================================
+   04 - TIER 1 EXPERIENCE
+=========================================== */
+
+.ipgs-ran-experience {
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.ipgs-ran-experience-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+    gap: 10%;
+    align-items: center;
+}
+
+.ipgs-ran-experience-images {
+    position: relative;
+    padding: 0 55px 55px 0;
+}
+
+.ipgs-ran-experience-images > img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.ipgs-ran-experience-small-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    border: 9px solid #ffffff;
+}
+
+.ipgs-ran-experience-small-image img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.ipgs-ran-experience-copy h2 {
+    margin-bottom: 27px;
+    font-size: clamp(36px, 3.8vw, 52px);
+}
+
+.ipgs-ran-experience-copy h2 span {
+    color: var(--ran-blue);
+}
+
+.ipgs-ran-experience-copy > p {
+    margin-bottom: 19px;
+    color: var(--ran-text);
+    font-size: 17px;
+}
+
+.ipgs-ran-experience-copy .ipgs-ran-text-link {
+    margin-top: 19px;
+}
+
+/* ===========================================
+   05 - FOUR DELIVERY PRINCIPLES
+=========================================== */
+
+.ipgs-ran-principles {
+    padding: 50px 0;
+    background: var(--ran-navy);
+}
+
+.ipgs-ran-principles .ipgs-ran-label {
+    color: var(--ran-sky);
+}
+
+.ipgs-ran-principles-heading {
+    max-width: 780px;
+    margin-bottom: 58px;
+}
+
+.ipgs-ran-principles-heading h2 {
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-size: clamp(38px, 3.9vw, 55px);
+}
+
+.ipgs-ran-principles-heading h2 span {
+    color: var(--ran-sky);
+}
+
+.ipgs-ran-principles-heading > p {
+    margin-bottom: 0;
+    color: #c4dae5;
+    font-size: 17px;
+}
+
+.ipgs-ran-principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px 65px;
+}
+
+.ipgs-ran-principle {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 18px;
+    padding-top: 28px;
+    border-top: 1px solid #3e5a6c;
+}
+
+.ipgs-ran-principle-number {
+    color: var(--ran-sky);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ipgs-ran-principle h3 {
+    margin-bottom: 17px;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.ipgs-ran-principle p {
+    margin-bottom: 0;
+    color: #c4d9e4;
+    font-size: 16px;
+}
+
+/* ===========================================
+   06 - FINAL CTA
+=========================================== */
+
+.ipgs-ran-final {
+    padding: 50px 0;
+    background: #e8f4fa;
+}
+
+.ipgs-ran-final-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8%;
+    align-items: center;
+}
+
+.ipgs-ran-final h2 {
+    max-width: 700px;
+    margin-bottom: 25px;
+    font-size: clamp(36px, 3.8vw, 54px);
+}
+
+.ipgs-ran-final h2 span {
+    color: var(--ran-blue);
+}
+
+.ipgs-ran-final p {
+    max-width: 700px;
+    margin-bottom: 15px;
+    color: var(--ran-text);
+    font-size: 17px;
+}
+
+.ipgs-ran-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ipgs-ran-final-button {
+    background: var(--ran-navy);
+    white-space: nowrap;
+}
+
+.ipgs-ran-final-button:hover {
+    background: var(--ran-blue);
+    color: #ffffff;
+}
+
+/* ===========================================
+   SCROLL REVEAL ANIMATION
+=========================================== */
+
+/* Content remains visible if JS is unavailable */
+
+.ipgs-ran-page [data-ran-reveal] {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes ranReveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-ran-page [data-ran-reveal].ran-visible {
+        animation: ranReveal .65s ease-out both;
+    }
+}
+
+/* ===========================================
+   LARGE TABLETS
+=========================================== */
+
+@media (max-width: 1199px) {
+    .ipgs-ran-intro,
+    .ipgs-ran-approach,
+    .ipgs-ran-services,
+    .ipgs-ran-experience,
+    .ipgs-ran-principles {
+        padding: 85px 0;
+    }
+
+    .ipgs-ran-intro-layout,
+    .ipgs-ran-approach-layout,
+    .ipgs-ran-experience-layout {
+        gap: 45px;
+    }
+
+    .ipgs-ran-image-frame img {
+        height: 465px;
+    }
+
+    .ipgs-ran-media-caption {
+        left: 12px;
+    }
+
+    .ipgs-ran-experience-images > img {
+        height: 440px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ipgs-ran-intro-layout,
+    .ipgs-ran-approach-layout,
+    .ipgs-ran-heading-grid,
+    .ipgs-ran-experience-layout {
+        gap: 30px;
+    }
+
+    .ipgs-ran-intro-copy h1 {
+        font-size: 39px;
+    }
+
+    .ipgs-ran-approach h2 {
+        font-size: 37px;
+    }
+
+    .ipgs-ran-image-frame img {
+        height: 405px;
+    }
+
+    .ipgs-ran-capability-trigger {
+        grid-template-columns: 25px minmax(0, 1fr) 20px;
+        gap: 10px;
+        padding: 19px 17px;
+    }
+
+    .ipgs-ran-capability-icon {
+        display: none;
+    }
+
+    .ipgs-ran-capability-panel {
+        padding: 0 20px 25px 52px;
+    }
+
+    .ipgs-ran-final-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ipgs-ran-final-action {
+        justify-content: flex-start;
+    }
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media (max-width: 767px) {
+    .ipgs-ran-page .container {
+        padding-inline: 20px;
+    }
+
+    .ipgs-ran-label {
+        margin-bottom: 20px;
+        font-size: 11px;
+        letter-spacing: 1.3px;
+    }
+
+    .ipgs-ran-intro,
+    .ipgs-ran-approach,
+    .ipgs-ran-services,
+    .ipgs-ran-experience,
+    .ipgs-ran-principles {
+        padding: 65px 0;
+    }
+
+    .ipgs-ran-intro-layout,
+    .ipgs-ran-approach-layout,
+    .ipgs-ran-heading-grid,
+    .ipgs-ran-experience-layout,
+    .ipgs-ran-final-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ipgs-ran-intro-copy h1 {
+        font-size: clamp(34px, 8.5vw, 45px);
+    }
+
+    .ipgs-ran-intro-copy > p,
+    .ipgs-ran-approach-copy p,
+    .ipgs-ran-experience-copy > p {
+        font-size: 16px;
+    }
+
+    .ipgs-ran-image-frame img {
+        height: 345px;
+    }
+
+    .ipgs-ran-network-graphic {
+        top: 15px;
+        right: 15px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .ipgs-ran-media-caption {
+        left: 10px;
+        bottom: 10px;
+        width: 180px;
+        padding: 17px;
+    }
+
+    .ipgs-ran-media-caption strong {
+        font-size: 20px;
+    }
+
+    .ipgs-ran-approach h2,
+    .ipgs-ran-heading-grid h2,
+    .ipgs-ran-experience-copy h2,
+    .ipgs-ran-principles-heading h2 {
+        font-size: clamp(32px, 8vw, 43px);
+    }
+
+    .ipgs-ran-approach-copy {
+        padding-top: 0;
+    }
+
+    .ipgs-ran-services-heading {
+        margin-bottom: 35px;
+    }
+
+    .ipgs-ran-capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .ipgs-ran-capability-trigger {
+        min-height: 93px;
+    }
+
+    .ipgs-ran-capability-name {
+        font-size: 19px;
+    }
+
+    .ipgs-ran-experience-images {
+        padding: 0 35px 35px 0;
+    }
+
+    .ipgs-ran-experience-images > img {
+        height: 360px;
+    }
+
+    .ipgs-ran-experience-small-image img {
+        height: 150px;
+    }
+
+    .ipgs-ran-principles-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ipgs-ran-principle h3 {
+        font-size: 23px;
+    }
+
+    .ipgs-ran-final {
+        padding: 70px 0;
+    }
+
+    .ipgs-ran-final h2 {
+        font-size: 35px;
+    }
+
+    .ipgs-ran-final-button {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 420px) {
+    .ipgs-ran-page .container {
+        padding-inline: 17px;
+    }
+
+    .ipgs-ran-intro-copy h1,
+    .ipgs-ran-approach h2,
+    .ipgs-ran-heading-grid h2,
+    .ipgs-ran-experience-copy h2,
+    .ipgs-ran-principles-heading h2,
+    .ipgs-ran-final h2 {
+        font-size: 31px;
+    }
+
+    .ipgs-ran-image-frame img,
+    .ipgs-ran-experience-images > img {
+        height: 270px;
+    }
+
+    .ipgs-ran-button,
+    .ipgs-ran-final-button {
+        width: 100%;
+    }
+}
+
+/* ===========================================
+   REDUCED MOTION ACCESSIBILITY
+=========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-ran-page *,
+    .ipgs-ran-page *::before,
+    .ipgs-ran-page *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .ipgs-ran-network-ring {
+        opacity: .5;
+        transform: scale(1.4);
+    }
+
+    .ipgs-ran-page [data-ran-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .ipgs-ran-button:hover,
+    .ipgs-ran-final-button:hover {
+        transform: none;
+    }
+}
+
+/* =============================================
+   IPGS RAN IMAGE-FREE EDITORIAL DESIGN
+   Inspired by the Our Team page hero treatment.
+   Colours: IPGS logo navy, blue, sky, white.
+============================================= */
+.ipgs-ran-page { --ran-navy:#0f1e2a; --ran-navy-soft:#183247; --ran-blue:#258db5; --ran-sky:#75c5e4; --ran-white:#ffffff; }
+
+/* Use the exact breadcrumb/hero architecture of Our Team. */
+.ipgs-ran-banner .title-of-hero p,
+.ipgs-ran-banner .title-of-hero span { animation:ranHeroEnter .9s cubic-bezier(.22,.61,.36,1) both; }
+.ipgs-ran-banner .title-of-hero span { animation-delay:.18s; }
+@keyframes ranHeroEnter { from { opacity:0;transform:translateY(14px); } to { opacity:1;transform:none; } }
+
+.ipgs-ran-intro { padding:104px 0 112px; background:var(--ran-navy); position:relative; isolation:isolate; }
+.ipgs-ran-intro::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:.4; background:radial-gradient(ellipse at 77% 40%,rgba(37,141,181,.17),transparent 47%); z-index:-1; }
+.ipgs-ran-intro-layout { grid-template-columns:minmax(0,1fr); gap:60px; }
+.ipgs-ran-intro-copy { max-width:950px; margin:auto; text-align:center; }
+.ipgs-ran-intro .ipgs-ran-label { justify-content:center; }
+.ipgs-ran-intro-copy h1 { max-width:950px; margin:0 auto 26px; font-size:clamp(38px,5vw,70px); letter-spacing:-.045em; line-height:1.13; }
+.ipgs-ran-intro-copy > p { max-width:780px; margin:0 auto 18px; }
+.ipgs-ran-intro-copy .ipgs-ran-button { margin-top:24px; }
+.ipgs-ran-hero-signature { position:relative; width:100%; max-width:1000px; margin:0 auto; padding:36px 42px 35px; overflow:hidden; border:1px solid rgba(117,197,228,.26); border-top:3px solid var(--ran-blue); background:linear-gradient(125deg,#183247,#0f1e2a 74%); color:#fff; }
+.ipgs-ran-signature-top,.ipgs-ran-feature-top { display:flex; justify-content:space-between; gap:16px; font-size:11px; font-weight:700; letter-spacing:.18em; color:var(--ran-sky); }
+.ipgs-ran-signature-title { position:relative; z-index:1; padding:62px 0 54px; font-size:clamp(30px,4vw,54px); font-weight:700; line-height:1.2; letter-spacing:-.04em; }
+.ipgs-ran-signature-title span { color:var(--ran-sky); }
+.ipgs-ran-signature-grid { position:relative; z-index:1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid rgba(117,197,228,.25); }
+.ipgs-ran-signature-grid > div { display:flex; flex-direction:column; gap:6px; padding:22px 12px 0 0; }
+.ipgs-ran-signature-grid > div + div { padding-left:22px; border-left:1px solid rgba(117,197,228,.25); }
+.ipgs-ran-signature-grid strong { color:white; font-size:19px; }
+.ipgs-ran-signature-grid span { color:#c4d9e4; font-size:13px; }
+.ipgs-ran-orbit { position:absolute; width:340px; height:340px; right:-70px; top:4px; display:grid; place-items:center; pointer-events:none; opacity:.45; }
+.ipgs-ran-orbit-circle { position:absolute; inset:20px; border:1px solid rgba(117,197,228,.4); border-radius:50%; animation:ranOrbit 20s linear infinite; }
+.ipgs-ran-orbit-circle::before { content:""; position:absolute; top:11%; left:12%; width:11px; height:11px; border-radius:50%; background:var(--ran-sky); box-shadow:0 0 22px var(--ran-blue); }
+.ipgs-ran-orbit-circle.orbit-b { inset:65px; animation-direction:reverse; animation-duration:15s; }
+.ipgs-ran-orbit-core { display:grid;place-items:center; width:80px;height:80px;border:1px solid var(--ran-sky);border-radius:50%;color:var(--ran-sky);font-size:38px; }
+@keyframes ranOrbit { to { transform:rotate(360deg); } }
+
+.ipgs-ran-experience-layout { grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:7%; }
+.ipgs-ran-experience-feature { position:relative; align-self:stretch; display:flex; flex-direction:column; padding:35px; min-height:475px; background:var(--ran-navy); border-top:4px solid var(--ran-blue); color:white; overflow:hidden; }
+.ipgs-ran-feature-num { margin:auto 0 0; font-size:clamp(75px,11vw,155px); line-height:1; font-weight:800; letter-spacing:-.09em; color:rgba(117,197,228,.18); }
+.ipgs-ran-feature-num span { color:var(--ran-blue); font-size:.5em; }
+.ipgs-ran-experience-feature h3 { color:white; font-size:clamp(27px,3vw,39px); margin:0 0 24px; }
+.ipgs-ran-feature-list { border-top:1px solid rgba(117,197,228,.3); }
+.ipgs-ran-feature-list > div { display:flex;align-items:center;gap:16px;padding:13px 0;border-bottom:1px solid rgba(117,197,228,.19); }
+.ipgs-ran-feature-list span { color:var(--ran-sky); font-size:12px; }
+.ipgs-ran-feature-list strong { flex:1; font-size:14px; color:white; }
+.ipgs-ran-feature-list i { color:var(--ran-sky); transition:transform .25s ease; }
+.ipgs-ran-feature-list > div:hover i { transform:translate(3px,-3px); }
+
+@media(max-width:991px) { .ipgs-ran-intro-layout { grid-template-columns:1fr; } .ipgs-ran-experience-layout { grid-template-columns:1fr; } .ipgs-ran-experience-feature { min-height:380px; } }
+@media(max-width:767px) { .ipgs-ran-intro { padding:65px 0; } .ipgs-ran-intro-layout { gap:35px; } .ipgs-ran-hero-signature { padding:24px 20px; } .ipgs-ran-signature-title { padding:42px 0 38px; } .ipgs-ran-signature-grid { grid-template-columns:1fr; } .ipgs-ran-signature-grid > div, .ipgs-ran-signature-grid > div + div { padding:12px 0; border-left:0; border-bottom:1px solid rgba(117,197,228,.2); } .ipgs-ran-orbit { width:230px;height:230px;right:-90px;top:15px; } .ipgs-ran-experience-feature { padding:25px; min-height:380px; } .ipgs-ran-feature-top { font-size:9px; } }
+@media(prefers-reduced-motion:reduce) { .ipgs-ran-orbit-circle,.ipgs-ran-banner .title-of-hero p,.ipgs-ran-banner .title-of-hero span { animation:none !important; } }
+
+
+/* ========================================================
+   IPGS RAN HERO ONLY - MATCHES ABOUT US / OUR TEAM BANNER
+   Scoped classes avoid inherited global hero decorations.
+   All below-the-hero styles remain as uploaded.
+======================================================== */
+.ipgs-ran-page .ipgs-ran-brand-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 330px;
+    padding: 105px max(24px, calc((100vw - 1660px) / 2)) 105px;
+    overflow: hidden;
+    background: linear-gradient(108deg, #0f1e2a 0%, #142d3f 47%, #286f8b 100%);
+    font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+}
+.ipgs-ran-page .ipgs-ran-brand-hero-ring {
+    position: absolute;
+    z-index: 0;
+    width: 580px;
+    height: 580px;
+    top: -245px;
+    right: -235px;
+    border: 1px solid rgba(168, 221, 245, .16);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: ipgsRanRingIntro 1.8s ease-out both;
+}
+.ipgs-ran-page .ipgs-ran-brand-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1660px;
+    margin: 0 auto;
+}
+.ipgs-ran-page .ipgs-ran-brand-hero h1 {
+    max-width: 1280px;
+    margin: 0 0 54px;
+    color: #fff;
+    font-size: clamp(36px, 3.5vw, 64px);
+    font-weight: 800;
+    
+    letter-spacing: -.035em;
+    animation: ipgsRanHeroRise .85s cubic-bezier(.22,.61,.36,1) both;
+}
+.ipgs-ran-page .ipgs-ran-brand-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    color: #b8c5ce;
+    font-size: clamp(14px, 1.15vw, 20px);
+    font-weight: 500;
+    line-height: 1.5;
+    animation: ipgsRanHeroRise .85s cubic-bezier(.22,.61,.36,1) .16s both;
+}
+.ipgs-ran-page .ipgs-ran-brand-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .25s ease;
+}
+.ipgs-ran-page .ipgs-ran-brand-breadcrumb a:hover { color: #a8ddf5; }
+.ipgs-ran-page .ipgs-ran-brand-breadcrumb a:focus-visible {
+    outline: 2px solid #a8ddf5;
+    outline-offset: 4px;
+}
+@keyframes ipgsRanHeroRise {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ipgsRanRingIntro {
+    from { opacity: 0; transform: scale(.94); }
+    to { opacity: 1; transform: scale(1); }
+}
+@media (max-width: 991px) {
+    .ipgs-ran-page .ipgs-ran-brand-hero { min-height: 490px; padding: 80px 36px; }
+    .ipgs-ran-page .ipgs-ran-brand-hero h1 { line-height: 1.3; margin-bottom: 42px; }
+    .ipgs-ran-page .ipgs-ran-hero-desktop-break { display: none; }
+}
+@media (max-width: 767px) {
+    .ipgs-ran-page .ipgs-ran-brand-hero { min-height: 390px; padding: 75px 20px; }
+    .ipgs-ran-page .ipgs-ran-brand-hero h1 {
+        font-size: clamp(30px, 8vw, 43px);
+        line-height: 1.2;
+        margin-bottom: 32px;
+    }
+    .ipgs-ran-page .ipgs-ran-brand-hero-ring {
+        width: 370px; height: 370px; top: -190px; right: -230px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-ran-page .ipgs-ran-brand-hero-ring,
+    .ipgs-ran-page .ipgs-ran-brand-hero h1,
+    .ipgs-ran-page .ipgs-ran-brand-breadcrumb {
+        animation: none !important;
+        opacity: 1;
+        transform: none;
+    }
+}

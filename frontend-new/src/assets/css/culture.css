@@ -1,0 +1,1056 @@
+/* ===========================================
+   IPGS CULTURE
+   Dark navy + steel-blue palette. Typographic
+   hero with animated emblem, count-up stats,
+   specialism list and role cards. No photos.
+=========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-culture-page {
+    --bg: #101c29;
+    --bg-alt: #132130;
+    --card: #19262f;
+    --card-hover: #1e2d38;
+    --line: #2a3742;
+    --blue: #2f8ab3;
+    --blue-light: #5db5d6;
+    --blue-hover: #3d9ec9;
+    --white: #ffffff;
+    --text: #a9b5bf;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-culture-page *,
+.ipgs-culture-page *::before,
+.ipgs-culture-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-culture-page .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ipgs-culture-page h1,
+.ipgs-culture-page h2,
+.ipgs-culture-page h3 {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+}
+
+.ipgs-culture-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-culture-page img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- Eyebrow label ---------- */
+
+.ipgs-culture-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ipgs-culture-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+/* ---------- Scroll reveal ----------
+   up    : fade + rise
+   lines : headline lines slide up out of a mask
+   emblem : hero emblem scales and fades in
+   spec / roles : staged entrances for the list and the role cards */
+
+.ipgs-culture-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-culture-page.is-anim [data-reveal="up"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-culture-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.ipgs-culture-line > * {
+    display: block;
+}
+
+.ipgs-culture-page.is-anim [data-reveal="lines"] .ipgs-culture-line > * {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-culture-page.is-anim [data-reveal="lines"].is-visible .ipgs-culture-line > * {
+    transform: none;
+}
+
+.ipgs-culture-page.is-anim [data-reveal="emblem"] {
+    opacity: 0;
+    transform: scale(0.88);
+    transition: opacity 1s var(--ease) 0.2s, transform 1.2s var(--ease) 0.2s;
+}
+
+.ipgs-culture-page.is-anim [data-reveal="emblem"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-culture-page.is-anim [data-reveal="spec"] {
+    opacity: 0;
+    transform: translateX(-26px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-culture-page.is-anim [data-reveal="spec"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-culture-page.is-anim [data-reveal="roles"] .ipgs-culture-role,
+.ipgs-culture-page.is-anim [data-reveal="roles"] .ipgs-culture-role-note {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-culture-page.is-anim [data-reveal="roles"].is-visible .ipgs-culture-role,
+.ipgs-culture-page.is-anim [data-reveal="roles"].is-visible .ipgs-culture-role-note {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Shared ---------- */
+
+.ipgs-culture-text-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 10px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Underline draws left-to-right on hover */
+.ipgs-culture-text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--blue-light);
+    transform-origin: left;
+    transform: scaleX(0.35);
+    transition: transform 0.4s var(--ease);
+}
+
+.ipgs-culture-text-link:hover {
+    color: var(--white);
+}
+
+.ipgs-culture-text-link:hover::after {
+    transform: scaleX(1);
+}
+
+.ipgs-culture-text-link i {
+    font-size: 19px;
+    transition: transform 0.3s var(--ease);
+}
+
+.ipgs-culture-text-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+.ipgs-culture-page a:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 4px;
+}
+
+/* ---------- Hero (typographic, no photo) ---------- */
+
+.ipgs-culture-intro-section {
+    position: relative;
+    padding: 110px 0 0;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.ipgs-culture-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.22;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    animation: culture-grid 24s linear infinite;
+}
+
+.ipgs-culture-intro-section .container {
+    position: relative;
+}
+
+.ipgs-culture-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: 6%;
+}
+
+.ipgs-culture-intro-content h1 {
+    margin-bottom: 28px;
+    font-size: clamp(38px, 4.8vw, 70px);
+    line-height: 1.08;
+}
+
+.ipgs-culture-intro-content h1 em {
+    color: var(--blue-light);
+    font-style: normal;
+}
+
+.ipgs-culture-intro-content p {
+    max-width: 60ch;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-culture-intro-content .ipgs-culture-text-link {
+    margin-top: 10px;
+}
+
+/* Emblem */
+
+.ipgs-culture-emblem {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1;
+    margin-left: auto;
+}
+
+.ipgs-culture-ring {
+    position: absolute;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+}
+
+.ipgs-culture-ring.ring-1 {
+    inset: 0;
+    border-style: dashed;
+    border-color: var(--blue);
+    animation: culture-spin 60s linear infinite;
+}
+
+.ipgs-culture-ring.ring-2 {
+    inset: 12%;
+}
+
+.ipgs-culture-ring.ring-3 {
+    inset: 24%;
+    border-color: rgba(93, 181, 214, 0.4);
+    animation: culture-pulse 4s ease-in-out infinite;
+}
+
+.ipgs-culture-orbit {
+    position: absolute;
+    inset: 0;
+    animation: culture-spin 14s linear infinite;
+}
+
+.ipgs-culture-orbit i {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    border-radius: 50%;
+    background: var(--blue-light);
+    box-shadow: 0 0 0 6px rgba(93, 181, 214, 0.18);
+}
+
+.ipgs-culture-emblem-core {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--blue);
+    text-align: center;
+}
+
+.ipgs-culture-emblem-core strong {
+    color: #fff;
+    font-size: clamp(14px, 1.5vw, 20px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+@keyframes culture-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes culture-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.06); opacity: 0.4; }
+}
+
+@keyframes culture-grid {
+    to { background-position: 64px 64px; }
+}
+
+/* Count-up facts strip */
+
+.ipgs-culture-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    margin-top: 90px;
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-bottom: none;
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-culture-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 28px 34px;
+}
+
+.ipgs-culture-stat + .ipgs-culture-stat {
+    border-left: 1px solid var(--line);
+}
+
+.ipgs-culture-stat strong {
+    color: var(--white);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+}
+
+.ipgs-culture-stat span {
+    color: var(--blue-light);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ipgs-culture-stat--text strong {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+/* ---------- Close-knit team ---------- */
+
+.ipgs-culture-story-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-culture-story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-culture-story-content h2 {
+    margin-bottom: 26px;
+    font-size: clamp(32px, 3.5vw, 50px);
+}
+
+.ipgs-culture-story-content p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-culture-story-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Specialism list */
+
+.ipgs-culture-specialisms {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-culture-specialisms li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+}
+
+.ipgs-culture-specialisms li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--card);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease);
+}
+
+.ipgs-culture-specialisms li:hover::before {
+    transform: scaleX(1);
+}
+
+.ipgs-culture-specialisms li > * {
+    position: relative;
+}
+
+.ipgs-culture-specialisms i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 26px;
+    transition: transform 0.4s var(--ease);
+}
+
+.ipgs-culture-specialisms strong {
+    color: #0f1e2a;
+    font-size: clamp(19px, 2vw, 25px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: transform 0.4s var(--ease);
+}
+
+.ipgs-culture-specialisms li:hover i,
+.ipgs-culture-specialisms li:hover strong {
+    transform: translateX(10px);
+}
+
+/* ---------- Career development ---------- */
+
+.ipgs-culture-growth-section {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-culture-growth-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-culture-growth-content h2 {
+    margin-bottom: 26px;
+    font-size: clamp(32px, 3.6vw, 50px);
+}
+
+.ipgs-culture-growth-content > p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-culture-growth-detail {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 32px;
+    padding: 22px 24px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+}
+
+.ipgs-culture-growth-detail i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 24px;
+}
+
+.ipgs-culture-growth-detail span {
+    color: #0f1e2a;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Role cards connected by a line */
+
+.ipgs-culture-roles {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.ipgs-culture-role {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 34px 32px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.ipgs-culture-role:hover {
+    background: var(--card-hover);
+    border-color: var(--blue-light);
+}
+
+.ipgs-culture-role i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 29px;
+}
+
+.ipgs-culture-role strong {
+    color: #0f1e2a;
+    font-size: clamp(20px, 2.1vw, 27px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.ipgs-culture-role-link {
+    position: relative;
+    align-self: center;
+    width: 3px;
+    height: 48px;
+    background: var(--line);
+    overflow: hidden;
+}
+
+/* pulse travelling between the two roles */
+.ipgs-culture-role-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 3px;
+    height: 20px;
+    background: var(--blue-light);
+    animation: culture-travel 2.2s ease-in-out infinite;
+}
+
+@keyframes culture-travel {
+    to { top: 48px; }
+}
+
+.ipgs-culture-role-note {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ipgs-culture-role-note i {
+    color: var(--blue-light);
+    font-size: 24px;
+}
+
+/* ---------- Academy ---------- */
+
+.ipgs-culture-academy-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-culture-academy-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: start;
+    gap: 8%;
+    padding: 64px 60px;
+    background: var(--card);
+    border: 1px solid var(--line);
+}
+
+/* Blue rule draws down the left edge when the panel appears */
+.ipgs-culture-academy-panel::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: 4px;
+    background: var(--blue);
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 1s var(--ease) 0.3s;
+}
+
+.ipgs-culture-academy-panel.is-visible::before,
+.ipgs-culture-page:not(.is-anim) .ipgs-culture-academy-panel::before {
+    transform: scaleY(1);
+}
+
+.ipgs-culture-academy-heading h2 {
+    max-width: 16ch;
+    margin-bottom: 0;
+    font-size: clamp(34px, 3.8vw, 52px);
+}
+
+.ipgs-culture-academy-icon {
+    display: grid;
+    place-items: center;
+    width: 76px;
+    height: 76px;
+    margin-bottom: 28px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 34px;
+}
+
+.ipgs-culture-academy-content p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-culture-academy-content .ipgs-culture-text-link {
+    margin-top: 10px;
+}
+
+/* ---------- Collaborative culture ---------- */
+
+.ipgs-culture-together-section {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-culture-together-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 9%;
+}
+
+.ipgs-culture-together-left h2 {
+    margin-bottom: 0;
+    font-size: clamp(34px, 3.8vw, 52px);
+}
+
+.ipgs-culture-together-right > p {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+/* Large statement row with a rule that draws across the top */
+
+.ipgs-culture-together-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-top: 72px;
+    padding-top: 40px;
+}
+
+.ipgs-culture-together-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--blue);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.2s var(--ease) 0.3s;
+}
+
+.ipgs-culture-together-line.is-visible::before,
+.ipgs-culture-page:not(.is-anim) .ipgs-culture-together-line::before {
+    transform: scaleX(1);
+}
+
+.ipgs-culture-together-line > span {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 30px;
+}
+
+.ipgs-culture-together-line strong {
+    color: #000000;
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+.ipgs-culture-final-content h2.is-visible {
+    color: #ffffff;
+}
+.ipgs-culture-final-content p.is-visible {
+    color: #ffffff;
+}
+/* ---------- Final CTA ---------- */
+
+.ipgs-culture-final-section {
+    padding: 50px 0;
+    background: #0b1520;
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-culture-final-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr);
+    align-items: end;
+    gap: 8%;
+}
+
+.ipgs-culture-final-content h2 {
+    margin-bottom: 24px;
+    font-size: clamp(32px, 3.6vw, 50px);
+}
+
+.ipgs-culture-final-content p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.ipgs-culture-final-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 4px;
+}
+
+.ipgs-culture-btn-primary,
+.ipgs-culture-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: min(100%, 320px);
+    min-height: 56px;
+    padding: 15px 24px;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.ipgs-culture-btn-primary {
+    background: var(--blue);
+    color: #fff;
+}
+
+.ipgs-culture-btn-primary:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-culture-btn-secondary {
+    background: transparent;
+    border: 1px solid #44566a;
+    color: #fff;
+}
+
+.ipgs-culture-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--blue-light);
+    color: #fff;
+}
+
+.ipgs-culture-btn-primary i,
+.ipgs-culture-btn-secondary i {
+    font-size: 19px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-culture-btn-primary:hover i,
+.ipgs-culture-btn-secondary:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1199px) {
+    .ipgs-culture-intro-section {
+        padding: 86px 0 0;
+    }
+
+    .ipgs-culture-story-section,
+    .ipgs-culture-growth-section,
+    .ipgs-culture-academy-section,
+    .ipgs-culture-together-section {
+        padding: 86px 0;
+    }
+
+    .ipgs-culture-academy-panel {
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ipgs-culture-intro-grid,
+    .ipgs-culture-story-grid,
+    .ipgs-culture-growth-grid,
+    .ipgs-culture-together-grid,
+    .ipgs-culture-academy-panel,
+    .ipgs-culture-final-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .ipgs-culture-emblem {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .ipgs-culture-stats {
+        margin-top: 60px;
+    }
+
+    .ipgs-culture-final-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 767px) {
+    .ipgs-culture-page .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ipgs-culture-label {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .ipgs-culture-label > span {
+        width: 32px;
+    }
+
+    .ipgs-culture-intro-section {
+        padding: 64px 0 0;
+    }
+
+    .ipgs-culture-story-section,
+    .ipgs-culture-growth-section,
+    .ipgs-culture-academy-section,
+    .ipgs-culture-together-section {
+        padding: 64px 0;
+    }
+
+    .ipgs-culture-emblem {
+        max-width: 280px;
+    }
+
+    .ipgs-culture-stats {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 48px;
+    }
+
+    .ipgs-culture-stat {
+        padding: 22px 20px;
+    }
+
+    .ipgs-culture-stat--text {
+        grid-column: 1 / -1;
+        border-left: none !important;
+        border-top: 1px solid var(--line);
+    }
+
+    .ipgs-culture-specialisms li {
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .ipgs-culture-specialisms i {
+        width: 46px;
+        height: 46px;
+        font-size: 22px;
+    }
+
+    .ipgs-culture-role {
+        padding: 24px 20px;
+        gap: 16px;
+    }
+
+    .ipgs-culture-role i {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+
+    .ipgs-culture-intro-content p,
+    .ipgs-culture-story-content p,
+    .ipgs-culture-growth-content > p,
+    .ipgs-culture-academy-content p,
+    .ipgs-culture-together-right > p {
+        font-size: 16px;
+    }
+
+    .ipgs-culture-stat strong {
+        font-size: 38px;
+    }
+
+    .ipgs-culture-growth-detail {
+        padding: 18px;
+    }
+
+    .ipgs-culture-academy-panel {
+        padding: 38px 24px;
+    }
+
+    .ipgs-culture-academy-icon {
+        width: 62px;
+        height: 62px;
+        font-size: 29px;
+    }
+
+    .ipgs-culture-together-line {
+        margin-top: 48px;
+        padding-top: 30px;
+        gap: 18px;
+    }
+
+    .ipgs-culture-together-line > span {
+        width: 52px;
+        height: 52px;
+        font-size: 25px;
+    }
+
+    .ipgs-culture-final-section {
+        padding: 70px 0;
+    }
+
+    .ipgs-culture-final-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ipgs-culture-btn-primary,
+    .ipgs-culture-btn-secondary {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+/* ---------- Reduced motion: show everything, no movement ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-culture-grid-bg,
+    .ipgs-culture-ring,
+    .ipgs-culture-orbit,
+    .ipgs-culture-role-link::after {
+        animation: none;
+    }
+
+    .ipgs-culture-page.is-anim [data-reveal="up"],
+    .ipgs-culture-page.is-anim [data-reveal="lines"] .ipgs-culture-line > *,
+    .ipgs-culture-page.is-anim [data-reveal="emblem"],
+    .ipgs-culture-page.is-anim [data-reveal="spec"],
+    .ipgs-culture-page.is-anim [data-reveal="roles"] .ipgs-culture-role,
+    .ipgs-culture-page.is-anim [data-reveal="roles"] .ipgs-culture-role-note {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        transition: none;
+    }
+
+    .ipgs-culture-academy-panel::before {
+        transform: scaleY(1);
+        transition: none;
+    }
+
+    .ipgs-culture-together-line::before {
+        transform: scaleX(1);
+        transition: none;
+    }
+
+    .ipgs-culture-text-link::after,
+    .ipgs-culture-text-link i,
+    .ipgs-culture-btn-primary i,
+    .ipgs-culture-btn-secondary i {
+        transition: none;
+    }
+}

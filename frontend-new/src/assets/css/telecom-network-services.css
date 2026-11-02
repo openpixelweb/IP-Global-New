@@ -1,0 +1,748 @@
+/* ===========================================
+   IPGS - TELECOM NETWORK SERVICES
+   Dark navy + steel-blue. No photos: layers panel,
+   core scope panel, RAN hub panel.
+=========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-tel-page {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --bg-deep: #0b1520;
+    --card: #ffffff;
+    --card-hover: #f3f8fb;
+    --line: #dce5eb;
+    --blue: #2f8ab3;
+    --blue-light: #247b9e;
+    --blue-hover: #3d9ec9;
+    --white: #102b3c;
+    --text: #435568;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-tel-page *,
+.ipgs-tel-page *::before,
+.ipgs-tel-page *::after { box-sizing: border-box; }
+
+.ipgs-tel-page .container {
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.ipgs-tel-page h1,
+.ipgs-tel-page h2,
+.ipgs-tel-page h3 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: var(--font);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-tel-page p { 
+    margin-top: 0; 
+}
+
+.ipgs-tel-page h1 em,
+.ipgs-tel-page h2 span { color: var(--blue-light); font-style: normal; }
+
+.ipgs-tel-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-tel-label > span { flex-shrink: 0; width: 50px; height: 2px; background: var(--blue-light); }
+
+.ipgs-tel-tag {
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   OUR TEAM REFERENCE HERO - SELF-CONTAINED
+   No global .services-home-hero / .desck-about dependency
+============================================ */
+.ipgs-tel-page .ipgs-tel-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 330px;
+    overflow: hidden;
+    background: linear-gradient(108deg, #0f1e2a 0%, #18384b 49%, #2d7593 100%);
+}
+
+.ipgs-tel-page .ipgs-tel-hero-ring {
+    position: absolute;
+    z-index: 0;
+    width: 570px;
+    height: 570px;
+    top: -235px;
+    right: -205px;
+    border: 1px solid rgba(168, 221, 245, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ipgs-tel-page .ipgs-tel-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1670px;
+    margin: 0 auto;
+    padding: 90px 24px;
+}
+
+.ipgs-tel-page .ipgs-tel-hero h1 {
+    max-width: 1250px;
+    margin: 0 0 43px;
+    color: #fff;
+    font-family: var(--font);
+    font-size: clamp(38px, 3.45vw, 64px);
+    font-weight: 800;
+    
+    letter-spacing: -0.035em;
+    animation: tel-hero-in 0.85s var(--ease) both;
+}
+
+.ipgs-tel-page .ipgs-tel-hero-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    color: #b8c2cb;
+    font-size: clamp(15px, 1.2vw, 20px);
+    font-weight: 600;
+    animation: tel-hero-in 0.85s var(--ease) 0.16s both;
+}
+.ipgs-tel-page .ipgs-tel-hero-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.ipgs-tel-page .ipgs-tel-hero-breadcrumb a:hover { color: #a8ddf5; }
+.ipgs-tel-page .ipgs-tel-hero-breadcrumb a:focus-visible {
+    outline: 2px solid #a8ddf5;
+    outline-offset: 4px;
+}
+
+@media (max-width: 1199px) {
+    .ipgs-tel-page .ipgs-tel-hero { min-height: 530px; }
+    .ipgs-tel-page .ipgs-tel-hero h1 { line-height: 1.45; }
+    .ipgs-tel-desktop-break { display: none; }
+}
+@media (max-width: 767px) {
+    .ipgs-tel-page .ipgs-tel-hero { min-height: 410px; }
+    .ipgs-tel-page .ipgs-tel-hero-inner { padding: 78px 20px; }
+    .ipgs-tel-page .ipgs-tel-hero h1 {
+        font-size: clamp(32px, 8vw, 44px);
+        line-height: 1.25;
+        margin-bottom: 32px;
+    }
+    .ipgs-tel-page .ipgs-tel-hero-ring {
+        width: 340px;
+        height: 340px;
+        top: -165px;
+        right: -190px;
+    }
+}
+@media (max-width: 420px) {
+    .ipgs-tel-page .ipgs-tel-hero-inner { padding-inline: 17px; }
+}
+
+/* Keyframes */
+@keyframes tel-hero-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes tel-grid { to { background-position: 64px 64px; } }
+
+@keyframes tel-layer-icon {
+    0%, 3% { background-color: var(--bg-alt); color: var(--blue-light); border-color: var(--line); }
+    8%, 30% { background-color: var(--blue); color: #fff; border-color: var(--blue-light); }
+    36%, 100% { background-color: var(--bg-alt); color: var(--blue-light); border-color: var(--line); }
+}
+
+@keyframes tel-layer-bar {
+    0%, 3% { transform: scaleX(0); }
+    22%, 30% { transform: scaleX(1); }
+    36%, 100% { transform: scaleX(0); }
+}
+
+/* scope list: 5 items over 12s */
+@keyframes tel-scope {
+    0%, 2% { color: var(--text); background-color: transparent; }
+    6%, 18% { color: var(--white); background-color: rgba(47, 138, 179, 0.18); }
+    22%, 100% { color: var(--text); background-color: transparent; }
+}
+
+@keyframes tel-scope-icon {
+    0%, 2% { background-color: var(--bg-alt); color: var(--blue-light); }
+    6%, 18% { background-color: var(--blue); color: #fff; }
+    22%, 100% { background-color: var(--bg-alt); color: var(--blue-light); }
+}
+
+/* vendor nodes: 4 items over 6s */
+@keyframes tel-vendor {
+    0%, 4% { border-color: var(--line); color: var(--text); }
+    10%, 24% { border-color: var(--blue-light); color: var(--white); }
+    30%, 100% { border-color: var(--line); color: var(--text); }
+}
+
+@keyframes tel-vendor-dot {
+    0%, 4% { background: var(--line); transform: scale(1); }
+    10%, 24% { background: var(--blue-light); transform: scale(1.35); }
+    30%, 100% { background: var(--line); transform: scale(1); }
+}
+
+@keyframes tel-ring {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes tel-scan {
+    0% { top: -4px; opacity: 0; }
+    10%, 90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+@keyframes tel-signal {
+    0% { left: 0; opacity: 0; }
+    10%, 90% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* Reveal */
+.ipgs-tel-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s var(--ease) var(--d, 0ms), transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-tel-page.is-anim [data-reveal="up"].is-visible { opacity: 1; transform: none; }
+
+.ipgs-tel-line { display: block; overflow: hidden; padding-bottom: 0.1em; }
+.ipgs-tel-line > * { display: block; }
+
+.ipgs-tel-page.is-anim [data-reveal="lines"] .ipgs-tel-line > * {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-tel-page.is-anim [data-reveal="lines"].is-visible .ipgs-tel-line > * { transform: none; }
+
+.ipgs-tel-page.is-anim [data-reveal="panel"] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.ipgs-tel-page.is-anim [data-reveal="panel"].is-visible { opacity: 1; transform: none; }
+
+/* Buttons */
+.ipgs-tel-button,
+.ipgs-tel-final-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 56px;
+    padding: 15px 28px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-tel-button:hover,
+.ipgs-tel-final-button:hover { background: var(--blue-hover); color: #fff; }
+
+.ipgs-tel-button i,
+.ipgs-tel-final-button i { font-size: 19px; transition: transform 0.25s var(--ease); }
+
+.ipgs-tel-button:hover i,
+.ipgs-tel-final-button:hover i { transform: translate(3px, -3px); }
+
+.ipgs-tel-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--blue);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.25s ease, gap 0.3s var(--ease);
+}
+
+.ipgs-tel-text-link:hover { color: var(--blue-light); gap: 22px; }
+.ipgs-tel-text-link i { font-size: 20px; }
+
+.ipgs-tel-page a:focus-visible { outline: 3px solid var(--blue-light); outline-offset: 4px; }
+
+/* Intro */
+.ipgs-tel-intro { position: relative; padding: 110px 0; overflow: hidden; background: var(--bg); }
+
+.ipgs-tel-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.2;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    animation: tel-grid 24s linear infinite;
+}
+
+.ipgs-tel-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: stretch;
+    gap: 7%;
+}
+
+.ipgs-tel-intro-copy h1 { margin-bottom: 28px; font-size: clamp(36px, 4.4vw, 62px); line-height: 1.08; }
+.ipgs-tel-intro-copy > p { max-width: 58ch; margin-bottom: 18px; font-size: 17px; }
+
+.ipgs-tel-highlight {
+    margin: 26px 0 32px;
+    padding-left: 20px;
+    border-left: 3px solid var(--blue);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Layers panel */
+.ipgs-tel-layers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 36px;
+    min-width: 0;
+    padding: 40px 44px 44px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-tel-layers ol { margin: 0; padding: 0; list-style: none; }
+
+.ipgs-tel-layers li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-tel-layers li:last-child { border-bottom: none; }
+
+.ipgs-tel-layers li i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 68px;
+    height: 68px;
+    background: var(--bg-alt);
+    border: 2px solid var(--line);
+    color: var(--blue-light);
+    font-size: 30px;
+    animation: tel-layer-icon 9s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+.ipgs-tel-layers li strong {
+    color: var(--white);
+    font-size: clamp(30px, 3.6vw, 50px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.ipgs-tel-layer-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    background: var(--blue-light);
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: tel-layer-bar 9s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+/* Connected */
+.ipgs-tel-connected {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-tel-connected-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: start;
+    gap: 9%;
+}
+
+.ipgs-tel-connected h2 { margin-bottom: 0; font-size: clamp(34px, 3.8vw, 52px); }
+.ipgs-tel-connected-copy { padding-top: 38px; }
+.ipgs-tel-connected-copy p { margin-bottom: 20px; font-size: 17px; }
+
+/* Disciplines */
+.ipgs-tel-disciplines { padding: 50px 0; background: var(--bg); }
+.ipgs-tel-heading { max-width: 780px; margin-bottom: 70px; }
+.ipgs-tel-heading h2 { margin-bottom: 22px; font-size: clamp(34px, 3.9vw, 54px); }
+.ipgs-tel-heading > p { margin-bottom: 0; font-size: 17px; }
+
+.ipgs-tel-discipline {
+    display: grid;
+    grid-template-columns: minmax(0, 0.97fr) minmax(0, 1.03fr);
+    align-items: stretch;
+    gap: 8%;
+    margin-bottom: 95px;
+}
+
+.ipgs-tel-discipline:last-child { margin-bottom: 0; }
+
+.ipgs-tel-discipline-copy { align-self: center; }
+.ipgs-tel-discipline-copy h3 { margin-bottom: 26px; font-size: clamp(36px, 3.7vw, 52px); }
+.ipgs-tel-discipline-copy > p { margin-bottom: 18px; font-size: 17px; }
+.ipgs-tel-discipline-copy > div:last-child { margin-top: 26px; }
+
+.ipgs-tel-discipline-reverse .ipgs-tel-hub { order: 2; }
+.ipgs-tel-discipline-reverse .ipgs-tel-discipline-copy { order: 1; }
+
+/* Core scope panel */
+.ipgs-tel-scope {
+    position: relative;
+    min-width: 0;
+    padding: 36px 34px 34px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-tel-scope ul { position: relative; z-index: 1; margin: 24px 0 0; padding: 0; list-style: none; }
+
+.ipgs-tel-scope li {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 14px;
+    border-bottom: 1px solid var(--line);
+    font-size: 17px;
+    font-weight: 600;
+    animation: tel-scope 12s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+.ipgs-tel-scope li:last-child { border-bottom: none; }
+
+.ipgs-tel-scope li i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    background: var(--bg-alt);
+    color: var(--blue-light);
+    font-size: 18px;
+    animation: tel-scope-icon 12s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+.ipgs-tel-scan {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+    opacity: 0;
+    animation: tel-scan 5s ease-in-out infinite;
+}
+
+/* RAN hub panel */
+.ipgs-tel-hub {
+    min-width: 0;
+    padding: 36px 34px 38px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-tel-hub-map { margin-top: 26px; }
+
+.ipgs-tel-hub-core {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+    background: var(--blue);
+}
+
+.ipgs-tel-hub-core::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--blue-light);
+    pointer-events: none;
+    animation: tel-ring 3.5s ease-out infinite;
+}
+
+.ipgs-tel-hub-core i { color: #fff; font-size: 34px; }
+.ipgs-tel-hub-core strong { color: #fff; font-size: clamp(18px, 1.9vw, 24px); font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; }
+
+.ipgs-tel-hub-map ul {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0;
+    padding: 36px 0 0;
+    list-style: none;
+}
+
+/* stem connecting the hub to the vendors */
+.ipgs-tel-hub-map ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 36px;
+    margin-left: -1px;
+    background: var(--blue-light);
+    opacity: 0.6;
+}
+
+.ipgs-tel-hub-map li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    font-size: 17px;
+    font-weight: 700;
+    animation: tel-vendor 6s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+.ipgs-tel-hub-map li span {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--line);
+    animation: tel-vendor-dot 6s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+/* Why */
+.ipgs-tel-why {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-tel-why-heading { margin-bottom: 56px; }
+
+.ipgs-tel-why-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 9%;
+    align-items: end;
+}
+
+.ipgs-tel-why-heading h2 { margin-bottom: 0; font-size: clamp(34px, 4vw, 54px); }
+.ipgs-tel-why-heading p { margin-bottom: 0; font-size: 16.5px; }
+
+.ipgs-tel-strengths { border-top: 1px solid var(--line); }
+
+.ipgs-tel-strength {
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr);
+    align-items: start;
+    gap: 28px;
+    padding: 36px 20px 38px 0;
+    border-bottom: 1px solid var(--line);
+    transition: background-color 0.3s ease, padding-left 0.35s var(--ease);
+}
+
+.ipgs-tel-strength:hover { background: var(--card); padding-left: 20px; }
+
+.ipgs-tel-strength-icon {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 30px;
+}
+
+.ipgs-tel-strength h3 { margin-bottom: 14px; font-size: clamp(22px, 2.3vw, 29px); }
+.ipgs-tel-strength p { max-width: 890px; margin-bottom: 0; font-size: 16px; }
+
+/* Final */
+.ipgs-tel-final { position: relative; padding: 50px 0 50px; overflow: hidden; background: var(--bg-deep); }
+
+.ipgs-tel-signal { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: rgba(47, 138, 179, 0.35); }
+
+.ipgs-tel-signal span {
+    position: absolute;
+    top: -5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 4px rgba(47, 138, 179, 0.25);
+}
+
+.ipgs-tel-signal span:nth-child(1) { left: 8%; }
+.ipgs-tel-signal span:nth-child(2) { left: 50%; }
+.ipgs-tel-signal span:nth-child(3) { left: 92%; }
+
+.ipgs-tel-signal i {
+    position: absolute;
+    top: -2px;
+    width: 120px;
+    height: 7px;
+    margin-left: -120px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, transparent, var(--blue-light));
+    animation: tel-signal 6s linear infinite;
+}
+
+.ipgs-tel-final-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-tel-final h2 { max-width: 22ch; margin-bottom: 24px; font-size: clamp(34px, 4vw, 56px); }
+.ipgs-tel-final p { max-width: 62ch; margin-bottom: 0; font-size: 17px; }
+.ipgs-tel-final-action { display: flex; justify-content: flex-end; }
+.ipgs-tel-final-button { white-space: nowrap; }
+
+/* Responsive */
+@media (max-width: 1199px) {
+    .ipgs-tel-intro, .ipgs-tel-connected, .ipgs-tel-disciplines, .ipgs-tel-why { padding: 86px 0; }
+    .ipgs-tel-layers { padding: 32px 28px 34px; }
+    .ipgs-tel-discipline { margin-bottom: 75px; }
+}
+
+@media (max-width: 991px) {
+    .ipgs-tel-intro-grid,
+    .ipgs-tel-connected-grid,
+    .ipgs-tel-discipline,
+    .ipgs-tel-why-grid,
+    .ipgs-tel-final-grid { grid-template-columns: 1fr; gap: 34px; }
+
+    .ipgs-tel-discipline-reverse .ipgs-tel-hub,
+    .ipgs-tel-discipline-reverse .ipgs-tel-discipline-copy { order: initial; }
+
+    .ipgs-tel-connected-copy { padding-top: 0; }
+    .ipgs-tel-final-action { justify-content: flex-start; }
+}
+
+@media (max-width: 767px) {
+    .ipgs-tel-page .container { padding-inline: 20px; }
+    .ipgs-tel-label { gap: 12px; font-size: 12px; }
+    .ipgs-tel-label > span { width: 32px; }
+
+    .ipgs-tel-intro, .ipgs-tel-connected, .ipgs-tel-disciplines, .ipgs-tel-why { padding: 64px 0; }
+
+    .ipgs-tel-intro-copy > p,
+    .ipgs-tel-connected-copy p,
+    .ipgs-tel-discipline-copy > p { font-size: 16px; }
+
+    .ipgs-tel-layers { padding: 24px 20px 26px; gap: 20px; }
+    .ipgs-tel-layers li { gap: 16px; padding: 18px 0; }
+    .ipgs-tel-layers li i { width: 54px; height: 54px; font-size: 24px; }
+
+    .ipgs-tel-heading { margin-bottom: 40px; }
+    .ipgs-tel-discipline { margin-bottom: 64px; }
+    .ipgs-tel-scope, .ipgs-tel-hub { padding: 26px 20px 28px; }
+    .ipgs-tel-scope li { font-size: 15.5px; padding: 15px 8px; }
+    .ipgs-tel-hub-map ul { grid-template-columns: 1fr; }
+    .ipgs-tel-hub-map ul::before { display: none; }
+    .ipgs-tel-hub-map ul { padding-top: 14px; }
+
+    .ipgs-tel-why-heading { margin-bottom: 36px; }
+    .ipgs-tel-strength { grid-template-columns: 48px minmax(0, 1fr); gap: 16px; padding: 26px 0; }
+    .ipgs-tel-strength:hover { padding-left: 0; }
+    .ipgs-tel-strength-icon { width: 48px; height: 48px; font-size: 22px; }
+    .ipgs-tel-strength p { font-size: 15px; }
+
+    .ipgs-tel-final { padding: 76px 0 70px; }
+    .ipgs-tel-final-button { white-space: normal; }
+}
+
+@media (max-width: 420px) {
+    .ipgs-tel-page .container { padding-inline: 17px; }
+    .ipgs-tel-button, .ipgs-tel-final-button { width: 100%; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-tel-hero h1,
+    .ipgs-tel-hero-breadcrumb,
+    .ipgs-tel-grid-bg,
+    .ipgs-tel-layers li i,
+    .ipgs-tel-layer-bar,
+    .ipgs-tel-scope li,
+    .ipgs-tel-scope li i,
+    .ipgs-tel-hub-core::after,
+    .ipgs-tel-hub-map li,
+    .ipgs-tel-hub-map li span,
+    .ipgs-tel-scan,
+    .ipgs-tel-signal i { animation: none; }
+
+    .ipgs-tel-scan, .ipgs-tel-signal i, .ipgs-tel-hub-core::after { display: none; }
+
+    .ipgs-tel-page.is-anim [data-reveal="up"],
+    .ipgs-tel-page.is-anim [data-reveal="lines"] .ipgs-tel-line > *,
+    .ipgs-tel-page.is-anim [data-reveal="panel"] { opacity: 1; transform: none; transition: none; }
+
+    .ipgs-tel-button i, .ipgs-tel-final-button i, .ipgs-tel-strength, .ipgs-tel-text-link { transition: none; }
+}
+
+/* Preserve readable text on the original dark final CTA. */
+.ipgs-tel-page .ipgs-tel-final h2 { color: #ffffff; }
+.ipgs-tel-page .ipgs-tel-final p { color: #c4d2dc; }

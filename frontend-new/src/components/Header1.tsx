@@ -20,61 +20,61 @@ const menuItems: MenuItem[] = [
     children: [
         {
             title: "How We Work",
-            link: "#",
+            link: "/how-we-work",
         },
         {
             title: "Our Team",
-            link: "#",
+            link: "/our-team",
         },
         {
             title: "Culture",
-            link: "#",
+            link: "/culture",
         },
         {
             title: "Careers",
-            link: "#",
+            link: "/careers",
         },
         {
             title: "IPGS Academy",
-            link: "#",
+            link: "/ipgs-academy",
         },
         {
             title: "CSR",
-            link: "#",
+            link: "/csr",
         },
     ],
 },
 
     {
         title: "Operational Technology",
-        link: "#",
+        link: "/operational-technology",
         children: [
             {
                 title: "Rail & Transport",
-                link: "#",
+                link: "/rail-transport",
             },
             {
                 title: "Energy, Oil & Gas",
-                link: "#",
+                link: "/energy-oil-gas",
             },
         ],
     },
 
     {
         title: "Telecom Network Services",
-        link: "#",
+        link: "/telecom-network-services",
         children: [
             {
                 title: "Core Network",
-                link: "#",
+                link: "/core-network",
             },
             {
                 title: "RAN",
-                link: "#",
+                link: "/ran",
             },
             {
                 title: "Cybersecurity",
-                link: "#",
+                link: "/cybersecurity",
             },
             {
                 title: "IP Networks / Transmission",

@@ -1,0 +1,1047 @@
+/* ==========================================
+   IPGS - CORPORATE SOCIAL RESPONSIBILITY
+   Dark navy + steel-blue palette. Icon-led
+   commitment cards, policy grids, sticky DEI
+   intro, final CTA band.
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-csr-page {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --bg-deep: #ffffff;
+    --card: #f3f8fb;
+    --card-hover: #e8f2f7;
+    --line: #d6e4ec;
+    --blue: #2f8ab3;
+    --blue-light: #267f9f;
+    --blue-hover: #3d9ec9;
+    --white: #ffffff;
+    --text: #405566;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-csr-page *,
+.ipgs-csr-page *::before,
+.ipgs-csr-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-csr-page .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ipgs-csr-page h1,
+.ipgs-csr-page h2,
+.ipgs-csr-page h3 {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+}
+
+.ipgs-csr-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-csr-page img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- Eyebrow label ---------- */
+
+.ipgs-csr-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-csr-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+/* ---------- Banner (existing site hero) ---------- */
+
+.ipgs-csr-banner .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-csr-banner .title-of-hero p,
+.ipgs-csr-banner .title-of-hero span {
+    animation: csr-hero-in 0.9s var(--ease) both;
+}
+
+.ipgs-csr-banner .title-of-hero span {
+    animation-delay: 0.18s;
+}
+
+.ipgs-csr-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ipgs-csr-banner .title-of-hero span a:hover {
+    color: var(--blue-light);
+}
+
+@keyframes csr-hero-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- Scroll reveal ----------
+   up    : fade + rise
+   lines : headline lines slide up out of a mask
+   image : the OBSERVED wrapper stays visible; only the <img>
+           inside is clipped, so the image always triggers */
+
+.ipgs-csr-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-csr-page.is-anim [data-reveal="up"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-csr-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.ipgs-csr-line > span {
+    display: block;
+}
+
+.ipgs-csr-page.is-anim [data-reveal="lines"] .ipgs-csr-line > span {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-csr-page.is-anim [data-reveal="lines"].is-visible .ipgs-csr-line > span {
+    transform: none;
+}
+
+.ipgs-csr-page.is-anim [data-reveal="image"] img {
+    clip-path: inset(0 0 100% 0);
+    transform: scale(1.1);
+    transition:
+        clip-path 1.2s var(--ease),
+        transform 1.8s var(--ease);
+}
+
+.ipgs-csr-page.is-anim [data-reveal="image"].is-visible img {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+}
+
+/* ---------- Shared ---------- */
+
+.ipgs-csr-photo {
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+}
+
+.ipgs-csr-photo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ipgs-csr-text-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 10px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ipgs-csr-text-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--blue-light);
+    transform-origin: left;
+    transform: scaleX(0.35);
+    transition: transform 0.4s var(--ease);
+}
+
+.ipgs-csr-text-link:hover {
+    color: var(--white);
+}
+
+.ipgs-csr-text-link:hover::after {
+    transform: scaleX(1);
+}
+
+.ipgs-csr-text-link i {
+    font-size: 19px;
+    transition: transform 0.3s var(--ease);
+}
+
+.ipgs-csr-text-link:hover i {
+    transform: translate(3px, -3px);
+}
+
+.ipgs-csr-page a:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 4px;
+}
+
+/* ---------- Intro ---------- */
+
+.ipgs-csr-intro-section {
+    padding: 110px 0;
+    background: var(--bg);
+}
+
+.ipgs-csr-intro-top {
+    margin-bottom: 64px;
+}
+
+.ipgs-csr-intro-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+    align-items: start;
+    gap: 8%;
+}
+
+.ipgs-csr-intro-heading-grid h1 {
+    margin-bottom: 0;
+    font-size: clamp(38px, 4.4vw, 64px);
+}
+
+.ipgs-csr-intro-side {
+    padding-top: 10px;
+}
+
+.ipgs-csr-intro-side p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-csr-intro-side .ipgs-csr-text-link {
+    margin-top: 10px;
+}
+
+.ipgs-csr-hero {
+    position: relative;
+}
+
+.ipgs-csr-hero .ipgs-csr-photo img {
+    height: 520px;
+    object-position: center 38%;
+}
+
+.ipgs-csr-photo-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 28px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.ipgs-csr-photo-caption span {
+    width: 30px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------- Philosophy ---------- */
+
+.ipgs-csr-philosophy-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-csr-philosophy-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    align-items: start;
+    gap: 9%;
+}
+
+.ipgs-csr-philosophy-grid h2 {
+    margin-bottom: 0;
+    font-size: clamp(32px, 3.8vw, 52px);
+}
+
+.ipgs-csr-philosophy-copy {
+    padding-top: 46px;
+}
+
+.ipgs-csr-philosophy-copy p {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+/* ---------- Four commitments ---------- */
+
+.ipgs-csr-commitments-section {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-csr-section-heading {
+    max-width: 760px;
+    margin-bottom: 56px;
+}
+
+.ipgs-csr-section-heading h2 {
+    margin-bottom: 18px;
+    font-size: clamp(34px, 4vw, 54px);
+}
+
+.ipgs-csr-section-heading p {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-csr-commitments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.ipgs-csr-commitment {
+    position: relative;
+    display: grid;
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 30px;
+    min-width: 0;
+    padding: 40px 38px 42px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* blue rule draws down the left edge on hover */
+.ipgs-csr-commitment::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: 4px;
+    background: var(--blue);
+    transform-origin: top;
+    transform: scaleY(0.25);
+    transition: transform 0.5s var(--ease);
+}
+
+.ipgs-csr-commitment:hover {
+    background: var(--card-hover);
+    border-color: #3a4b58;
+}
+
+.ipgs-csr-commitment:hover::before {
+    transform: scaleY(1);
+}
+
+.ipgs-csr-commitment-icon {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 33px;
+}
+
+.ipgs-csr-commitment h3 {
+    margin-bottom: 14px;
+    font-size: clamp(22px, 2.2vw, 27px);
+}
+
+.ipgs-csr-commitment p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* Academy link strip */
+
+.ipgs-csr-academy-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 28px;
+    padding: 30px 38px;
+    background: var(--bg-deep);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+}
+
+.ipgs-csr-academy-link > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ipgs-csr-academy-link span {
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ipgs-csr-academy-link strong {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.ipgs-csr-academy-link a {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-csr-academy-link a:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-csr-academy-link a i {
+    font-size: 20px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-csr-academy-link a:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* ---------- DEI ---------- */
+
+.ipgs-csr-dei-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-csr-dei-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    align-items: start;
+    gap: 8%;
+}
+
+.ipgs-csr-dei-intro {
+    position: sticky;
+    top: 110px;
+}
+
+.ipgs-csr-dei-intro h2 {
+    margin-bottom: 26px;
+    font-size: clamp(32px, 3.6vw, 50px);
+}
+
+.ipgs-csr-dei-intro p {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.ipgs-csr-dei-image {
+    margin-top: 32px;
+}
+
+.ipgs-csr-dei-image img {
+    height: 300px;
+}
+
+/* ---------- Policy cards (DEI + modern slavery) ---------- */
+
+.ipgs-csr-dei-list {
+    display: grid;
+    gap: 20px;
+}
+
+.ipgs-csr-policy {
+    position: relative;
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 24px;
+    min-width: 0;
+    padding: 30px 30px 32px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* blue line draws along the bottom edge on hover */
+.ipgs-csr-policy::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    height: 3px;
+    background: var(--blue);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s var(--ease);
+}
+
+.ipgs-csr-policy:hover {
+    background: var(--card-hover);
+    border-color: #3a4b58;
+}
+
+.ipgs-csr-policy:hover::after {
+    transform: scaleX(1);
+}
+
+.ipgs-csr-policy-icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 25px;
+}
+
+.ipgs-csr-policy-copy h3 {
+    margin-bottom: 12px;
+    font-size: clamp(20px, 2vw, 24px);
+}
+
+.ipgs-csr-policy-copy p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+/* ---------- Environment ---------- */
+
+.ipgs-csr-environment-section {
+    padding: 50px 0;
+    background: var(--bg-deep);
+}
+
+.ipgs-csr-environment-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-csr-environment-image {
+    position: relative;
+    min-width: 0;
+}
+
+.ipgs-csr-environment-image .ipgs-csr-photo img {
+    height: 590px;
+}
+
+.ipgs-csr-environment-image-tag {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    padding: 18px 26px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.ipgs-csr-environment-content h2 {
+    margin-bottom: 28px;
+    font-size: clamp(34px, 3.8vw, 52px);
+}
+
+.ipgs-csr-environment-content > p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-csr-environment-footer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 34px;
+    padding: 22px 24px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+}
+
+.ipgs-csr-environment-footer i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 24px;
+}
+
+.ipgs-csr-environment-footer span {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ---------- Modern slavery ---------- */
+
+.ipgs-csr-slavery-section {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-csr-slavery-heading {
+    margin-bottom: 56px;
+}
+
+.ipgs-csr-slavery-title-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: start;
+    gap: 9%;
+}
+
+.ipgs-csr-slavery-title-grid h2 {
+    margin-bottom: 0;
+    font-size: clamp(34px, 3.8vw, 52px);
+}
+
+.ipgs-csr-slavery-title-grid > p {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-csr-slavery-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* ---------- Accountability ---------- */
+
+.ipgs-csr-accountability-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-csr-accountability-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: start;
+    gap: 9%;
+}
+
+.ipgs-csr-accountability-layout h2 {
+    margin-bottom: 0;
+    font-size: clamp(32px, 3.8vw, 50px);
+}
+
+.ipgs-csr-accountability-copy {
+    padding-left: 36px;
+    border-left: 3px solid var(--blue);
+}
+
+.ipgs-csr-accountability-copy p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-csr-accountability-copy p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Final CTA ---------- */
+
+.ipgs-csr-final-section {
+    padding: 50px 0;
+    background: var(--bg-deep);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-csr-final-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.6fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-csr-final-layout h2 {
+    margin-bottom: 22px;
+    font-size: clamp(34px, 4vw, 56px);
+}
+
+.ipgs-csr-final-layout p {
+    max-width: 62ch;
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-csr-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ipgs-csr-final-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    min-height: 58px;
+    padding: 16px 30px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-csr-final-button:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-csr-final-button i {
+    font-size: 20px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-csr-final-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1199px) {
+    .ipgs-csr-intro-section,
+    .ipgs-csr-philosophy-section,
+    .ipgs-csr-commitments-section,
+    .ipgs-csr-dei-section,
+    .ipgs-csr-environment-section,
+    .ipgs-csr-slavery-section,
+    .ipgs-csr-accountability-section {
+        padding: 86px 0;
+    }
+
+    .ipgs-csr-hero .ipgs-csr-photo img {
+        height: 450px;
+    }
+
+    .ipgs-csr-environment-image .ipgs-csr-photo img {
+        height: 520px;
+    }
+
+    .ipgs-csr-commitment {
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 22px;
+        padding: 32px 26px 34px;
+    }
+
+    .ipgs-csr-commitment-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ipgs-csr-intro-heading-grid,
+    .ipgs-csr-philosophy-grid,
+    .ipgs-csr-commitments-grid,
+    .ipgs-csr-dei-layout,
+    .ipgs-csr-environment-grid,
+    .ipgs-csr-slavery-title-grid,
+    .ipgs-csr-slavery-list,
+    .ipgs-csr-accountability-layout,
+    .ipgs-csr-final-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ipgs-csr-slavery-list,
+    .ipgs-csr-commitments-grid {
+        gap: 20px;
+    }
+
+    .ipgs-csr-philosophy-copy {
+        padding-top: 0;
+    }
+
+    .ipgs-csr-dei-intro {
+        position: static;
+    }
+
+    .ipgs-csr-environment-image .ipgs-csr-photo img {
+        height: 440px;
+    }
+
+    .ipgs-csr-final-action {
+        justify-content: flex-start;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 767px) {
+    .ipgs-csr-page .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ipgs-csr-label {
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .ipgs-csr-label > span {
+        width: 32px;
+    }
+
+    .ipgs-csr-intro-section,
+    .ipgs-csr-philosophy-section,
+    .ipgs-csr-commitments-section,
+    .ipgs-csr-dei-section,
+    .ipgs-csr-environment-section,
+    .ipgs-csr-slavery-section,
+    .ipgs-csr-accountability-section {
+        padding: 64px 0;
+    }
+
+    .ipgs-csr-intro-top {
+        margin-bottom: 40px;
+    }
+
+    .ipgs-csr-intro-side p,
+    .ipgs-csr-philosophy-copy p,
+    .ipgs-csr-accountability-copy p,
+    .ipgs-csr-environment-content > p,
+    .ipgs-csr-slavery-title-grid > p {
+        font-size: 16px;
+    }
+
+    .ipgs-csr-hero .ipgs-csr-photo img {
+        height: 320px;
+    }
+
+    .ipgs-csr-photo-caption {
+        padding: 13px 16px;
+        gap: 10px;
+        font-size: 10px;
+    }
+
+    .ipgs-csr-photo-caption span {
+        width: 16px;
+    }
+
+    .ipgs-csr-section-heading,
+    .ipgs-csr-slavery-heading {
+        margin-bottom: 36px;
+    }
+
+    .ipgs-csr-commitment {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ipgs-csr-academy-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 24px 22px;
+    }
+
+    .ipgs-csr-academy-link strong {
+        font-size: 17px;
+    }
+
+    .ipgs-csr-dei-image img {
+        height: 260px;
+    }
+
+    .ipgs-csr-policy {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 16px;
+        padding: 24px 20px 26px;
+    }
+
+    .ipgs-csr-policy-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .ipgs-csr-environment-image .ipgs-csr-photo img {
+        height: 330px;
+    }
+
+    .ipgs-csr-environment-image-tag {
+        padding: 13px 16px;
+        font-size: 10px;
+    }
+
+    .ipgs-csr-accountability-copy {
+        padding-left: 22px;
+    }
+
+    .ipgs-csr-final-section {
+        padding: 70px 0;
+    }
+
+    .ipgs-csr-final-button {
+        width: 100%;
+    }
+}
+
+/* ---------- Reduced motion: show everything, no movement ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-csr-banner .title-of-hero p,
+    .ipgs-csr-banner .title-of-hero span {
+        animation: none;
+    }
+
+    .ipgs-csr-page.is-anim [data-reveal="up"],
+    .ipgs-csr-page.is-anim [data-reveal="lines"] .ipgs-csr-line > span,
+    .ipgs-csr-page.is-anim [data-reveal="image"] img {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        transition: none;
+    }
+
+    .ipgs-csr-commitment::before,
+    .ipgs-csr-policy::after,
+    .ipgs-csr-text-link::after,
+    .ipgs-csr-text-link i,
+    .ipgs-csr-academy-link a i,
+    .ipgs-csr-final-button i {
+        transition: none;
+    }
+}
+
+
+/* ============================================================
+   IPGS CSR - WHITE BACKGROUND CONTRAST CORRECTIONS
+   Only visual colour changes; existing layouts and motion intact.
+   The shared site hero remains controlled by main style.css.
+   ============================================================ */
+.ipgs-csr-page h1,
+.ipgs-csr-page h2,
+.ipgs-csr-page h3,
+.ipgs-csr-page .ipgs-csr-commitment h3,
+.ipgs-csr-page .ipgs-csr-policy-copy h3 {
+    color: #102b3e;
+}
+
+.ipgs-csr-page .ipgs-csr-text-link,
+.ipgs-csr-page .ipgs-csr-text-link:hover,
+.ipgs-csr-page .ipgs-csr-academy-link strong,
+.ipgs-csr-page .ipgs-csr-environment-footer span {
+    color: #102b3e;
+}
+
+.ipgs-csr-page .ipgs-csr-academy-link,
+.ipgs-csr-page .ipgs-csr-environment-footer,
+.ipgs-csr-page .ipgs-csr-commitment,
+.ipgs-csr-page .ipgs-csr-policy {
+    color: #405566;
+}
+
+.ipgs-csr-page .ipgs-csr-academy-link a,
+.ipgs-csr-page .ipgs-csr-academy-link a:hover,
+.ipgs-csr-page .ipgs-csr-photo-caption,
+.ipgs-csr-page .ipgs-csr-environment-image-tag,
+.ipgs-csr-page .ipgs-csr-final-button,
+.ipgs-csr-page .ipgs-csr-final-button:hover {
+    color: #ffffff;
+}
+
+/* Retain the existing dark final call to action. */
+.ipgs-csr-page .ipgs-csr-final-section {
+    background: #0b1520;
+    color: #c7d7e0;
+}
+.ipgs-csr-page .ipgs-csr-final-section h2 {
+    color: #ffffff;
+}
+.ipgs-csr-page .ipgs-csr-final-section p {
+    color: #c7d7e0;
+}
+
+/* The global gradient hero retains white text regardless of the page palette. */
+.ipgs-csr-page .services-home-hero .title-of-hero p,
+.ipgs-csr-page .services-home-hero .title-of-hero span,
+.ipgs-csr-page .services-home-hero .title-of-hero a {
+    color: #ffffff;
+}
