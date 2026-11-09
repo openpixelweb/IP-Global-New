@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "Blogimage": "hm-blog-01.jpg",
+        "Timeimage": "time.svg",
+        "Dateimage": "date.svg",
+        "date": "25 June 2026",
+        "title": "Building Secure Digital Infrastructure",
+        "desc": "Key steps for creating reliable and scalable technology environments.",
+        "link": "#"
+    },
+    {
+        "id": 2,
+        "Blogimage": "hm-blog-02.jpg",
+        "Timeimage": "time.svg",
+        "Dateimage": "date.svg",
+        "date": "25 May 2026",
+        "title": "Cloud Strategy for Business Growth",
+        "desc": "How cloud solutions can improve flexibility and performance.",
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "Blogimage": "hm-blog-03.jpg",
+        "Timeimage": "time.svg",
+        "Dateimage": "date.svg",
+        "date": "25 March 2026",
+        "title": "Protecting Modern Business Networks",
+        "desc": "Simple ways to strengthen security across connected operations.",
+        "link": "#"
+    }
+]

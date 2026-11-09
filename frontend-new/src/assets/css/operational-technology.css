@@ -1,0 +1,2555 @@
+/* =============================================
+
+   IPGS OPERATIONAL TECHNOLOGY
+
+   Dark navy + steel-blue palette. Full-bleed
+
+   image hero with key-facts strip, "not on our
+
+   watch" statement, tabbed sectors, pillar row,
+
+   signal-line CTA.
+
+============================================= */
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+
+
+.ipgs-ot-page {
+
+    --bg: #101c29;
+
+    --bg-alt: #132130;
+
+    --bg-deep: #0b1520;
+
+    --card: #19262f;
+
+    --card-hover: #1e2d38;
+
+    --line: #2a3742;
+
+    --blue: #2f8ab3;
+
+    --blue-light: #5db5d6;
+
+    --blue-hover: #3d9ec9;
+
+    --white: #ffffff;
+
+    --text: #a9b5bf;
+
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    font-family: var(--font);
+
+    background: var(--bg);
+
+    color: var(--text);
+
+}
+
+
+
+.ipgs-ot-page *,
+
+.ipgs-ot-page *::before,
+
+.ipgs-ot-page *::after {
+
+    box-sizing: border-box;
+
+}
+
+
+
+.ipgs-ot-page .container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding-left: 24px;
+
+    padding-right: 24px;
+
+}
+
+
+
+.ipgs-ot-page h1,
+
+.ipgs-ot-page h2,
+
+.ipgs-ot-page h3 {
+
+    font-family: var(--font);
+
+    color: var(--white);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+
+    margin-top: 0;
+
+}
+
+
+
+.ipgs-ot-page p {
+
+    margin-top: 0;
+
+    line-height: 1.8;
+
+}
+
+
+
+.ipgs-ot-page img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+
+/* ---------- Eyebrow label ---------- */
+
+
+
+.ipgs-ot-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 24px;
+
+    color: var(--blue-light);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+}
+
+
+
+.ipgs-ot-label > span {
+
+    flex-shrink: 0;
+
+    width: 50px;
+
+    height: 2px;
+
+    background: var(--blue-light);
+
+}
+
+
+
+/* ---------- Banner (existing site hero) ---------- */
+
+
+
+.ipgs-ot-banner .title-of-hero {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.ipgs-ot-banner .title-of-hero p,
+
+.ipgs-ot-banner .title-of-hero span {
+
+    animation: ot-hero-in 0.9s var(--ease) both;
+
+}
+
+
+
+.ipgs-ot-banner .title-of-hero span {
+
+    animation-delay: 0.18s;
+
+}
+
+
+
+.ipgs-ot-banner .title-of-hero span a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+}
+
+
+
+.ipgs-ot-banner .title-of-hero span a:hover {
+
+    color: var(--blue-light);
+
+}
+
+
+
+@keyframes ot-hero-in {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(14px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+
+
+
+@keyframes ot-zoom {
+
+    from {
+
+        transform: scale(1.12);
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+
+@keyframes ot-panel-in {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(16px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+
+
+
+@keyframes ot-image-in {
+
+    from {
+
+        clip-path: inset(0 100% 0 0);
+
+        transform: scale(1.08);
+
+    }
+
+    to {
+
+        clip-path: inset(0 0 0 0);
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+
+@keyframes ot-signal {
+
+    0% {
+
+        left: 0;
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    90% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        left: 100%;
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* ---------- Scroll reveal ----------
+
+   up    : fade + rise
+
+   lines : headline lines slide up out of a mask
+
+   draw  : the "not on our watch" rule draws across
+
+   image : the OBSERVED wrapper stays visible; only the <img>
+
+           inside is clipped, so the image always triggers */
+
+
+
+.ipgs-ot-page.is-anim [data-reveal="up"] {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+
+        opacity 0.8s var(--ease) var(--d, 0ms),
+
+        transform 0.8s var(--ease) var(--d, 0ms);
+
+}
+
+
+
+.ipgs-ot-page.is-anim [data-reveal="up"].is-visible {
+
+    opacity: 1;
+
+    transform: none;
+
+}
+
+
+
+.ipgs-ot-line {
+
+    display: block;
+
+    overflow: hidden;
+
+    padding-bottom: 0.1em;
+
+}
+
+
+
+.ipgs-ot-line > span {
+
+    display: block;
+
+}
+
+
+
+.ipgs-ot-page.is-anim [data-reveal="lines"] .ipgs-ot-line > span {
+
+    transform: translateY(110%);
+
+    transition: transform 1s var(--ease) var(--d, 0ms);
+
+}
+
+
+
+.ipgs-ot-page.is-anim [data-reveal="lines"].is-visible .ipgs-ot-line > span {
+
+    transform: none;
+
+}
+
+
+
+.ipgs-ot-page.is-anim [data-reveal="image"] img {
+
+    clip-path: inset(0 0 100% 0);
+
+    transform: scale(1.1);
+
+    transition:
+
+        clip-path 1.2s var(--ease),
+
+        transform 1.8s var(--ease);
+
+}
+
+
+
+.ipgs-ot-page.is-anim [data-reveal="image"].is-visible img {
+
+    clip-path: inset(0 0 0 0);
+
+    transform: scale(1);
+
+}
+
+
+
+/* ---------- Buttons / links ---------- */
+
+
+
+.ipgs-ot-primary-btn,
+
+.ipgs-ot-final-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 22px;
+
+    min-height: 56px;
+
+    padding: 15px 28px;
+
+    background: var(--blue);
+
+    color: #fff;
+
+    font-family: var(--font);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: background-color 0.25s ease;
+
+}
+
+
+
+.ipgs-ot-primary-btn:hover,
+
+.ipgs-ot-final-button:hover {
+
+    background: var(--blue-hover);
+
+    color: #fff;
+
+}
+
+
+
+.ipgs-ot-primary-btn i,
+
+.ipgs-ot-final-button i {
+
+    font-size: 19px;
+
+    transition: transform 0.25s var(--ease);
+
+}
+
+
+
+.ipgs-ot-primary-btn:hover i,
+
+.ipgs-ot-final-button:hover i {
+
+    transform: translate(3px, -3px);
+
+}
+
+
+
+.ipgs-ot-text-link {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding-bottom: 10px;
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+
+
+.ipgs-ot-text-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: var(--blue-light);
+
+    transform-origin: left;
+
+    transform: scaleX(0.35);
+
+    transition: transform 0.4s var(--ease);
+
+}
+
+
+
+.ipgs-ot-text-link:hover {
+
+    color: var(--white);
+
+}
+
+
+
+.ipgs-ot-text-link:hover::after {
+
+    transform: scaleX(1);
+
+}
+
+
+
+.ipgs-ot-text-link i {
+
+    font-size: 19px;
+
+    transition: transform 0.3s var(--ease);
+
+}
+
+
+
+.ipgs-ot-text-link:hover i {
+
+    transform: translate(3px, -3px);
+
+}
+
+
+
+.ipgs-ot-page a:focus-visible,
+
+.ipgs-ot-tab:focus-visible {
+
+    outline: 3px solid var(--blue-light);
+
+    outline-offset: 4px;
+
+}
+
+
+
+/* ---------- Hero (full-bleed image) ---------- */
+
+
+
+.ipgs-ot-intro {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    min-height: 780px;
+
+    padding: 120px 0 0;
+
+    overflow: hidden;
+
+    background: var(--bg-deep);
+
+}
+
+
+
+.ipgs-ot-intro-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    animation: ot-zoom 2.4s var(--ease) both;
+
+}
+
+
+
+.ipgs-ot-intro-shade {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(90deg, rgba(11, 21, 32, 0.94) 0%, rgba(11, 21, 32, 0.78) 48%, rgba(11, 21, 32, 0.35) 100%),
+
+        linear-gradient(0deg, rgba(11, 21, 32, 0.95) 0%, rgba(11, 21, 32, 0) 45%);
+
+}
+
+
+
+.ipgs-ot-intro .container {
+
+    width: 100%;
+
+}
+
+
+
+.ipgs-ot-intro-content {
+
+    max-width: 780px;
+
+    padding-bottom: 72px;
+
+}
+
+
+
+.ipgs-ot-intro-content h1 {
+
+    margin-bottom: 26px;
+
+    font-size: clamp(38px, 4.8vw, 70px);
+
+}
+
+
+
+.ipgs-ot-intro-content > p {
+
+    max-width: 58ch;
+
+    margin-bottom: 22px;
+
+    color: #c4cdd5;
+
+    font-size: 18px;
+
+}
+
+
+
+.ipgs-ot-intro-statement {
+
+    display: block;
+
+    max-width: 520px;
+
+    margin: 0 0 34px;
+
+    padding-left: 20px;
+
+    border-left: 3px solid var(--blue);
+
+    color: var(--white);
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    line-height: 1.55;
+
+}
+
+
+
+.ipgs-ot-intro-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 22px 40px;
+
+}
+
+
+
+.ipgs-ot-pledges {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px 22px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+
+.ipgs-ot-pledges li {
+
+    color: var(--blue-light);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+
+
+/* Key facts strip */
+
+
+
+.ipgs-ot-facts {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    background: rgba(11, 21, 32, 0.82);
+
+    border: 1px solid var(--line);
+
+    border-bottom: none;
+
+    border-top: 3px solid var(--blue);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+
+.ipgs-ot-facts li {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 28px 30px;
+
+}
+
+
+
+.ipgs-ot-facts li + li {
+
+    border-left: 1px solid var(--line);
+
+}
+
+
+
+.ipgs-ot-facts strong {
+
+    color: var(--white);
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.03em;
+
+}
+
+
+
+.ipgs-ot-facts span {
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* ---------- The challenge ---------- */
+
+
+
+.ipgs-ot-challenge {
+
+    padding: 110px 0;
+
+    background: var(--bg-alt);
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+
+.ipgs-ot-challenge-grid {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+
+    align-items: start;
+
+    gap: 9%;
+
+}
+
+
+
+.ipgs-ot-challenge-head {
+
+    position: sticky;
+
+    top: 110px;
+
+}
+
+
+
+.ipgs-ot-challenge h2 {
+
+    margin-bottom: 0;
+
+    font-size: clamp(32px, 3.8vw, 52px);
+
+}
+
+
+
+.ipgs-ot-challenge-content p {
+
+    margin-bottom: 0;
+
+    font-size: 17px;
+
+}
+
+
+
+/* "But not on our watch." */
+
+
+
+.ipgs-ot-statement {
+
+    position: relative;
+
+    margin: 40px 0;
+
+    padding: 36px 0;
+
+}
+
+
+
+.ipgs-ot-statement::before,
+
+.ipgs-ot-statement::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    height: 2px;
+
+    background: var(--blue);
+
+    transform-origin: left;
+
+    transition: transform 1.2s var(--ease) 0.2s;
+
+}
+
+
+
+.ipgs-ot-statement::before {
+
+    top: 0;
+
+}
+
+
+
+.ipgs-ot-statement::after {
+
+    bottom: 0;
+
+    transform-origin: right;
+
+}
+
+
+
+.ipgs-ot-page.is-anim .ipgs-ot-statement::before,
+
+.ipgs-ot-page.is-anim .ipgs-ot-statement::after {
+
+    transform: scaleX(0);
+
+}
+
+
+
+.ipgs-ot-page.is-anim .ipgs-ot-statement.is-visible::before,
+
+.ipgs-ot-page.is-anim .ipgs-ot-statement.is-visible::after {
+
+    transform: scaleX(1);
+
+}
+
+
+
+.ipgs-ot-statement h3 {
+
+    margin: 0;
+
+    font-size: clamp(30px, 3.6vw, 48px);
+
+}
+
+
+
+/* ---------- Sectors (tabs) ---------- */
+
+
+
+.ipgs-ot-sectors {
+
+    padding: 110px 0;
+
+    background: var(--bg);
+
+}
+
+
+
+.ipgs-ot-sector-heading {
+
+    margin-bottom: 56px;
+
+}
+
+
+
+.ipgs-ot-sector-heading-grid {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+
+    align-items: start;
+
+    gap: 8%;
+
+}
+
+
+
+.ipgs-ot-sector-heading h2 {
+
+    margin-bottom: 0;
+
+    font-size: clamp(34px, 3.9vw, 54px);
+
+}
+
+
+
+.ipgs-ot-sector-heading-grid p {
+
+    margin-bottom: 16px;
+
+    font-size: 16px;
+
+}
+
+
+
+.ipgs-ot-sector-heading-grid p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+.ipgs-ot-tablist {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border: 1px solid var(--line);
+
+    border-bottom: none;
+
+}
+
+
+
+.ipgs-ot-tab {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 26px 32px;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    font-family: var(--font);
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+
+
+.ipgs-ot-tab + .ipgs-ot-tab {
+
+    border-left: 1px solid var(--line);
+
+}
+
+
+
+.ipgs-ot-tab i {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 46px;
+
+    height: 46px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    font-size: 23px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+
+
+.ipgs-ot-tab::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 3px;
+
+    background: var(--blue-light);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.5s var(--ease);
+
+}
+
+
+
+.ipgs-ot-tab:hover {
+
+    color: var(--white);
+
+    background: var(--card-hover);
+
+}
+
+
+
+.ipgs-ot-tab.is-active {
+
+    background: var(--card-hover);
+
+    color: var(--white);
+
+}
+
+
+
+.ipgs-ot-tab.is-active i {
+
+    background: var(--blue);
+
+    color: #fff;
+
+}
+
+
+
+.ipgs-ot-tab.is-active::after {
+
+    transform: scaleX(1);
+
+}
+
+
+
+.ipgs-ot-panel {
+
+    border: 1px solid var(--line);
+
+    background: var(--card);
+
+}
+
+
+
+.ipgs-ot-panel:not([hidden]) {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+}
+
+
+
+.ipgs-ot-panel-image {
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    background: var(--bg-deep);
+
+}
+
+
+
+.ipgs-ot-panel-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 560px;
+
+    object-fit: cover;
+
+}
+
+
+
+.ipgs-ot-panel:not([hidden]) .ipgs-ot-panel-image img {
+
+    animation: ot-image-in 1.1s var(--ease) both;
+
+}
+
+
+
+.ipgs-ot-panel-content {
+
+    align-self: center;
+
+    padding: 56px 56px 60px;
+
+}
+
+
+
+.ipgs-ot-panel:not([hidden]) .ipgs-ot-panel-content > * {
+
+    animation: ot-panel-in 0.7s var(--ease) both;
+
+}
+
+
+
+.ipgs-ot-panel:not([hidden]) .ipgs-ot-panel-content > *:nth-child(2) {
+
+    animation-delay: 0.1s;
+
+}
+
+
+
+.ipgs-ot-panel:not([hidden]) .ipgs-ot-panel-content > *:nth-child(3) {
+
+    animation-delay: 0.2s;
+
+}
+
+
+
+.ipgs-ot-panel:not([hidden]) .ipgs-ot-panel-content > *:nth-child(4) {
+
+    animation-delay: 0.3s;
+
+}
+
+
+
+.ipgs-ot-panel-content h3 {
+
+    margin-bottom: 24px;
+
+    font-size: clamp(30px, 3.2vw, 44px);
+
+}
+
+
+
+.ipgs-ot-panel-content p {
+
+    margin-bottom: 18px;
+
+    font-size: 16px;
+
+}
+
+
+
+.ipgs-ot-panel-content .ipgs-ot-text-link {
+
+    margin-top: 14px;
+
+}
+
+
+
+/* ---------- Why IPGS ---------- */
+
+
+
+.ipgs-ot-why {
+
+    padding: 110px 0;
+
+    background: var(--bg-alt);
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+
+.ipgs-ot-why-top {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+    align-items: start;
+
+    gap: 8%;
+
+    margin-bottom: 60px;
+
+}
+
+
+
+.ipgs-ot-why-top h2 {
+
+    margin-bottom: 0;
+
+    font-size: clamp(34px, 3.9vw, 54px);
+
+}
+
+
+
+.ipgs-ot-why-copy p {
+
+    margin-bottom: 18px;
+
+    font-size: 16px;
+
+}
+
+
+
+.ipgs-ot-why-copy p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+.ipgs-ot-why-band {
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+
+    background: var(--card);
+
+}
+
+
+
+.ipgs-ot-why-band img {
+
+    width: 100%;
+
+    height: 340px;
+
+    object-fit: cover;
+
+    object-position: center 40%;
+
+}
+
+
+
+/* Pillars */
+
+
+
+.ipgs-ot-pillars {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    border: 1px solid var(--line);
+
+    border-top: none;
+
+    background: var(--line);
+
+    gap: 1px;
+
+}
+
+
+
+.ipgs-ot-pillar {
+
+    position: relative;
+
+    min-width: 0;
+
+    padding: 38px 30px 42px;
+
+    background: var(--card);
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+.ipgs-ot-pillar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 3px;
+
+    background: var(--blue);
+
+    transform-origin: left;
+
+    transform: scaleX(0);
+
+    transition: transform 0.5s var(--ease);
+
+}
+
+
+
+.ipgs-ot-pillar:hover {
+
+    background: var(--card-hover);
+
+}
+
+
+
+.ipgs-ot-pillar:hover::before {
+
+    transform: scaleX(1);
+
+}
+
+
+
+.ipgs-ot-pillar-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 60px;
+
+    height: 60px;
+
+    margin-bottom: 26px;
+
+    background: var(--blue);
+
+    color: #fff;
+
+    font-size: 27px;
+
+}
+
+
+
+.ipgs-ot-pillar h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 21px;
+
+}
+
+
+
+.ipgs-ot-pillar p {
+
+    margin-bottom: 0;
+
+    font-size: 15px;
+
+}
+
+
+
+/* ---------- Final CTA ---------- */
+
+
+
+.ipgs-ot-final {
+
+    position: relative;
+
+    padding: 110px 0 100px;
+
+    overflow: hidden;
+
+    background: var(--bg-deep);
+
+}
+
+
+
+/* signal line with a pulse that travels along it */
+
+.ipgs-ot-signal {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 3px;
+
+    background: rgba(47, 138, 179, 0.35);
+
+}
+
+
+
+.ipgs-ot-signal span {
+
+    position: absolute;
+
+    top: -5px;
+
+    width: 13px;
+
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    box-shadow: 0 0 0 4px rgba(47, 138, 179, 0.25);
+
+}
+
+
+
+.ipgs-ot-signal span:nth-child(1) {
+
+    left: 8%;
+
+}
+
+
+
+.ipgs-ot-signal span:nth-child(2) {
+
+    left: 50%;
+
+}
+
+
+
+.ipgs-ot-signal span:nth-child(3) {
+
+    left: 92%;
+
+}
+
+
+
+.ipgs-ot-signal i {
+
+    position: absolute;
+
+    top: -2px;
+
+    width: 120px;
+
+    height: 7px;
+
+    margin-left: -120px;
+
+    background: linear-gradient(90deg, transparent, var(--blue-light));
+
+    border-radius: 4px;
+
+    animation: ot-signal 6s linear infinite;
+
+}
+
+
+
+.ipgs-ot-final-inner {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 8%;
+
+}
+
+
+
+.ipgs-ot-final h2 {
+
+    max-width: 22ch;
+
+    margin-bottom: 24px;
+
+    font-size: clamp(34px, 4vw, 56px);
+
+}
+
+
+
+.ipgs-ot-final p {
+
+    max-width: 62ch;
+
+    margin-bottom: 14px;
+
+    font-size: 17px;
+
+}
+
+
+
+.ipgs-ot-final-action {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+}
+
+
+
+.ipgs-ot-final-button {
+
+    white-space: nowrap;
+
+}
+
+
+
+/* ---------- Tablet ---------- */
+
+
+
+@media (max-width: 1199px) {
+
+    .ipgs-ot-intro {
+
+        min-height: 700px;
+
+    }
+
+
+
+    .ipgs-ot-challenge,
+
+    .ipgs-ot-sectors,
+
+    .ipgs-ot-why {
+
+        padding: 86px 0;
+
+    }
+
+
+
+    .ipgs-ot-panel-content {
+
+        padding: 40px 34px 44px;
+
+    }
+
+
+
+    .ipgs-ot-pillars {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .ipgs-ot-facts li {
+
+        padding: 24px 22px;
+
+    }
+
+
+
+    .ipgs-ot-facts strong {
+
+        font-size: 21px;
+
+    }
+
+}
+
+
+
+@media (max-width: 991px) {
+
+    .ipgs-ot-challenge-grid,
+
+    .ipgs-ot-sector-heading-grid,
+
+    .ipgs-ot-why-top,
+
+    .ipgs-ot-final-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+    }
+
+
+
+    .ipgs-ot-challenge-head {
+
+        position: static;
+
+    }
+
+
+
+    .ipgs-ot-panel:not([hidden]) {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .ipgs-ot-panel-image,
+
+    .ipgs-ot-panel-image img {
+
+        min-height: 0;
+
+        height: 380px;
+
+    }
+
+
+
+    .ipgs-ot-facts {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .ipgs-ot-facts li:nth-child(3) {
+
+        border-left: none;
+
+    }
+
+
+
+    .ipgs-ot-facts li:nth-child(n + 3) {
+
+        border-top: 1px solid var(--line);
+
+    }
+
+
+
+    .ipgs-ot-final-action {
+
+        justify-content: flex-start;
+
+    }
+
+}
+
+
+
+/* ---------- Mobile ---------- */
+
+
+
+@media (max-width: 767px) {
+
+    .ipgs-ot-page .container {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+
+    .ipgs-ot-label {
+
+        gap: 12px;
+
+        font-size: 12px;
+
+    }
+
+
+
+    .ipgs-ot-label > span {
+
+        width: 32px;
+
+    }
+
+
+
+    .ipgs-ot-intro {
+
+        min-height: 0;
+
+        padding-top: 90px;
+
+    }
+
+
+
+    .ipgs-ot-intro-shade {
+
+        background: linear-gradient(0deg, rgba(11, 21, 32, 0.96) 0%, rgba(11, 21, 32, 0.8) 100%);
+
+    }
+
+
+
+    .ipgs-ot-intro-content {
+
+        padding-bottom: 48px;
+
+    }
+
+
+
+    .ipgs-ot-intro-content > p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .ipgs-ot-intro-statement {
+
+        font-size: 17px;
+
+    }
+
+
+
+    .ipgs-ot-facts li {
+
+        padding: 20px 16px;
+
+    }
+
+
+
+    .ipgs-ot-facts strong {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .ipgs-ot-facts span {
+
+        font-size: 13px;
+
+    }
+
+
+
+    .ipgs-ot-challenge,
+
+    .ipgs-ot-sectors,
+
+    .ipgs-ot-why {
+
+        padding: 64px 0;
+
+    }
+
+
+
+    .ipgs-ot-challenge-content p,
+
+    .ipgs-ot-why-copy p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .ipgs-ot-statement {
+
+        margin: 30px 0;
+
+        padding: 26px 0;
+
+    }
+
+
+
+    .ipgs-ot-sector-heading {
+
+        margin-bottom: 36px;
+
+    }
+
+
+
+    .ipgs-ot-tablist {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .ipgs-ot-tab {
+
+        padding: 18px 20px;
+
+        font-size: 17px;
+
+    }
+
+
+
+    .ipgs-ot-tab + .ipgs-ot-tab {
+
+        border-left: none;
+
+        border-top: 1px solid var(--line);
+
+    }
+
+
+
+    .ipgs-ot-panel-image,
+
+    .ipgs-ot-panel-image img {
+
+        height: 280px;
+
+    }
+
+
+
+    .ipgs-ot-panel-content {
+
+        padding: 32px 22px 36px;
+
+    }
+
+
+
+    .ipgs-ot-panel-content p {
+
+        font-size: 15px;
+
+    }
+
+
+
+    .ipgs-ot-why-top {
+
+        margin-bottom: 40px;
+
+    }
+
+
+
+    .ipgs-ot-why-band img {
+
+        height: 220px;
+
+    }
+
+
+
+    .ipgs-ot-pillars {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .ipgs-ot-pillar {
+
+        padding: 30px 24px 34px;
+
+    }
+
+
+
+    .ipgs-ot-final {
+
+        padding: 76px 0 70px;
+
+    }
+
+
+
+    .ipgs-ot-final-button {
+
+        white-space: normal;
+
+    }
+
+}
+
+
+
+/* ---------- Reduced motion: show everything, no movement ---------- */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ipgs-ot-banner .title-of-hero p,
+
+    .ipgs-ot-banner .title-of-hero span,
+
+    .ipgs-ot-intro-bg,
+
+    .ipgs-ot-panel:not([hidden]) .ipgs-ot-panel-image img,
+
+    .ipgs-ot-panel:not([hidden]) .ipgs-ot-panel-content > * {
+
+        animation: none;
+
+    }
+
+
+
+    .ipgs-ot-signal i {
+
+        display: none;
+
+    }
+
+
+
+    .ipgs-ot-page.is-anim [data-reveal="up"],
+
+    .ipgs-ot-page.is-anim [data-reveal="lines"] .ipgs-ot-line > span,
+
+    .ipgs-ot-page.is-anim [data-reveal="image"] img {
+
+        opacity: 1;
+
+        transform: none;
+
+        clip-path: none;
+
+        transition: none;
+
+    }
+
+
+
+    .ipgs-ot-page.is-anim .ipgs-ot-statement::before,
+
+    .ipgs-ot-page.is-anim .ipgs-ot-statement::after {
+
+        transform: scaleX(1);
+
+        transition: none;
+
+    }
+
+
+
+    .ipgs-ot-tab::after,
+
+    .ipgs-ot-pillar::before,
+
+    .ipgs-ot-text-link::after,
+
+    .ipgs-ot-text-link i,
+
+    .ipgs-ot-primary-btn i,
+
+    .ipgs-ot-final-button i {
+
+        transition: none;
+
+    }
+
+}
+
+
+
+/* ============================================================
+
+   IPGS OPERATIONAL TECHNOLOGY - IMAGE-FREE DESIGN
+
+   Only formerly image-based sections are restyled.
+
+   All other page components retain their original CSS.
+
+   ============================================================ */
+
+.ipgs-ot-page .ipgs-ot-intro {
+
+    isolation: isolate;
+
+    min-height: auto;
+
+    padding: 105px 0 0;
+
+    background: linear-gradient(112deg, #0f1e2a 0%, #163348 62%, #205b76 100%);
+
+}
+
+.ipgs-ot-intro-decoration { position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:-1; }
+
+.ipgs-ot-intro-decoration span:first-child { position:absolute; width:540px; height:540px; border:1px solid rgba(117,197,228,.19); border-radius:50%; right:-205px; top:-280px; }
+
+.ipgs-ot-intro-decoration span:last-child { position:absolute; width:320px; height:320px; border:1px solid rgba(117,197,228,.12); border-radius:50%; right:-95px; top:-160px; animation:otDecorDrift 15s ease-in-out infinite alternate; }
+
+@keyframes otDecorDrift { to {transform:translate(-26px,25px)} }
+
+.ipgs-ot-page .ipgs-ot-intro-content { max-width:880px; padding-bottom:64px; position:relative; z-index:1; }
+
+.ipgs-ot-page .ipgs-ot-intro-content h1 { font-size:clamp(36px,4.6vw,66px); }
+
+.ipgs-ot-page .ipgs-ot-intro-content > p { color:#c7dbe5; }
+
+.ipgs-ot-page .ipgs-ot-facts { position:relative; z-index:1; background:#132b3c; border-color:rgba(117,197,228,.24); }
+
+.ipgs-ot-page .ipgs-ot-facts li + li { border-color:rgba(117,197,228,.2); }
+
+/* Replace rail and energy photos with structured typographic engineering panels. */
+
+.ipgs-ot-page .ipgs-ot-sector-art {
+
+  min-height:490px; height:auto; padding:34px; display:flex; flex-direction:column;
+
+  position:relative; isolation:isolate; overflow:hidden;
+
+  background:linear-gradient(140deg,#193b50,#0f1e2a 80%); border-right:1px solid rgba(117,197,228,.16);
+
+}
+
+.ipgs-ot-sector-art::before { content:""; position:absolute; width:370px; height:370px; border:1px solid rgba(117,197,228,.16); border-radius:50%; right:-125px; top:35px; pointer-events:none; }
+
+.ipgs-ot-sector-art::after { content:""; position:absolute; inset:auto 0 0; height:3px; background:linear-gradient(90deg,#258db5,#75c5e4); transform-origin:left; animation:otArtLine 1.1s ease both; }
+
+@keyframes otArtLine { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+
+.ipgs-ot-sector-art-head { display:flex; justify-content:space-between; gap:14px; color:#75c5e4; font-size:10px; font-weight:700; letter-spacing:.13em; }
+
+.ipgs-ot-sector-art-symbol { display:grid; place-items:center; width:90px; height:90px; border:1px solid rgba(117,197,228,.5); background:rgba(37,141,181,.13); color:#75c5e4; font-size:43px; margin:auto 0 24px; transition:transform .4s ease,background .4s ease; }
+
+.ipgs-ot-sector-art:hover .ipgs-ot-sector-art-symbol {transform:translateY(-7px);background:rgba(37,141,181,.25)}
+
+.ipgs-ot-sector-art > strong { position:relative; z-index:1; color:white; font-size:clamp(37px,4vw,55px); line-height:1.12; letter-spacing:-.04em; }
+
+.ipgs-ot-sector-art-steps { display:flex; flex-wrap:wrap; gap:9px; margin-top:30px; padding-top:20px; border-top:1px solid rgba(117,197,228,.25); }
+
+.ipgs-ot-sector-art-steps span { color:#d0e6f0; border:1px solid rgba(117,197,228,.3); padding:8px 10px; font-size:12px; }
+
+/* Compact replacement for the old wide image between the Why IPGS copy and pillars. */
+
+.ipgs-ot-page .ipgs-ot-delivery-band { display:grid; grid-template-columns:1fr 1fr; align-items:center; min-height:220px; padding:30px 36px; gap:28px; border:1px solid rgba(117,197,228,.24); border-top:3px solid #258db5; background:linear-gradient(115deg,#193b50,#102330); }
+
+.ipgs-ot-delivery-band-heading { display:grid; gap:13px; }
+
+.ipgs-ot-delivery-band-heading > span {color:#75c5e4;font-size:11px;font-weight:700;letter-spacing:.17em}
+
+.ipgs-ot-delivery-band-heading strong {font-size:clamp(23px,2.5vw,34px);line-height:1.22;letter-spacing:-.03em;color:white;max-width:420px}
+
+.ipgs-ot-delivery-band-items {display:grid;gap:12px}
+
+.ipgs-ot-delivery-band-items > div {display:flex;align-items:center;gap:15px;padding:9px 0;border-bottom:1px solid rgba(117,197,228,.2);color:#e0f0f5;font-weight:600}
+
+.ipgs-ot-delivery-band-items i {color:#75c5e4;font-size:24px}
+
+@media(max-width:991px){.ipgs-ot-page .ipgs-ot-sector-art {min-height:330px}.ipgs-ot-page .ipgs-ot-delivery-band {grid-template-columns:1fr}}
+
+@media(max-width:767px){.ipgs-ot-page .ipgs-ot-intro {padding-top:72px}.ipgs-ot-page .ipgs-ot-intro-content {padding-bottom:44px}.ipgs-ot-page .ipgs-ot-sector-art {padding:24px; min-height:320px}.ipgs-ot-sector-art-symbol{width:70px;height:70px;font-size:34px}.ipgs-ot-page .ipgs-ot-delivery-band {padding:25px 22px;min-height:0}.ipgs-ot-intro-decoration span:first-child {right:-350px}}
+
+@media(prefers-reduced-motion:reduce){.ipgs-ot-intro-decoration span:last-child,.ipgs-ot-sector-art::after{animation:none!important}.ipgs-ot-sector-art-symbol{transition:none!important}}
+
+
+
+/* Self-contained About Us style, image-free page banner */
+
+.ipgs-ot-page .ipgs-ot-banner {position:relative;isolation:isolate;overflow:hidden;min-height:440px;display:flex;align-items:center;background:linear-gradient(105deg,#0f1e2a 0%,#173649 59%,#286f8b 100%);}
+
+.ipgs-ot-banner-inner{width:100%;max-width:1240px;padding:72px 24px;margin:auto;position:relative;z-index:1;}
+
+.ipgs-ot-page .ipgs-ot-banner h2{margin:0 0 40px;color:#fff;font-size:clamp(38px,4.25vw,65px);line-height:1.18;font-weight:800;letter-spacing:-.035em;animation:otHeroFade .85s ease both;}
+
+.ipgs-ot-banner nav{color:#b9cbd5;font-size:17px;font-weight:600;animation:otHeroFade .85s ease .18s both;}
+
+.ipgs-ot-banner nav a{color:inherit;text-decoration:none;transition:color .25s ease}.ipgs-ot-banner nav a:hover{color:#75c5e4}
+
+.ipgs-ot-banner-ring{position:absolute;pointer-events:none;width:470px;height:470px;right:-190px;top:-180px;border-radius:50%;border:1px solid rgba(117,197,228,.17)}
+
+@keyframes otHeroFade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+@media(max-width:767px){.ipgs-ot-page .ipgs-ot-banner{min-height:300px}.ipgs-ot-banner-inner{padding:58px 20px}.ipgs-ot-page .ipgs-ot-banner h2{margin-bottom:24px}.ipgs-ot-banner nav{font-size:14px}}
+
+@media(prefers-reduced-motion:reduce){.ipgs-ot-page .ipgs-ot-banner h2,.ipgs-ot-banner nav{animation:none}}
+
+/* =============================================================
+
+   IPGS OT - COMPACT SPACING REFINEMENT
+
+   Applies only to the Operational Technology page.
+
+   Content, styling and existing interactions are unchanged.
+
+   ============================================================= */
+
+.ipgs-ot-page .ipgs-ot-banner { min-height: 350px; }
+
+.ipgs-ot-page .ipgs-ot-banner-inner { padding-block: 58px; }
+
+.ipgs-ot-page .ipgs-ot-banner h2 { margin-bottom: 25px; }
+
+
+
+.ipgs-ot-page .ipgs-ot-intro { min-height: 0; padding: 62px 0 0; align-items: stretch; }
+
+.ipgs-ot-page .ipgs-ot-intro-content { padding-bottom: 36px; max-width: 880px; }
+
+.ipgs-ot-page .ipgs-ot-intro-content h1 { margin-bottom: 19px; font-size: clamp(34px, 4.2vw, 60px); }
+
+.ipgs-ot-page .ipgs-ot-intro-content > p { margin-bottom: 15px; font-size: 16.5px; }
+
+.ipgs-ot-page .ipgs-ot-intro-statement { margin-bottom: 20px; font-size: 17px; }
+
+.ipgs-ot-page .ipgs-ot-intro-actions { gap: 16px 26px; }
+
+.ipgs-ot-page .ipgs-ot-facts li { padding: 19px 21px; gap: 5px; }
+
+.ipgs-ot-page .ipgs-ot-facts strong { font-size: 20px; }
+
+.ipgs-ot-page .ipgs-ot-facts span { font-size: 13px; }
+
+
+
+.ipgs-ot-page .ipgs-ot-challenge,
+
+.ipgs-ot-page .ipgs-ot-sectors,
+
+.ipgs-ot-page .ipgs-ot-why { padding: 68px 0; }
+
+.ipgs-ot-page .ipgs-ot-challenge-grid,
+
+.ipgs-ot-page .ipgs-ot-sector-heading-grid,
+
+.ipgs-ot-page .ipgs-ot-why-top { gap: 5%; }
+
+.ipgs-ot-page .ipgs-ot-challenge-head { top: 80px; }
+
+.ipgs-ot-page .ipgs-ot-statement { margin: 25px 0; padding: 20px 0; }
+
+.ipgs-ot-page .ipgs-ot-sector-heading { margin-bottom: 30px; }
+
+.ipgs-ot-page .ipgs-ot-tab { padding: 17px 23px; font-size: 17px; }
+
+.ipgs-ot-page .ipgs-ot-tab i { width: 39px; height: 39px; font-size: 20px; }
+
+
+
+/* Remove the old photo area heights and unused vertical room. */
+
+.ipgs-ot-page .ipgs-ot-panel:not([hidden]) { align-items: stretch; }
+
+.ipgs-ot-page .ipgs-ot-panel-image.ipgs-ot-sector-art {
+
+  min-height: 0; height: auto; padding: 26px 28px;
+
+  justify-content: center; gap: 16px;
+
+}
+
+.ipgs-ot-page .ipgs-ot-sector-art-symbol {
+
+  width: 66px; height: 66px; font-size: 30px;
+
+  margin: 10px 0 0;
+
+}
+
+.ipgs-ot-page .ipgs-ot-sector-art > strong { font-size: clamp(28px, 3vw, 42px); }
+
+.ipgs-ot-page .ipgs-ot-sector-art-steps { margin-top: 10px; padding-top: 14px; }
+
+.ipgs-ot-page .ipgs-ot-panel-content { padding: 34px 36px 38px; }
+
+.ipgs-ot-page .ipgs-ot-panel-content h3 { margin-bottom: 17px; }
+
+.ipgs-ot-page .ipgs-ot-panel-content p { margin-bottom: 12px; }
+
+.ipgs-ot-page .ipgs-ot-panel-content .ipgs-ot-text-link { margin-top: 9px; }
+
+
+
+.ipgs-ot-page .ipgs-ot-why-top { margin-bottom: 32px; }
+
+.ipgs-ot-page .ipgs-ot-delivery-band {
+
+  min-height: 0; padding: 20px 28px; gap: 20px;
+
+}
+
+.ipgs-ot-page .ipgs-ot-delivery-band-heading { gap: 7px; }
+
+.ipgs-ot-page .ipgs-ot-delivery-band-items { gap: 4px; }
+
+.ipgs-ot-page .ipgs-ot-delivery-band-items > div { padding: 6px 0; }
+
+.ipgs-ot-page .ipgs-ot-pillar { padding: 24px 23px 27px; }
+
+.ipgs-ot-page .ipgs-ot-pillar-icon { width: 50px; height: 50px; margin-bottom: 18px; font-size: 24px; }
+
+.ipgs-ot-page .ipgs-ot-final { padding: 66px 0; }
+
+.ipgs-ot-page .ipgs-ot-final h2 { margin-bottom: 16px; }
+
+.ipgs-ot-page .ipgs-ot-final p { margin-bottom: 10px; }
+
+
+
+@media (max-width: 991px) {
+
+  .ipgs-ot-page .ipgs-ot-challenge-head { position: static; }
+
+  .ipgs-ot-page .ipgs-ot-panel-image.ipgs-ot-sector-art { min-height: 0; }
+
+}
+
+@media (max-width: 767px) {
+
+  .ipgs-ot-page .ipgs-ot-banner { min-height: 270px; }
+
+  .ipgs-ot-page .ipgs-ot-banner-inner { padding: 46px 20px; }
+
+  .ipgs-ot-page .ipgs-ot-intro { padding-top: 44px; }
+
+  .ipgs-ot-page .ipgs-ot-intro-content { padding-bottom: 27px; }
+
+  .ipgs-ot-page .ipgs-ot-intro-content h1 { font-size: clamp(31px, 8vw, 42px); }
+
+  .ipgs-ot-page .ipgs-ot-facts li { padding: 15px 13px; }
+
+  .ipgs-ot-page .ipgs-ot-challenge,
+
+  .ipgs-ot-page .ipgs-ot-sectors,
+
+  .ipgs-ot-page .ipgs-ot-why { padding: 46px 0; }
+
+  .ipgs-ot-page .ipgs-ot-sector-heading { margin-bottom: 22px; }
+
+  .ipgs-ot-page .ipgs-ot-tab { padding: 13px 17px; }
+
+  .ipgs-ot-page .ipgs-ot-panel-image.ipgs-ot-sector-art { height: auto; min-height: 0; padding: 23px 20px; }
+
+  .ipgs-ot-page .ipgs-ot-panel-content { padding: 26px 21px 29px; }
+
+  .ipgs-ot-page .ipgs-ot-why-top { margin-bottom: 25px; }
+
+  .ipgs-ot-page .ipgs-ot-delivery-band { padding: 19px 20px; gap: 13px; }
+
+  .ipgs-ot-page .ipgs-ot-pillar { padding: 22px 20px; }
+
+  .ipgs-ot-page .ipgs-ot-final { padding: 51px 0; }
+
+}
+
+/* =============================================================
+   IPGS OPERATIONAL TECHNOLOGY | WHITE CONTENT THEME
+   Colour-only refinements. The page hero and final CTA retain
+   their existing branded appearance; layout and motion are intact.
+   ============================================================= */
+.ipgs-ot-page {
+  --bg: #ffffff;
+  --bg-alt: #ffffff;
+  --bg-deep: #ffffff;
+  --card: #f5f9fc;
+  --card-hover: #eaf3f8;
+  --line: #d7e4eb;
+  --text: #44596a;
+  --blue-light: #237fa6;
+  background: #ffffff;
+  color: var(--text);
+}
+
+/* Headings and text remain readable against white surfaces. */
+.ipgs-ot-page h1,
+.ipgs-ot-page h2,
+.ipgs-ot-page h3 { color: #102b3e; }
+.ipgs-ot-page .ipgs-ot-label,
+.ipgs-ot-page .ipgs-ot-pledges li,
+.ipgs-ot-page .ipgs-ot-facts span { color: #37637c; }
+.ipgs-ot-page .ipgs-ot-text-link,
+.ipgs-ot-page .ipgs-ot-text-link:hover { color: #12354a; }
+
+/* Introduction stays image-free, but now has a white backdrop. */
+.ipgs-ot-page .ipgs-ot-intro {
+  background: #ffffff;
+}
+.ipgs-ot-page .ipgs-ot-intro-shade { background: transparent; }
+.ipgs-ot-page .ipgs-ot-intro-decoration span { border-color: rgba(37, 141, 181, .18); }
+.ipgs-ot-page .ipgs-ot-intro-content > p { color: #44596a; }
+.ipgs-ot-page .ipgs-ot-intro-statement { color: #102b3e; }
+.ipgs-ot-page .ipgs-ot-facts {
+  background: #f5f9fc;
+  border-color: #d7e4eb;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.ipgs-ot-page .ipgs-ot-facts li + li { border-color: #d7e4eb; }
+.ipgs-ot-page .ipgs-ot-facts strong { color: #102b3e; }
+.ipgs-ot-page .ipgs-ot-facts span { color: #44596a; }
+
+/* Tabs, cards and technical panels adopt bright surfaces. */
+.ipgs-ot-page .ipgs-ot-tab,
+.ipgs-ot-page .ipgs-ot-panel { background: #f5f9fc; color: #44596a; }
+.ipgs-ot-page .ipgs-ot-tab:hover,
+.ipgs-ot-page .ipgs-ot-tab.is-active { background: #eaf3f8; color: #102b3e; }
+.ipgs-ot-page .ipgs-ot-tab i { background: #e5f0f6; color: #237fa6; }
+.ipgs-ot-page .ipgs-ot-tab.is-active i { background: var(--blue); color: #fff; }
+.ipgs-ot-page .ipgs-ot-sector-art {
+  background: linear-gradient(140deg, #f5f9fc, #eaf3f8 85%);
+  border-right-color: #d7e4eb;
+}
+.ipgs-ot-page .ipgs-ot-sector-art-head,
+.ipgs-ot-page .ipgs-ot-sector-art-symbol { color: #237fa6; }
+.ipgs-ot-page .ipgs-ot-sector-art-symbol { background: #e4f1f7; border-color: #b9d7e5; }
+.ipgs-ot-page .ipgs-ot-sector-art:hover .ipgs-ot-sector-art-symbol { background: #d9ecf5; }
+.ipgs-ot-page .ipgs-ot-sector-art > strong { color: #102b3e; }
+.ipgs-ot-page .ipgs-ot-sector-art-steps span { color: #44596a; border-color: #cbdfe9; }
+.ipgs-ot-page .ipgs-ot-sector-art-steps { border-top-color: #cbdfe9; }
+.ipgs-ot-page .ipgs-ot-sector-art::before { border-color: rgba(37,141,181,.18); }
+
+.ipgs-ot-page .ipgs-ot-delivery-band {
+  background: #f5f9fc;
+  border-color: #d7e4eb;
+  border-top-color: var(--blue);
+}
+.ipgs-ot-page .ipgs-ot-delivery-band-heading > span,
+.ipgs-ot-page .ipgs-ot-delivery-band-items i { color: #237fa6; }
+.ipgs-ot-page .ipgs-ot-delivery-band-heading strong { color: #102b3e; }
+.ipgs-ot-page .ipgs-ot-delivery-band-items > div {
+  color: #44596a;
+  border-bottom-color: #d7e4eb;
+}
+.ipgs-ot-page .ipgs-ot-pillar,
+.ipgs-ot-page .ipgs-ot-pillar:hover { color: #44596a; }
+
+/* Preserve the branded dark final call-to-action. */
+.ipgs-ot-page .ipgs-ot-final { background: #0b1520; color: #cbd9e2; }
+.ipgs-ot-page .ipgs-ot-final h2 { color: #ffffff; }
+.ipgs-ot-page .ipgs-ot-final p { color: #cbd9e2; }
+.ipgs-ot-page .ipgs-ot-final-button,
+.ipgs-ot-page .ipgs-ot-primary-btn { color: #ffffff; }
+.ipgs-ot-page .ipgs-ot-final-button:hover,
+.ipgs-ot-page .ipgs-ot-primary-btn:hover { color: #ffffff; }

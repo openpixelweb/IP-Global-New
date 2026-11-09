@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Doris Jordan",
+        "role": "Design Expert",
+        "image": "image-1.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 2,
+        "name": "Diana Wagner",
+        "role": "Inspection Expert",
+        "image": "image-2.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 3,
+        "name": "Fuchida Raku",
+        "role": "Installation Expert",
+        "image": "image-3.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 4,
+        "name": "Harry Garrett",
+        "role": "Maintenance Expert",
+        "image": "image-4.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 5,
+        "name": "Jon Doe",
+        "role": "Design Expert",
+        "image": "image-5.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 6,
+        "name": "Jackson Cooper",
+        "role": "Inspection Expert",
+        "image": "image-6.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 7,
+        "name": "Raita Benson",
+        "role": "Installation Expert",
+        "image": "image-7.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 8,
+        "name": "Will Gilbert",
+        "role": "Maintenance Expert",
+        "image": "image-8.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 9,
+        "name": "Brian Walker",
+        "role": "Design Expert",
+        "image": "image-9.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 10,
+        "name": "Lily Bennett",
+        "role": "Inspection Expert",
+        "image": "image-10.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 11,
+        "name": "Alice Thomson",
+        "role": "Installation Expert",
+        "image": "image-11.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    },
+    {
+        "id": 12,
+        "name": "Tony Smith",
+        "role": "Maintenance Expert",
+        "image": "image-12.png",
+        "facebook": "https://facebook.com/",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://linkedin.com/"
+    }
+]

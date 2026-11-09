@@ -1,0 +1,1098 @@
+
+/* ==========================================
+   IPGS - IT MANAGED SERVICES
+   Premium Network Connectivity Design
+   Navy / Blue / White Only
+========================================== */
+
+.ipgs-ms-page {
+    --ms-navy: #0f1e2a;
+    --ms-navy-soft: #193345;
+    --ms-blue: #258db5;
+    --ms-sky: #75c5e4;
+    --ms-white: #ffffff;
+    --ms-pale: #eaf5fa;
+    --ms-light: #f5fafd;
+    --ms-text: #445b69;
+    --ms-border: #d9e8ef;
+
+    width: 100%;
+    background: var(--ms-white);
+    color: var(--ms-navy);
+}
+
+.ipgs-ms-page *,
+.ipgs-ms-page *::before,
+.ipgs-ms-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-ms-page .container {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.ipgs-ms-page h1,
+.ipgs-ms-page h2,
+.ipgs-ms-page h3 {
+    margin-top: 0;
+    color: var(--ms-navy);
+    font-weight: 600;
+    letter-spacing: -.035em;
+    line-height: 1.2;
+}
+
+.ipgs-ms-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-ms-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--ms-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-ms-label > span {
+    flex-shrink: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--ms-sky);
+}
+
+/* ==========================================
+   EXISTING IPGS HERO
+   PRESERVE THE GLOBAL BANNER
+========================================== */
+
+.ipgs-ms-banner .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-ms-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ipgs-ms-banner .title-of-hero span a:hover {
+    color: var(--ms-sky);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.ipgs-ms-primary-btn,
+.ipgs-ms-final-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 55px;
+    padding: 16px 24px;
+    border: 1px solid var(--ms-blue);
+    background: var(--ms-blue);
+    color: var(--ms-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-ms-primary-btn:hover,
+.ipgs-ms-final-btn:hover {
+    background: var(--ms-navy);
+    border-color: var(--ms-navy);
+    color: var(--ms-white);
+    transform: translateY(-2px);
+}
+
+.ipgs-ms-primary-btn i,
+.ipgs-ms-final-btn i {
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.ipgs-ms-page a:focus-visible {
+    outline: 3px solid var(--ms-sky);
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   01 - INTRODUCTION
+========================================== */
+
+.ipgs-ms-intro {
+    padding: 50px 0;
+    background: var(--ms-white);
+}
+
+.ipgs-ms-intro-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, .95fr);
+    align-items: center;
+    gap: 7%;
+}
+
+.ipgs-ms-intro-content h1 {
+    margin-bottom: 26px;
+    font-size: clamp(37px, 3.9vw, 57px);
+}
+
+.ipgs-ms-intro-content h1 em {
+    color: var(--ms-blue);
+    font-style: normal;
+}
+
+.ipgs-ms-intro-content > p {
+    max-width: 600px;
+    margin-bottom: 20px;
+    color: var(--ms-text);
+    font-size: 17px;
+}
+
+.ipgs-ms-intro-statement {
+    max-width: 530px;
+    margin: 25px 0 30px;
+    padding: 10px 0 10px 20px;
+    border-left: 3px solid var(--ms-blue);
+    color: var(--ms-navy);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.ipgs-ms-intro-art {
+    min-width: 0;
+}
+
+/* ==========================================
+   CSS-ONLY NETWORK ILLUSTRATION
+========================================== */
+
+.ipgs-ms-network {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 28px 24px;
+    background:
+        radial-gradient(
+            circle at 82% 16%,
+            rgba(37, 141, 181, .20),
+            transparent 46%
+        ),
+        var(--ms-navy);
+    color: var(--ms-white);
+}
+
+.ipgs-ms-network::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .24;
+    background-image:
+        linear-gradient(
+            rgba(117, 197, 228, .14) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(117, 197, 228, .14) 1px,
+            transparent 1px
+        );
+    background-size: 30px 30px;
+}
+
+.ipgs-ms-network-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 29px;
+    color: var(--ms-sky);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* Central hub */
+
+.ipgs-ms-network-hub {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 270px);
+    min-height: 185px;
+    margin-inline: auto;
+    padding: 22px 15px;
+    border: 1px solid rgba(117, 197, 228, .6);
+    background: var(--ms-navy-soft);
+    text-align: center;
+}
+
+.ipgs-ms-network-hub-icon {
+    display: grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    margin-bottom: 14px;
+    color: var(--ms-sky);
+    background: rgba(37, 141, 181, .16);
+}
+
+.ipgs-ms-network-hub-icon i {
+    font-size: 28px;
+}
+
+.ipgs-ms-network-hub > strong {
+    color: var(--ms-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ipgs-ms-network-hub > small {
+    margin-top: 9px;
+    color: #b9dceb;
+    font-size: 11px;
+}
+
+.ipgs-ms-network-waves {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.ipgs-ms-network-waves > span {
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--ms-sky);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5);
+}
+
+@keyframes msNetworkWave {
+    0% {
+        opacity: .55;
+        transform: translate(-50%, -50%) scale(.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.4);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-ms-network-waves > span {
+        animation: msNetworkWave 5s ease-out infinite;
+    }
+
+    .ipgs-ms-network-waves > span:nth-child(2) {
+        animation-delay: 1.65s;
+    }
+
+    .ipgs-ms-network-waves > span:nth-child(3) {
+        animation-delay: 3.3s;
+    }
+}
+
+/* Diagram connections */
+
+.ipgs-ms-connector {
+    position: relative;
+    height: 75px;
+}
+
+.ipgs-ms-connector > span {
+    position: absolute;
+    display: block;
+}
+
+.ipgs-ms-connector-stem {
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 35px;
+    background: var(--ms-sky);
+}
+
+.ipgs-ms-connector-rail {
+    top: 35px;
+    left: 16.67%;
+    width: 66.66%;
+    height: 1px;
+    background: var(--ms-sky);
+}
+
+.ipgs-ms-connector-left,
+.ipgs-ms-connector-centre,
+.ipgs-ms-connector-right {
+    top: 35px;
+    width: 1px;
+    height: 40px;
+    background: var(--ms-sky);
+}
+
+.ipgs-ms-connector-left {
+    left: 16.67%;
+}
+
+.ipgs-ms-connector-centre {
+    left: 50%;
+}
+
+.ipgs-ms-connector-right {
+    left: 83.33%;
+}
+
+.ipgs-ms-connector-pulse {
+    z-index: 2;
+    top: 30px;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--ms-sky);
+}
+
+@keyframes msConnectorPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 3px rgba(117, 197, 228, .25);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(117, 197, 228, 0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-ms-connector-pulse {
+        animation: msConnectorPulse 3s ease-in-out infinite;
+    }
+}
+
+/* Connected nodes */
+
+.ipgs-ms-network-nodes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.ipgs-ms-network-node {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 140px;
+    padding: 16px 7px;
+    border: 1px solid #315a72;
+    background: var(--ms-navy-soft);
+    text-align: center;
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-ms-network-node:hover {
+    border-color: var(--ms-sky);
+    transform: translateY(-4px);
+}
+
+.ipgs-ms-network-node i {
+    margin-bottom: 14px;
+    color: var(--ms-sky);
+    font-size: 29px;
+}
+
+.ipgs-ms-network-node strong {
+    color: var(--ms-white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ipgs-ms-network-node > span {
+    margin-top: 8px;
+    color: #b7d8e7;
+    font-size: 11px;
+}
+
+.ipgs-ms-network-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 27px;
+    padding-top: 20px;
+    border-top: 1px solid #315a72;
+    color: #c5dfec;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ipgs-ms-network-footer i {
+    color: var(--ms-sky);
+    font-size: 21px;
+}
+
+/* ==========================================
+   02 - CONNECTIVITY CHALLENGE
+========================================== */
+
+.ipgs-ms-context {
+    padding: 50px 0;
+    background: var(--ms-light);
+}
+
+.ipgs-ms-context-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .94fr);
+    gap: 10%;
+    align-items: start;
+}
+
+.ipgs-ms-chapter {
+    display: block;
+    margin-bottom: 26px;
+    color: var(--ms-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.ipgs-ms-context h2 {
+    max-width: 630px;
+    margin-bottom: 0;
+    font-size: clamp(35px, 3.7vw, 52px);
+}
+
+.ipgs-ms-context h2 span {
+    color: var(--ms-blue);
+}
+
+.ipgs-ms-context-copy {
+    padding-top: 35px;
+}
+
+.ipgs-ms-context-copy p {
+    margin-bottom: 19px;
+    color: var(--ms-text);
+    font-size: 17px;
+}
+
+/* ==========================================
+   03 - FIVE STEP DELIVERY TIMELINE
+========================================== */
+
+.ipgs-ms-process {
+    padding: 50px 0;
+    background: var(--ms-white);
+}
+
+.ipgs-ms-process-intro {
+    max-width: 830px;
+    margin-bottom: 58px;
+}
+
+.ipgs-ms-process-intro h2 {
+    margin-bottom: 22px;
+    font-size: clamp(37px, 3.9vw, 55px);
+}
+
+.ipgs-ms-process-intro h2 span {
+    color: var(--ms-blue);
+}
+
+.ipgs-ms-process-intro > p {
+    max-width: 730px;
+    margin-bottom: 0;
+    color: var(--ms-text);
+    font-size: 17px;
+}
+
+.ipgs-ms-process-list {
+    position: relative;
+    max-width: 1000px;
+    margin-left: auto;
+    border-top: 1px solid var(--ms-border);
+}
+
+.ipgs-ms-process-item {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    align-items: start;
+    gap: 32px;
+    padding: 29px 0;
+    border-bottom: 1px solid var(--ms-border);
+}
+
+.ipgs-ms-process-marker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-right: 16px;
+}
+
+.ipgs-ms-process-marker span {
+    color: var(--ms-blue);
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -.04em;
+}
+
+.ipgs-ms-process-marker i {
+    color: var(--ms-blue);
+    font-size: 25px;
+}
+
+.ipgs-ms-process-copy h3 {
+    margin-bottom: 12px;
+    font-size: clamp(22px, 2.2vw, 28px);
+}
+
+.ipgs-ms-process-copy p {
+    max-width: 780px;
+    margin-bottom: 0;
+    color: var(--ms-text);
+    font-size: 16px;
+}
+
+/* ==========================================
+   04 - PROJECT EXPERIENCE
+========================================== */
+
+.ipgs-ms-projects {
+    padding: 50px 0;
+    background: var(--ms-navy);
+}
+
+.ipgs-ms-projects .ipgs-ms-label {
+    color: var(--ms-sky);
+}
+
+.ipgs-ms-projects-heading {
+    margin-bottom: 53px;
+}
+
+.ipgs-ms-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+    align-items: end;
+    gap: 10%;
+}
+
+.ipgs-ms-heading-grid h2 {
+    margin-bottom: 0;
+    color: var(--ms-white);
+    font-size: clamp(36px, 3.9vw, 54px);
+}
+
+.ipgs-ms-heading-grid h2 span {
+    color: var(--ms-sky);
+}
+
+.ipgs-ms-heading-grid p {
+    margin-bottom: 0;
+    color: #c4dae6;
+    font-size: 17px;
+}
+
+.ipgs-ms-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ipgs-ms-project {
+    min-width: 0;
+    padding: 30px;
+    border: 1px solid #35546a;
+    background: var(--ms-navy-soft);
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-ms-project:hover {
+    border-color: var(--ms-sky);
+    transform: translateY(-4px);
+}
+
+.ipgs-ms-project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 29px;
+    color: var(--ms-sky);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ipgs-ms-project-top i {
+    font-size: 23px;
+}
+
+.ipgs-ms-project-label {
+    display: block;
+    margin-bottom: 13px;
+    color: var(--ms-sky);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.ipgs-ms-project h3 {
+    margin-bottom: 18px;
+    color: var(--ms-white);
+    font-size: clamp(23px, 2.3vw, 29px);
+}
+
+.ipgs-ms-project p {
+    margin-bottom: 0;
+    color: #c8deea;
+    font-size: 15px;
+}
+
+/* ==========================================
+   05 - WHY IPGS
+========================================== */
+
+.ipgs-ms-advantages {
+    padding: 50px 0;
+    background: var(--ms-pale);
+}
+
+.ipgs-ms-advantages-heading {
+    max-width: 800px;
+    margin-bottom: 54px;
+}
+
+.ipgs-ms-advantages-heading h2 {
+    margin-bottom: 21px;
+    font-size: clamp(36px, 3.8vw, 53px);
+}
+
+.ipgs-ms-advantages-heading h2 span {
+    color: var(--ms-blue);
+}
+
+.ipgs-ms-advantages-heading > p {
+    margin-bottom: 0;
+    color: var(--ms-text);
+    font-size: 17px;
+}
+
+.ipgs-ms-advantages-list {
+    border-top: 1px solid #cbdde8;
+}
+
+.ipgs-ms-advantage {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) 52px;
+    gap: 26px;
+    align-items: start;
+    padding: 30px 0;
+    border-bottom: 1px solid #cbdde8;
+}
+
+.ipgs-ms-advantage-number {
+    padding-top: 5px;
+    color: var(--ms-blue);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ipgs-ms-advantage-copy h3 {
+    margin-bottom: 13px;
+    font-size: clamp(22px, 2.2vw, 28px);
+}
+
+.ipgs-ms-advantage-copy p {
+    max-width: 900px;
+    margin-bottom: 0;
+    color: var(--ms-text);
+    font-size: 16px;
+}
+
+.ipgs-ms-advantage > i {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    background: #dceef7;
+    color: var(--ms-blue);
+    font-size: 26px;
+}
+
+/* ==========================================
+   06 - FINAL CTA
+========================================== */
+
+.ipgs-ms-final {
+    padding: 50px 0;
+    background: var(--ms-white);
+}
+
+.ipgs-ms-final-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-ms-final h2 {
+    max-width: 760px;
+    margin-bottom: 24px;
+    font-size: clamp(36px, 3.9vw, 54px);
+}
+
+.ipgs-ms-final h2 span {
+    color: var(--ms-blue);
+}
+
+.ipgs-ms-final p {
+    max-width: 740px;
+    margin-bottom: 14px;
+    color: var(--ms-text);
+    font-size: 17px;
+}
+
+.ipgs-ms-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ipgs-ms-final-btn {
+    max-width: 350px;
+    background: var(--ms-navy);
+    border-color: var(--ms-navy);
+}
+
+.ipgs-ms-final-btn:hover {
+    background: var(--ms-blue);
+    border-color: var(--ms-blue);
+}
+
+/* ==========================================
+   SCROLL ENTRANCE ANIMATIONS
+========================================== */
+
+.ipgs-ms-page [data-ms-reveal] {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes msReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-ms-page [data-ms-reveal].ms-visible {
+        animation: msReveal .65s ease-out both;
+    }
+}
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+@media (max-width: 1199px) {
+    .ipgs-ms-intro,
+    .ipgs-ms-context,
+    .ipgs-ms-process,
+    .ipgs-ms-projects,
+    .ipgs-ms-advantages {
+        padding: 85px 0;
+    }
+
+    .ipgs-ms-intro-grid,
+    .ipgs-ms-context-grid {
+        gap: 42px;
+    }
+
+    .ipgs-ms-projects-grid {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ipgs-ms-intro-grid,
+    .ipgs-ms-context-grid,
+    .ipgs-ms-heading-grid {
+        gap: 30px;
+    }
+
+    .ipgs-ms-intro-content h1 {
+        font-size: 39px;
+    }
+
+    .ipgs-ms-network {
+        padding: 23px 16px;
+    }
+
+    .ipgs-ms-network-nodes {
+        gap: 6px;
+    }
+
+    .ipgs-ms-network-node {
+        min-height: 124px;
+        padding: 12px 4px;
+    }
+
+    .ipgs-ms-network-node strong {
+        font-size: 12px;
+    }
+
+    .ipgs-ms-final-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ipgs-ms-final-action {
+        justify-content: flex-start;
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+    .ipgs-ms-page .container {
+        padding-inline: 20px;
+    }
+
+    .ipgs-ms-label {
+        margin-bottom: 19px;
+        font-size: 11px;
+        letter-spacing: 1.3px;
+    }
+
+    .ipgs-ms-intro,
+    .ipgs-ms-context,
+    .ipgs-ms-process,
+    .ipgs-ms-projects,
+    .ipgs-ms-advantages {
+        padding: 65px 0;
+    }
+
+    .ipgs-ms-intro-grid,
+    .ipgs-ms-context-grid,
+    .ipgs-ms-heading-grid,
+    .ipgs-ms-final-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ipgs-ms-intro-content h1 {
+        font-size: clamp(34px, 8vw, 44px);
+    }
+
+    .ipgs-ms-intro-content > p,
+    .ipgs-ms-context-copy p {
+        font-size: 16px;
+    }
+
+    .ipgs-ms-intro-art {
+        width: 100%;
+        max-width: 550px;
+        margin-inline: auto;
+    }
+
+    .ipgs-ms-context h2,
+    .ipgs-ms-process-intro h2,
+    .ipgs-ms-heading-grid h2,
+    .ipgs-ms-advantages-heading h2 {
+        font-size: clamp(32px, 8vw, 43px);
+    }
+
+    .ipgs-ms-context-copy {
+        padding-top: 0;
+    }
+
+    .ipgs-ms-process-intro,
+    .ipgs-ms-projects-heading,
+    .ipgs-ms-advantages-heading {
+        margin-bottom: 36px;
+    }
+
+    .ipgs-ms-process-item {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 18px;
+        padding: 25px 0;
+    }
+
+    .ipgs-ms-process-marker {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 0;
+    }
+
+    .ipgs-ms-process-marker span {
+        font-size: 29px;
+    }
+
+    .ipgs-ms-process-marker i {
+        font-size: 20px;
+    }
+
+    .ipgs-ms-process-copy h3 {
+        font-size: 22px;
+    }
+
+    .ipgs-ms-process-copy p {
+        font-size: 15px;
+    }
+
+    .ipgs-ms-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .ipgs-ms-project {
+        padding: 25px;
+    }
+
+    .ipgs-ms-project h3 {
+        font-size: 24px;
+    }
+
+    .ipgs-ms-advantage {
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 14px;
+        padding: 25px 0;
+    }
+
+    .ipgs-ms-advantage > i {
+        display: none;
+    }
+
+    .ipgs-ms-advantage-copy h3 {
+        font-size: 22px;
+    }
+
+    .ipgs-ms-advantage-copy p {
+        font-size: 15px;
+    }
+
+    .ipgs-ms-final {
+        padding: 70px 0;
+    }
+
+    .ipgs-ms-final h2 {
+        font-size: 35px;
+    }
+
+    .ipgs-ms-final-btn {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+    .ipgs-ms-page .container {
+        padding-inline: 17px;
+    }
+
+    .ipgs-ms-intro-content h1,
+    .ipgs-ms-context h2,
+    .ipgs-ms-process-intro h2,
+    .ipgs-ms-heading-grid h2,
+    .ipgs-ms-advantages-heading h2,
+    .ipgs-ms-final h2 {
+        font-size: 31px;
+    }
+
+    .ipgs-ms-network {
+        padding: 20px 12px;
+    }
+
+    .ipgs-ms-network-hub {
+        min-height: 160px;
+    }
+
+    .ipgs-ms-network-nodes {
+        gap: 5px;
+    }
+
+    .ipgs-ms-network-node {
+        min-height: 113px;
+    }
+
+    .ipgs-ms-network-node i {
+        margin-bottom: 9px;
+        font-size: 24px;
+    }
+
+    .ipgs-ms-network-node strong {
+        font-size: 11px;
+    }
+
+    .ipgs-ms-network-node > span {
+        font-size: 10px;
+    }
+
+    .ipgs-ms-primary-btn,
+    .ipgs-ms-final-btn {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-ms-page *,
+    .ipgs-ms-page *::before,
+    .ipgs-ms-page *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .ipgs-ms-page [data-ms-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .ipgs-ms-network-node:hover,
+    .ipgs-ms-project:hover,
+    .ipgs-ms-primary-btn:hover,
+    .ipgs-ms-final-btn:hover {
+        transform: none;
+    }
+}

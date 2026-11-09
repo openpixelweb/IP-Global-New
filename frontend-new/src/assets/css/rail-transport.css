@@ -1,0 +1,1245 @@
+/* =============================================
+   IPGS RAIL & TRANSPORT
+   Dark navy + steel-blue palette. No photos:
+   network panel, pull quote and failover diagram.
+   Full-width headline, keyword ticker, journey
+   steps, services as stations on a scroll-drawn
+   rail line, accordion strengths, moving-track CTA.
+============================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-rail-page {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --bg-deep: #0b1520;
+    --card: #f5f9fc;
+    --card-hover: #edf5fa;
+    --line: #dbe6ee;
+    --blue: #2f8ab3;
+    --blue-light: #1679a0;
+    --blue-hover: #3d9ec9;
+    --white: #102c3d;
+    --text: #425766;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    width: 100%;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-rail-page *,
+.ipgs-rail-page *::before,
+.ipgs-rail-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-rail-page .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.ipgs-rail-page h1,
+.ipgs-rail-page h2,
+.ipgs-rail-page h3 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: var(--font);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-rail-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-rail-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.ipgs-rail-page h2 span,
+.ipgs-rail-page h1 em {
+    color: var(--blue-light);
+    font-style: normal;
+}
+
+.ipgs-rail-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-rail-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+/* ---------- Banner ---------- */
+
+.ipgs-rail-banner .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-rail-banner .title-of-hero p,
+.ipgs-rail-banner .title-of-hero span {
+    animation: rail-hero-in 0.9s var(--ease) both;
+}
+
+.ipgs-rail-banner .title-of-hero span {
+    animation-delay: 0.18s;
+}
+
+.ipgs-rail-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ipgs-rail-banner .title-of-hero span a:hover {
+    color: var(--blue-light);
+}
+
+@keyframes rail-hero-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes rail-ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes rail-sleepers {
+    from { background-position: 0 0; }
+    to { background-position: -64px 0; }
+}
+
+/* ---------- Scroll reveal ---------- */
+
+.ipgs-rail-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-rail-page.is-anim [data-reveal="up"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-rail-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.ipgs-rail-line > span,
+.ipgs-rail-line > em {
+    display: block;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="lines"] .ipgs-rail-line > * {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-rail-page.is-anim [data-reveal="lines"].is-visible .ipgs-rail-line > * {
+    transform: none;
+}
+
+/* panels (replace the old photos) fade and rise in */
+.ipgs-rail-page.is-anim [data-reveal="panel"] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.ipgs-rail-page.is-anim [data-reveal="panel"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.ipgs-rail-button,
+.ipgs-rail-final-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 56px;
+    padding: 15px 28px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-rail-button:hover,
+.ipgs-rail-final-button:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-rail-button i,
+.ipgs-rail-final-button i {
+    font-size: 19px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-rail-button:hover i,
+.ipgs-rail-final-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+.ipgs-rail-page a:focus-visible,
+.ipgs-rail-acc-item button:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 4px;
+}
+
+/* ---------- Intro ---------- */
+
+.ipgs-rail-intro {
+    padding: 110px 0 0;
+    background: var(--bg);
+}
+
+.ipgs-rail-intro h1 {
+    max-width: 17ch;
+    margin-bottom: 64px;
+    font-size: clamp(38px, 5.4vw, 80px);
+    line-height: 1.08;
+}
+
+/* allow the headline to run wider than 17ch per line */
+.ipgs-rail-intro h1 {
+    max-width: none;
+}
+
+.ipgs-rail-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    align-items: stretch;
+    gap: 7%;
+    padding-bottom: 100px;
+}
+
+/* Network panel: nodes joined by a line with a travelling pulse */
+
+.ipgs-rail-network {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 56px;
+    min-width: 0;
+    padding: 40px 44px 44px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+/* faint grid inside the panel */
+.ipgs-rail-network::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+.ipgs-rail-network > * {
+    position: relative;
+}
+
+.ipgs-rail-network-tag {
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ipgs-rail-network-line {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ipgs-rail-network-line::before {
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 12%;
+    right: 12%;
+    height: 3px;
+    background: var(--line);
+}
+
+.ipgs-rail-network-line li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.ipgs-rail-network-line li i {
+    display: grid;
+    place-items: center;
+    width: 62px;
+    height: 62px;
+    background: var(--bg-alt);
+    border: 2px solid var(--line);
+    color: var(--blue-light);
+    font-size: 27px;
+    transition: background-color 0.6s ease, border-color 0.6s ease, color 0.6s ease;
+}
+
+.ipgs-rail-network-line li span {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="panel"].is-visible .ipgs-rail-network-line li i {
+    background: var(--blue);
+    border-color: var(--blue-light);
+    color: #fff;
+    transition-delay: var(--d, 0ms);
+}
+
+.ipgs-rail-pulse {
+    position: absolute;
+    top: 27px;
+    left: 12%;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--blue-light);
+    box-shadow: 0 0 0 6px rgba(93, 181, 214, 0.2), 0 0 18px var(--blue-light);
+    animation: rail-pulse 4.5s ease-in-out infinite;
+}
+
+@keyframes rail-pulse {
+    0% { left: 12%; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: 88%; opacity: 0; }
+}
+
+.ipgs-rail-network > strong {
+    color: var(--white);
+    font-size: clamp(26px, 3vw, 40px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-rail-intro-content p {
+    margin-bottom: 22px;
+    font-size: 17px;
+}
+
+.ipgs-rail-intro-content > div {
+    margin-top: 34px;
+}
+
+/* Ticker */
+
+.ipgs-rail-ticker {
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-alt);
+}
+
+.ipgs-rail-ticker-track {
+    display: flex;
+    width: max-content;
+    animation: rail-ticker 40s linear infinite;
+}
+
+.ipgs-rail-ticker ul {
+    display: flex;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ipgs-rail-ticker li {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding: 24px 34px 24px 0;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.ipgs-rail-ticker li::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: var(--blue);
+    transform: rotate(45deg);
+}
+
+.ipgs-rail-ticker:hover .ipgs-rail-ticker-track {
+    animation-play-state: paused;
+}
+
+/* ---------- Foundations ---------- */
+
+.ipgs-rail-foundations {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-rail-foundations-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 9%;
+}
+
+.ipgs-rail-foundations-grid h2 {
+    margin-bottom: 44px;
+    font-size: clamp(34px, 3.8vw, 52px);
+}
+
+/* Pull quote */
+
+.ipgs-rail-quote {
+    position: relative;
+    margin: 0;
+    padding: 44px 40px 40px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+}
+
+.ipgs-rail-quote > i {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--blue);
+    font-size: 56px;
+    line-height: 1;
+}
+
+.ipgs-rail-quote blockquote {
+    margin: 0 0 26px;
+    color: var(--white);
+    font-size: clamp(24px, 2.6vw, 34px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-rail-quote figcaption {
+    position: relative;
+    padding-top: 18px;
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* rule draws across above the caption */
+.ipgs-rail-quote figcaption::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--blue);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.2s var(--ease) 0.5s;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="panel"].is-visible figcaption::before,
+.ipgs-rail-page:not(.is-anim) .ipgs-rail-quote figcaption::before {
+    transform: scaleX(1);
+}
+
+.ipgs-rail-foundations-content {
+    padding-top: 6px;
+}
+
+.ipgs-rail-foundations-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Journey steps */
+
+.ipgs-rail-journey {
+    margin-top: 40px;
+    padding: 28px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-rail-journey > strong {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ipgs-rail-journey ol {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ipgs-rail-journey ol::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 12%;
+    right: 12%;
+    height: 2px;
+    background: var(--line);
+}
+
+.ipgs-rail-journey li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.ipgs-rail-journey li i {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    color: var(--blue-light);
+    font-size: 22px;
+}
+
+.ipgs-rail-journey li span {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="journey"] li {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+        opacity 0.6s var(--ease) var(--d, 0ms),
+        transform 0.6s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-rail-page.is-anim [data-reveal="journey"].is-visible li {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="journey"].is-visible li i {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+    transition: background-color 0.5s ease var(--d, 0ms), border-color 0.5s ease var(--d, 0ms);
+}
+
+/* ---------- Services: stations on a rail line ---------- */
+
+.ipgs-rail-services {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-rail-section-head {
+    margin-bottom: 70px;
+}
+
+.ipgs-rail-section-head-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: end;
+    gap: 9%;
+}
+
+.ipgs-rail-section-head h2 {
+    margin-bottom: 0;
+    font-size: clamp(34px, 3.9vw, 54px);
+}
+
+.ipgs-rail-section-head-grid p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.ipgs-rail-route {
+    --p: 0;
+    position: relative;
+}
+
+.ipgs-rail-route-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    margin-left: -2px;
+    background: var(--line);
+}
+
+.ipgs-rail-route-track span {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, var(--blue), var(--blue-light));
+    transform-origin: top;
+    transform: scaleY(var(--p));
+}
+
+.ipgs-rail-stations {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ipgs-rail-station {
+    position: relative;
+    display: flex;
+    width: 50%;
+    padding: 0 64px 56px 0;
+}
+
+.ipgs-rail-station:last-child {
+    padding-bottom: 0;
+}
+
+.ipgs-rail-station.is-right {
+    margin-left: 50%;
+    padding: 0 0 56px 64px;
+}
+
+.ipgs-rail-station.is-right:last-child {
+    padding-bottom: 0;
+}
+
+.ipgs-rail-node {
+    position: absolute;
+    top: 14px;
+    right: -26px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    background: var(--bg-alt);
+    border: 3px solid var(--line);
+    color: var(--text);
+    font-size: 22px;
+    transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease,
+        color 0.5s ease,
+        transform 0.5s var(--ease);
+}
+
+.ipgs-rail-station.is-right .ipgs-rail-node {
+    right: auto;
+    left: -26px;
+}
+
+.ipgs-rail-station-card {
+    width: 100%;
+    padding: 32px 34px 36px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.ipgs-rail-station-card:hover {
+    background: var(--card-hover);
+    border-color: var(--blue);
+}
+
+.ipgs-rail-station-card h3 {
+    margin-bottom: 14px;
+    font-size: clamp(20px, 1.9vw, 25px);
+}
+
+.ipgs-rail-station-card p {
+    margin-bottom: 0;
+    font-size: 15.5px;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="station"] .ipgs-rail-station-card {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition:
+        opacity 0.8s var(--ease),
+        transform 0.8s var(--ease),
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="station"].is-right .ipgs-rail-station-card {
+    transform: translateX(30px);
+}
+
+.ipgs-rail-page.is-anim [data-reveal="station"].is-visible .ipgs-rail-station-card {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-rail-page.is-anim [data-reveal="station"] .ipgs-rail-node {
+    transform: scale(0.7);
+}
+
+.ipgs-rail-page.is-anim [data-reveal="station"].is-visible .ipgs-rail-node {
+    transform: none;
+    background: var(--blue);
+    border-color: var(--blue-light);
+    color: #fff;
+}
+
+/* ---------- Assurance (accordion) ---------- */
+
+.ipgs-rail-assurance {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-rail-assurance-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: 8%;
+}
+
+.ipgs-rail-assurance-intro {
+    position: sticky;
+    top: 100px;
+}
+
+.ipgs-rail-assurance-intro h2 {
+    margin-bottom: 24px;
+    font-size: clamp(34px, 3.7vw, 50px);
+}
+
+.ipgs-rail-assurance-intro > p {
+    margin-bottom: 30px;
+    font-size: 16.5px;
+}
+
+/* Failover panel: two separate networks, one fault */
+
+.ipgs-rail-failover {
+    padding: 30px 30px 32px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-rail-failover-row {
+    margin-bottom: 26px;
+}
+
+.ipgs-rail-failover-row > span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ipgs-rail-wire {
+    position: relative;
+    height: 4px;
+    background: var(--line);
+}
+
+.ipgs-rail-wire i {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 70px;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, transparent, var(--blue-light));
+}
+
+/* A runs, hits the fault, then B carries the signal */
+.ipgs-rail-wire.wire-a i {
+    animation: rail-wire-a 6s ease-in-out infinite;
+}
+
+.ipgs-rail-wire.wire-b i {
+    opacity: 0;
+    animation: rail-wire-b 6s ease-in-out infinite;
+}
+
+.ipgs-rail-wire em {
+    position: absolute;
+    top: -14px;
+    left: 58%;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    background: var(--bg-alt);
+    border: 2px solid #c75c5c;
+    border-radius: 50%;
+    color: #e08a8a;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@keyframes rail-wire-a {
+    0% { left: 0; opacity: 0; }
+    8% { opacity: 1; }
+    42%, 100% { left: calc(58% - 70px); opacity: 0; }
+}
+
+@keyframes rail-wire-b {
+    0%, 42% { left: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: calc(100% - 70px); opacity: 0; }
+}
+
+.ipgs-rail-failover p {
+    margin: 4px 0 0;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.ipgs-rail-accordion {
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-rail-acc-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-rail-acc-item h3 {
+    margin: 0;
+    font-size: inherit;
+    letter-spacing: 0;
+}
+
+.ipgs-rail-acc-item button {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) 24px;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    padding: 26px 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font);
+    font-size: clamp(18px, 1.8vw, 23px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.ipgs-rail-acc-item button i {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--blue-light);
+    font-size: 23px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.ipgs-rail-acc-item button:hover {
+    color: var(--blue-light);
+}
+
+.ipgs-rail-acc-item.is-open button i {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+}
+
+/* plus / minus */
+.ipgs-rail-acc-item button b {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.ipgs-rail-acc-item button b::before,
+.ipgs-rail-acc-item button b::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: var(--blue-light);
+    transition: transform 0.35s var(--ease);
+}
+
+.ipgs-rail-acc-item button b::after {
+    transform: rotate(90deg);
+}
+
+.ipgs-rail-acc-item.is-open button b::after {
+    transform: rotate(0);
+}
+
+.ipgs-rail-acc-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition:
+        grid-template-rows 0.5s var(--ease),
+        visibility 0s linear 0.5s;
+}
+
+.ipgs-rail-acc-item.is-open .ipgs-rail-acc-panel {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows 0.5s var(--ease), visibility 0s;
+}
+
+.ipgs-rail-acc-panel > div {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.ipgs-rail-acc-panel p {
+    margin: 0;
+    padding: 0 0 30px 74px;
+    font-size: 16px;
+}
+
+/* ---------- Final CTA ---------- */
+
+.ipgs-rail-final {
+    position: relative;
+    padding: 50px 0 150px;
+    overflow: hidden;
+    background: var(--bg-deep);
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-rail-final-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-rail-final h2 {
+    max-width: 20ch;
+    margin-bottom: 24px;
+    font-size: clamp(34px, 4vw, 56px);
+}
+
+.ipgs-rail-final p {
+    max-width: 62ch;
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-rail-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ipgs-rail-final-button {
+    white-space: nowrap;
+}
+
+/* moving track: two rails with sleepers sliding past */
+.ipgs-rail-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    height: 34px;
+}
+
+.ipgs-rail-track::before {
+    content: "";
+    position: absolute;
+    inset: 6px 0;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--line) 0 8px,
+        transparent 8px 64px
+    );
+    animation: rail-sleepers 2.4s linear infinite;
+}
+
+.ipgs-rail-track span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--blue);
+}
+
+.ipgs-rail-track span:first-child {
+    top: 6px;
+}
+
+.ipgs-rail-track span:last-child {
+    bottom: 6px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1199px) {
+    .ipgs-rail-intro { padding-top: 86px; }
+    .ipgs-rail-foundations,
+    .ipgs-rail-services,
+    .ipgs-rail-assurance { padding: 86px 0; }
+    .ipgs-rail-intro-grid { padding-bottom: 80px; }
+    .ipgs-rail-network { padding: 32px 28px 34px; }
+    .ipgs-rail-station { padding-right: 52px; }
+    .ipgs-rail-station.is-right { padding-left: 52px; }
+}
+
+@media (max-width: 991px) {
+    .ipgs-rail-intro-grid,
+    .ipgs-rail-foundations-grid,
+    .ipgs-rail-section-head-grid,
+    .ipgs-rail-assurance-grid,
+    .ipgs-rail-final-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .ipgs-rail-intro h1 { margin-bottom: 44px; }
+    .ipgs-rail-network { gap: 40px; }
+    .ipgs-rail-assurance-intro { position: static; }
+    .ipgs-rail-final-action { justify-content: flex-start; }
+
+    /* rail line moves to the left edge */
+    .ipgs-rail-route-track { left: 26px; }
+
+    .ipgs-rail-station,
+    .ipgs-rail-station.is-right {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 0 40px 78px;
+    }
+
+    .ipgs-rail-station:last-child,
+    .ipgs-rail-station.is-right:last-child { padding-bottom: 0; }
+
+    .ipgs-rail-node,
+    .ipgs-rail-station.is-right .ipgs-rail-node {
+        right: auto;
+        left: 0;
+    }
+
+    .ipgs-rail-page.is-anim [data-reveal="station"].is-right .ipgs-rail-station-card {
+        transform: translateX(-30px);
+    }
+
+    .ipgs-rail-page.is-anim [data-reveal="station"].is-right.is-visible .ipgs-rail-station-card {
+        transform: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .ipgs-rail-page .container { padding: 0 20px; }
+
+    .ipgs-rail-label { gap: 12px; font-size: 12px; }
+    .ipgs-rail-label > span { width: 32px; }
+
+    .ipgs-rail-intro { padding-top: 64px; }
+    .ipgs-rail-intro-grid { padding-bottom: 60px; }
+    .ipgs-rail-network { padding: 26px 20px 28px; gap: 32px; }
+    .ipgs-rail-network-line { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 12px; }
+    .ipgs-rail-network-line::before,
+    .ipgs-rail-pulse { display: none; }
+    .ipgs-rail-intro-content p { font-size: 16px; }
+    .ipgs-rail-quote { padding: 32px 24px 30px; }
+    .ipgs-rail-failover { padding: 24px 20px 26px; }
+
+    .ipgs-rail-ticker li { padding: 18px 26px 18px 0; gap: 26px; font-size: 16px; }
+
+    .ipgs-rail-foundations,
+    .ipgs-rail-services,
+    .ipgs-rail-assurance { padding: 64px 0; }
+
+    .ipgs-rail-foundations-grid h2 { margin-bottom: 30px; }
+
+    .ipgs-rail-journey { padding: 22px 18px; }
+    .ipgs-rail-journey ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 10px; }
+    .ipgs-rail-journey ol::before { display: none; }
+
+    .ipgs-rail-section-head { margin-bottom: 44px; }
+    .ipgs-rail-station-card { padding: 24px 22px 28px; }
+    .ipgs-rail-station-card p { font-size: 15px; }
+
+    .ipgs-rail-station,
+    .ipgs-rail-station.is-right { padding-left: 66px; }
+
+    .ipgs-rail-node { width: 44px; height: 44px; font-size: 19px; }
+    .ipgs-rail-route-track { left: 22px; }
+
+    .ipgs-rail-acc-item button {
+        grid-template-columns: 44px minmax(0, 1fr) 20px;
+        gap: 14px;
+        padding: 20px 0;
+    }
+
+    .ipgs-rail-acc-item button i { width: 44px; height: 44px; font-size: 20px; }
+    .ipgs-rail-acc-panel p { padding: 0 0 24px 58px; font-size: 15px; }
+
+    .ipgs-rail-final { padding: 76px 0 120px; }
+    .ipgs-rail-final-button { white-space: normal; }
+}
+
+@media (max-width: 420px) {
+    .ipgs-rail-page .container { padding: 0 17px; }
+    .ipgs-rail-button,
+    .ipgs-rail-final-button { width: 100%; }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-rail-banner .title-of-hero p,
+    .ipgs-rail-banner .title-of-hero span,
+    .ipgs-rail-ticker-track,
+    .ipgs-rail-track::before,
+    .ipgs-rail-pulse,
+    .ipgs-rail-wire i {
+        animation: none;
+    }
+
+    .ipgs-rail-wire.wire-b i { opacity: 1; width: 100%; background: var(--blue); }
+
+    .ipgs-rail-ticker { overflow-x: auto; }
+
+    .ipgs-rail-page.is-anim [data-reveal="up"],
+    .ipgs-rail-page.is-anim [data-reveal="lines"] .ipgs-rail-line > *,
+    .ipgs-rail-page.is-anim [data-reveal="panel"],
+    .ipgs-rail-page.is-anim [data-reveal="journey"] li,
+    .ipgs-rail-page.is-anim [data-reveal="station"] .ipgs-rail-station-card,
+    .ipgs-rail-page.is-anim [data-reveal="station"] .ipgs-rail-node {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        transition: none;
+    }
+
+    .ipgs-rail-route { --p: 1 !important; }
+
+    .ipgs-rail-quote figcaption::before {
+        transform: scaleX(1);
+        transition: none;
+    }
+
+    .ipgs-rail-acc-panel,
+    .ipgs-rail-acc-item button b::before,
+    .ipgs-rail-acc-item button b::after {
+        transition: none;
+    }
+}
+
+/* =============================================
+   WHITE CONTENT THEME - CONTRAST CORRECTIONS
+   No changes to existing layout, spacing, or animation.
+   Dark final CTA and shared global hero are retained.
+============================================= */
+
+/* All content sections use white backgrounds; cards remain subtly distinguished. */
+.ipgs-rail-page .ipgs-rail-label,
+.ipgs-rail-page .ipgs-rail-network-tag,
+.ipgs-rail-page .ipgs-rail-quote figcaption,
+.ipgs-rail-page .ipgs-rail-journey > strong,
+.ipgs-rail-page .ipgs-rail-failover-row > span {
+    color: #1679a0;
+}
+
+/* White text is retained wherever a brand-blue filled element requires it. */
+.ipgs-rail-page .ipgs-rail-final {
+    color: #d5e3eb;
+}
+.ipgs-rail-page .ipgs-rail-final h1,
+.ipgs-rail-page .ipgs-rail-final h2,
+.ipgs-rail-page .ipgs-rail-final h3,
+.ipgs-rail-page .ipgs-rail-final p {
+    color: #ffffff;
+}
+.ipgs-rail-page .ipgs-rail-final .ipgs-rail-final-button,
+.ipgs-rail-page .ipgs-rail-final .ipgs-rail-final-button:hover {
+    color: #ffffff;
+}

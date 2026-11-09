@@ -1,0 +1,963 @@
+/* ===========================================
+   IPGS - CORE NETWORK SERVICES
+   Dark navy + steel-blue palette. No photos:
+   stages panel, ripple panel, delivery panel,
+   icon-led services and advantages.
+=========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-core-page {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --bg-deep: #0b1a26;
+    --card: #ffffff;
+    --card-hover: #f3f8fb;
+    --line: #dbe5eb;
+    --blue: #2c94b9;
+    --blue-light: #227da2;
+    --blue-hover: #3aa9cd;
+    --white: #102d40;
+    --text: #415667;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-core-page *,
+.ipgs-core-page *::before,
+.ipgs-core-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-core-page .container {
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.ipgs-core-page h1,
+.ipgs-core-page h2,
+.ipgs-core-page h3 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: var(--font);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-core-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-core-page h1 em,
+.ipgs-core-page h2 span {
+    color: var(--blue-light);
+    font-style: normal;
+}
+
+.ipgs-core-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-core-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+.ipgs-core-tag {
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* ---------- Core Network hero: matched to About Us / Our Team ---------- */
+.ipgs-core-page .ipgs-core-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 330px;
+    padding: 110px 0;
+    overflow: hidden;
+    background: linear-gradient(107deg, #0f202d 0%, #163448 46%, #286f8b 100%);
+}
+
+/* Fine-line orbital motif, intentionally positioned at the TOP RIGHT. */
+.ipgs-core-page .ipgs-core-hero-orbit {
+    position: absolute;
+    z-index: 0;
+    top: -260px;
+    right: -195px;
+    width: 580px;
+    height: 580px;
+    border: 1px solid rgba(139, 213, 237, 0.14);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: core-hero-orbit 9s ease-in-out infinite alternate;
+}
+
+.ipgs-core-page .ipgs-core-hero-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.ipgs-core-page .ipgs-core-hero h1 {
+    max-width: 1160px;
+    margin: 0;
+    color: #fff;
+    font-family: var(--font);
+    font-size: clamp(38px, 4.15vw, 65px);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    animation: core-hero-text 0.95s var(--ease) both;
+}
+
+.ipgs-core-page .ipgs-core-hero-line { display: block; color: #fff; }
+
+.ipgs-core-page .ipgs-core-hero-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: 37px;
+    color: #bfd2dd;
+    font-family: var(--font);
+    font-size: clamp(15px, 1.2vw, 20px);
+    font-weight: 500;
+    line-height: 1.6;
+    animation: core-hero-text 0.95s var(--ease) 0.18s both;
+}
+
+.ipgs-core-page .ipgs-core-hero-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.ipgs-core-page .ipgs-core-hero-breadcrumb a:hover { color: #fff; }
+.ipgs-core-page .ipgs-core-hero-breadcrumb a:focus-visible {
+    outline: 2px solid var(--blue-light);
+    outline-offset: 4px;
+}
+
+@keyframes core-hero-text {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes core-hero-orbit {
+    from { transform: translate3d(0, 0, 0); opacity: 0.7; }
+    to { transform: translate3d(-14px, 16px, 0); opacity: 1; }
+}
+
+@media (max-width: 991px) {
+    .ipgs-core-page .ipgs-core-hero { min-height: 500px; padding: 85px 0; }
+    .ipgs-core-page .ipgs-core-hero h1 { line-height: 1.35; }
+    .ipgs-core-page .ipgs-core-hero-orbit { width: 450px; height: 450px; right: -240px; top: -220px; }
+}
+@media (max-width: 767px) {
+    .ipgs-core-page .ipgs-core-hero { min-height: 390px; padding: 76px 0; }
+    .ipgs-core-page .ipgs-core-hero-container { padding-inline: 20px; }
+    .ipgs-core-page .ipgs-core-hero h1 { font-size: clamp(32px, 8vw, 45px); line-height: 1.28; }
+    .ipgs-core-page .ipgs-core-hero-breadcrumb { margin-top: 26px; font-size: 14px; }
+    .ipgs-core-page .ipgs-core-hero-orbit { width: 300px; height: 300px; right: -185px; top: -145px; }
+}
+@media (max-width: 420px) {
+    .ipgs-core-page .ipgs-core-hero-container { padding-inline: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-core-page .ipgs-core-hero-orbit,
+    .ipgs-core-page .ipgs-core-hero h1,
+    .ipgs-core-page .ipgs-core-hero-breadcrumb { animation: none !important; }
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes core-hero-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes core-grid {
+    to { background-position: 64px 64px; }
+}
+
+@keyframes core-stage-icon {
+    0%, 3% { background-color: var(--bg-alt); color: var(--blue-light); border-color: var(--line); }
+    8%, 30% { background-color: var(--blue); color: #fff; border-color: var(--blue-light); }
+    36%, 100% { background-color: var(--bg-alt); color: var(--blue-light); border-color: var(--line); }
+}
+
+@keyframes core-stage-bar {
+    0%, 3% { transform: scaleX(0); }
+    22%, 30% { transform: scaleX(1); }
+    36%, 100% { transform: scaleX(0); }
+}
+
+@keyframes core-ripple {
+    0% { transform: scale(0.35); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+@keyframes core-scan {
+    0% { top: -4px; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+@keyframes core-signal {
+    0% { left: 0; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* ---------- Scroll reveal ---------- */
+
+.ipgs-core-page.is-anim [data-reveal="up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-core-page.is-anim [data-reveal="up"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-core-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.ipgs-core-line > * {
+    display: block;
+}
+
+.ipgs-core-page.is-anim [data-reveal="lines"] .ipgs-core-line > * {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-core-page.is-anim [data-reveal="lines"].is-visible .ipgs-core-line > * {
+    transform: none;
+}
+
+.ipgs-core-page.is-anim [data-reveal="panel"] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.ipgs-core-page.is-anim [data-reveal="panel"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Buttons ---------- */
+
+.ipgs-core-primary-btn,
+.ipgs-core-final-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 56px;
+    padding: 15px 28px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-core-primary-btn:hover,
+.ipgs-core-final-btn:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-core-primary-btn i,
+.ipgs-core-final-btn i {
+    font-size: 19px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-core-primary-btn:hover i,
+.ipgs-core-final-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
+.ipgs-core-page a:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 4px;
+}
+
+/* ---------- Intro ---------- */
+
+.ipgs-core-intro {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.ipgs-core-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.2;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    animation: core-grid 24s linear infinite;
+}
+
+.ipgs-core-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: stretch;
+    gap: 7%;
+}
+
+.ipgs-core-intro-content h1 {
+    margin-bottom: 28px;
+    font-size: clamp(36px, 4.6vw, 66px);
+    line-height: 1.08;
+}
+
+.ipgs-core-intro-content > p {
+    max-width: 58ch;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.ipgs-core-intro-content > div:last-child {
+    margin-top: 26px;
+}
+
+/* Stages panel: Design / Migrate / Optimise */
+
+.ipgs-core-stages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 36px;
+    min-width: 0;
+    padding: 40px 44px 44px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-core-stages ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ipgs-core-stages li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-core-stages li:last-child {
+    border-bottom: none;
+}
+
+.ipgs-core-stages li i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 68px;
+    height: 68px;
+    background: var(--bg-alt);
+    border: 2px solid var(--line);
+    color: var(--blue-light);
+    font-size: 30px;
+    animation: core-stage-icon 9s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+.ipgs-core-stages li strong {
+    color: var(--white);
+    font-size: clamp(30px, 3.6vw, 50px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.ipgs-core-stage-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    background: var(--blue-light);
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: core-stage-bar 9s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+}
+
+/* ---------- Operator experience ---------- */
+
+.ipgs-core-experience {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-core-experience-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: stretch;
+    gap: 8%;
+}
+
+.ipgs-core-ripple-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    min-width: 0;
+    padding: 40px 40px 42px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--blue);
+}
+
+.ipgs-core-ripple {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+}
+
+.ipgs-core-ripple span {
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--blue-light);
+    border-radius: 50%;
+    opacity: 0;
+    animation: core-ripple 4.5s ease-out infinite;
+}
+
+.ipgs-core-ripple span:nth-child(2) { animation-delay: 1.5s; }
+.ipgs-core-ripple span:nth-child(3) { animation-delay: 3s; }
+
+.ipgs-core-ripple i {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    font-size: 44px;
+}
+
+.ipgs-core-ripple-panel > strong {
+    padding-top: 22px;
+    width: 100%;
+    border-top: 1px solid var(--line);
+    color: var(--white);
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-core-experience-content h2 {
+    margin-bottom: 26px;
+    font-size: clamp(34px, 3.7vw, 52px);
+}
+
+.ipgs-core-experience-content > p {
+    margin-bottom: 18px;
+    font-size: 16.5px;
+}
+
+.ipgs-core-experience-note {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-core-experience-note i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 24px;
+}
+
+.ipgs-core-experience-note strong {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ---------- Services ---------- */
+
+.ipgs-core-services {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-core-section-heading {
+    margin-bottom: 56px;
+}
+
+.ipgs-core-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: end;
+    gap: 9%;
+}
+
+.ipgs-core-heading-grid h2 {
+    margin-bottom: 0;
+    font-size: clamp(34px, 3.9vw, 54px);
+}
+
+.ipgs-core-heading-grid > p {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-core-services-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    align-items: start;
+    gap: 6%;
+}
+
+/* Delivery panel (sticky) */
+
+.ipgs-core-delivery {
+    position: sticky;
+    top: 100px;
+    padding: 36px 34px 40px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-core-delivery ul {
+    position: relative;
+    z-index: 1;
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ipgs-core-delivery li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-core-delivery li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.ipgs-core-delivery li i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 26px;
+}
+
+.ipgs-core-delivery li strong {
+    color: var(--white);
+    font-size: clamp(20px, 2vw, 25px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+/* a faint scan line sweeping down the panel */
+.ipgs-core-scan {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+    opacity: 0;
+    animation: core-scan 5s ease-in-out infinite;
+}
+
+/* Service rows */
+
+.ipgs-core-services-list {
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-core-service {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 24px;
+    padding: 30px 20px 32px 0;
+    border-bottom: 1px solid var(--line);
+    transition: background-color 0.3s ease, padding-left 0.35s var(--ease);
+}
+
+.ipgs-core-service:hover {
+    background: var(--card);
+    padding-left: 18px;
+}
+
+.ipgs-core-service-icon {
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 27px;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-core-service:hover .ipgs-core-service-icon {
+    background: var(--blue-hover);
+}
+
+.ipgs-core-service-content h3 {
+    margin-bottom: 12px;
+    font-size: clamp(20px, 2vw, 25px);
+}
+
+.ipgs-core-service-content p {
+    margin-bottom: 0;
+    font-size: 15.5px;
+}
+
+/* ---------- Advantages ---------- */
+
+.ipgs-core-advantages {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-core-advantages-heading {
+    max-width: 820px;
+    margin-bottom: 56px;
+}
+
+.ipgs-core-advantages-heading h2 {
+    margin-bottom: 24px;
+    font-size: clamp(34px, 3.9vw, 54px);
+}
+
+.ipgs-core-advantages-heading > p {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-core-advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.ipgs-core-advantage {
+    position: relative;
+    min-width: 0;
+    padding: 40px 38px 42px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* blue rule draws across the top on reveal */
+.ipgs-core-advantage::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    height: 3px;
+    background: var(--blue);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.9s var(--ease) calc(var(--d, 0ms) + 250ms);
+}
+
+.ipgs-core-advantage.is-visible::before,
+.ipgs-core-page:not(.is-anim) .ipgs-core-advantage::before {
+    transform: scaleX(1);
+}
+
+.ipgs-core-advantage:hover {
+    background: var(--card-hover);
+    border-color: #3a4b58;
+}
+
+.ipgs-core-advantage-icon {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    margin-bottom: 28px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 30px;
+}
+
+.ipgs-core-advantage h3 {
+    margin-bottom: 16px;
+    font-size: clamp(21px, 2.1vw, 26px);
+}
+
+.ipgs-core-advantage p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* ---------- Final CTA ---------- */
+
+.ipgs-core-final {
+    position: relative;
+    padding: 50px 0 50px;
+    overflow: hidden;
+    background: var(--bg-deep);
+}
+
+.ipgs-core-signal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(47, 138, 179, 0.35);
+}
+
+.ipgs-core-signal span {
+    position: absolute;
+    top: -5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 4px rgba(47, 138, 179, 0.25);
+}
+
+.ipgs-core-signal span:nth-child(1) { left: 8%; }
+.ipgs-core-signal span:nth-child(2) { left: 50%; }
+.ipgs-core-signal span:nth-child(3) { left: 92%; }
+
+.ipgs-core-signal i {
+    position: absolute;
+    top: -2px;
+    width: 120px;
+    height: 7px;
+    margin-left: -120px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, transparent, var(--blue-light));
+    animation: core-signal 6s linear infinite;
+}
+
+.ipgs-core-final-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-core-final h2 {
+    max-width: 22ch;
+    margin-bottom: 24px;
+    font-size: clamp(34px, 4vw, 56px);
+}
+
+.ipgs-core-final p {
+    max-width: 62ch;
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.ipgs-core-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ipgs-core-final-btn {
+    white-space: nowrap;
+}
+
+/* White-page text contrast: the dark final CTA retains its original appearance. */
+.ipgs-core-page .ipgs-core-final {
+    color: #bbcfda;
+}
+.ipgs-core-page .ipgs-core-final h2,
+.ipgs-core-page .ipgs-core-final h3 {
+    color: #ffffff;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1199px) {
+    .ipgs-core-intro,
+    .ipgs-core-experience,
+    .ipgs-core-services,
+    .ipgs-core-advantages { padding: 86px 0; }
+
+    .ipgs-core-stages { padding: 32px 28px 34px; }
+    .ipgs-core-ripple-panel { padding: 32px 28px 34px; }
+    .ipgs-core-advantage { padding: 32px 28px 34px; }
+}
+
+@media (max-width: 991px) {
+    .ipgs-core-intro-grid,
+    .ipgs-core-experience-grid,
+    .ipgs-core-heading-grid,
+    .ipgs-core-services-layout,
+    .ipgs-core-final-layout {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .ipgs-core-delivery { position: static; }
+    .ipgs-core-advantages-grid { grid-template-columns: 1fr; gap: 20px; }
+    .ipgs-core-final-action { justify-content: flex-start; }
+}
+
+@media (max-width: 767px) {
+    .ipgs-core-page .container { padding-inline: 20px; }
+
+    .ipgs-core-label { gap: 12px; font-size: 12px; }
+    .ipgs-core-label > span { width: 32px; }
+
+    .ipgs-core-intro,
+    .ipgs-core-experience,
+    .ipgs-core-services,
+    .ipgs-core-advantages { padding: 64px 0; }
+
+    .ipgs-core-intro-content > p,
+    .ipgs-core-experience-content > p,
+    .ipgs-core-heading-grid > p { font-size: 16px; }
+
+    .ipgs-core-stages { padding: 24px 20px 26px; gap: 20px; }
+    .ipgs-core-stages li { gap: 16px; padding: 18px 0; }
+    .ipgs-core-stages li i { width: 54px; height: 54px; font-size: 24px; }
+
+    .ipgs-core-ripple-panel { padding: 26px 20px 28px; }
+    .ipgs-core-ripple { max-width: 240px; }
+
+    .ipgs-core-section-heading,
+    .ipgs-core-advantages-heading { margin-bottom: 36px; }
+
+    .ipgs-core-delivery { padding: 26px 20px 28px; }
+
+    .ipgs-core-service { grid-template-columns: 48px minmax(0, 1fr); gap: 16px; padding: 24px 0; }
+    .ipgs-core-service:hover { padding-left: 0; }
+    .ipgs-core-service-icon { width: 48px; height: 48px; font-size: 22px; }
+    .ipgs-core-service-content p { font-size: 15px; }
+
+    .ipgs-core-advantage { padding: 26px 20px 28px; }
+    .ipgs-core-advantage p { font-size: 15px; }
+
+    .ipgs-core-final { padding: 76px 0 70px; }
+    .ipgs-core-final-btn { white-space: normal; }
+}
+
+@media (max-width: 420px) {
+    .ipgs-core-page .container { padding-inline: 17px; }
+    .ipgs-core-primary-btn,
+    .ipgs-core-final-btn { width: 100%; }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-core-grid-bg,
+    .ipgs-core-stages li i,
+    .ipgs-core-stage-bar,
+    .ipgs-core-ripple span,
+    .ipgs-core-scan,
+    .ipgs-core-signal i {
+        animation: none;
+    }
+
+    .ipgs-core-ripple span:first-child { opacity: 0.4; transform: scale(0.8); }
+    .ipgs-core-signal i,
+    .ipgs-core-scan { display: none; }
+
+    .ipgs-core-page.is-anim [data-reveal="up"],
+    .ipgs-core-page.is-anim [data-reveal="lines"] .ipgs-core-line > *,
+    .ipgs-core-page.is-anim [data-reveal="panel"] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .ipgs-core-advantage::before {
+        transform: scaleX(1);
+        transition: none;
+    }
+
+    .ipgs-core-primary-btn i,
+    .ipgs-core-final-btn i,
+    .ipgs-core-service { transition: none; }
+}

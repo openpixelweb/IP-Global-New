@@ -1,0 +1,1030 @@
+
+/* ==========================================
+   IPGS - INDUSTRIES
+   Classic Corporate Editorial Design
+   Navy / Blue / Sky Blue / White
+   No Photographs
+========================================== */
+
+.ipgs-industries-page {
+    --ind-navy: #0f1e2a;
+    --ind-navy-soft: #193345;
+    --ind-blue: #258db5;
+    --ind-sky: #75c5e4;
+    --ind-white: #ffffff;
+    --ind-pale: #eaf5fa;
+    --ind-light: #f5fafd;
+    --ind-text: #445b69;
+    --ind-border: #d9e8ef;
+
+    width: 100%;
+    background: var(--ind-white);
+    color: var(--ind-navy);
+}
+
+.ipgs-industries-page *,
+.ipgs-industries-page *::before,
+.ipgs-industries-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-industries-page .container {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.ipgs-industries-page h1,
+.ipgs-industries-page h2,
+.ipgs-industries-page h3 {
+    margin-top: 0;
+    color: var(--ind-navy);
+    font-weight: 600;
+    letter-spacing: -.035em;
+    line-height: 1.2;
+}
+
+.ipgs-industries-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-ind-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--ind-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-ind-label > span {
+    flex-shrink: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--ind-sky);
+}
+
+/* ==========================================
+   EXISTING GLOBAL IPGS BANNER
+========================================== */
+
+.ipgs-ind-banner .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-ind-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ipgs-ind-banner .title-of-hero span a:hover {
+    color: var(--ind-sky);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.ipgs-ind-primary-btn,
+.ipgs-ind-final-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 56px;
+    padding: 16px 25px;
+    border: 1px solid var(--ind-blue);
+    background: var(--ind-blue);
+    color: var(--ind-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-ind-primary-btn:hover,
+.ipgs-ind-final-btn:hover {
+    background: var(--ind-navy);
+    border-color: var(--ind-navy);
+    color: var(--ind-white);
+    transform: translateY(-2px);
+}
+
+.ipgs-ind-primary-btn i,
+.ipgs-ind-final-btn i {
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.ipgs-industries-page a:focus-visible {
+    outline: 3px solid var(--ind-sky);
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   01 - INDUSTRIES INTRODUCTION
+========================================== */
+
+.ipgs-ind-intro {
+    padding: 50px 0;
+    background: var(--ind-white);
+}
+
+.ipgs-ind-intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    gap: 8%;
+    align-items: center;
+}
+
+.ipgs-ind-intro-content h1 {
+    max-width: 700px;
+    margin-bottom: 28px;
+    font-size: clamp(38px, 4.1vw, 60px);
+}
+
+.ipgs-ind-intro-content h1 em {
+    color: var(--ind-blue);
+    font-style: normal;
+}
+
+.ipgs-ind-intro-content > p {
+    max-width: 590px;
+    margin-bottom: 31px;
+    color: var(--ind-text);
+    font-size: 17px;
+}
+
+.ipgs-ind-intro-visual {
+    min-width: 0;
+}
+
+/* ==========================================
+   CSS-ONLY CONNECTED INDUSTRIES VISUAL
+========================================== */
+
+.ipgs-ind-network {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 26px;
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(37, 141, 181, .17),
+            transparent 60%
+        ),
+        var(--ind-navy);
+    color: var(--ind-white);
+}
+
+.ipgs-ind-network::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .2;
+    background-image:
+        linear-gradient(
+            rgba(117, 197, 228, .2) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(117, 197, 228, .2) 1px,
+            transparent 1px
+        );
+    background-size: 34px 34px;
+}
+
+.ipgs-ind-network-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--ind-sky);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.ipgs-ind-orbit {
+    position: relative;
+    height: 440px;
+    margin-top: 14px;
+}
+
+.ipgs-ind-orbit-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    border: 1px solid rgba(117, 197, 228, .35);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ipgs-ind-ring-one {
+    width: 190px;
+    height: 190px;
+}
+
+.ipgs-ind-ring-two {
+    width: 300px;
+    height: 300px;
+    border-style: dashed;
+}
+
+.ipgs-ind-ring-three {
+    width: 415px;
+    height: 415px;
+    opacity: .45;
+}
+
+.ipgs-ind-orbit-core {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 126px;
+    height: 126px;
+    border: 2px solid var(--ind-sky);
+    border-radius: 50%;
+    background: var(--ind-navy-soft);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 0 40px rgba(37, 141, 181, .15);
+}
+
+.ipgs-ind-orbit-core i {
+    margin-bottom: 5px;
+    color: var(--ind-sky);
+    font-size: 26px;
+}
+
+.ipgs-ind-orbit-core strong {
+    color: var(--ind-white);
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.ipgs-ind-orbit-core small {
+    margin-top: 2px;
+    color: var(--ind-sky);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* Orbit nodes */
+
+.ipgs-ind-orbit-node {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 94px;
+    height: 82px;
+    border: 1px solid #3b6680;
+    background: var(--ind-navy-soft);
+    color: var(--ind-white);
+    text-align: center;
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-ind-orbit-node:hover {
+    border-color: var(--ind-sky);
+    transform: translateY(-4px);
+}
+
+.ipgs-ind-orbit-node i {
+    color: var(--ind-sky);
+    font-size: 24px;
+}
+
+.ipgs-ind-orbit-node span {
+    color: var(--ind-white);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ipgs-ind-node-1 {
+    top: 2%;
+    left: calc(50% - 47px);
+}
+
+.ipgs-ind-node-2 {
+    top: 20%;
+    right: 1%;
+}
+
+.ipgs-ind-node-3 {
+    bottom: 17%;
+    right: 1%;
+}
+
+.ipgs-ind-node-4 {
+    bottom: 0;
+    left: calc(50% - 47px);
+}
+
+.ipgs-ind-node-5 {
+    bottom: 17%;
+    left: 1%;
+}
+
+.ipgs-ind-node-6 {
+    top: 20%;
+    left: 1%;
+}
+
+.ipgs-ind-network-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px solid #38586a;
+    color: #b9dbe9;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ipgs-ind-network-footer i {
+    color: var(--ind-sky);
+    font-size: 20px;
+}
+
+/* Orbit animation */
+
+@keyframes ipgsIndOrbitPulse {
+    0%, 100% {
+        opacity: .4;
+    }
+
+    50% {
+        opacity: .9;
+    }
+}
+
+@keyframes ipgsIndCoreGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(37, 141, 181, .1);
+    }
+
+    50% {
+        box-shadow: 0 0 42px rgba(117, 197, 228, .24);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-ind-ring-two {
+        animation: ipgsIndOrbitPulse 4s ease-in-out infinite;
+    }
+
+    .ipgs-ind-orbit-core {
+        animation: ipgsIndCoreGlow 4s ease-in-out infinite;
+    }
+}
+
+/* ==========================================
+   02 - INDUSTRY INTRODUCTION STATEMENT
+========================================== */
+
+.ipgs-ind-statement {
+    padding: 50px 0;
+    background: var(--ind-light);
+}
+
+.ipgs-ind-statement-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+    gap: 10%;
+    align-items: start;
+}
+
+.ipgs-ind-statement h2 {
+    max-width: 640px;
+    font-size: clamp(35px, 3.8vw, 52px);
+}
+
+.ipgs-ind-statement h2 span {
+    color: var(--ind-blue);
+}
+
+.ipgs-ind-statement-copy {
+    padding-top: 22px;
+}
+
+.ipgs-ind-statement-copy > p {
+    margin-bottom: 18px;
+    color: var(--ind-text);
+    font-size: 17px;
+}
+
+.ipgs-ind-statement-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 28px;
+    padding: 24px 0 0;
+    border-top: 1px solid var(--ind-border);
+}
+
+.ipgs-ind-statement-highlight i {
+    flex-shrink: 0;
+    color: var(--ind-blue);
+    font-size: 26px;
+}
+
+.ipgs-ind-statement-highlight strong {
+    color: var(--ind-navy);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+/* ==========================================
+   03 - TWELVE INDUSTRY DIRECTORY
+========================================== */
+
+.ipgs-ind-directory {
+    padding: 50px 0;
+    background: var(--ind-white);
+}
+
+.ipgs-ind-directory-heading {
+    margin-bottom: 50px;
+}
+
+.ipgs-ind-directory-heading-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+    gap: 10%;
+    align-items: end;
+}
+
+.ipgs-ind-directory-heading-grid h2 {
+    max-width: 680px;
+    margin-bottom: 0;
+    font-size: clamp(37px, 3.9vw, 55px);
+}
+
+.ipgs-ind-directory-heading-grid h2 span {
+    color: var(--ind-blue);
+}
+
+.ipgs-ind-directory-heading-grid > p {
+    margin-bottom: 0;
+    color: var(--ind-text);
+    font-size: 16px;
+}
+
+.ipgs-ind-directory-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid var(--ind-navy);
+    border-bottom: 1px solid var(--ind-border);
+    color: var(--ind-blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Twelve refined industry entries */
+
+.ipgs-industry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+}
+
+.ipgs-industry-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 305px;
+    padding: 30px 27px 35px;
+    border-right: 1px solid var(--ind-border);
+    border-bottom: 1px solid var(--ind-border);
+    background: var(--ind-white);
+    transition:
+        background-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.ipgs-industry-item:nth-child(3n) {
+    border-right: none;
+}
+
+.ipgs-industry-item:hover {
+    background: var(--ind-light);
+}
+
+.ipgs-industry-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.ipgs-industry-number {
+    color: var(--ind-blue);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ipgs-industry-icon {
+    display: grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    background: var(--ind-pale);
+    color: var(--ind-blue);
+}
+
+.ipgs-industry-icon i {
+    font-size: 25px;
+}
+
+.ipgs-industry-item h3 {
+    margin-bottom: 16px;
+    font-size: clamp(21px, 2vw, 25px);
+}
+
+.ipgs-industry-item p {
+    flex-grow: 1;
+    margin-bottom: 0;
+    color: var(--ind-text);
+    font-size: 15px;
+}
+
+.ipgs-industry-bottomline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--ind-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+}
+
+.ipgs-industry-item:hover .ipgs-industry-bottomline {
+    transform: scaleX(1);
+}
+
+/* ==========================================
+   04 - FINAL CTA
+========================================== */
+
+.ipgs-ind-final {
+    padding: 50px 0;
+    background: var(--ind-navy);
+}
+
+.ipgs-ind-final-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8%;
+    align-items: center;
+}
+
+.ipgs-ind-final .ipgs-ind-label {
+    color: var(--ind-sky);
+}
+
+.ipgs-ind-final h2 {
+    max-width: 750px;
+    margin-bottom: 23px;
+    color: var(--ind-white);
+    font-size: clamp(37px, 3.9vw, 54px);
+}
+
+.ipgs-ind-final h2 span {
+    color: var(--ind-sky);
+}
+
+.ipgs-ind-final p {
+    max-width: 730px;
+    margin-bottom: 0;
+    color: #c4dce8;
+    font-size: 17px;
+}
+
+.ipgs-ind-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ipgs-ind-final-btn {
+    max-width: 325px;
+    background: var(--ind-blue);
+}
+
+.ipgs-ind-final-btn:hover {
+    background: var(--ind-white);
+    border-color: var(--ind-white);
+    color: var(--ind-navy);
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+   CONTENT IS VISIBLE WITHOUT JAVASCRIPT
+========================================== */
+
+.ipgs-industries-page [data-industries-reveal] {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes ipgsIndReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-industries-page
+    [data-industries-reveal].ind-visible {
+        animation: ipgsIndReveal .65s ease-out both;
+    }
+}
+
+/* ==========================================
+   LAPTOP / LARGE TABLET
+========================================== */
+
+@media (max-width: 1199px) {
+    .ipgs-ind-intro,
+    .ipgs-ind-statement,
+    .ipgs-ind-directory {
+        padding: 85px 0;
+    }
+
+    .ipgs-ind-intro-layout,
+    .ipgs-ind-statement-layout,
+    .ipgs-ind-directory-heading-grid {
+        gap: 45px;
+    }
+
+    .ipgs-ind-intro-content h1 {
+        font-size: 43px;
+    }
+
+    .ipgs-ind-network {
+        padding: 20px 15px;
+    }
+
+    .ipgs-ind-orbit {
+        height: 395px;
+    }
+
+    .ipgs-ind-ring-three {
+        width: 350px;
+        height: 350px;
+    }
+
+    .ipgs-ind-orbit-node {
+        width: 83px;
+        height: 74px;
+    }
+
+    .ipgs-ind-node-1,
+    .ipgs-ind-node-4 {
+        left: calc(50% - 41.5px);
+    }
+
+    .ipgs-industry-item {
+        padding: 27px 23px 34px;
+    }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+    .ipgs-ind-intro-layout,
+    .ipgs-ind-statement-layout,
+    .ipgs-ind-directory-heading-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .ipgs-ind-intro-content h1 {
+        font-size: 39px;
+    }
+
+    .ipgs-ind-orbit {
+        height: 365px;
+    }
+
+    .ipgs-ind-ring-one {
+        width: 140px;
+        height: 140px;
+    }
+
+    .ipgs-ind-ring-two {
+        width: 235px;
+        height: 235px;
+    }
+
+    .ipgs-ind-ring-three {
+        width: 310px;
+        height: 310px;
+    }
+
+    .ipgs-ind-orbit-core {
+        width: 110px;
+        height: 110px;
+    }
+
+    .ipgs-ind-orbit-node {
+        width: 72px;
+        height: 70px;
+    }
+
+    .ipgs-ind-orbit-node i {
+        font-size: 20px;
+    }
+
+    .ipgs-ind-orbit-node span {
+        font-size: 9px;
+    }
+
+    .ipgs-ind-node-1,
+    .ipgs-ind-node-4 {
+        left: calc(50% - 36px);
+    }
+
+    .ipgs-industry-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ipgs-industry-item:nth-child(3n) {
+        border-right: 1px solid var(--ind-border);
+    }
+
+    .ipgs-industry-item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .ipgs-ind-final-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ipgs-ind-final-action {
+        justify-content: flex-start;
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+    .ipgs-industries-page .container {
+        padding-inline: 20px;
+    }
+
+    .ipgs-ind-label {
+        margin-bottom: 19px;
+        font-size: 11px;
+        letter-spacing: 1.3px;
+    }
+
+    .ipgs-ind-intro,
+    .ipgs-ind-statement,
+    .ipgs-ind-directory {
+        padding: 65px 0;
+    }
+
+    .ipgs-ind-intro-layout,
+    .ipgs-ind-statement-layout,
+    .ipgs-ind-directory-heading-grid,
+    .ipgs-ind-final-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ipgs-ind-intro-content h1 {
+        font-size: clamp(34px, 8vw, 44px);
+    }
+
+    .ipgs-ind-intro-content > p,
+    .ipgs-ind-statement-copy > p {
+        font-size: 16px;
+    }
+
+    .ipgs-ind-intro-visual {
+        width: 100%;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    .ipgs-ind-network {
+        padding: 23px 18px;
+    }
+
+    .ipgs-ind-orbit {
+        height: 385px;
+    }
+
+    .ipgs-ind-ring-three {
+        width: 350px;
+        height: 350px;
+    }
+
+    .ipgs-ind-orbit-node {
+        width: 85px;
+        height: 75px;
+    }
+
+    .ipgs-ind-node-1,
+    .ipgs-ind-node-4 {
+        left: calc(50% - 42.5px);
+    }
+
+    .ipgs-ind-statement h2,
+    .ipgs-ind-directory-heading-grid h2 {
+        font-size: clamp(32px, 8vw, 43px);
+    }
+
+    .ipgs-ind-statement-copy {
+        padding-top: 0;
+    }
+
+    .ipgs-ind-directory-heading {
+        margin-bottom: 35px;
+    }
+
+    .ipgs-industry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ipgs-industry-item,
+    .ipgs-industry-item:nth-child(2n),
+    .ipgs-industry-item:nth-child(3n) {
+        min-height: 0;
+        padding: 25px 12px 30px;
+        border-right: none;
+    }
+
+    .ipgs-industry-top {
+        margin-bottom: 20px;
+    }
+
+    .ipgs-industry-item h3 {
+        font-size: 23px;
+    }
+
+    .ipgs-industry-item p {
+        font-size: 15px;
+    }
+
+    .ipgs-ind-final {
+        padding: 70px 0;
+    }
+
+    .ipgs-ind-final h2 {
+        font-size: 35px;
+    }
+
+    .ipgs-ind-final p {
+        font-size: 16px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 420px) {
+    .ipgs-industries-page .container {
+        padding-inline: 17px;
+    }
+
+    .ipgs-ind-intro-content h1,
+    .ipgs-ind-statement h2,
+    .ipgs-ind-directory-heading-grid h2,
+    .ipgs-ind-final h2 {
+        font-size: 31px;
+    }
+
+    .ipgs-ind-network {
+        padding: 19px 11px;
+    }
+
+    .ipgs-ind-orbit {
+        height: 340px;
+    }
+
+    .ipgs-ind-ring-three {
+        width: 285px;
+        height: 285px;
+    }
+
+    .ipgs-ind-ring-two {
+        width: 220px;
+        height: 220px;
+    }
+
+    .ipgs-ind-ring-one {
+        width: 135px;
+        height: 135px;
+    }
+
+    .ipgs-ind-orbit-core {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ipgs-ind-orbit-node {
+        width: 68px;
+        height: 65px;
+        gap: 4px;
+    }
+
+    .ipgs-ind-orbit-node i {
+        font-size: 19px;
+    }
+
+    .ipgs-ind-orbit-node span {
+        font-size: 9px;
+    }
+
+    .ipgs-ind-node-1,
+    .ipgs-ind-node-4 {
+        left: calc(50% - 34px);
+    }
+
+    .ipgs-ind-network-head {
+        font-size: 8px;
+    }
+
+    .ipgs-ind-network-footer {
+        font-size: 10px;
+    }
+
+    .ipgs-ind-primary-btn,
+    .ipgs-ind-final-btn {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-industries-page *,
+    .ipgs-industries-page *::before,
+    .ipgs-industries-page *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .ipgs-industries-page [data-industries-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .ipgs-ind-orbit-node:hover,
+    .ipgs-ind-primary-btn:hover,
+    .ipgs-ind-final-btn:hover {
+        transform: none;
+    }
+}

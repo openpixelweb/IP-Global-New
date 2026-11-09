@@ -1,0 +1,32 @@
+[
+    {
+        "image": "image-1.png",
+        "title": "Smooth and Hassle-Free Process!",
+        "desc": "The solar panel installation process was smooth and hassle-free. The team was very professional and took care of everything.",
+        "name": "Sophia Jennifer"
+    },
+    {
+        "image": "image-2.png",
+        "title": "Seamless Solar Installation Experience!",
+        "desc": "From the very first consultation to the final setup, everything was perfectly managed. Completely stress-free!",
+        "name": "Rahul Mehta"
+    },
+    {
+        "image": "image-3.png",
+        "title": "Quick, Clean & Stress-Free Setup!",
+        "desc": "The team was super professional and made the solar installation so easy. No mess, no hassle – just clean energy!",
+        "name": "Priya Shah"
+    },
+    {
+        "image": "image-4.png",
+        "title": "Easy Solar Journey, Start to Finish!",
+        "desc": "Everything was handled efficiently. They guided us at every step, making the switch to solar effortless.",
+        "name": "Nilesh Patel"
+    },
+    {
+        "image": "image-5.png",
+        "title": "Smooth Transition to Solar Energy!",
+        "desc": "The service was excellent. From paperwork to installation, everything went like clockwork.",
+        "name": "Anjali Desai"
+    }
+]

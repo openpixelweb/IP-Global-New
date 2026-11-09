@@ -1,0 +1,895 @@
+/* ============================================
+   IPGS - HOW WE WORK
+   IPGS logo navy + ocean/sky blue palette, bold sans
+   headings, classic structured layout.
+============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.ipgs-how-work {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --card: #ffffff;
+    --card-hover: #f3f9fc;
+    --line: #d9e8f0;
+    --blue: #278ab3;
+    --blue-light: #258db5;
+    --blue-hover: #389fc5;
+    --white: #0f1e2a;
+    --text: #455d6d;
+    --font: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.ipgs-how-work *,
+.ipgs-how-work *::before,
+.ipgs-how-work *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-how-work .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ipgs-how-work h1,
+.ipgs-how-work h2,
+.ipgs-how-work h3 {
+    font-family: var(--font);
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+}
+
+.ipgs-how-work p {
+    margin-top: 0;
+    max-width: 70ch;
+}
+
+.ipgs-how-work img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------- Eyebrow label (line + text) ---------- */
+
+.ipgs-how-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.ipgs-how-label > span {
+    flex-shrink: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--blue-light);
+}
+
+/* ---------- Hero (existing site hero, gentle load-in) ---------- */
+
+.ipgs-how-hero .title-of-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-how-hero .title-of-hero p,
+.ipgs-how-hero .title-of-hero span {
+    animation: how-hero-in 0.9s var(--ease) both;
+}
+
+.ipgs-how-hero .title-of-hero span {
+    animation-delay: 0.18s;
+}
+
+.ipgs-how-hero .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.ipgs-how-hero .title-of-hero span a:hover {
+    color: var(--blue-light);
+}
+
+@keyframes how-hero-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- Scroll reveal ----------
+   Text blocks fade up. For images the OBSERVED wrapper is never
+   hidden; only the <img> inside it is clipped, so the image always
+   triggers and always shows. */
+
+.ipgs-how-work.is-anim [data-reveal]:not([data-reveal="image"]):not([data-reveal="lines"]):not([data-reveal="emblem"]) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.8s var(--ease) var(--d, 0ms),
+        transform 0.8s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-how-work.is-anim [data-reveal]:not([data-reveal="image"]):not([data-reveal="lines"]):not([data-reveal="emblem"]).is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-how-work.is-anim [data-reveal="image"] img {
+    clip-path: inset(0 0 100% 0);
+    transform: scale(1.1);
+    transition:
+        clip-path 1.1s var(--ease) var(--d, 0ms),
+        transform 1.6s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-how-work.is-anim [data-reveal="image"].is-visible img {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+}
+
+/* ---------- Shared ---------- */
+
+.ipgs-how-photo {
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--line);
+}
+
+.ipgs-how-photo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.ipgs-how-primary-btn,
+.ipgs-how-final-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 54px;
+    padding: 15px 28px;
+    background: var(--blue);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-how-primary-btn:hover,
+.ipgs-how-final-button:hover {
+    background: var(--blue-hover);
+    color: #fff;
+}
+
+.ipgs-how-primary-btn i,
+.ipgs-how-final-button i {
+    font-size: 19px;
+    transition: transform 0.25s var(--ease);
+}
+
+.ipgs-how-primary-btn:hover i,
+.ipgs-how-final-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+.ipgs-how-primary-btn:focus-visible,
+.ipgs-how-final-button:focus-visible {
+    outline: 3px solid var(--blue-light);
+    outline-offset: 3px;
+}
+
+/* ---------- Introduction (typographic, no photo) ---------- */
+
+.ipgs-how-intro-section {
+    position: relative;
+    padding: 110px 0 0;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+/* faint blueprint grid that fades towards the bottom */
+.ipgs-how-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.22;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    mask-image: linear-gradient(180deg, #000 0%, transparent 85%);
+    animation: how-grid 24s linear infinite;
+}
+
+.ipgs-how-intro-section .container {
+    position: relative;
+}
+
+.ipgs-how-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: 6%;
+}
+
+.ipgs-how-intro-content h1 {
+    margin-bottom: 28px;
+    font-size: clamp(38px, 4.8vw, 70px);
+    line-height: 1.08;
+}
+
+.ipgs-how-intro-content h1 em {
+    color: var(--blue-light);
+    font-style: normal;
+}
+
+.ipgs-how-line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.1em;
+}
+
+.ipgs-how-line > * {
+    display: block;
+}
+
+.ipgs-how-work.is-anim [data-reveal="lines"] .ipgs-how-line > * {
+    transform: translateY(110%);
+    transition: transform 1s var(--ease) var(--d, 0ms);
+}
+
+.ipgs-how-work.is-anim [data-reveal="lines"].is-visible .ipgs-how-line > * {
+    transform: none;
+}
+
+.ipgs-how-intro-content p {
+    font-size: 18px;
+    margin-bottom: 34px;
+}
+
+/* Emblem: concentric rings, orbiting dot, central statement */
+
+.ipgs-how-emblem {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1;
+    margin-left: auto;
+    display: grid;
+    place-items: center;
+}
+
+.ipgs-how-work.is-anim [data-reveal="emblem"] {
+    opacity: 0;
+    transform: scale(0.88);
+    transition: opacity 1s var(--ease) 0.2s, transform 1.2s var(--ease) 0.2s;
+}
+
+.ipgs-how-work.is-anim [data-reveal="emblem"].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.ipgs-how-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+}
+
+.ipgs-how-ring.ring-1 {
+    inset: 0;
+    border-style: dashed;
+    border-color: var(--blue);
+    animation: how-spin 60s linear infinite;
+}
+
+.ipgs-how-ring.ring-2 {
+    inset: 12%;
+}
+
+.ipgs-how-ring.ring-3 {
+    inset: 24%;
+    border-color: rgba(100, 195, 223, 0.4);
+    animation: how-pulse 4s ease-in-out infinite;
+}
+
+.ipgs-how-orbit {
+    position: absolute;
+    inset: 0;
+    animation: how-spin 14s linear infinite;
+}
+
+.ipgs-how-orbit i {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    border-radius: 50%;
+    background: var(--blue-light);
+    box-shadow: 0 0 0 6px rgba(100, 195, 223, 0.18);
+}
+
+.ipgs-how-emblem-core {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 46%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--blue);
+    text-align: center;
+}
+
+.ipgs-how-emblem-core strong {
+    color: #fff;
+    font-size: clamp(16px, 1.7vw, 22px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+/* Facts strip */
+
+.ipgs-how-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 90px 0 0;
+    padding: 0;
+    list-style: none;
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-bottom: none;
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-how-facts li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 30px 34px;
+}
+
+.ipgs-how-facts li + li {
+    border-left: 1px solid var(--line);
+}
+
+.ipgs-how-facts strong {
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.ipgs-how-facts span {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@keyframes how-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes how-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.06); opacity: 0.4; }
+}
+
+@keyframes how-grid {
+    to { background-position: 64px 64px; }
+}
+
+/* ---------- Client first (no photo) ---------- */
+
+.ipgs-how-client-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-how-client-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-how-client-content h2 {
+    font-size: clamp(32px, 3.6vw, 52px);
+    margin-bottom: 24px;
+}
+
+.ipgs-how-client-content > p {
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.ipgs-how-values {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+}
+
+.ipgs-how-value {
+    position: relative;
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr) 24px;
+    align-items: center;
+    gap: 24px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+}
+
+/* blue wash that sweeps in on hover */
+.ipgs-how-value::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--card);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--ease);
+    z-index: 0;
+}
+
+.ipgs-how-value:hover::before {
+    transform: scaleX(1);
+}
+
+.ipgs-how-value > * {
+    position: relative;
+    z-index: 1;
+}
+
+.ipgs-how-value > i {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+    color: #fff;
+    background: var(--blue);
+    transition: transform 0.4s var(--ease), background-color 0.25s ease;
+}
+
+.ipgs-how-value:hover > i {
+    background: var(--blue-hover);
+    transform: translateX(10px);
+}
+
+.ipgs-how-value strong {
+    font-size: clamp(22px, 2.3vw, 30px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    transition: transform 0.4s var(--ease);
+}
+
+.ipgs-how-value:hover strong {
+    transform: translateX(10px);
+}
+
+.ipgs-how-value-arrow {
+    color: var(--blue-light);
+    font-size: 22px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.4s var(--ease);
+}
+
+.ipgs-how-value:hover .ipgs-how-value-arrow {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Commitments ---------- */
+
+.ipgs-how-commit-section {
+    padding: 50px 0;
+    background: var(--bg);
+}
+
+.ipgs-how-section-head,
+.ipgs-how-delivery-header {
+    margin-bottom: 56px;
+}
+
+.ipgs-how-section-head h2,
+.ipgs-how-delivery-header h2 {
+    font-size: clamp(34px, 3.8vw, 54px);
+    margin-bottom: 16px;
+}
+
+.ipgs-how-delivery-header h2 {
+    margin-bottom: 0;
+}
+
+.ipgs-how-section-head p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.ipgs-how-commit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.ipgs-how-commit-item {
+    position: relative;
+    padding: 44px 40px 46px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+        transform 0.3s var(--ease);
+}
+
+/* Blue rule that draws across the top of each card on reveal */
+.ipgs-how-commit-item::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    height: 3px;
+    background: var(--blue);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.9s var(--ease) calc(var(--d, 0ms) + 250ms);
+}
+
+.ipgs-how-commit-item.is-visible::before,
+.ipgs-how-work:not(.is-anim) .ipgs-how-commit-item::before {
+    transform: scaleX(1);
+}
+
+.ipgs-how-commit-item:hover {
+    background: var(--card-hover);
+    border-color: #258db5;
+}
+
+.ipgs-how-commit-icon {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    margin-bottom: 32px;
+    font-size: 32px;
+    color: #fff;
+    background: var(--blue);
+}
+
+.ipgs-how-commit-item h3 {
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+
+.ipgs-how-commit-item p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* ---------- Delivery model ---------- */
+
+.ipgs-how-delivery-section {
+    padding: 50px 0;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-how-delivery-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: start;
+    gap: 7%;
+}
+
+.ipgs-how-delivery-item {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 24px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.ipgs-how-delivery-item:first-child {
+    padding-top: 0;
+}
+
+.ipgs-how-delivery-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.ipgs-how-delivery-icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    font-size: 25px;
+    color: #fff;
+    background: var(--blue);
+    transition: background-color 0.25s ease;
+}
+
+.ipgs-how-delivery-item:hover .ipgs-how-delivery-icon {
+    background: var(--blue-hover);
+}
+
+.ipgs-how-delivery-text h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.ipgs-how-delivery-text p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.ipgs-how-delivery-image {
+    position: sticky;
+    top: 110px;
+}
+
+.ipgs-how-delivery-image .ipgs-how-photo img {
+    height: 600px;
+}
+
+/* ---------- Final CTA ---------- */
+
+.ipgs-how-final-cta {
+    padding: 50px 0;
+    background: #ffffff;
+    border-top: 3px solid var(--blue);
+}
+
+.ipgs-how-final-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 64px;
+}
+
+.ipgs-how-final-content h2 {
+    max-width: 22ch;
+    font-size: clamp(34px, 3.8vw, 54px);
+    margin-bottom: 24px;
+}
+
+.ipgs-how-final-content p {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.ipgs-how-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1199px) {
+    .ipgs-how-intro-section {
+        padding-top: 86px;
+    }
+
+    .ipgs-how-client-section,
+    .ipgs-how-commit-section,
+    .ipgs-how-delivery-section {
+        padding: 86px 0;
+    }
+
+    .ipgs-how-intro-grid,
+    .ipgs-how-client-grid,
+    .ipgs-how-delivery-grid {
+        gap: 44px;
+    }
+
+    .ipgs-how-commit-grid {
+        gap: 20px;
+    }
+
+    .ipgs-how-commit-item {
+        padding: 34px 26px 36px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ipgs-how-intro-grid,
+    .ipgs-how-client-grid,
+    .ipgs-how-delivery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ipgs-how-emblem {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .ipgs-how-facts {
+        margin-top: 60px;
+    }
+
+    .ipgs-how-commit-grid {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+    }
+
+    .ipgs-how-delivery-image {
+        position: static;
+    }
+
+    .ipgs-how-delivery-image .ipgs-how-photo img {
+        height: 440px;
+    }
+
+    .ipgs-how-final-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .ipgs-how-final-action {
+        justify-content: flex-start;
+    }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 767px) {
+    .ipgs-how-work .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ipgs-how-intro-section {
+        padding-top: 64px;
+    }
+
+    .ipgs-how-client-section,
+    .ipgs-how-commit-section,
+    .ipgs-how-delivery-section {
+        padding: 64px 0;
+    }
+
+    .ipgs-how-emblem {
+        max-width: 280px;
+    }
+
+    .ipgs-how-facts {
+        grid-template-columns: 1fr;
+        margin-top: 48px;
+    }
+
+    .ipgs-how-facts li {
+        padding: 22px 20px;
+    }
+
+    .ipgs-how-facts li + li {
+        border-left: none;
+        border-top: 1px solid var(--line);
+    }
+
+    .ipgs-how-value {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 16px;
+        padding: 22px 0;
+    }
+
+    .ipgs-how-value > i {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .ipgs-how-value-arrow {
+        display: none;
+    }
+
+    .ipgs-how-intro-content p,
+    .ipgs-how-client-content > p,
+    .ipgs-how-section-head p {
+        font-size: 16px;
+    }
+
+    .ipgs-how-section-head,
+    .ipgs-how-delivery-header {
+        margin-bottom: 36px;
+    }
+
+    .ipgs-how-commit-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 27px;
+    }
+
+    .ipgs-how-delivery-item {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .ipgs-how-delivery-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 21px;
+    }
+
+    .ipgs-how-delivery-image .ipgs-how-photo img {
+        height: 320px;
+    }
+
+    .ipgs-how-final-cta {
+        padding: 70px 0;
+    }
+
+    .ipgs-how-final-button {
+        white-space: normal;
+    }
+}
+
+/* ---------- Reduced motion: show everything, no movement ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-how-hero .title-of-hero p,
+    .ipgs-how-hero .title-of-hero span,
+    .ipgs-how-grid-bg,
+    .ipgs-how-ring,
+    .ipgs-how-orbit {
+        animation: none;
+    }
+
+        .ipgs-how-work.is-anim [data-reveal]:not([data-reveal="image"]):not([data-reveal="lines"]):not([data-reveal="emblem"]),
+    .ipgs-how-work.is-anim [data-reveal="lines"] .ipgs-how-line > *,
+    .ipgs-how-work.is-anim [data-reveal="emblem"],
+    .ipgs-how-work.is-anim [data-reveal="image"] img {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        transition: none;
+    }
+
+    .ipgs-how-commit-item::before {
+        transform: scaleX(1);
+        transition: none;
+    }
+
+    .ipgs-how-primary-btn i,
+    .ipgs-how-final-button i {
+        transition: none;
+    }
+}
+
+/* The shared site hero remains dark; keep its heading readable. */
+.ipgs-how-work .services-home-hero .title-of-hero p,
+.ipgs-how-work .services-home-hero .title-of-hero span,
+.ipgs-how-work .services-home-hero .title-of-hero a {
+    color: #ffffff;
+}

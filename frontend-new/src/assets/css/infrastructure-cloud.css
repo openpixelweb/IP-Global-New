@@ -1,0 +1,1110 @@
+
+/* ============================================
+   IPGS - INFRASTRUCTURE & CLOUD
+   Classic Professional / Technical Architecture
+   LOGO COLOURS ONLY
+============================================ */
+
+.ipgs-cloud-page {
+    --ic-navy: #0f1e2a;
+    --ic-navy-soft: #193345;
+    --ic-blue: #258db5;
+    --ic-sky: #75c5e4;
+    --ic-white: #ffffff;
+    --ic-pale: #eaf5fa;
+    --ic-light: #f5fafd;
+    --ic-text: #445b69;
+    --ic-border: #d9e8ef;
+
+    background: var(--ic-white);
+    color: var(--ic-navy);
+}
+
+.ipgs-cloud-page *,
+.ipgs-cloud-page *::before,
+.ipgs-cloud-page *::after {
+    box-sizing: border-box;
+}
+
+.ipgs-cloud-page .container {
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.ipgs-cloud-page h1,
+.ipgs-cloud-page h2,
+.ipgs-cloud-page h3 {
+    margin-top: 0;
+    color: var(--ic-navy);
+    font-weight: 600;
+    line-height: 1.19;
+    letter-spacing: -.035em;
+}
+
+.ipgs-cloud-page p {
+    margin-top: 0;
+    
+}
+
+.ipgs-cloud-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--ic-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.ipgs-cloud-label > span {
+    width: 30px;
+    height: 3px;
+    flex-shrink: 0;
+    background: var(--ic-sky);
+}
+
+/* ============================================
+   01 - EXISTING IPGS HERO BANNER
+   NO NEW IMAGE IMPORT
+============================================ */
+
+.ipgs-cloud-banner {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Preserve the existing hero layout/background. */
+
+.ipgs-cloud-banner .title-of-hero {
+    position: relative;
+    z-index: 3;
+}
+
+.ipgs-cloud-banner .title-of-hero span a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ipgs-cloud-banner .title-of-hero span a:hover {
+    color: var(--ic-sky);
+}
+
+/* ============================================
+   BUTTONS AND LINKS
+============================================ */
+
+.ipgs-cloud-primary-btn,
+.ipgs-cloud-final-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-height: 56px;
+    padding: 16px 24px;
+    background: var(--ic-blue);
+    border: 1px solid var(--ic-blue);
+    color: var(--ic-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-cloud-primary-btn:hover,
+.ipgs-cloud-final-button:hover {
+    background: var(--ic-navy);
+    border-color: var(--ic-navy);
+    color: var(--ic-white);
+    transform: translateY(-2px);
+}
+
+.ipgs-cloud-primary-btn i,
+.ipgs-cloud-final-button i {
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.ipgs-cloud-page a:focus-visible {
+    outline: 3px solid var(--ic-sky);
+    outline-offset: 4px;
+}
+
+/* ============================================
+   02 - INTRODUCTION
+============================================ */
+
+.ipgs-cloud-intro {
+    padding: 115px 0;
+    background: var(--ic-white);
+}
+
+.ipgs-cloud-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr);
+    gap: 7%;
+    align-items: center;
+}
+
+.ipgs-cloud-intro-content h1 {
+    max-width: 680px;
+    margin-bottom: 28px;
+    font-size: clamp(38px, 4vw, 59px);
+}
+
+.ipgs-cloud-intro-content h1 em {
+    color: var(--ic-blue);
+    font-style: normal;
+}
+
+.ipgs-cloud-intro-content > p {
+    max-width: 580px;
+    margin-bottom: 20px;
+    color: var(--ic-text);
+    font-size: 17px;
+}
+
+.ipgs-cloud-intro-statement {
+    max-width: 510px;
+    margin: 29px 0 32px;
+    padding-left: 19px;
+    border-left: 3px solid var(--ic-blue);
+    color: var(--ic-navy);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.ipgs-cloud-intro-diagram {
+    min-width: 0;
+}
+
+/* ============================================
+   ANIMATED CLOUD ARCHITECTURE
+   CSS ONLY / NO IMAGES
+============================================ */
+
+.ipgs-cloud-architecture {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 32px 26px 28px;
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(37, 141, 181, .19),
+            transparent 48%
+        ),
+        var(--ic-navy);
+    color: var(--ic-white);
+}
+
+.ipgs-cloud-architecture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .23;
+    background-image:
+        linear-gradient(
+            rgba(117, 197, 228, .16) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(117, 197, 228, .16) 1px,
+            transparent 1px
+        );
+    background-size: 32px 32px;
+}
+
+.ipgs-cloud-architecture-top,
+.ipgs-cloud-architecture-nodes,
+.ipgs-cloud-architecture-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.ipgs-cloud-architecture-kicker {
+    display: block;
+    margin-bottom: 27px;
+    color: var(--ic-sky);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-align: center;
+}
+
+.ipgs-cloud-architecture-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 265px;
+    min-height: 160px;
+    margin-inline: auto;
+    padding: 22px 16px;
+    border: 1px solid rgba(117, 197, 228, .6);
+    background: var(--ic-navy-soft);
+    text-align: center;
+}
+
+.ipgs-cloud-architecture-main-icon {
+    color: var(--ic-sky);
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.ipgs-cloud-architecture-main strong {
+    color: var(--ic-white);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ipgs-cloud-architecture-main small {
+    margin-top: 8px;
+    color: #b4d7e6;
+    font-size: 11px;
+}
+
+/* Diagram connector lines */
+
+.ipgs-cloud-connector {
+    position: relative;
+    width: 100%;
+    height: 76px;
+}
+
+.ipgs-cloud-connector-vertical,
+.ipgs-cloud-connector-horizontal,
+.ipgs-cloud-connector-left,
+.ipgs-cloud-connector-middle,
+.ipgs-cloud-connector-right {
+    position: absolute;
+    display: block;
+    background: var(--ic-sky);
+}
+
+.ipgs-cloud-connector-vertical {
+    width: 1px;
+    height: 35px;
+    top: 0;
+    left: 50%;
+}
+
+.ipgs-cloud-connector-horizontal {
+    width: 66.66%;
+    height: 1px;
+    top: 35px;
+    left: 16.67%;
+}
+
+.ipgs-cloud-connector-left,
+.ipgs-cloud-connector-middle,
+.ipgs-cloud-connector-right {
+    width: 1px;
+    height: 41px;
+    top: 35px;
+}
+
+.ipgs-cloud-connector-left {
+    left: 16.67%;
+}
+
+.ipgs-cloud-connector-middle {
+    left: 50%;
+}
+
+.ipgs-cloud-connector-right {
+    left: 83.33%;
+}
+
+.ipgs-cloud-connector-dot {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--ic-sky);
+    box-shadow: 0 0 0 5px rgba(117, 197, 228, .12);
+}
+
+.ipgs-cloud-architecture-nodes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.ipgs-cloud-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 143px;
+    padding: 17px 8px;
+    border: 1px solid rgba(117, 197, 228, .34);
+    background: var(--ic-navy-soft);
+    text-align: center;
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.ipgs-cloud-node:hover {
+    border-color: var(--ic-sky);
+    transform: translateY(-4px);
+}
+
+.ipgs-cloud-node i {
+    margin-bottom: 13px;
+    color: var(--ic-sky);
+    font-size: 27px;
+}
+
+.ipgs-cloud-node strong {
+    color: var(--ic-white);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.ipgs-cloud-node > span {
+    margin-top: 8px;
+    color: #b7d5e3;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.ipgs-cloud-architecture-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(117, 197, 228, .25);
+    color: #c3e1ed;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ipgs-cloud-architecture-bottom i {
+    color: var(--ic-sky);
+    font-size: 20px;
+}
+
+/* Gentle diagram animations */
+
+@keyframes icPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 5px rgba(117, 197, 228, .12);
+    }
+    50% {
+        box-shadow: 0 0 0 13px rgba(117, 197, 228, 0);
+    }
+}
+
+@keyframes icLineGrow {
+    from {
+        opacity: .3;
+        transform: scaleX(.65);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-cloud-connector-dot {
+        animation: icPulse 3s ease-in-out infinite;
+    }
+
+    .ipgs-cloud-connector-horizontal {
+        transform-origin: center;
+        animation: icLineGrow 2.8s ease-in-out infinite alternate;
+    }
+}
+
+/* ============================================
+   03 - INFRASTRUCTURE APPROACH
+============================================ */
+
+.ipgs-cloud-approach {
+    padding: 50px 0;
+    background: var(--ic-light);
+}
+
+.ipgs-cloud-approach-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+    gap: 10%;
+    align-items: start;
+}
+
+.ipgs-cloud-chapter {
+    display: block;
+    margin-bottom: 24px;
+    color: var(--ic-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.ipgs-cloud-approach h2 {
+    max-width: 600px;
+    margin-bottom: 0;
+    font-size: clamp(35px, 3.7vw, 52px);
+}
+
+.ipgs-cloud-approach h2 span {
+    color: var(--ic-blue);
+}
+
+.ipgs-cloud-approach-copy {
+    padding-top: 30px;
+}
+
+.ipgs-cloud-approach-copy > p {
+    margin-bottom: 19px;
+    color: var(--ic-text);
+    font-size: 17px;
+}
+
+.ipgs-cloud-approach-quote {
+    margin-top: 28px;
+    padding: 20px 0 20px 23px;
+    border-left: 3px solid var(--ic-blue);
+    color: var(--ic-navy);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ============================================
+   04 - SIX INFRASTRUCTURE CAPABILITIES
+============================================ */
+
+.ipgs-cloud-services {
+    padding: 50px 0;
+    background: var(--ic-white);
+}
+
+.ipgs-cloud-services-heading {
+    max-width: 800px;
+    margin-bottom: 52px;
+}
+
+.ipgs-cloud-services-heading h2 {
+    margin-bottom: 23px;
+    font-size: clamp(36px, 3.8vw, 54px);
+}
+
+.ipgs-cloud-services-heading h2 span {
+    color: var(--ic-blue);
+}
+
+.ipgs-cloud-services-heading p {
+    max-width: 760px;
+    margin-bottom: 0;
+    color: var(--ic-text);
+    font-size: 17px;
+}
+
+.ipgs-cloud-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ipgs-cloud-service {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 335px;
+    overflow: hidden;
+    padding: 29px 27px 35px;
+    background: var(--ic-light);
+    border: 1px solid var(--ic-border);
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.ipgs-cloud-service:hover {
+    transform: translateY(-5px);
+    border-color: var(--ic-sky);
+    box-shadow: 0 16px 36px rgba(15, 30, 42, .07);
+}
+
+.ipgs-cloud-service-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.ipgs-cloud-service-number {
+    color: var(--ic-blue);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ipgs-cloud-service-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    background: var(--ic-pale);
+    color: var(--ic-blue);
+}
+
+.ipgs-cloud-service-icon i {
+    font-size: 25px;
+}
+
+.ipgs-cloud-service h3 {
+    margin-bottom: 17px;
+    font-size: 23px;
+}
+
+.ipgs-cloud-service p {
+    margin-bottom: 20px;
+    color: var(--ic-text);
+    font-size: 15px;
+}
+
+.ipgs-cloud-service-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--ic-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s ease;
+}
+
+.ipgs-cloud-service:hover .ipgs-cloud-service-line {
+    transform: scaleX(1);
+}
+
+/* ============================================
+   05 - VODAFONETHREE EXPERIENCE
+============================================ */
+
+.ipgs-cloud-case-section {
+    padding: 50px 0;
+    background: var(--ic-navy);
+}
+
+.ipgs-cloud-case-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+    gap: 11%;
+    align-items: center;
+}
+
+.ipgs-cloud-case-section .ipgs-cloud-label {
+    color: var(--ic-sky);
+}
+
+.ipgs-cloud-case-index {
+    display: block;
+    margin-bottom: 25px;
+    color: #a9d7e8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.ipgs-cloud-case-heading h2 {
+    margin-bottom: 0;
+    color: var(--ic-white);
+    font-size: clamp(36px, 3.8vw, 53px);
+}
+
+.ipgs-cloud-case-heading h2 span {
+    color: var(--ic-sky);
+}
+
+.ipgs-cloud-case-content {
+    padding: 30px 0;
+    border-top: 1px solid #31566e;
+    border-bottom: 1px solid #31566e;
+}
+
+.ipgs-cloud-case-symbol {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin-bottom: 28px;
+    color: var(--ic-sky);
+}
+
+.ipgs-cloud-case-symbol > i {
+    font-size: 46px;
+}
+
+.ipgs-cloud-case-arrow {
+    color: var(--ic-blue);
+    font-size: 29px;
+}
+
+.ipgs-cloud-case-content > p {
+    margin-bottom: 25px;
+    color: #c6deea;
+    font-size: 17px;
+}
+
+.ipgs-cloud-case-footnote {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 310px;
+    color: var(--ic-sky);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* ============================================
+   06 - WHY IPGS
+============================================ */
+
+.ipgs-cloud-why {
+    padding: 50px 0;
+    background: var(--ic-pale);
+}
+
+.ipgs-cloud-why-heading {
+    max-width: 760px;
+    margin-bottom: 52px;
+}
+
+.ipgs-cloud-why-heading h2 {
+    margin-bottom: 22px;
+    font-size: clamp(37px, 3.9vw, 55px);
+}
+
+.ipgs-cloud-why-heading h2 span {
+    color: var(--ic-blue);
+}
+
+.ipgs-cloud-why-heading > p {
+    margin-bottom: 0;
+    color: var(--ic-text);
+    font-size: 17px;
+}
+
+.ipgs-cloud-why-list {
+    border-top: 1px solid #cbdde8;
+}
+
+.ipgs-cloud-why-item {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr) 52px;
+    gap: 25px;
+    align-items: start;
+    padding: 31px 0;
+    border-bottom: 1px solid #cbdde8;
+}
+
+.ipgs-cloud-why-number {
+    padding-top: 6px;
+    color: var(--ic-blue);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ipgs-cloud-why-copy h3 {
+    margin-bottom: 13px;
+    font-size: clamp(22px, 2.2vw, 28px);
+}
+
+.ipgs-cloud-why-copy p {
+    max-width: 880px;
+    margin-bottom: 0;
+    color: var(--ic-text);
+    font-size: 16px;
+}
+
+.ipgs-cloud-why-item > i {
+    display: grid;
+    place-items: center;
+    width: 51px;
+    height: 51px;
+    background: #dceef7;
+    color: var(--ic-blue);
+    font-size: 25px;
+}
+
+/* ============================================
+   07 - FINAL CTA
+============================================ */
+
+.ipgs-cloud-final {
+    padding: 50px 0;
+    background: var(--ic-white);
+}
+
+.ipgs-cloud-final-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8%;
+}
+
+.ipgs-cloud-final h2 {
+    max-width: 740px;
+    margin-bottom: 24px;
+    font-size: clamp(37px, 3.9vw, 55px);
+}
+
+.ipgs-cloud-final h2 span {
+    color: var(--ic-blue);
+}
+
+.ipgs-cloud-final p {
+    max-width: 730px;
+    margin-bottom: 15px;
+    color: var(--ic-text);
+    font-size: 17px;
+}
+
+.ipgs-cloud-final-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ipgs-cloud-final-button {
+    background: var(--ic-navy);
+    border-color: var(--ic-navy);
+    max-width: 340px;
+}
+
+.ipgs-cloud-final-button:hover {
+    background: var(--ic-blue);
+    border-color: var(--ic-blue);
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATION
+   CONTENT VISIBLE WITHOUT JAVASCRIPT
+============================================ */
+
+.ipgs-cloud-page [data-cloud-reveal] {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes cloudReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .ipgs-cloud-page [data-cloud-reveal].cloud-visible {
+        animation: cloudReveal .7s ease-out both;
+    }
+}
+
+/* ============================================
+   LAPTOP / TABLET
+============================================ */
+
+@media (max-width: 1199px) {
+    .ipgs-cloud-intro,
+    .ipgs-cloud-approach,
+    .ipgs-cloud-services,
+    .ipgs-cloud-case-section,
+    .ipgs-cloud-why {
+        padding: 85px 0;
+    }
+
+    .ipgs-cloud-intro-grid,
+    .ipgs-cloud-approach-grid,
+    .ipgs-cloud-case-layout {
+        gap: 40px;
+    }
+
+    .ipgs-cloud-services-grid {
+        gap: 18px;
+    }
+
+    .ipgs-cloud-service {
+        padding: 24px 22px 31px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ipgs-cloud-intro-grid,
+    .ipgs-cloud-approach-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .ipgs-cloud-intro-content h1 {
+        font-size: 39px;
+    }
+
+    .ipgs-cloud-architecture {
+        padding: 25px 16px;
+    }
+
+    .ipgs-cloud-architecture-nodes {
+        gap: 6px;
+    }
+
+    .ipgs-cloud-node {
+        padding: 12px 4px;
+    }
+
+    .ipgs-cloud-node strong {
+        font-size: 11px;
+    }
+
+    .ipgs-cloud-node > span {
+        font-size: 9px;
+    }
+
+    .ipgs-cloud-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ipgs-cloud-case-layout {
+        gap: 30px;
+    }
+
+    .ipgs-cloud-final-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .ipgs-cloud-final-action {
+        justify-content: flex-start;
+    }
+}
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 767px) {
+    .ipgs-cloud-page .container {
+        padding-inline: 20px;
+    }
+
+    .ipgs-cloud-label {
+        margin-bottom: 19px;
+        font-size: 11px;
+        letter-spacing: 1.3px;
+    }
+
+    .ipgs-cloud-intro,
+    .ipgs-cloud-approach,
+    .ipgs-cloud-services,
+    .ipgs-cloud-case-section,
+    .ipgs-cloud-why {
+        padding: 65px 0;
+    }
+
+    .ipgs-cloud-intro-grid,
+    .ipgs-cloud-approach-grid,
+    .ipgs-cloud-case-layout,
+    .ipgs-cloud-final-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ipgs-cloud-intro-content h1 {
+        font-size: clamp(34px, 8vw, 44px);
+    }
+
+    .ipgs-cloud-intro-content > p,
+    .ipgs-cloud-approach-copy > p {
+        font-size: 16px;
+    }
+
+    .ipgs-cloud-intro-diagram {
+        max-width: 550px;
+        margin-inline: auto;
+    }
+
+    .ipgs-cloud-architecture {
+        padding: 25px 18px;
+    }
+
+    .ipgs-cloud-node {
+        min-height: 128px;
+    }
+
+    .ipgs-cloud-approach h2,
+    .ipgs-cloud-services-heading h2,
+    .ipgs-cloud-case-heading h2,
+    .ipgs-cloud-why-heading h2 {
+        font-size: clamp(32px, 8vw, 43px);
+    }
+
+    .ipgs-cloud-approach-copy {
+        padding-top: 0;
+    }
+
+    .ipgs-cloud-services-heading,
+    .ipgs-cloud-why-heading {
+        margin-bottom: 35px;
+    }
+
+    .ipgs-cloud-services-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .ipgs-cloud-service {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .ipgs-cloud-service-top {
+        margin-bottom: 19px;
+    }
+
+    .ipgs-cloud-service h3 {
+        font-size: 22px;
+    }
+
+    .ipgs-cloud-service p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .ipgs-cloud-why-item {
+        grid-template-columns: 29px minmax(0, 1fr);
+        gap: 14px;
+        padding: 25px 0;
+    }
+
+    .ipgs-cloud-why-item > i {
+        display: none;
+    }
+
+    .ipgs-cloud-why-copy h3 {
+        font-size: 22px;
+    }
+
+    .ipgs-cloud-why-copy p {
+        font-size: 15px;
+    }
+
+    .ipgs-cloud-final {
+        padding: 70px 0;
+    }
+
+    .ipgs-cloud-final h2 {
+        font-size: 35px;
+    }
+
+    .ipgs-cloud-final-button {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE
+============================================ */
+
+@media (max-width: 420px) {
+    .ipgs-cloud-page .container {
+        padding-inline: 17px;
+    }
+
+    .ipgs-cloud-intro-content h1,
+    .ipgs-cloud-approach h2,
+    .ipgs-cloud-services-heading h2,
+    .ipgs-cloud-case-heading h2,
+    .ipgs-cloud-why-heading h2,
+    .ipgs-cloud-final h2 {
+        font-size: 31px;
+    }
+
+    .ipgs-cloud-architecture {
+        padding: 22px 12px;
+    }
+
+    .ipgs-cloud-architecture-main {
+        max-width: 230px;
+        min-height: 140px;
+    }
+
+    .ipgs-cloud-architecture-nodes {
+        gap: 5px;
+    }
+
+    .ipgs-cloud-node {
+        min-height: 116px;
+        padding: 10px 3px;
+    }
+
+    .ipgs-cloud-node i {
+        font-size: 23px;
+        margin-bottom: 7px;
+    }
+
+    .ipgs-cloud-node strong {
+        font-size: 10px;
+    }
+
+    .ipgs-cloud-node > span {
+        font-size: 9px;
+    }
+
+    .ipgs-cloud-primary-btn,
+    .ipgs-cloud-final-button {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION ACCESSIBILITY
+============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-cloud-page *,
+    .ipgs-cloud-page *::before,
+    .ipgs-cloud-page *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .ipgs-cloud-page [data-cloud-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .ipgs-cloud-node:hover,
+    .ipgs-cloud-service:hover,
+    .ipgs-cloud-primary-btn:hover,
+    .ipgs-cloud-final-button:hover {
+        transform: none;
+    }
+}

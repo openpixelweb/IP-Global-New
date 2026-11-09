@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Solar Powered Smart Cities",
+        "desc": "Our solar projects aim to reduce carbon footprints and provide sustainable energy solutions for communities.",
+        "image": "image-1.png"
+    },
+    {
+        "id": 2,
+        "title": "Green Energy Initiatives",
+        "desc": "Empowering communities through affordable and efficient solar energy solutions worldwide.",
+        "image": "image-2.png"
+    },
+    {
+        "id": 3,
+        "title": "Smart Energy Solutions",
+        "desc": "Innovative projects that combine smart grids with renewable sources for better urban living.",
+        "image": "image-3.png"
+    },
+    {
+        "id": 4,
+        "title": "Sustainable Development",
+        "desc": "We build sustainable energy infrastructures that power future-ready smart cities.",
+        "image": "image-4.png"
+    },
+    {
+        "id": 5,
+        "title": "Solar Innovation Hubs",
+        "desc": "Our hubs focus on advancing solar technology and increasing renewable adoption.",
+        "image": "image-5.png"
+    },
+    {
+        "id": 6,
+        "title": "Solar Powered Smart Cities",
+        "desc": "Our solar projects aim to reduce carbon footprints and provide sustainable energy solutions for communities..",
+        "image": "image-2.png"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "type": "image",
+        "bg": "hero/image-home.png",
+        "title": "Brightening Your Future with",
+        "span": "Sun Star Solar Energy",
+        "desc": "At Sun Star, we’re dedicated to transforming how you power your life. Wave goodbye to rising energy costs and welcome a cleaner, brighter tomorrow with our cutting-edge solar solutions.",
+        "btnLink": "/Services1"
+    },
+    {
+        "type": "video",
+        "bg": "video-home.mp4",
+        "title": "Empowering Your World through",
+        "span": "Clean Solar Innovation",
+        "desc": "Discover a smarter way to generate energy for your home or business. Our solar technology offers reliable performance and a sustainable future for generations to come.",
+        "btnLink": "/Services1"
+    },
+    {
+        "type": "image",
+        "bg": "hero/image-home-2.png",
+        "title": "Leading the Way in",
+        "span": "Renewable Energy Excellence",
+        "desc": "We combine innovation, technology, and expertise to deliver solar solutions that are efficient, affordable, and environmentally responsible for every household. We combine innovation, technology.",
+        "btnLink": "/Services1"
+    }
+]

@@ -1,0 +1,1040 @@
+
+/* ==========================================
+   IPGS - IT HARDWARE DISTRIBUTION
+   Premium Editorial Procurement Design
+   Navy / Blue / White Only
+========================================== */
+
+.ipgs-hd-page {
+  --hd-navy: #0f1e2a;
+  --hd-navy-soft: #193345;
+  --hd-blue: #258db5;
+  --hd-sky: #75c5e4;
+  --hd-white: #ffffff;
+  --hd-pale: #eaf5fa;
+  --hd-light: #f5fafd;
+  --hd-text: #445b69;
+  --hd-border: #d9e8ef;
+
+  width: 100%;
+  color: var(--hd-navy);
+  background: var(--hd-white);
+}
+
+.ipgs-hd-page *,
+.ipgs-hd-page *::before,
+.ipgs-hd-page *::after {
+  box-sizing: border-box;
+}
+
+.ipgs-hd-page .container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.ipgs-hd-page h1,
+.ipgs-hd-page h2,
+.ipgs-hd-page h3 {
+  margin-top: 0;
+  color: var(--hd-navy);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.ipgs-hd-page p {
+  margin-top: 0;
+  
+}
+
+/* ==========================================
+   EXISTING HERO - UNCHANGED
+========================================== */
+
+.ipgs-hd-banner .title-of-hero {
+  position: relative;
+  z-index: 2;
+}
+
+.ipgs-hd-banner .title-of-hero span a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ipgs-hd-banner .title-of-hero span a:hover {
+  color: var(--hd-sky);
+}
+
+/* ==========================================
+   SHARED TYPOGRAPHY & BUTTONS
+========================================== */
+
+.ipgs-hd-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: var(--hd-blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.ipgs-hd-label > span {
+  flex: 0 0 30px;
+  height: 3px;
+  background: var(--hd-sky);
+}
+
+.ipgs-hd-primary-btn,
+.ipgs-hd-final-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 56px;
+  padding: 16px 24px;
+  border: 1px solid var(--hd-blue);
+  background: var(--hd-blue);
+  color: var(--hd-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-decoration: none;
+  transition:
+    background-color .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+
+.ipgs-hd-primary-btn:hover,
+.ipgs-hd-final-btn:hover {
+  background: var(--hd-navy);
+  border-color: var(--hd-navy);
+  color: var(--hd-white);
+  transform: translateY(-2px);
+}
+
+.ipgs-hd-primary-btn i,
+.ipgs-hd-final-btn i {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.ipgs-hd-page a:focus-visible {
+  outline: 3px solid var(--hd-sky);
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   01 - EDITORIAL INTRODUCTION
+========================================== */
+
+.ipgs-hd-intro {
+  padding: 112px 0;
+  background: var(--hd-white);
+}
+
+.ipgs-hd-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: 7%;
+  align-items: center;
+}
+
+.ipgs-hd-intro-copy h1 {
+  max-width: 680px;
+  margin-bottom: 27px;
+  font-size: clamp(38px, 4.1vw, 59px);
+}
+
+.ipgs-hd-intro-copy h1 em {
+  color: var(--hd-blue);
+  font-style: normal;
+}
+
+.ipgs-hd-intro-copy > p {
+  max-width: 590px;
+  margin-bottom: 21px;
+  color: var(--hd-text);
+  font-size: 17px;
+}
+
+.ipgs-hd-intro-statement {
+  display: block;
+  max-width: 550px;
+  margin: 25px 0 32px;
+  padding: 12px 0 12px 21px;
+  border-left: 3px solid var(--hd-blue);
+  color: var(--hd-navy);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.ipgs-hd-intro-visual {
+  min-width: 0;
+}
+
+/* ==========================================
+   CSS-ONLY PROCUREMENT WORKFLOW
+========================================== */
+
+.ipgs-hd-workflow {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 30px 26px;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(37, 141, 181, .2),
+      transparent 48%
+    ),
+    var(--hd-navy);
+  color: var(--hd-white);
+}
+
+.ipgs-hd-workflow::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: .2;
+  background-image:
+    linear-gradient(
+      rgba(117, 197, 228, .16) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(117, 197, 228, .16) 1px,
+      transparent 1px
+    );
+  background-size: 30px 30px;
+}
+
+.ipgs-hd-workflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+  color: var(--hd-sky);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.ipgs-hd-workflow-header i {
+  font-size: 24px;
+}
+
+.ipgs-hd-workflow-title {
+  margin-bottom: 44px;
+}
+
+.ipgs-hd-workflow-title > span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--hd-sky);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.ipgs-hd-workflow-title strong {
+  display: block;
+  color: var(--hd-white);
+  font-size: clamp(27px, 3vw, 40px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -.03em;
+}
+
+.ipgs-hd-workflow-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ipgs-hd-workflow-track::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 52px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: var(--hd-sky);
+}
+
+.ipgs-hd-workflow-track::after {
+  content: "";
+  position: absolute;
+  top: 49px;
+  left: 10%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--hd-sky);
+  box-shadow: 0 0 0 5px rgba(117, 197, 228, .12);
+}
+
+.ipgs-hd-workflow-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.ipgs-hd-workflow-index {
+  margin-bottom: 15px;
+  color: var(--hd-sky);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ipgs-hd-workflow-symbol {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 15px;
+  border: 1px solid var(--hd-sky);
+  background: var(--hd-navy-soft);
+  color: var(--hd-sky);
+  transition:
+    background-color .25s ease,
+    transform .25s ease;
+}
+
+.ipgs-hd-workflow-step:hover .ipgs-hd-workflow-symbol {
+  background: var(--hd-blue);
+  color: var(--hd-white);
+  transform: translateY(-4px);
+}
+
+.ipgs-hd-workflow-symbol i {
+  font-size: 25px;
+}
+
+.ipgs-hd-workflow-step strong {
+  color: var(--hd-white);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ipgs-hd-workflow-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 45px;
+  padding-top: 22px;
+  border-top: 1px solid #34566c;
+}
+
+.ipgs-hd-workflow-pulse {
+  flex: 0 0 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--hd-sky);
+}
+
+.ipgs-hd-workflow-footer p {
+  margin: 0;
+  color: #c5e1ee;
+  font-size: 12px;
+}
+
+@keyframes hdPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(117, 197, 228, .12);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(117, 197, 228, 0);
+  }
+}
+
+@keyframes hdTrackTravel {
+  0% { left: 10%; }
+  100% { left: calc(90% - 8px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ipgs-hd-workflow-pulse {
+    animation: hdPulse 3s ease-in-out infinite;
+  }
+
+  .ipgs-hd-workflow-track::after {
+    animation: hdTrackTravel 6s linear infinite alternate;
+  }
+}
+
+/* ==========================================
+   02 - WHY INTEGRATED SUPPLY
+========================================== */
+
+.ipgs-hd-overview {
+  padding: 50px 0;
+  background: var(--hd-light);
+}
+
+.ipgs-hd-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .94fr);
+  gap: 10%;
+  align-items: start;
+}
+
+.ipgs-hd-overview h2 {
+  max-width: 620px;
+  margin-bottom: 0;
+  font-size: clamp(35px, 3.8vw, 52px);
+}
+
+.ipgs-hd-overview h2 span {
+  color: var(--hd-blue);
+}
+
+.ipgs-hd-overview-copy {
+  padding-top: 22px;
+}
+
+.ipgs-hd-overview-copy > p {
+  margin-bottom: 22px;
+  color: var(--hd-text);
+  font-size: 17px;
+}
+
+.ipgs-hd-overview-note {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding-top: 22px;
+  border-top: 1px solid var(--hd-border);
+}
+
+.ipgs-hd-overview-note i {
+  flex-shrink: 0;
+  color: var(--hd-blue);
+  font-size: 25px;
+}
+
+.ipgs-hd-overview-note strong {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   03 - FOUR SUPPLY CAPABILITIES
+========================================== */
+
+.ipgs-hd-supply {
+  padding: 50px 0;
+  background: var(--hd-white);
+}
+
+.ipgs-hd-section-heading {
+  max-width: 800px;
+  margin-bottom: 55px;
+}
+
+.ipgs-hd-section-heading h2 {
+  margin-bottom: 20px;
+  font-size: clamp(37px, 3.9vw, 55px);
+}
+
+.ipgs-hd-section-heading h2 span {
+  color: var(--hd-blue);
+}
+
+.ipgs-hd-section-heading > p {
+  margin-bottom: 0;
+  color: var(--hd-text);
+  font-size: 17px;
+}
+
+.ipgs-hd-supply-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.ipgs-hd-supply-item {
+  min-width: 0;
+  padding: 34px;
+  border: 1px solid var(--hd-border);
+  background: var(--hd-white);
+  transition:
+    border-color .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.ipgs-hd-supply-item:hover {
+  border-color: var(--hd-sky);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(15, 30, 42, .06);
+}
+
+.ipgs-hd-supply-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.ipgs-hd-supply-top span {
+  color: var(--hd-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ipgs-hd-supply-top i {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background: var(--hd-pale);
+  color: var(--hd-blue);
+  font-size: 26px;
+}
+
+.ipgs-hd-supply-item h3 {
+  margin-bottom: 17px;
+  font-size: clamp(23px, 2.2vw, 29px);
+}
+
+.ipgs-hd-supply-item p {
+  margin-bottom: 0;
+  color: var(--hd-text);
+  font-size: 16px;
+}
+
+/* ==========================================
+   04 - PRODUCT CATALOGUE DIRECTORY
+========================================== */
+
+.ipgs-hd-catalogue {
+  padding: 50px 0;
+  background: var(--hd-pale);
+}
+
+.ipgs-hd-catalogue-heading {
+  margin-bottom: 46px;
+}
+
+.ipgs-hd-catalogue-heading-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .86fr);
+  align-items: end;
+  gap: 10%;
+}
+
+.ipgs-hd-catalogue-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(36px, 3.9vw, 54px);
+}
+
+.ipgs-hd-catalogue-heading h2 span {
+  color: var(--hd-blue);
+}
+
+.ipgs-hd-catalogue-heading p {
+  margin-bottom: 0;
+  color: var(--hd-text);
+  font-size: 17px;
+}
+
+.ipgs-hd-catalogue-index {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--hd-navy);
+  border-bottom: 1px solid #c5dfea;
+  color: var(--hd-blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.ipgs-hd-catalogue-row {
+  display: grid;
+  grid-template-columns: 44px 58px minmax(0, 1fr) 27px;
+  gap: 23px;
+  align-items: start;
+  padding: 29px 20px 29px 0;
+  border-bottom: 1px solid #c5dfea;
+  transition:
+    background-color .25s ease,
+    padding-left .25s ease;
+}
+
+.ipgs-hd-catalogue-row:hover {
+  background: var(--hd-white);
+  padding-left: 17px;
+}
+
+.ipgs-hd-catalogue-number {
+  padding-top: 11px;
+  color: var(--hd-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ipgs-hd-catalogue-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #bcdbea;
+  color: var(--hd-blue);
+  font-size: 25px;
+}
+
+.ipgs-hd-catalogue-copy h3 {
+  margin-bottom: 13px;
+  font-size: clamp(21px, 2.1vw, 27px);
+}
+
+.ipgs-hd-catalogue-copy p {
+  max-width: 900px;
+  margin-bottom: 0;
+  color: var(--hd-text);
+  font-size: 15px;
+}
+
+.ipgs-hd-catalogue-arrow {
+  padding-top: 13px;
+  color: var(--hd-blue);
+  font-size: 22px;
+  transition: transform .25s ease;
+}
+
+.ipgs-hd-catalogue-row:hover .ipgs-hd-catalogue-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================
+   05 - WHY IPGS
+========================================== */
+
+.ipgs-hd-why {
+  padding: 50px 0;
+  background: var(--hd-navy);
+}
+
+.ipgs-hd-why .ipgs-hd-label {
+  color: var(--hd-sky);
+}
+
+.ipgs-hd-why-heading {
+  max-width: 800px;
+  margin-bottom: 55px;
+}
+
+.ipgs-hd-why-heading h2 {
+  margin-bottom: 22px;
+  color: var(--hd-white);
+  font-size: clamp(37px, 3.9vw, 55px);
+}
+
+.ipgs-hd-why-heading h2 span {
+  color: var(--hd-sky);
+}
+
+.ipgs-hd-why-heading p {
+  margin-bottom: 0;
+  color: #c7e0ec;
+  font-size: 17px;
+}
+
+.ipgs-hd-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.ipgs-hd-why-item {
+  min-width: 0;
+  padding: 30px 0 0;
+  border-top: 1px solid #426176;
+}
+
+.ipgs-hd-why-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.ipgs-hd-why-top span,
+.ipgs-hd-why-top i {
+  color: var(--hd-sky);
+}
+
+.ipgs-hd-why-top span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ipgs-hd-why-top i {
+  font-size: 27px;
+}
+
+.ipgs-hd-why-item h3 {
+  margin-bottom: 17px;
+  color: var(--hd-white);
+  font-size: clamp(22px, 2.2vw, 28px);
+}
+
+.ipgs-hd-why-item p {
+  margin-bottom: 0;
+  color: #c4dce8;
+  font-size: 15px;
+}
+
+/* ==========================================
+   06 - FINAL CTA
+========================================== */
+
+.ipgs-hd-final {
+  padding: 50px 0;
+  background: var(--hd-white);
+}
+
+.ipgs-hd-final-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8%;
+}
+
+.ipgs-hd-final h2 {
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-size: clamp(36px, 3.9vw, 54px);
+}
+
+.ipgs-hd-final h2 span {
+  color: var(--hd-blue);
+}
+
+.ipgs-hd-final p {
+  max-width: 700px;
+  margin-bottom: 0;
+  color: var(--hd-text);
+  font-size: 17px;
+}
+
+.ipgs-hd-final-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ipgs-hd-final-btn {
+  max-width: 320px;
+  background: var(--hd-navy);
+  border-color: var(--hd-navy);
+}
+
+.ipgs-hd-final-btn:hover {
+  background: var(--hd-blue);
+  border-color: var(--hd-blue);
+}
+
+/* ==========================================
+   SCROLL REVEAL - SAFE DEFAULT
+========================================== */
+
+.ipgs-hd-page [data-hd-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes hdReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ipgs-hd-page [data-hd-reveal].hd-visible {
+    animation: hdReveal .65s ease-out both;
+  }
+}
+
+/* ==========================================
+   LAPTOP / LARGE TABLET
+========================================== */
+
+@media (max-width: 1199px) {
+  .ipgs-hd-intro,
+  .ipgs-hd-overview,
+  .ipgs-hd-supply,
+  .ipgs-hd-catalogue,
+  .ipgs-hd-why {
+    padding: 85px 0;
+  }
+
+  .ipgs-hd-intro-grid,
+  .ipgs-hd-overview-grid,
+  .ipgs-hd-catalogue-heading-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .ipgs-hd-intro-grid,
+  .ipgs-hd-overview-grid {
+    gap: 30px;
+  }
+
+  .ipgs-hd-intro-copy h1 {
+    font-size: 40px;
+  }
+
+  .ipgs-hd-workflow {
+    padding: 25px 16px;
+  }
+
+  .ipgs-hd-workflow-symbol {
+    width: 46px;
+    height: 46px;
+  }
+
+  .ipgs-hd-workflow-track::before {
+    top: 47px;
+  }
+
+  .ipgs-hd-workflow-track::after {
+    top: 44px;
+  }
+
+  .ipgs-hd-supply-grid,
+  .ipgs-hd-why-grid {
+    gap: 18px;
+  }
+
+  .ipgs-hd-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ipgs-hd-final-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ipgs-hd-final-action {
+    justify-content: flex-start;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .ipgs-hd-page .container {
+    padding-inline: 20px;
+  }
+
+  .ipgs-hd-label {
+    margin-bottom: 19px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .ipgs-hd-intro,
+  .ipgs-hd-overview,
+  .ipgs-hd-supply,
+  .ipgs-hd-catalogue,
+  .ipgs-hd-why {
+    padding: 65px 0;
+  }
+
+  .ipgs-hd-intro-grid,
+  .ipgs-hd-overview-grid,
+  .ipgs-hd-catalogue-heading-grid,
+  .ipgs-hd-final-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ipgs-hd-intro-copy h1 {
+    font-size: clamp(34px, 8vw, 44px);
+  }
+
+  .ipgs-hd-intro-copy > p,
+  .ipgs-hd-overview-copy > p {
+    font-size: 16px;
+  }
+
+  .ipgs-hd-intro-visual {
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+  }
+
+  .ipgs-hd-overview h2,
+  .ipgs-hd-section-heading h2,
+  .ipgs-hd-catalogue-heading h2,
+  .ipgs-hd-why-heading h2 {
+    font-size: clamp(32px, 8vw, 43px);
+  }
+
+  .ipgs-hd-overview-copy {
+    padding-top: 0;
+  }
+
+  .ipgs-hd-section-heading,
+  .ipgs-hd-catalogue-heading,
+  .ipgs-hd-why-heading {
+    margin-bottom: 36px;
+  }
+
+  .ipgs-hd-supply-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .ipgs-hd-supply-item {
+    padding: 26px;
+  }
+
+  .ipgs-hd-supply-item h3 {
+    font-size: 23px;
+  }
+
+  .ipgs-hd-supply-item p {
+    font-size: 15px;
+  }
+
+  .ipgs-hd-catalogue-row {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 13px;
+    padding: 25px 0;
+  }
+
+  .ipgs-hd-catalogue-row:hover {
+    padding-left: 0;
+  }
+
+  .ipgs-hd-catalogue-icon,
+  .ipgs-hd-catalogue-arrow {
+    display: none;
+  }
+
+  .ipgs-hd-catalogue-copy h3 {
+    font-size: 21px;
+  }
+
+  .ipgs-hd-catalogue-copy p {
+    font-size: 15px;
+  }
+
+  .ipgs-hd-why-item {
+    padding-top: 25px;
+  }
+
+  .ipgs-hd-why-item h3 {
+    font-size: 23px;
+  }
+
+  .ipgs-hd-final {
+    padding: 70px 0;
+  }
+
+  .ipgs-hd-final h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ipgs-hd-page .container {
+    padding-inline: 17px;
+  }
+
+  .ipgs-hd-intro-copy h1,
+  .ipgs-hd-overview h2,
+  .ipgs-hd-section-heading h2,
+  .ipgs-hd-catalogue-heading h2,
+  .ipgs-hd-why-heading h2,
+  .ipgs-hd-final h2 {
+    font-size: 31px;
+  }
+
+  .ipgs-hd-workflow {
+    padding: 22px 12px;
+  }
+
+  .ipgs-hd-workflow-symbol {
+    width: 42px;
+    height: 42px;
+  }
+
+  .ipgs-hd-workflow-symbol i {
+    font-size: 20px;
+  }
+
+  .ipgs-hd-workflow-step strong {
+    font-size: 11px;
+  }
+
+  .ipgs-hd-workflow-track::before {
+    top: 45px;
+  }
+
+  .ipgs-hd-workflow-track::after {
+    top: 42px;
+  }
+
+  .ipgs-hd-primary-btn,
+  .ipgs-hd-final-btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ipgs-hd-page *,
+  .ipgs-hd-page *::before,
+  .ipgs-hd-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .ipgs-hd-page [data-hd-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ipgs-hd-workflow-step:hover .ipgs-hd-workflow-symbol,
+  .ipgs-hd-supply-item:hover,
+  .ipgs-hd-primary-btn:hover,
+  .ipgs-hd-final-btn:hover {
+    transform: none;
+  }
+}

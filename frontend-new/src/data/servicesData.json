@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "title": "Solar Installation",
+        "desc": "Eget pellentesque faucibus in nulla felis aliquam amet rhoncus sed. Libero at morbi viverra purus elementum phasellus.",
+        "image": "services-1.svg",
+        "link": "/ServicesDetail1",
+        "className": "boxdesign-services",
+        "textClass": "solar-services",
+        "descClass": "solar-desc",
+        "buttonClass": "services-btn"
+    },
+    {
+        "id": 2,
+        "title": "Solar Maintenance",
+        "desc": "Eget pellentesque faucibus in nulla felis aliquam amet rhoncus sed. Libero at morbi viverra purus elementum phasellus.",
+        "image": "services-2.svg",
+        "link": "/ServicesDetail1",
+        "className": "boxdesign-services-center",
+        "textClass": "solar-services-center",
+        "descClass": "solar-desc-center",
+        "buttonClass": "services-btn-center"
+    },
+    {
+        "id": 3,
+        "title": "Solar Battery Solution",
+        "desc": "Sed elementum libero dictumst malesuad platea amet vitae. In ultrices enim at ac et. Viverra sit odio sed duis pretium sed.",
+        "image": "services-3.svg",
+        "link": "/ServicesDetail2",
+        "className": "boxdesign-services",
+        "textClass": "solar-services",
+        "descClass": "solar-desc",
+        "buttonClass": "services-btn"
+    }
+]
