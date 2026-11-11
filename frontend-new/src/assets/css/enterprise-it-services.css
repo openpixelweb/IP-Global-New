@@ -1,3 +1,4 @@
+
 /* ===========================================
    IPGS - ENTERPRISE IT SERVICES
    Hero matches the site banner: navy to teal gradient,
@@ -41,7 +42,6 @@
 .ipgs-ent-delivery, .ipgs-ent-final { background: #0f1e2a; }
 .ipgs-ent-advantage, .ipgs-ent-service:hover { box-shadow: 0 10px 30px rgba(15, 30, 42, 0.06); }
 .ipgs-ent-service:hover { box-shadow: none; }
-
 
 .ipgs-ent-page *,
 .ipgs-ent-page *::before,
@@ -353,6 +353,12 @@
     animation-delay: var(--d, 0ms);
 }
 
+/* NEW: icon size only — keeps the same 54px circles */
+.ipgs-ent-delivery-stage span > i {
+    font-size: 23px;
+    line-height: 1;
+}
+
 .ipgs-ent-delivery-stage strong { color: var(--white); font-size: 16px; font-weight: 600; }
 .ipgs-ent-delivery-inner > p { margin-bottom: 0; font-size: 16px; }
 
@@ -482,6 +488,10 @@
     .ipgs-ent-track { top: 20px; }
     .ipgs-ent-delivery-stage { gap: 10px; }
     .ipgs-ent-delivery-stage span { width: 40px; height: 40px; font-size: 12px; }
+
+    /* NEW: icon size only — keeps the same 40px mobile circles */
+    .ipgs-ent-delivery-stage span > i { font-size: 18px; }
+
     .ipgs-ent-delivery-stage strong { font-size: 11px; overflow-wrap: anywhere; }
 
     .ipgs-ent-advantage { padding: 26px 20px 28px; }

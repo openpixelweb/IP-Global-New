@@ -541,9 +541,9 @@
 
 .ipgs-ms-process-item {
     display: grid;
-    grid-template-columns: 110px minmax(0, 1fr);
+    grid-template-columns: 58px minmax(0, 1fr);
     align-items: start;
-    gap: 32px;
+    gap: 24px;
     padding: 29px 0;
     border-bottom: 1px solid var(--ms-border);
 }
@@ -554,13 +554,6 @@
     justify-content: space-between;
     gap: 14px;
     padding-right: 16px;
-}
-
-.ipgs-ms-process-marker span {
-    color: var(--ms-blue);
-    font-size: 34px;
-    font-weight: 600;
-    letter-spacing: -.04em;
 }
 
 .ipgs-ms-process-marker i {
@@ -644,8 +637,8 @@
 .ipgs-ms-project-top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 29px;
+    justify-content: flex-end;
+    margin-bottom: -24px;
     color: var(--ms-sky);
     font-size: 13px;
     font-weight: 700;
@@ -711,18 +704,11 @@
 
 .ipgs-ms-advantage {
     display: grid;
-    grid-template-columns: 48px minmax(0, 1fr) 52px;
+    grid-template-columns: minmax(0, 1fr) 52px;
     gap: 26px;
     align-items: start;
     padding: 30px 0;
     border-bottom: 1px solid #cbdde8;
-}
-
-.ipgs-ms-advantage-number {
-    padding-top: 5px;
-    color: var(--ms-blue);
-    font-size: 14px;
-    font-weight: 700;
 }
 
 .ipgs-ms-advantage-copy h3 {
@@ -948,7 +934,7 @@
     }
 
     .ipgs-ms-process-item {
-        grid-template-columns: 58px minmax(0, 1fr);
+        grid-template-columns: 40px minmax(0, 1fr);
         gap: 18px;
         padding: 25px 0;
     }
@@ -957,10 +943,6 @@
         flex-direction: column;
         align-items: flex-start;
         padding-right: 0;
-    }
-
-    .ipgs-ms-process-marker span {
-        font-size: 29px;
     }
 
     .ipgs-ms-process-marker i {
@@ -989,7 +971,7 @@
     }
 
     .ipgs-ms-advantage {
-        grid-template-columns: 28px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         gap: 14px;
         padding: 25px 0;
     }

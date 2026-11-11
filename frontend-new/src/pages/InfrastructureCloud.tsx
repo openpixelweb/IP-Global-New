@@ -10,7 +10,6 @@ import "../assets/css/infrastructure-cloud.css";
 ========================================== */
 
 interface InfrastructureItem {
-    number: string;
     title: string;
     description: string;
     icon: string;
@@ -22,42 +21,36 @@ interface InfrastructureItem {
 
 const capabilities: InfrastructureItem[] = [
     {
-        number: "01",
         title: "Transition without disruption",
         description:
             "We move data from public clouds to private environments through meticulous planning and step-by-step execution. This ensures your users can carry on as normal. Your organisation ends up with clearer costs and more control, without anyone noticing the change.",
         icon: "ri-arrow-left-right-line",
     },
     {
-        number: "02",
         title: "A private cloud based on your priorities",
         description:
             "We can design and build a private cloud in your own data centre or in a shared one. You get an environment sized for your needs and under your control, making your costs easier to predict. You also get to decide who gets access to what.",
         icon: "ri-cloud-line",
     },
     {
-        number: "03",
         title: "Keep your data where you need it",
         description:
             "We design your environment so your data remains secure and under your direct control. Audits get easier, compliance is assured, and you can say with confidence exactly where your data is located.",
         icon: "ri-shield-keyhole-line",
     },
     {
-        number: "04",
         title: "Custom cloud infrastructure solutions built from scratch",
         description:
             "We gather your requirements and write the specification, then install and test your equipment before it goes live. You get a design that fits your goals and equipment that has already proven it works.",
         icon: "ri-settings-3-line",
     },
     {
-        number: "05",
         title: "Data protection long after delivery",
         description:
             "Our ongoing support keeps your software up to date and your systems monitored, so problems show up early. Your systems stay secure and available, and your team spends less time firefighting.",
         icon: "ri-shield-check-line",
     },
     {
-        number: "06",
         title: "Public or private, it’s about what’s best for you",
         description:
             "Some workloads belong in AWS, Azure, or Google Cloud, and we build and connect those, too. Each workload gets the right home, and nothing that works well has to move.",
@@ -71,28 +64,24 @@ const capabilities: InfrastructureItem[] = [
 
 const advantages: InfrastructureItem[] = [
     {
-        number: "01",
         title: "Concept to completion, all in-house",
         description:
             "Requirements, design, build, and support all sit within our own team, so one group owns responsibilities and outcomes from start to finish.",
         icon: "ri-stack-line",
     },
     {
-        number: "02",
         title: "Specialists who share the load",
         description:
             "Our infrastructure specialists work alongside our network and security teams and share responsibility for the result. There is an “I” in IPGS, but it’s “We” when it comes to project delivery.",
         icon: "ri-team-line",
     },
     {
-        number: "03",
         title: "Quick answers from a team our size",
         description:
             "We're small enough to decide fast and big enough to deliver, so we’re able to respond to requests and queries according to your timeframe.",
         icon: "ri-timer-flash-line",
     },
     {
-        number: "04",
         title: "Cloud infrastructure services with named people behind them",
         description:
             "You know who's working on your project, because we give you named contacts. But we also give you authentic relationships, so you always know a friendly colleague is ready to act.",
@@ -240,7 +229,7 @@ const InfrastructureCloud: FC = () => {
                                 </div>
 
                                 <span className="ipgs-cloud-chapter">
-                                    01 / INFRASTRUCTURE STRATEGY
+                                    INFRASTRUCTURE STRATEGY
                                 </span>
 
                                 <h2>
@@ -334,15 +323,11 @@ const InfrastructureCloud: FC = () => {
 
                                 <article
                                     className="ipgs-cloud-service"
-                                    key={item.number}
+                                    key={item.title}
                                     data-cloud-reveal
                                 >
 
                                     <div className="ipgs-cloud-service-top">
-
-                                        <span className="ipgs-cloud-service-number">
-                                            {item.number}
-                                        </span>
 
                                         <div className="ipgs-cloud-service-icon">
                                             <i
@@ -496,13 +481,9 @@ const InfrastructureCloud: FC = () => {
 
                                 <article
                                     className="ipgs-cloud-why-item"
-                                    key={item.number}
+                                    key={item.title}
                                     data-cloud-reveal
                                 >
-
-                                    <span className="ipgs-cloud-why-number">
-                                        {item.number}
-                                    </span>
 
                                     <div className="ipgs-cloud-why-copy">
 

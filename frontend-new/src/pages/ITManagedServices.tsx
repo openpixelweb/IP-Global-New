@@ -241,7 +241,7 @@ const ITManagedServices: FC = () => {
                             </div>
 
                             <span className="ipgs-ms-chapter">
-                                01 / THE CHALLENGE
+                                THE CHALLENGE
                             </span>
 
                             <h2>
@@ -321,7 +321,6 @@ const ITManagedServices: FC = () => {
                                 data-ms-reveal
                             >
                                 <div className="ipgs-ms-process-marker">
-                                    <span>{step.number}</span>
                                     <i
                                         className={step.icon}
                                         aria-hidden="true"
@@ -375,7 +374,6 @@ const ITManagedServices: FC = () => {
                                 data-ms-reveal
                             >
                                 <div className="ipgs-ms-project-top">
-                                    <span>{project.number}</span>
                                     <i
                                         className="ri-arrow-right-up-line"
                                         aria-hidden="true"
@@ -430,10 +428,6 @@ const ITManagedServices: FC = () => {
                                 key={item.number}
                                 data-ms-reveal
                             >
-                                <span className="ipgs-ms-advantage-number">
-                                    {item.number}
-                                </span>
-
                                 <div className="ipgs-ms-advantage-copy">
                                     <h3>{item.title}</h3>
                                     <p>{item.description}</p>

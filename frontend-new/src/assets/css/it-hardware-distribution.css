@@ -491,15 +491,9 @@
 .ipgs-hd-supply-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 16px;
   margin-bottom: 28px;
-}
-
-.ipgs-hd-supply-top span {
-  color: var(--hd-blue);
-  font-size: 14px;
-  font-weight: 700;
 }
 
 .ipgs-hd-supply-top i {
@@ -573,7 +567,7 @@
 
 .ipgs-hd-catalogue-row {
   display: grid;
-  grid-template-columns: 44px 58px minmax(0, 1fr) 27px;
+  grid-template-columns: 58px minmax(0, 1fr) 27px;
   gap: 23px;
   align-items: start;
   padding: 29px 20px 29px 0;
@@ -586,13 +580,6 @@
 .ipgs-hd-catalogue-row:hover {
   background: var(--hd-white);
   padding-left: 17px;
-}
-
-.ipgs-hd-catalogue-number {
-  padding-top: 11px;
-  color: var(--hd-blue);
-  font-size: 14px;
-  font-weight: 700;
 }
 
 .ipgs-hd-catalogue-icon {
@@ -677,19 +664,13 @@
 .ipgs-hd-why-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 16px;
   margin-bottom: 30px;
 }
 
-.ipgs-hd-why-top span,
 .ipgs-hd-why-top i {
   color: var(--hd-sky);
-}
-
-.ipgs-hd-why-top span {
-  font-size: 14px;
-  font-weight: 700;
 }
 
 .ipgs-hd-why-top i {
@@ -930,7 +911,7 @@
   }
 
   .ipgs-hd-catalogue-row {
-    grid-template-columns: 30px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 13px;
     padding: 25px 0;
   }

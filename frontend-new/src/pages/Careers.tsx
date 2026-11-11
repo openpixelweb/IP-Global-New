@@ -463,9 +463,6 @@ const Careers: FC = () => {
                                 key={step.number}
                                 style={delay(300 + i * 350)}
                             >
-                                <div className="ipgs-careers-journey-number">
-                                    {step.number}
-                                </div>
                                 <h3>{step.title}</h3>
                                 <p>{step.description}</p>
                             </li>

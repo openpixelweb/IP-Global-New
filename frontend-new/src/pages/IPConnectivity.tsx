@@ -288,7 +288,7 @@ const IPConnectivity: FC = () => {
               </h2>
 
               <div className="ipgs-conn-access-foot">
-                <span>01 / CONNECTIVITY STRATEGY</span>
+                <span>CONNECTIVITY STRATEGY</span>
               </div>
             </div>
 
@@ -365,7 +365,6 @@ const IPConnectivity: FC = () => {
                 data-conn-reveal
               >
                 <div className="ipgs-conn-service-top">
-                  <span>{service.number}</span>
 
                   <i
                     className={service.icon}
@@ -434,7 +433,6 @@ const IPConnectivity: FC = () => {
                 data-conn-reveal
               >
                 <div className="ipgs-conn-transport-top">
-                  <span>{item.number}</span>
 
                   <i
                     className={item.icon}
@@ -488,9 +486,6 @@ const IPConnectivity: FC = () => {
                 key={item.number}
                 data-conn-reveal
               >
-                <span className="ipgs-conn-why-number">
-                  {item.number}
-                </span>
 
                 <div className="ipgs-conn-why-copy">
                   <h3>{item.title}</h3>
@@ -539,7 +534,7 @@ const IPConnectivity: FC = () => {
                   aria-hidden="true"
                 ></i>
 
-                <span>01 / AVAILABILITY</span>
+                <span>AVAILABILITY</span>
               </div>
 
               <h3>
@@ -570,7 +565,7 @@ const IPConnectivity: FC = () => {
                   aria-hidden="true"
                 ></i>
 
-                <span>02 / CONTINUITY</span>
+                <span>CONTINUITY</span>
               </div>
 
               <h3>

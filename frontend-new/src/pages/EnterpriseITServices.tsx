@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from "react";
 import type { CSSProperties, FC } from "react";
 import { Link } from "react-router-dom";
@@ -88,7 +89,18 @@ const enterpriseAdvantages: EnterpriseAdvantage[] = [
     },
 ];
 
-const stages = ["Requirements", "Design", "Build", "Deployment", "Support"];
+/* ==========================================
+   DELIVERY STAGES
+   Icons replace the original 01-05 numbers
+========================================== */
+
+const stages = [
+    { title: "Requirements", icon: "ri-file-list-3-line" },
+    { title: "Design", icon: "ri-pencil-ruler-2-line" },
+    { title: "Build", icon: "ri-tools-line" },
+    { title: "Deployment", icon: "ri-rocket-line" },
+    { title: "Support", icon: "ri-customer-service-2-line" },
+];
 
 /** Sets a stagger delay used by the CSS transitions. */
 const delay = (ms: number): CSSProperties =>
@@ -301,11 +313,11 @@ const EnterpriseITServices: FC = () => {
                             <span className="ipgs-ent-track" aria-hidden="true"><i></i></span>
 
                             {stages.map((stage, index) => (
-                                <li className="ipgs-ent-delivery-stage" key={stage}>
+                                <li className="ipgs-ent-delivery-stage" key={stage.title}>
                                     <span style={delay(index * 1800)}>
-                                        {String(index + 1).padStart(2, "0")}
+                                        <i className={stage.icon} aria-hidden="true"></i>
                                     </span>
-                                    <strong>{stage}</strong>
+                                    <strong>{stage.title}</strong>
                                 </li>
                             ))}
                         </ol>

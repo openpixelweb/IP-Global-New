@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import "../assets/css/it-hardware-distribution.css";
 
 interface ContentItem {
-  number: string;
   title: string;
   description: string;
   icon: string;
@@ -14,28 +13,24 @@ interface ContentItem {
 
 const supplyCapabilities: ContentItem[] = [
   {
-    number: "01",
     title: "Network equipment that fits the design",
     description:
       "We supply switches, routers, and wireless equipment that’s perfectly suited to the job in hand. Everything is matched to the design we agree on with you, so your network performs as planned, and nothing needs replacing after installation. It’s also a great way to keep your costs down.",
     icon: "ri-router-line",
   },
   {
-    number: "02",
     title: "Cabling and Wi-Fi ready to install",
     description:
       "We supply the cabling and access points for the sites we survey and design, so our engineers install on the day and your people are back online sooner.",
     icon: "ri-wifi-line",
   },
   {
-    number: "03",
     title: "Security hardware from trusted sources",
     description:
       "Let us source firewalls and other protective equipment through our established supplier relationships, so what protects your network is genuine, properly supported, and ready when your project needs it.",
     icon: "ri-shield-check-line",
   },
   {
-    number: "04",
     title: "Data centre and device supply",
     description:
       "Get the equipment you need for data centres and end-user devices, delivered where and when your team needs it. This full-service solution means rollouts can be executed without waiting on orders from third parties.",
@@ -45,63 +40,54 @@ const supplyCapabilities: ContentItem[] = [
 
 const catalogue: ContentItem[] = [
   {
-    number: "01",
     title: "IT, telecom, & installation supplies",
     description:
       "IPGS provides the products, cabling, connectivity components, and installation materials required for IT, network, telecom, and data centre deployments.",
     icon: "ri-stack-line",
   },
   {
-    number: "02",
     title: "Structured copper & fibre optic cabling",
     description:
       "From copper to fibre, our cabling covers enterprise, network, telecom, and data centre sites, so your installation starts with the right cable and runs reliably for years.",
     icon: "ri-links-line",
   },
   {
-    number: "03",
     title: "Fibre optic products & accessories",
     description:
       "Our fibre products and accessories are built for high-performance networks, so your connections stay fast and dependable and your deployment isn't held up by missing or mismatched parts.",
     icon: "ri-share-forward-line",
   },
   {
-    number: "04",
     title: "Patch panels, patch cords & connectivity",
     description:
       "Patch panels, patch cords, and connectivity components keep your network organised and scalable, and they make life easier for the engineers who maintain it as you grow.",
     icon: "ri-node-tree",
   },
   {
-    number: "05",
     title: "Racks, cabinets & cable management",
     description:
       "Racks, cabinets and cable management from us keep network rooms, servers, and data centres organised, protected, and easy to reach.",
     icon: "ri-server-line",
   },
   {
-    number: "06",
     title: "Network & telecom installation materials",
     description:
       "Your engineers finish on schedule when the materials for professional network and telecom installations are on site from day one, and we make sure they are.",
     icon: "ri-tools-line",
   },
   {
-    number: "07",
     title: "Data centre-related products",
     description:
       "When your data centre deployment needs modern connectivity, our infrastructure products make it happen smoothly, keeping your systems connected and protected as you scale.",
     icon: "ri-database-2-line",
   },
   {
-    number: "08",
     title: "Installation accessories & consumables",
     description:
       "Small items cause big delays, so we make sure the accessories and consumables are on hand, helping your team finish efficiently and on budget.",
     icon: "ri-settings-3-line",
   },
   {
-    number: "09",
     title: "Power & battery solutions",
     description:
       "Backup power matters most when something goes wrong, so our power and battery solutions for telecom, network and data centre sites keep your services running.",
@@ -111,21 +97,18 @@ const catalogue: ContentItem[] = [
 
 const reasons: ContentItem[] = [
   {
-    number: "01",
     title: "One IT hardware supplier from order to install",
     description:
       "The people who choose your equipment also design and install it, so nothing falls between suppliers, and you deal with one named contact from order to handover.",
     icon: "ri-user-follow-line",
   },
   {
-    number: "02",
     title: "Supplier relationships built over many years",
     description:
       "We buy through the same trusted supplier relationships that support the rest of our work, so you get dependable products and clear answers if something changes.",
     icon: "ri-links-line",
   },
   {
-    number: "03",
     title: "Delivery you can plan your project around",
     description:
       "We manage supply with the same discipline as our projects, so equipment arrives in step with your installation, and your team isn't left waiting or chasing.",
@@ -328,11 +311,10 @@ const ITHardwareDistribution: FC = () => {
             {supplyCapabilities.map((item) => (
               <article
                 className="ipgs-hd-supply-item"
-                key={item.number}
+                key={item.title}
                 data-hd-reveal
               >
                 <div className="ipgs-hd-supply-top">
-                  <span>{item.number}</span>
                   <i
                     className={item.icon}
                     aria-hidden="true"
@@ -389,13 +371,9 @@ const ITHardwareDistribution: FC = () => {
             {catalogue.map((item) => (
               <article
                 className="ipgs-hd-catalogue-row"
-                key={item.number}
+                key={item.title}
                 data-hd-reveal
               >
-                <span className="ipgs-hd-catalogue-number">
-                  {item.number}
-                </span>
-
                 <div className="ipgs-hd-catalogue-icon">
                   <i
                     className={item.icon}
@@ -450,11 +428,10 @@ const ITHardwareDistribution: FC = () => {
             {reasons.map((item) => (
               <article
                 className="ipgs-hd-why-item"
-                key={item.number}
+                key={item.title}
                 data-hd-reveal
               >
                 <div className="ipgs-hd-why-top">
-                  <span>{item.number}</span>
                   <i
                     className={item.icon}
                     aria-hidden="true"

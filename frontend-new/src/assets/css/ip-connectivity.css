@@ -686,7 +686,7 @@
 
 .ipgs-conn-why-item {
   display: grid;
-  grid-template-columns: 45px minmax(0, 1fr) 55px;
+  grid-template-columns: minmax(0, 1fr) 55px;
   gap: 26px;
   align-items: start;
   padding: 29px 0;
@@ -1118,7 +1118,7 @@
   }
 
   .ipgs-conn-why-item {
-    grid-template-columns: 31px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 14px;
     padding: 25px 0;
   }
@@ -1248,4 +1248,10 @@
   .ipgs-conn-final-btn:hover {
     transform: none;
   }
+}
+
+/* Keep icons aligned at the right when card numbers are removed. */
+.ipgs-conn-service-top > i,
+.ipgs-conn-transport-top > i {
+  margin-left: auto;
 }

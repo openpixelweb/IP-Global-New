@@ -134,9 +134,6 @@ const RANCapabilities: FC = () => {
                                     )
                                 }
                             >
-                                <span className="ipgs-ran-capability-index">
-                                    {service.number}
-                                </span>
 
                                 <span className="ipgs-ran-capability-name">
                                     {service.title}
@@ -280,7 +277,7 @@ const RAN: FC = () => {
                                 </div>
 
                                 <span className="ipgs-ran-chapter">
-                                    01 / OUR APPROACH
+                                    OUR APPROACH
                                 </span>
 
                                 <h2>
@@ -377,12 +374,11 @@ const RAN: FC = () => {
 
                             <div className="ipgs-ran-experience-feature" data-ran-reveal>
                                 <div className="ipgs-ran-feature-top"><span>ENGINEERING EXPERIENCE</span><span>IPGS / RAN</span></div>
-                                <div className="ipgs-ran-feature-num" aria-hidden="true">01<span>/</span>03</div>
                                 <h3>From network design<br />to live operation.</h3>
                                 <div className="ipgs-ran-feature-list">
-                                    <div><span>01</span><strong>Network sharing</strong><i className="ri-arrow-right-up-line" aria-hidden="true" /></div>
-                                    <div><span>02</span><strong>LTE refarming</strong><i className="ri-arrow-right-up-line" aria-hidden="true" /></div>
-                                    <div><span>03</span><strong>5G capacity expansion</strong><i className="ri-arrow-right-up-line" aria-hidden="true" /></div>
+                                    <div><strong>Network sharing</strong><i className="ri-arrow-right-up-line" aria-hidden="true" /></div>
+                                    <div><strong>LTE refarming</strong><i className="ri-arrow-right-up-line" aria-hidden="true" /></div>
+                                    <div><strong>5G capacity expansion</strong><i className="ri-arrow-right-up-line" aria-hidden="true" /></div>
                                 </div>
                             </div>
 
@@ -469,9 +465,6 @@ const RAN: FC = () => {
                                     key={principle.number}
                                     data-ran-reveal
                                 >
-                                    <span className="ipgs-ran-principle-number">
-                                        {principle.number}
-                                    </span>
 
                                     <div>
                                         <h3>{principle.title}</h3>

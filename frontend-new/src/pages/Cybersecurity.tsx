@@ -150,9 +150,6 @@ const SecurityServices: FC = () => {
                                     )
                                 }
                             >
-                                <span className="ipgs-cyber-service-number">
-                                    {service.number}
-                                </span>
 
                                 <span className="ipgs-cyber-service-icon">
                                     <i
@@ -388,9 +385,9 @@ const Cybersecurity: FC = () => {
                                 <h3>Built around your infrastructure. <span>Not the other way around.</span></h3>
                                 <p>A complete security approach from one accountable team, spanning cloud, networks, and operations.</p>
                                 <div className="ipgs-cyber-feature-divider" />
-                                <div className="ipgs-cyber-feature-row"><i className="ri-search-eye-line" /><span>Threat assessment & testing</span><b>01</b></div>
-                                <div className="ipgs-cyber-feature-row"><i className="ri-cloud-line" /><span>Secure cloud & infrastructure</span><b>02</b></div>
-                                <div className="ipgs-cyber-feature-row"><i className="ri-radar-line" /><span>Monitoring & ongoing support</span><b>03</b></div>
+                                <div className="ipgs-cyber-feature-row"><i className="ri-search-eye-line" /><span>Threat assessment & testing</span></div>
+                                <div className="ipgs-cyber-feature-row"><i className="ri-cloud-line" /><span>Secure cloud & infrastructure</span></div>
+                                <div className="ipgs-cyber-feature-row"><i className="ri-radar-line" /><span>Monitoring & ongoing support</span></div>
                                 <div className="ipgs-cyber-feature-footer"><span className="ipgs-cyber-feature-pulse" /> ONE TEAM. SHARED ACCOUNTABILITY.</div>
                             </aside>
 
@@ -413,9 +410,9 @@ const Cybersecurity: FC = () => {
                                 <div className="ipgs-cyber-experience-emblem"><i className="ri-global-line" aria-hidden="true" /><span>DELIVERY<br />EXPERIENCE</span></div>
                                 <div className="ipgs-cyber-experience-rule" />
                                 <div className="ipgs-cyber-experience-points">
-                                    <div><span>01</span><strong>Private cloud migration</strong></div>
-                                    <div><span>02</span><strong>Network segmentation</strong></div>
-                                    <div><span>03</span><strong>Multi-layer protection</strong></div>
+                                    <div><strong>Private cloud migration</strong></div>
+                                    <div><strong>Network segmentation</strong></div>
+                                    <div><strong>Multi-layer protection</strong></div>
                                 </div>
                             </div>
 
@@ -507,7 +504,6 @@ const Cybersecurity: FC = () => {
                                     data-cyber-reveal
                                 >
                                     <div className="ipgs-cyber-why-top">
-                                        <span>{item.number}</span>
                                         <i
                                             className={item.icon}
                                             aria-hidden="true"

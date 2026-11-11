@@ -10,7 +10,6 @@ import "../assets/css/data-centre-services.css";
 ========================================== */
 
 interface DataCentreItem {
-    number: string;
     title: string;
     description: string;
     icon: string;
@@ -22,42 +21,36 @@ interface DataCentreItem {
 
 const services: DataCentreItem[] = [
     {
-        number: "01",
         title: "Data centre design & architecture",
         description:
             "We plan the layout, cabling, and capacity of your data centre around the way your business works. This approach ensures it performs from day one and has room to grow.",
         icon: "ri-layout-grid-line",
     },
     {
-        number: "02",
         title: "Server & storage solutions",
         description:
             "We select, build, and install servers and storage to match your workloads. The preparatory and planning work we do ensures your applications run quickly and your data is always easy to reach.",
         icon: "ri-server-line",
     },
     {
-        number: "03",
         title: "Virtualisation & cloud integration",
         description:
             "Your dedicated IPGS team connects your data centre to private and public cloud, so each workload sits where it costs least and performs best. Moving it never leaves you exposed.",
         icon: "ri-cloud-line",
     },
     {
-        number: "04",
         title: "Data centre security & compliance",
         description:
             "We build protection in from the start, including segmentation and firewalling. Our work adheres to UK telecoms security law, CIS, and NIST. The result is simple yet crucial. Your data stays protected, and audits are easier and faster.",
         icon: "ri-shield-check-line",
     },
     {
-        number: "05",
         title: "Monitoring & management",
         description:
             "Our engineers watch your environment and handle updates as and when they come along. We’re used to working across multiple time zones, so small issues anywhere in the world are caught before they become serious outages.",
         icon: "ri-pulse-line",
     },
     {
-        number: "06",
         title: "Disaster recovery & backup solutions",
         description:
             "Backup and recovery are planned and executed with precision, so you can restore systems quickly after a failure. From day one, we’ll make it our mission to keep your business running smoothly while providing the kind of data protection that gives your customers confidence.",
@@ -71,28 +64,24 @@ const services: DataCentreItem[] = [
 
 const outcomes = [
     {
-        number: "01",
         title: "Improved infrastructure performance and reliability",
         description:
             "Your teams work faster, and outages become rare.",
         icon: "ri-speed-up-line",
     },
     {
-        number: "02",
         title: "Enhanced network security and risk management",
         description:
             "Threats are found early, and every risk is tracked.",
         icon: "ri-shield-keyhole-line",
     },
     {
-        number: "03",
         title: "Scalable IT systems that support future growth",
         description:
             "This means you add capacity when you need it without rebuilding.",
         icon: "ri-stack-line",
     },
     {
-        number: "04",
         title: "Expert guidance for digital transformation initiatives",
         description:
             "Each move, such as bringing workloads out of the public cloud, is planned and costed in advance.",
@@ -257,7 +246,7 @@ const DataCentreServices: FC = () => {
                             </div>
 
                             <span className="ipgs-dc-chapter">
-                                01 / RELIABLE INFRASTRUCTURE
+                                RELIABLE INFRASTRUCTURE
                             </span>
 
                             <h2>
@@ -354,13 +343,9 @@ const DataCentreServices: FC = () => {
                         {services.map((service) => (
                             <article
                                 className="ipgs-dc-service"
-                                key={service.number}
+                                key={service.title}
                                 data-dc-reveal
                             >
-
-                                <span className="ipgs-dc-service-number">
-                                    {service.number}
-                                </span>
 
                                 <div className="ipgs-dc-service-copy">
 
@@ -427,13 +412,11 @@ const DataCentreServices: FC = () => {
                         {outcomes.map((item) => (
                             <article
                                 className="ipgs-dc-outcome"
-                                key={item.number}
+                                key={item.title}
                                 data-dc-reveal
                             >
 
                                 <div className="ipgs-dc-outcome-top">
-                                    <span>{item.number}</span>
-
                                     <i
                                         className={item.icon}
                                         aria-hidden="true"

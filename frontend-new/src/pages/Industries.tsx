@@ -11,7 +11,6 @@ import "../assets/css/industries.css";
 ========================================== */
 
 interface Industry {
-    number: string;
     title: string;
     description: string;
     icon: string;
@@ -23,84 +22,84 @@ interface Industry {
 
 const industries: Industry[] = [
     {
-        number: "01",
+
         title: "Telecoms",
         description:
             "Mobile operators rely on us for network design, rollout, and specialist engineers, including at a Tier-1 UK operator. Upgrades and migrations finish on time, and customers stay connected.",
         icon: "ri-base-station-line",
     },
     {
-        number: "02",
+
         title: "Enterprise organisations",
         description:
             "Growing businesses get networks that scale with them. Brambles did just that with our help, starting with a first batch of 14 sites before handing us their entire programme. We repaid their faith by scaling our solution up without compromising quality, safety, or reliability.",
         icon: "ri-building-4-line",
     },
     {
-        number: "03",
+
         title: "Retail",
         description:
             "Busy shops and shopping centres need Wi-Fi that just works. To make this happen, we survey, design, and set up networks that keep customers and staff connected during even the busiest traffic days.",
         icon: "ri-store-2-line",
     },
     {
-        number: "04",
+
         title: "Banking & financial services",
         description:
             "Financial firms need systems that protect sensitive data and meet compliance demands. To deliver these necessities, we build secure, dependable networks. One of our success stories is the WiFi system we installed at Berkeley Square House, home to various major banks.",
         icon: "ri-bank-line",
     },
     {
-        number: "05",
+
         title: "Government & public sector",
         description:
             "Councils rely on secure, dependable technology to serve residents and deliver essential services. We provide expertise and technical support to local authorities in Southwark, Brent, and Lewisham. And we’re currently delivering a major library network project.",
         icon: "ri-government-line",
     },
     {
-        number: "06",
+
         title: "Healthcare",
         description:
             "Patient data and healthcare systems depend on infrastructure that is secure and always available. To strike the right balance between data protection and accessibility, we build reliable networks that protect sensitive records and keep digital health services running.",
         icon: "ri-hospital-line",
     },
     {
-        number: "07",
+
         title: "Education",
         description:
             "Universities and colleges need connections that give students reliable access to information. At the University of Reading, we're replacing 622 Wi-Fi access points across 15 buildings. Students and staff stay connected throughout, and the campus keeps running while the upgrade happens.",
         icon: "ri-graduation-cap-line",
     },
     {
-        number: "08",
+
         title: "Manufacturing",
         description:
             "Production lines run best on networks built for industrial control. To keep factories efficient and safe, we secure and connect operational systems to the IEC 62443 standard for industrial security. The result is a network that is as reliable as it is robust.",
         icon: "ri-settings-3-line",
     },
     {
-        number: "09",
+
         title: "Logistics & transportation",
         description:
             "Reliable connections keep goods and people moving. For Brambles (CHEP), we've delivered a global programme of site surveys, designs, and upgrades. On the railways, we support the networks behind signalling for Network Rail to keep people safe and on the move.",
         icon: "ri-truck-line",
     },
     {
-        number: "10",
+
         title: "Energy & utilities",
         description:
             "Power and utility networks must stay safe and switched on. To protect energy distribution from disruption, we secure and connect control and monitoring systems to industrial security standards. The result is infrastructure that keeps supplying when it matters most.",
         icon: "ri-flashlight-line",
     },
     {
-        number: "11",
+
         title: "Media & entertainment",
         description:
             "Audiences expect streaming and digital media to run smoothly during periods of high demand. To make that happen, we build the high-performance infrastructure behind your platforms. Content reaches viewers faster, and the busiest moments pass without a stutter.",
         icon: "ri-live-line",
     },
     {
-        number: "12",
+
         title: "Real estate & infrastructure",
         description:
             "Tenants judge a building by its connection. To keep Berkeley Square House in Mayfair running smoothly, we manage its backbone network for Colliers. The work we did earned us another prestigious referral.",
@@ -355,7 +354,7 @@ const Industries: FC = () => {
                     <div className="ipgs-industry-grid">
                         {industries.map((industry, index) => (
                             <article
-                                key={industry.number}
+                                key={industry.title}
                                 className="ipgs-industry-item"
                                 data-industries-reveal
                                 style={{
@@ -364,10 +363,6 @@ const Industries: FC = () => {
                                 }}
                             >
                                 <div className="ipgs-industry-top">
-                                    <span className="ipgs-industry-number">
-                                        {industry.number}
-                                    </span>
-
                                     <div className="ipgs-industry-icon">
                                         <i
                                             className={industry.icon}
