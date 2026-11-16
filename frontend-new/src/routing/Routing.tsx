@@ -37,6 +37,15 @@ import TelecomNetworkServices from "../pages/TelecomNetworkServices.tsx";
 import CoreNetwork from "../pages/CoreNetwork.tsx";
 import RAN from "../pages/RAN.tsx";
 import Cybersecurity from "../pages/Cybersecurity.tsx";
+import IPConnectivity from "../pages/IPConnectivity.tsx";
+import EnterpriseITServices from "../pages/EnterpriseITServices.tsx";
+import InfrastructureCloud from "../pages/InfrastructureCloud.tsx";
+import DataCentreServices from "../pages/DataCentreServices.tsx";
+import ITManagedServices from "../pages/ITManagedServices.tsx";
+import ITHardwareDistribution from "../pages/ITHardwareDistribution.tsx";
+import Industries from "../pages/Industries.tsx";
+import IPGSBlog from "../pages/IPGSBlog.tsx";
+
 
 interface RouteType {
     path: string;
@@ -65,6 +74,14 @@ export const routesWithMainLayout1: RouteType[] = [
     {path: "/core-network", element: <CoreNetwork />, },
     {path: "/ran", element: <RAN />, },
     {path: "/cybersecurity", element: <Cybersecurity />, },
+    {path: "/ip-connectivity", element: <IPConnectivity />, },
+    {path: "/enterprise-it-services", element: <EnterpriseITServices />, },
+    {path: "/infrastructure-cloud", element: <InfrastructureCloud />, },
+    {path: "/data-centre", element: <DataCentreServices />, },
+    {path: "/it-managed-services", element: <ITManagedServices />, },
+    {path: "/distribution", element: <ITHardwareDistribution />, },
+    {path: "/industries", element: <Industries />, },
+    {path: "/blog", element: <IPGSBlog />, },
     { path: "/Team1", element: <Team1 /> },
     { path: "/Team2", element: <Team2 /> },
     { path: "/SingleTeam", element: <SingleTeam /> },

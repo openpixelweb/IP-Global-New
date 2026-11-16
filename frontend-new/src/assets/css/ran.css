@@ -1117,3 +1117,45 @@
         transform: none;
     }
 }
+
+
+/* =============================================
+   REMOVE NUMBER SPACING ONLY - RAN SECTIONS
+   All other styles and animations are unchanged.
+============================================= */
+.ipgs-ran-capability-trigger {
+    grid-template-columns: minmax(0, 1fr) 32px 22px;
+}
+.ipgs-ran-capability-panel {
+    padding-left: 23px;
+}
+.ipgs-ran-principle {
+    grid-template-columns: minmax(0, 1fr);
+}
+.ipgs-ran-experience-feature h3 {
+    margin-top: 34px;
+}
+@media (max-width: 991px) {
+    .ipgs-ran-capability-trigger {
+        grid-template-columns: minmax(0, 1fr) 20px;
+    }
+    .ipgs-ran-capability-panel {
+        padding-left: 17px;
+    }
+}
+
+/* ==========================================
+   RAN ENGINEERING EXPERIENCE SPACING FIX
+   No changes to content or design
+========================================== */
+
+.ipgs-ran-page .ipgs-ran-experience-feature {
+    min-height: 0;
+    justify-content: flex-start;
+}
+
+@media (max-width: 991px) {
+    .ipgs-ran-page .ipgs-ran-experience-feature {
+        min-height: 0;
+    }
+}

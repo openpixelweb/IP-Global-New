@@ -1,9 +1,51 @@
 
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 // import AboutImg3 from "../assets/images/about/image-3.png";
 
 import AboutImage from "../assets/images/abt-01.jpg";
+
+
+type AboutCounterProps = { end: number; suffix?: string };
+const AboutCounter = ({end, suffix = ""}: AboutCounterProps) => {
+    const [value, setValue] = useState(0);
+    const ref = useRef<HTMLSpanElement>(null);
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        let animation = 0;
+        let started = false;
+        let observer: IntersectionObserver | undefined;
+        const run = () => {
+            if (started) return;
+            started = true;
+            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                setValue(end);
+                return;
+            }
+            const start = performance.now();
+            const step = (now: number) => {
+                const progress = Math.min((now - start) / 1700, 1);
+                setValue(Math.round(end * (1 - Math.pow(1 - progress, 3))));
+                if (progress < 1) animation = requestAnimationFrame(step);
+            };
+            animation = requestAnimationFrame(step);
+        };
+        if (typeof IntersectionObserver === "undefined") run();
+        else {
+            observer = new IntersectionObserver(entries => {
+                if (entries.some(entry => entry.isIntersecting)) {
+                    run();
+                    observer?.disconnect();
+                }
+            }, {threshold: 0.2});
+            observer.observe(el);
+        }
+        return () => { observer?.disconnect(); cancelAnimationFrame(animation); };
+    }, [end]);
+    return <span ref={ref}>{value.toLocaleString("en-GB")}{suffix}</span>;
+};
 
 const AboutUs: React.FC = () => {
 
@@ -96,7 +138,36 @@ const AboutUs: React.FC = () => {
 
 
 
+
+{/* IPGS COMPANY STATISTICS - ABOVE WHAT DRIVES US */}
+<section className="ipgs-about-proof" aria-label="IPGS company statistics">
+    <div className="ipgs-about-proof-grid">
+        <div className="ipgs-about-proof-item">
+            <strong><AboutCounter end={12} suffix="+" /></strong>
+            <p>Years of Industry Experience</p>
+        </div>
+        <div className="ipgs-about-proof-separator" aria-hidden="true"><span /></div>
+        <div className="ipgs-about-proof-item">
+            <strong><AboutCounter end={100} suffix="+" /></strong>
+            <p>Combined Technology Expertise</p>
+        </div>
+        <div className="ipgs-about-proof-separator" aria-hidden="true"><span /></div>
+        <div className="ipgs-about-proof-item">
+            <strong><AboutCounter end={5} suffix="+" /></strong>
+            <p>Global Locations</p>
+            <small>United Kingdom, India,<br />UAE, Poland &amp; Australia</small>
+        </div>
+        <div className="ipgs-about-proof-separator" aria-hidden="true"><span /></div>
+        <div className="ipgs-about-proof-item">
+            <strong><AboutCounter end={2000} suffix="+" /></strong>
+            <p>Project Execution</p>
+        </div>
+    </div>
+</section>
+
 <section className="ipgs-about-mission-section">
+
+    
 
     <div className="container">
 

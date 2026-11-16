@@ -78,43 +78,43 @@ const menuItems: MenuItem[] = [
             },
             {
                 title: "IP Networks / Transmission",
-                link: "#",
+                link: "/ip-connectivity",
             },
         ],
     },
 
     {
         title: "Enterprise IT Services",
-        link: "#",
+        link: "/enterprise-it-services",
         children: [
             
             {
                 title: "Infrastructure & Cloud",
-                link: "#",
+                link: "/infrastructure-cloud",
             },
             {
                 title: "Data Centre Services",
-                link: "#",
+                link: "/data-centre",
             },
             {
                 title: "IT Managed Services",
-                link: "#",
+                link: "/it-managed-services",
             },
             {
                 title: "Product Distribution & Aggregator",
-                link: "#",
+                link: "/distribution",
             },
         ],
     },
 
     {
         title: "Industries",
-        link: "#",
+        link: "/industries",
     },
 
     {
         title: "Blog",
-        link: "#",
+        link: "/blog",
     },
 ];
 

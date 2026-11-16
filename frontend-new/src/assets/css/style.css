@@ -7124,7 +7124,7 @@ li.slick-active {
     overflow: hidden;
 
     padding:
-        155px
+        70px
         0
         13px;
 
@@ -9344,7 +9344,7 @@ li.slick-active {
 
     overflow: hidden;
 
-    padding: 120px 0;
+    padding: 50px 0;
 
     background: #F5F8FA;
 }
@@ -10592,7 +10592,7 @@ li.slick-active {
 
     overflow: hidden;
 
-    padding: 120px 0;
+    padding: 50px 0;
 
     background: #F4F7F9;
 }
@@ -11210,7 +11210,7 @@ li.slick-active {
 
     overflow: hidden;
 
-    padding: 100px 0;
+    padding: 50px 0;
 
     background: #0B0E11;
 }
@@ -11551,7 +11551,7 @@ li.slick-active {
 
     overflow: hidden;
 
-    padding: 110px 0;
+    padding: 50px 0;
 
     background: #F7F9FA;
 }
@@ -12180,7 +12180,7 @@ p {
 ========================================================= */
 
 .ipgs-industries-showcase {
-    padding: 90px 0;
+    padding: 50px 0;
 
     background: #FFFFFF;
 }
@@ -12577,7 +12577,7 @@ p {
 
     overflow: hidden;
 
-    padding: 90px 0;
+    padding: 50px 0;
 
     background: #F5F8FA;
 }
@@ -12990,7 +12990,7 @@ p {
 
     overflow: hidden;
 
-    padding: 90px 0;
+    padding: 50px 0;
 
     background: #FFFFFF;
 }
@@ -13665,7 +13665,7 @@ p {
 
     overflow: hidden;
 
-    padding: 85px 0;
+    padding: 50px 0;
 
     background: #0F1E2A;
 }
@@ -14758,7 +14758,7 @@ a.ipgs-new-footer-contact-item:hover
 ========================================================= */
 
 .ipgs-about-story-section {
-    padding: 90px 0;
+    padding: 50px 0;
 
     background: #F5F8FA;
 }
@@ -14980,7 +14980,7 @@ a.ipgs-new-footer-contact-item:hover
 .ipgs-about-mission-section {
     position: relative;
 
-    padding: 95px 0;
+    padding: 50px 0;
 
     background: #0F1E2A;
 
@@ -15251,7 +15251,7 @@ a.ipgs-new-footer-contact-item:hover
 ========================================================= */
 
 .ipgs-about-growth-section {
-    padding: 95px 0;
+    padding: 50px 0;
 
     background: #FFFFFF;
 }
@@ -15608,7 +15608,7 @@ a.ipgs-new-footer-contact-item:hover
 ========================================================= */
 
 .ipgs-about-family-section {
-    padding: 95px 0;
+    padding: 50px 0;
 
     background: #F5F8FA;
 }
@@ -15941,7 +15941,7 @@ a.ipgs-new-footer-contact-item:hover
 .ipgs-about-final-cta {
     position: relative;
 
-    padding: 80px 0;
+    padding: 50px 0;
 
     overflow: hidden;
 
@@ -17924,6 +17924,127 @@ a.ipgs-new-footer-contact-item:hover
 
 
 
+
+
+/* =========================================================
+   CONTACT PAGE REFINEMENT - NUMBER-FREE CLASSIC LAYOUT
+   All selectors are Contact-specific; no shared CSS modified.
+========================================================= */
+
+/* The featured UK office no longer reserves a number column. */
+.ipgs-contact-featured-office {
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+    gap: 36px;
+}
+
+/* Office location icon remains at the right edge of each card. */
+.ipgs-contact-office-card-top {
+    justify-content: flex-end;
+}
+
+.ipgs-contact-office-marker {
+    flex: 0 0 42px;
+    transition: background-color .32s ease, color .32s ease,
+                transform .38s cubic-bezier(.22, 1, .36, 1);
+}
+
+.ipgs-contact-office-card:hover .ipgs-contact-office-marker {
+    transform: translateY(-3px);
+}
+
+/* The process icons are on the right; the number is removed. */
+.ipgs-contact-process-top {
+    justify-content: flex-end;
+}
+
+.ipgs-contact-process-top i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .38s cubic-bezier(.22, 1, .36, 1),
+                color .32s ease;
+}
+
+/* Smooth, reserved motion: subtle card lift and clear focus states. */
+.ipgs-contact-office-card,
+.ipgs-contact-process-card,
+.ipgs-contact-featured-office {
+    transition: transform .38s cubic-bezier(.22, 1, .36, 1),
+                border-color .3s ease,
+                background-color .3s ease,
+                box-shadow .38s ease;
+}
+
+.ipgs-contact-office-card:hover,
+.ipgs-contact-process-card:hover,
+.ipgs-contact-featured-office:hover {
+    transform: translateY(-4px);
+}
+
+.ipgs-contact-office-card a:focus-visible,
+.ipgs-contact-featured-office a:focus-visible,
+.ipgs-contact-process-card a:focus-visible {
+    outline: 2px solid #5FB6D5;
+    outline-offset: 4px;
+}
+
+@media (max-width: 991px) {
+    .ipgs-contact-featured-office {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .ipgs-contact-featured-details {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 575px) {
+    .ipgs-contact-featured-office {
+        grid-template-columns: 1fr;
+    }
+    .ipgs-contact-process-top {
+        margin-bottom: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-contact-office-card,
+    .ipgs-contact-process-card,
+    .ipgs-contact-featured-office,
+    .ipgs-contact-office-marker,
+    .ipgs-contact-process-top i {
+        animation: none !important;
+        transition: none !important;
+    }
+    .ipgs-contact-office-card:hover,
+    .ipgs-contact-process-card:hover,
+    .ipgs-contact-featured-office:hover,
+    .ipgs-contact-office-card:hover .ipgs-contact-office-marker,
+    .ipgs-contact-process-card:hover .ipgs-contact-process-top i {
+        transform: none !important;
+    }
+}
+
+
+/* CONTACT OFFICE HEADING + ICON ON A SINGLE HORIZONTAL ROW */
+.ipgs-contact-office-card .ipgs-contact-office-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.ipgs-contact-office-card .ipgs-contact-office-card-top .ipgs-contact-office-country {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+}
+.ipgs-contact-office-card .ipgs-contact-office-card-top .ipgs-contact-office-marker {
+    flex: 0 0 42px;
+    margin-left: auto;
+}
+
 /* =========================================================
    HOME COUNTER SECTION
 ========================================================= */
@@ -18390,4 +18511,256 @@ a.ipgs-new-footer-contact-item:hover
         opacity: 0.35;
     }
 
+}
+/* =========================================================
+   CONTACT PAGE ONLY - PROCESS ICONS RIGHT
+   Icon sits at the far right within each process card.
+   No changes to shared page components or animation timing.
+========================================================= */
+.ipgs-contact-process-section .ipgs-contact-process-card .ipgs-contact-process-top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 45px;
+}
+
+.ipgs-contact-process-section .ipgs-contact-process-card .ipgs-contact-process-top > i {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 274px;
+    font-size: 32px;
+}
+
+@media (max-width: 575px) {
+    .ipgs-contact-process-section .ipgs-contact-process-card .ipgs-contact-process-top {
+        margin-bottom: 28px;
+    }
+}
+
+
+
+/* ============================================================
+   IPGS HOME SERVICE CARD REFINEMENT - only Home flip cards
+   ============================================================ */
+.ipgs-flip-services-section .ipgs-flip-card-inner {
+    transition: transform .85s cubic-bezier(.22,.72,.2,1);
+}
+.ipgs-flip-services-section .ipgs-flip-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 18px;
+}
+.ipgs-flip-services-section .ipgs-flip-card-top .ipgs-flip-card-icon {
+    margin: 0;
+    width: 76px;
+    height: 76px;
+    flex: 0 0 76px;
+    font-size: 34px;
+    transition: background-color .3s ease, transform .3s ease;
+}
+.ipgs-flip-services-section .ipgs-flip-card-top .ipgs-flip-card-arrow {
+    flex: 0 0 44px;
+    transition: background-color .3s ease, border-color .3s ease;
+}
+.ipgs-flip-services-section .ipgs-flip-card-front-content {
+    margin-top: 48px;
+    margin-bottom: auto;
+}
+.ipgs-flip-services-section .ipgs-flip-card-back {
+    justify-content: flex-start;
+}
+.ipgs-flip-services-section .ipgs-flip-card-back-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0 26px;
+}
+.ipgs-flip-services-section .ipgs-flip-card-back-icon {
+    width: 55px;
+    height: 55px;
+    flex: 0 0 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.37);
+    font-size: 28px;
+    color: #fff;
+}
+.ipgs-flip-services-section .ipgs-flip-card-back-heading h3 {
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    font-size: clamp(23px, 2.1vw, 31px);
+}
+.ipgs-flip-services-section .ipgs-flip-card-back p {
+    margin-top: 0;
+}
+.ipgs-flip-services-section .ipgs-flip-card-link {
+    margin-top: 25px;
+}
+@media (hover: hover) {
+    .ipgs-flip-services-section .ipgs-flip-card:hover .ipgs-flip-card-top .ipgs-flip-card-icon {
+        background: #277ea6;
+    }
+}
+@media (max-width: 575px) {
+    .ipgs-flip-services-section .ipgs-flip-card-top .ipgs-flip-card-icon {
+        width: 62px; height: 62px; flex-basis: 62px; font-size: 28px;
+    }
+    .ipgs-flip-services-section .ipgs-flip-card-front-content { margin-top: 35px; }
+    .ipgs-flip-services-section .ipgs-flip-card-back-heading { margin-top: 5px; gap: 12px; }
+    .ipgs-flip-services-section .ipgs-flip-card-back-icon { width: 44px; height: 44px; flex-basis: 44px; font-size: 23px; }
+}
+@media (hover: none) {
+    .ipgs-flip-services-section .ipgs-flip-card:focus-within .ipgs-flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-flip-services-section .ipgs-flip-card-inner { transition: none; }
+}
+
+/* ============================================================
+   IPGS ABOUT STATISTICS - above WHAT DRIVES US, About page only
+   ============================================================ */
+.ipgs-about-proof {
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(108deg,#0b293d 0%,#12445f 48%,#287fa6 100%);
+    padding: 0px clamp(18px,3vw,48px);
+}
+.ipgs-about-proof-grid {
+    width: min(100%,1760px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr);
+    align-items: center;
+}
+.ipgs-about-proof-item {
+    min-width: 0;
+    text-align: center;
+    padding: 12px 8px;
+    animation: ipgsAboutProofReveal .7s ease-out both;
+}
+.ipgs-about-proof-item:nth-child(3) {animation-delay:.09s;}
+.ipgs-about-proof-item:nth-child(5) {animation-delay:.18s;}
+.ipgs-about-proof-item:nth-child(7) {animation-delay:.27s;}
+.ipgs-about-proof-item strong {
+    display: block;
+    color: #fff;
+    font-weight: 800;
+    font-size: clamp(44px,5vw,84px);
+    letter-spacing: -.045em;
+    line-height: 1.06;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+.ipgs-about-proof-item p {
+    color: #fff;
+    font-weight: 700;
+    font-size: clamp(13px,1.05vw,18px);
+    line-height: 1.4;
+    margin-top: 12px;
+}
+.ipgs-about-proof-item small {
+    display: block;
+    margin-top: 8px;
+    color: #c4dce9;
+    line-height: 1.45;
+    font-size: clamp(12px,.9vw,16px);
+}
+.ipgs-about-proof-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.ipgs-about-proof-separator span {
+    display: block;
+    width: 1px;
+    height: 82px;
+    position: relative;
+    background: rgba(255,255,255,.65);
+}
+.ipgs-about-proof-separator span::before,
+.ipgs-about-proof-separator span::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ipgs-about-proof-separator span::before {top:-5px;}
+.ipgs-about-proof-separator span::after {bottom:-5px;}
+@keyframes ipgsAboutProofReveal {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 991px) {
+    .ipgs-about-proof-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+    .ipgs-about-proof-separator {display:none;}
+    .ipgs-about-proof-item {padding:24px 10px; border-bottom:1px solid rgba(255,255,255,.2);}
+    .ipgs-about-proof-item:nth-last-child(1),
+    .ipgs-about-proof-item:nth-last-child(3) {border-bottom:0;}
+}
+@media (max-width: 575px) {
+    .ipgs-about-proof {padding:28px 18px;}
+    .ipgs-about-proof-grid {grid-template-columns:1fr;gap:0;}
+    .ipgs-about-proof-item {padding:24px 8px;border-bottom:1px solid rgba(255,255,255,.2) !important;}
+    .ipgs-about-proof-item:last-child {border-bottom:0 !important;}
+    .ipgs-about-proof-item strong {font-size:clamp(52px,13vw,74px);}
+}
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-about-proof-item {animation:none;}
+}
+
+
+/* ==========================================
+   IPGS HOME - COMPACT SERVICE CARDS
+========================================== */
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .ipgs-flip-services-section .ipgs-flip-card,
+    .ipgs-flip-services-section .ipgs-flip-card-inner {
+        min-height: 390px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .ipgs-flip-services-section .ipgs-flip-card,
+    .ipgs-flip-services-section .ipgs-flip-card-inner {
+        min-height: 410px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .ipgs-flip-services-section .ipgs-flip-card,
+    .ipgs-flip-services-section .ipgs-flip-card-inner {
+        min-height: 430px;
+    }
+}
+
+/* Reduce spacing between icons and headings */
+.ipgs-flip-services-section .ipgs-flip-card-front-content {
+    margin-top: 34px;
+}
+
+@media (max-width: 575px) {
+    .ipgs-flip-services-section .ipgs-flip-card-front-content {
+        margin-top: 28px;
+    }
 }

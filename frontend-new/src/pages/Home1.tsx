@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import whyHmImage from "../assets/images/why-hm.jpg";
 // import bannerBg from "../assets/images/banner-bg.jpg";
@@ -14,94 +14,6 @@ import indusHmImage6 from "../assets/images/indus-hm-06.jpg";
 
 
 
-interface CounterProps {
-    end: number;
-    suffix?: string;
-    duration?: number;
-    format?: boolean;
-}
-
-const AnimatedCounter: React.FC<CounterProps> = ({
-    end,
-    suffix = "",
-    duration = 1800,
-    format = false,
-}) => {
-
-    const [count, setCount] = useState(0);
-    const counterRef = useRef<HTMLSpanElement | null>(null);
-    const started = useRef(false);
-
-    useEffect(() => {
-
-        const element = counterRef.current;
-
-        if (!element) return;
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-
-                if (entry.isIntersecting && !started.current) {
-
-                    started.current = true;
-
-                    const startTime = performance.now();
-
-                    const animate = (currentTime: number) => {
-
-                        const elapsed = currentTime - startTime;
-
-                        const progress = Math.min(
-                            elapsed / duration,
-                            1
-                        );
-
-                        const easedProgress =
-                            1 - Math.pow(1 - progress, 3);
-
-                        const currentValue =
-                            Math.floor(end * easedProgress);
-
-                        setCount(currentValue);
-
-                        if (progress < 1) {
-                            requestAnimationFrame(animate);
-                        } else {
-                            setCount(end);
-                        }
-
-                    };
-
-                    requestAnimationFrame(animate);
-
-                    observer.disconnect();
-                }
-
-            },
-            {
-                threshold: 0.35,
-            }
-        );
-
-        observer.observe(element);
-
-        return () => observer.disconnect();
-
-    }, [end, duration]);
-
-
-    const displayValue = format
-        ? count.toLocaleString()
-        : count;
-
-
-    return (
-        <span ref={counterRef}>
-            {displayValue}
-            {suffix}
-        </span>
-    );
-};
 // ---- Component ----
 const Home1: React.FC = () => {
     return (
@@ -258,140 +170,7 @@ const Home1: React.FC = () => {
             </div>
 
         </div> */}
-<section className="ipgs-home-counter-section">
-
-    {/* BLUE FLOWING SHAPE */}
-
-
-
-
-    {/* RIGHT SIDE PNG STRIP */}
-
-    <div
-        className="ipgs-home-counter-strip"
-        aria-hidden="true"
-    >
-        {/* <img
-    src={CounterStrip}
-    alt=""
-/> */}
-    </div>
-
-
-    <div className="container">
-
-        <div className="ipgs-home-counter-grid">
-
-
-            {/* 01 */}
-
-            <div className="ipgs-home-counter-item">
-
-                <div className="ipgs-home-counter-number">
-                    <AnimatedCounter
-                        end={12}
-                        suffix="+"
-                    />
-                </div>
-
-                <p>
-                    Years of Industry Experience
-                </p>
-
-            </div>
-
-
-            <div
-                className="ipgs-home-counter-connector"
-                aria-hidden="true"
-            >
-                <span></span>
-            </div>
-
-
-            {/* 02 */}
-
-            <div className="ipgs-home-counter-item">
-
-                <div className="ipgs-home-counter-number">
-                    <AnimatedCounter
-                        end={100}
-                        suffix="+"
-                    />
-                </div>
-
-                <p>
-                    Combined Technology Expertise
-                </p>
-
-            </div>
-
-
-            <div
-                className="ipgs-home-counter-connector"
-                aria-hidden="true"
-            >
-                <span></span>
-            </div>
-
-
-            {/* 03 */}
-
-            <div className="ipgs-home-counter-item">
-
-                <div className="ipgs-home-counter-number">
-                    <AnimatedCounter
-                        end={5}
-                        suffix="+"
-                    />
-                </div>
-
-                <p>
-                    Global Locations
-                </p>
-
-                <small>
-                    United Kingdom, India,
-                    <br />
-                    UAE, Poland & Australia
-                </small>
-
-            </div>
-
-
-            <div
-                className="ipgs-home-counter-connector"
-                aria-hidden="true"
-            >
-                <span></span>
-            </div>
-
-
-            {/* 04 */}
-
-            <div className="ipgs-home-counter-item">
-
-                <div className="ipgs-home-counter-number">
-                    <AnimatedCounter
-                        end={2000}
-                        suffix="+"
-                        format
-                    />
-                </div>
-
-                <p>
-                    Project Execution
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-    </div>
-
+</div>
 </section>
 
         
@@ -514,10 +293,6 @@ const Home1: React.FC = () => {
 
                     <div className="ipgs-sector-item">
 
-                        <span className="ipgs-sector-number">
-                            01
-                        </span>
-
                         <span>
                             Telecom
                         </span>
@@ -526,10 +301,6 @@ const Home1: React.FC = () => {
 
 
                     <div className="ipgs-sector-item">
-
-                        <span className="ipgs-sector-number">
-                            02
-                        </span>
 
                         <span>
                             Rail
@@ -540,10 +311,6 @@ const Home1: React.FC = () => {
 
                     <div className="ipgs-sector-item">
 
-                        <span className="ipgs-sector-number">
-                            03
-                        </span>
-
                         <span>
                             Energy
                         </span>
@@ -552,10 +319,6 @@ const Home1: React.FC = () => {
 
 
                     <div className="ipgs-sector-item">
-
-                        <span className="ipgs-sector-number">
-                            04
-                        </span>
 
                         <span>
                             Public Sector
@@ -652,21 +415,11 @@ const Home1: React.FC = () => {
                     <div className="ipgs-flip-card-front">
 
                         <div className="ipgs-flip-card-top">
-
-                            <span className="ipgs-flip-card-number">
-                                01
-                            </span>
+                            <div className="ipgs-flip-card-icon"><i className="ri-train-line" aria-hidden="true"></i></div>
 
                             <span className="ipgs-flip-card-arrow">
                                 <i className="ri-arrow-right-up-line"></i>
                             </span>
-
-                        </div>
-
-
-                        <div className="ipgs-flip-card-icon">
-
-                            <i className="ri-train-line"></i>
 
                         </div>
 
@@ -699,20 +452,10 @@ const Home1: React.FC = () => {
 
                     <div className="ipgs-flip-card-back">
 
-                        <div className="ipgs-flip-card-back-top">
-
-                            <span>
-                                01
-                            </span>
-
-                            <i className="ri-train-line"></i>
-
+                        <div className="ipgs-flip-card-back-heading">
+                            <span className="ipgs-flip-card-back-icon"><i className="ri-train-line" aria-hidden="true"></i></span>
+                            <h3>Operational Technology</h3>
                         </div>
-
-
-                        <h3>
-                            Operational Technology
-                        </h3>
 
 
                         <p>
@@ -754,21 +497,11 @@ const Home1: React.FC = () => {
                     <div className="ipgs-flip-card-front">
 
                         <div className="ipgs-flip-card-top">
-
-                            <span className="ipgs-flip-card-number">
-                                02
-                            </span>
+                            <div className="ipgs-flip-card-icon"><i className="ri-signal-tower-line" aria-hidden="true"></i></div>
 
                             <span className="ipgs-flip-card-arrow">
                                 <i className="ri-arrow-right-up-line"></i>
                             </span>
-
-                        </div>
-
-
-                        <div className="ipgs-flip-card-icon">
-
-                            <i className="ri-signal-tower-line"></i>
 
                         </div>
 
@@ -801,20 +534,10 @@ const Home1: React.FC = () => {
 
                     <div className="ipgs-flip-card-back">
 
-                        <div className="ipgs-flip-card-back-top">
-
-                            <span>
-                                02
-                            </span>
-
-                            <i className="ri-signal-tower-line"></i>
-
+                        <div className="ipgs-flip-card-back-heading">
+                            <span className="ipgs-flip-card-back-icon"><i className="ri-signal-tower-line" aria-hidden="true"></i></span>
+                            <h3>Telecom Network Services</h3>
                         </div>
-
-
-                        <h3>
-                            Telecom Network Services
-                        </h3>
 
 
                         <p>
@@ -855,21 +578,11 @@ const Home1: React.FC = () => {
                     <div className="ipgs-flip-card-front">
 
                         <div className="ipgs-flip-card-top">
-
-                            <span className="ipgs-flip-card-number">
-                                03
-                            </span>
+                            <div className="ipgs-flip-card-icon"><i className="ri-server-line" aria-hidden="true"></i></div>
 
                             <span className="ipgs-flip-card-arrow">
                                 <i className="ri-arrow-right-up-line"></i>
                             </span>
-
-                        </div>
-
-
-                        <div className="ipgs-flip-card-icon">
-
-                            <i className="ri-server-line"></i>
 
                         </div>
 
@@ -902,20 +615,10 @@ const Home1: React.FC = () => {
 
                     <div className="ipgs-flip-card-back">
 
-                        <div className="ipgs-flip-card-back-top">
-
-                            <span>
-                                03
-                            </span>
-
-                            <i className="ri-server-line"></i>
-
+                        <div className="ipgs-flip-card-back-heading">
+                            <span className="ipgs-flip-card-back-icon"><i className="ri-server-line" aria-hidden="true"></i></span>
+                            <h3>Enterprise IT Services</h3>
                         </div>
-
-
-                        <h3>
-                            Enterprise IT Services
-                        </h3>
 
 
                         <p>
