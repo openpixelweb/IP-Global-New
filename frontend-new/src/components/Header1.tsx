@@ -9,10 +9,10 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-    {
-        title: "Home",
-        link: "/",
-    },
+    // {
+    //     title: "Home",
+    //     link: "/",
+    // },
 
 {
     title: "About IPGS",

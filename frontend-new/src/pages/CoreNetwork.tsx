@@ -26,9 +26,9 @@ const coreServices: CoreItem[] = [
         icon: "ri-team-line",
     },
     {
-        title: "Move voice and SIP traffic across with confidence",
+        title: "Migrate voice, SIP, 5G standalone, and service layer platforms with confidence",
         description:
-            "Our voice and SIP migration support takes you from legacy systems to modern infrastructure. The engineers involved understand what a dropped call costs you.",
+            "Our migration support takes you from legacy systems to modern infrastructure across voice, SIP, 5G standalone, and service layer platforms. The engineers involved understand what a dropped call costs you.",
         icon: "ri-phone-line",
     },
     {
@@ -63,15 +63,15 @@ const coreAdvantages: CoreItem[] = [
         icon: "ri-timer-flash-line",
     },
     {
-        title: "Experience from inside a Tier 1 operator",
+        title: "Experience from inside Tier 1 operators worldwide",
         description:
-            "Our consultants have spent years working with a Tier-1 UK mobile network operator, so they understand your world before they start.",
+            "Our consultants and delivery engineers have spent years inside Tier 1 operators in the UK and worldwide. They've delivered significant, complex multi-vendor core network programmes, so they understand your world before they start.",
         icon: "ri-base-station-line",
     },
     {
-        title: "Advisors who take the initiative and remain proactive at all times",
+        title: "Consultants and delivery engineers who take the initiative and remain proactive at all times",
         description:
-            "Experienced advisors support decisions about where your network goes next, and our expertise reaches well beyond transport and security.",
+            "Experienced consultants and delivery engineers support decisions about where your network goes next, and our end-to-end core network delivery capabilities take you from strategy through to optimisation.",
         icon: "ri-compass-3-line",
     },
     {
@@ -162,6 +162,7 @@ const CoreNetwork: FC = () => {
                         Core network services built on
                         <span className="ipgs-core-hero-line">real operator experience</span>
                     </h1>
+                    
                     <nav className="ipgs-core-hero-breadcrumb" aria-label="Breadcrumb">
                         <Link to="/">Home</Link>
                         <span aria-hidden="true"> - </span>
@@ -186,7 +187,7 @@ const CoreNetwork: FC = () => {
                                 <i className="ri-base-station-line"></i>
                             </div>
 
-                            <strong>Tier 1 UK mobile network operator experience.</strong>
+                            <strong>Tier 1 operator experience in the UK and worldwide.</strong>
                         </div>
 
                         <div className="ipgs-core-experience-content">
@@ -202,16 +203,17 @@ const CoreNetwork: FC = () => {
                             </h2>
 
                             <p data-reveal="up" style={delay(200)}>
-                                Our core network services fit programmes that
-                                are already underway, so your timeline keeps
-                                moving while our engineers get to work. A live
-                                migration can't pause for new people to find
-                                their feet.
+                                Our core network services fit programmes that are
+                                already underway as well as new programmes built
+                                from scratch, so your timeline keeps moving while
+                                our engineers get to work. A live migration can't
+                                pause for new people to find their feet, and a new
+                                programme needs a team that's productive from day one.
                             </p>
 
                             <p data-reveal="up" style={delay(280)}>
-                                Consultants here bring years of experience from
-                                inside a Tier 1 UK mobile network operator.
+                                Consultants and delivery engineers here bring
+                                years of experience from inside a Tier 1 UK MNO.
                                 They understand how an operator thinks, so
                                 they're useful from the first conversation.
                             </p>
@@ -249,7 +251,7 @@ const CoreNetwork: FC = () => {
                         <div className="ipgs-core-heading-grid">
                             <h2 data-reveal="up" style={delay(100)}>
                                 A proven approach to delivering{" "}
-                                <span>technically sound core networks</span>
+                                <span>best-in-class core networks</span>
                             </h2>
 
                             <p data-reveal="up" style={delay(200)}>
@@ -380,7 +382,7 @@ const CoreNetwork: FC = () => {
                             data-reveal="up"
                             style={delay(300)}
                         >
-                            <Link to="/Contact" className="ipgs-core-final-btn">
+                            <Link to="/contact" className="ipgs-core-final-btn">
                                 Speak to Our Core Network Team
                                 <i className="ri-arrow-right-up-line" aria-hidden="true"></i>
                             </Link>

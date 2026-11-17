@@ -10,14 +10,12 @@ import "../assets/css/ran.css";
 ========================================== */
 
 interface RANService {
-    number: string;
     title: string;
     description: string;
     icon: string;
 }
 
 interface RANPrinciple {
-    number: string;
     title: string;
     description: string;
 }
@@ -28,42 +26,36 @@ interface RANPrinciple {
 
 const ranServices: RANService[] = [
     {
-        number: "01",
         title: "Independent design that suits your whole network",
         description:
-            "We design across the major RAN vendors without favouring any of them. Our engineers analyse your node dumps and recommend features that enhance user experience and performance KPIs.",
+            "We offer in-depth expertise across all major RAN vendors and understand the specific feature sets needed to align and improve your radio network. Our engineers analyse your node dumps and recommend features that enhance user experience and performance KPIs.",
         icon: "ri-node-tree",
     },
     {
-        number: "02",
         title: "Roll out large programmes without losing continuity",
         description:
             "We support large rollout and transformation programmes from integration through stabilisation, ensuring a consistent service across legacy and modern platforms.",
         icon: "ri-base-station-line",
     },
     {
-        number: "03",
         title: "Bring new 5G features into service smoothly",
         description:
             "We implement new features on an end-to-end basis, from 5G standalone slicing and VoNR to advanced scheduling and power saving. We also offer expertise in integrations and decommissioning.",
         icon: "ri-signal-tower-line",
     },
     {
-        number: "04",
         title: "Combine transport and radio for one secure network",
         description:
             "We integrate transport and RAN with secure connectivity that meets stringent regulatory requirements in the UK and around the world. Migration and hybrid integration are part of the same job.",
         icon: "ri-shield-check-line",
     },
     {
-        number: "05",
         title: "Get faulty hardware back in service",
         description:
             "Our trusted repair partners take care of faulty RAN and transport cards, so you get working hardware back in service without any disruption or hassle.",
         icon: "ri-tools-line",
     },
     {
-        number: "06",
         title: "Let AI and automation do the routine work",
         description:
             "We use AI and automation tools to manage energy-saving switch-off on legacy RAN and RF optimisation. Drive-test analysis and test automation ensure your engineers spend more time on strategic decisions.",
@@ -77,25 +69,21 @@ const ranServices: RANService[] = [
 
 const ranPrinciples: RANPrinciple[] = [
     {
-        number: "01",
         title: "We adapt to your networks",
         description:
             "We work around your governance and standards, so there's no new process to learn. Transitioning to IPGS is as fast as it is painless.",
     },
     {
-        number: "02",
         title: "Responsive when things change",
         description:
             "A dedicated UK team ramps up fast when things change. Our India-based team is always ready to pitch in when additional expertise is needed.",
     },
     {
-        number: "03",
         title: "Multi-vendor RAN support you can rely on",
         description:
-            "We use multiple vendors without favouring any one of them. This approach ensures your design and advice come with no strings attached.",
+            "Our engineers know the feature set of every major RAN vendor, so you get dependable support regardless of the vendors your radio network relies on.",
     },
     {
-        number: "04",
         title: "Cost-effective by design",
         description:
             "Our UK team and our engineers in India work together, so you get expert help and proven expertise at a competitive price.",
@@ -119,7 +107,7 @@ const RANCapabilities: FC = () => {
                         className={`ipgs-ran-capability ${
                             isOpen ? "is-active" : ""
                         }`}
-                        key={service.number}
+                        key={service.title}
                         data-ran-reveal
                     >
                         <h3>
@@ -252,6 +240,7 @@ const RAN: FC = () => {
                         <h1 id="ipgs-ran-hero-title">
                             Multi-vendor RAN support that keeps<br className="ipgs-ran-hero-desktop-break" /> your radio network performing optimally
                         </h1>
+                        
                         <nav className="ipgs-ran-brand-breadcrumb" aria-label="Breadcrumb">
                             <Link to="/">Home</Link>
                             <span aria-hidden="true"> - </span>
@@ -349,12 +338,10 @@ const RAN: FC = () => {
                                 </h2>
 
                                 <p>
-                                    Our engineers will embed
-                                    themselves seamlessly into
-                                    your existing radio network —
-                                    providing exceptional services
-                                    backed by years of on-site
-                                    experience.
+                                    Our engineers understand your network
+                                    and work as an extension of your existing
+                                    teams, providing exceptional services
+                                    backed by years of experience.
                                 </p>
                             </div>
                         </div>
@@ -462,7 +449,7 @@ const RAN: FC = () => {
                             {ranPrinciples.map((principle) => (
                                 <article
                                     className="ipgs-ran-principle"
-                                    key={principle.number}
+                                    key={principle.title}
                                     data-ran-reveal
                                 >
 

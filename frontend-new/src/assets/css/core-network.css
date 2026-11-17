@@ -961,3 +961,62 @@
     .ipgs-core-final-btn i,
     .ipgs-core-service { transition: none; }
 }
+
+
+/* ===========================================
+   CORE NETWORK - APPROVED HERO COPY (2026)
+   Scoped to this page; existing layout/animations unchanged.
+=========================================== */
+.ipgs-core-page .ipgs-core-hero-description {
+    max-width: 770px;
+    margin: 26px 0 0;
+    color: #e1eef4;
+    font-size: clamp(16px, 1.25vw, 19px);
+    line-height: 1.7;
+    font-weight: 500;
+    animation: core-hero-text 0.95s var(--ease) 0.22s both;
+}
+
+.ipgs-core-page .ipgs-core-hero-support {
+    max-width: 740px;
+    margin: 14px 0 0;
+    color: #c5dbe6;
+    font-size: clamp(15px, 1vw, 17px);
+    line-height: 1.7;
+    animation: core-hero-text 0.95s var(--ease) 0.3s both;
+}
+
+.ipgs-core-page .ipgs-core-hero-cta {
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 24px;
+    animation: core-hero-text 0.95s var(--ease) 0.38s both;
+}
+
+.ipgs-core-page .ipgs-core-hero-breadcrumb {
+    margin-top: 25px;
+}
+
+@media (max-width: 767px) {
+    .ipgs-core-page .ipgs-core-hero-description {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .ipgs-core-page .ipgs-core-hero-support {
+        font-size: 14px;
+    }
+    .ipgs-core-page .ipgs-core-hero-cta {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 13px;
+        text-align: left;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-core-page .ipgs-core-hero-description,
+    .ipgs-core-page .ipgs-core-hero-support,
+    .ipgs-core-page .ipgs-core-hero-cta {
+        animation: none;
+    }
+}

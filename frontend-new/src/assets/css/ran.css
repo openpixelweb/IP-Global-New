@@ -1159,3 +1159,88 @@
         min-height: 0;
     }
 }
+
+/* ============================================================
+   IPGS RAN - APPROVED 2026 HERO COPY & CTA
+   Page scoped. All existing design and animations are retained.
+============================================================ */
+.ipgs-ran-page .ipgs-ran-brand-hero {
+    min-height: 0;
+    padding-top: 92px;
+    padding-bottom: 88px;
+}
+
+.ipgs-ran-page .ipgs-ran-brand-hero h1 {
+    margin-bottom: 26px;
+}
+
+.ipgs-ran-page .ipgs-ran-brand-hero-description,
+.ipgs-ran-page .ipgs-ran-brand-hero-support {
+    max-width: 800px;
+    color: #d5e6ee;
+    font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    animation: ipgsRanHeroRise .85s cubic-bezier(.22,.61,.36,1) both;
+}
+
+.ipgs-ran-page .ipgs-ran-brand-hero-description {
+    font-size: clamp(16px, 1.22vw, 19px);
+    animation-delay: .12s;
+}
+
+.ipgs-ran-page .ipgs-ran-brand-hero-support {
+    margin-top: 12px;
+    font-size: clamp(15px, 1.08vw, 17px);
+    animation-delay: .2s;
+}
+
+.ipgs-ran-page .ipgs-ran-brand-hero-cta {
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 24px;
+    animation: ipgsRanHeroRise .85s cubic-bezier(.22,.61,.36,1) .28s both;
+}
+
+.ipgs-ran-page .ipgs-ran-brand-breadcrumb {
+    margin-top: 26px;
+}
+
+@media (max-width: 991px) {
+    .ipgs-ran-page .ipgs-ran-brand-hero {
+        min-height: 0;
+        padding-top: 78px;
+        padding-bottom: 74px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ipgs-ran-page .ipgs-ran-brand-hero {
+        min-height: 0;
+        padding: 68px 20px;
+    }
+    .ipgs-ran-page .ipgs-ran-brand-hero h1 {
+        margin-bottom: 21px;
+    }
+    .ipgs-ran-page .ipgs-ran-brand-hero-description {
+        font-size: 15px;
+    }
+    .ipgs-ran-page .ipgs-ran-brand-hero-support {
+        font-size: 14px;
+    }
+    .ipgs-ran-page .ipgs-ran-brand-hero-cta {
+        padding: 14px 17px;
+        font-size: 13px;
+    }
+    .ipgs-ran-page .ipgs-ran-brand-breadcrumb {
+        margin-top: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ipgs-ran-page .ipgs-ran-brand-hero-description,
+    .ipgs-ran-page .ipgs-ran-brand-hero-support,
+    .ipgs-ran-page .ipgs-ran-brand-hero-cta {
+        animation: none !important;
+    }
+}
